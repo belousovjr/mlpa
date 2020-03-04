@@ -1,11 +1,12 @@
 import React from 'react';
-//import logo from './logo.svg';
-import './App.css';
+
+import {test} from './location'
 
 function App() {
+  test()
   return (
     <div >
-      MLPA
+      MLPAв
     </div>
   );
 }
