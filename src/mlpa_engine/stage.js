@@ -1,8 +1,9 @@
 export default class Stage {
-	constructor(answer, pAnswers, themeName){
-		this.answer = answer 
-		this.pAnswers = pAnswers
- 		this.themeName = themeName
-	}
-	isBeen = false
+  constructor(id, answer, pAnswers) {
+    this.id = id;
+    this.answer = answer;
+    this.pAnswers = pAnswers;
+  }
+  topicName = null;
+  isBeen = false;
 }

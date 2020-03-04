@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import {test} from './location'
+import Constructor from "./components/Constructor/Constructor";
 
 function App() {
-  test()
   return (
-    <div >
-      MLPAв
+    <div>
+      <Constructor />
     </div>
   );
 }

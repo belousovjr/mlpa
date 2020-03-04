@@ -1,5 +1,7 @@
 export default class Stuff {
-	constructor(phrases){
-		this.phrases = phrases 	
-	}
+  constructor(next_stage_id, changes = [], phrases) {
+    this.next_stage_id = next_stage_id;
+    this.changes = changes;
+    this.phrases = phrases;
+  }
 }
