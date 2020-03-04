@@ -1,7 +1,7 @@
 export default class Topic {
-  constructor(name, graduation, stages) {
+  constructor(name, graduation, id) {
     this.name = name;
     this.graduation = graduation;
-    this.stages = stages;
+    this.id = id;
   }
 }

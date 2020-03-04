@@ -3,12 +3,14 @@ import Stuffs from "../Stuffs/Stuffs";
 
 export default class StageItem extends React.Component {
   render() {
-    const { stage } = this.props;
-    const { pAnswers } = stage;
+    const { stage, methods } = this.props;
+
+    const pAnswers = methods.getStuffs(stage.id);
+
     return (
       <div>
         <h2>StageItem {stage.id}</h2>
-        <Stuffs stuffs={pAnswers} />
+        <Stuffs stage={stage} stuffs={pAnswers} methods={methods} />
       </div>
     );
   }

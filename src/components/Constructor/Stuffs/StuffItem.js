@@ -2,9 +2,9 @@ import React from "react";
 
 export default class StuffItem extends React.Component {
   render() {
-    const { stuff } = this.props;
+    const { stuff, methods } = this.props;
 
-    const { phrases } = stuff;
+    const phrases = methods.getPhrases(stuff.id);
 
     const phrasesItems = phrases.map((phrase, i) => (
       <div key={i}>{phrase.text}</div>

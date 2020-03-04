@@ -3,10 +3,12 @@ import StuffItem from "./StuffItem";
 
 export default class Stuffs extends React.Component {
   render() {
-    const { stuffs } = this.props;
+    const { methods, stage } = this.props;
+
+    const stuffs = methods.getStuffs(stage.id);
 
     const stuffsItems = stuffs.map((stuff, i) => (
-      <StuffItem key={i} stuff={stuff} />
+      <StuffItem methods={methods} key={i} stuff={stuff} />
     ));
 
     return <div>{stuffsItems}</div>;

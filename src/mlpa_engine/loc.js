@@ -13,6 +13,10 @@ export default class Loc {
   grads = [];
   topics = [];
 
+  stuffs = [];
+  stages = [];
+  phrases = [];
+
   cParam(name, value) {
     return new Parameter(name, value);
   }
@@ -35,29 +39,71 @@ export default class Loc {
   }
 
   cTopic(name, gradName, ...stages) {
-    return new Topic(name, gradName, stages);
+    const topicId = this.getId("topics");
+    this.addTopics(new Topic(name, gradName, topicId));
+    this.addStages(topicId, ...stages);
   }
 
   addTopics(...topics) {
     this.topics = this.topics.concat(topics);
   }
 
-  cPhrase(text, rangeName) {
-    return new Phrase(rangeName, text);
+  cStage(...answers) {
+    const stageId = this.getId("stages");
+    this.addStuffs(stageId, ...answers);
+    return new Stage(stageId);
+  }
+
+  addStages(topicId, ...stages) {
+    if (this._getTopic(topicId)) {
+      const newStages = stages.map(stage => ({ ...stage, topic_id: topicId }));
+      this.stages = this.stages.concat(newStages);
+    } else console.error(`Topic ${topicId} not found!`);
   }
 
   cStuff(props, ...phrases) {
     const { id: nextStageId, changes } = props ? props : {};
-    return new Stuff(nextStageId, changes, phrases);
+    const stuffId = this.getId("stuffs");
+    this.addPhrases(stuffId, phrases);
+    return new Stuff(nextStageId, changes, stuffId);
   }
 
-  cStage(id, answer, ...pAnswers) {
-    return new Stage(id, answer, pAnswers);
+  addStuffs(stageId, ...stuffs) {
+    const newStuffs = stuffs.map(stuff => ({ ...stuff, stage_id: stageId }));
+    this.stuffs = this.stuffs.concat(newStuffs);
+  }
+
+  addPhrases(stuffId, phrases) {
+    const newPhrases = phrases.map(phrase => ({
+      ...phrase,
+      stuff_id: stuffId
+    }));
+
+    this.phrases = this.phrases.concat(newPhrases);
+  }
+
+  cPhrase(text, rangeName) {
+    return new Phrase(rangeName, text, this.getId("phrases"));
   }
 
   cChange(paramName, term) {
     return new Change(paramName, term);
   }
+
+  _getTopic(id) {
+    return this.topics.find(topic => topic.id === id);
+  }
+  _getStages = topicId => {
+    return this.stages.filter(stage => stage.topic_id === topicId);
+  };
+
+  _getStuffs = stageId => {
+    return this.stuffs.filter(stuff => stuff.stage_id === stageId);
+  };
+
+  _getPhrases = stuffId => {
+    return this.phrases.filter(phrase => phrase.stuff_id === stuffId);
+  };
 
   _getParam(name) {
     return this.params.find(param => param.name === name);
@@ -99,11 +145,17 @@ export default class Loc {
     }
     return true;
   }
-  /*
-    idState = []
-    getId(type){
-      if(!this.idState[type])this.idState[type]=0
-      this.idState[type]++
-      return this.idState[type]
-    }*/
+
+  idState = {};
+  getId(type) {
+    if (!this.idState[type]) this.idState[type] = 0;
+    this.idState[type]++;
+    return this.idState[type];
+  }
+
+  ssign(data) {
+    for (let key in data) {
+      if (Boolean(this[key])) this[key] = data[key];
+    }
+  }
 }

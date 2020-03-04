@@ -9,28 +9,47 @@ export default class Constructor extends React.Component {
     super();
     this.myStorage = window.localStorage;
     this.loc = this.getLoc();
-    console.log(this.loc);
   }
 
   getLoc() {
-    const loc = Object.assign(
-      new Loc(),
-      JSON.parse(this.myStorage.getItem("locData"))
-    );
-    return loc || locE;
+    const loc = new Loc();
+    const data = JSON.parse(this.myStorage.getItem("locData"));
+    loc.ssign(data);
+    return loc ? loc : locE;
   }
 
   saveLoc() {
-    this.myStorage.setItem("locData", JSON.stringify(this.loc));
+    const locData = JSON.stringify(this.loc);
+    this.myStorage.setItem("locData", locData);
   }
 
-  render() {
-    const { topics } = this.loc;
+  addTopic = (name, gradName) => {
+    this.loc.cTopic(name, gradName);
+    this.forceUpdate();
+  };
 
+  addStage = topicId => {
+    this.loc.addStages(topicId, this.loc.cStage());
+    this.forceUpdate();
+  };
+
+  render() {
+    const { topics, grads } = this.loc;
+    console.log(this.loc);
     return (
       <div>
         <h1>Hello, Heh</h1>
-        <Topics topics={topics} />
+        <Topics
+          topics={topics}
+          grads={grads}
+          methods={{
+            addTopic: this.addTopic,
+            addStage: this.addStage,
+            getStages: this.loc._getStages,
+            getStuffs: this.loc._getStuffs,
+            getPhrases: this.loc._getPhrases
+          }}
+        />
 
         <button onClick={() => this.saveLoc()}>save</button>
       </div>

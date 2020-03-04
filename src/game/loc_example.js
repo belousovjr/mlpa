@@ -18,27 +18,24 @@ locE.addGrads(
   locE.cGrad(GRAD_CONSTRUCTIVE, RANGE_HYSTERICS, RANGE_TRANQUILITY)
 );
 
-locE.addTopics(
-  locE.cTopic(
-    "adecvat",
-    GRAD_CONSTRUCTIVE,
-    locE.cStage(
-      1,
-      locE.cStuff(
-        null,
-        locE.cPhrase("im have hysterics", RANGE_HYSTERICS),
-        locE.cPhrase("im ok")
-      ),
-      locE.cStuff(
-        { id: 2, changes: [locE.cChange(PARAM_DETERMINATION, -5)] },
-        locE.cPhrase("fix it!!!", RANGE_HYSTERICS),
-        locE.cPhrase("be cool bro")
-      ),
-      locE.cStuff(
-        { id: 2, changes: [locE.cChange(PARAM_DETERMINATION, -5)] },
-        locE.cPhrase("im good!!!", RANGE_TRANQUILITY),
-        locE.cPhrase("im normal")
-      )
+locE.cTopic(
+  "adecvat",
+  GRAD_CONSTRUCTIVE,
+  locE.cStage(
+    locE.cStuff(
+      null,
+      locE.cPhrase("im have hysterics", RANGE_HYSTERICS),
+      locE.cPhrase("im ok")
+    ),
+    locE.cStuff(
+      { id: 2, changes: [locE.cChange(PARAM_DETERMINATION, -5)] },
+      locE.cPhrase("fix it!!!", RANGE_HYSTERICS),
+      locE.cPhrase("be cool bro")
+    ),
+    locE.cStuff(
+      { id: 2, changes: [locE.cChange(PARAM_DETERMINATION, -5)] },
+      locE.cPhrase("im good!!!", RANGE_TRANQUILITY),
+      locE.cPhrase("im normal")
     )
   )
 );
