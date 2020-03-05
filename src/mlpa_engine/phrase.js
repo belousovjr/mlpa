@@ -4,4 +4,5 @@ export default class Phrase {
     this.text = text;
     this.id = id;
   }
+  stuff_id = null
 }

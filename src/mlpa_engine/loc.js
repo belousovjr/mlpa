@@ -62,10 +62,10 @@ export default class Loc {
   }
 
   cStuff(props, ...phrases) {
-    const { id: nextStageId, changes } = props ? props : {};
+    const { id: nextStageId, changes, isA } = props ? props : {};
     const stuffId = this.getId("stuffs");
     this.addPhrases(stuffId, phrases);
-    return new Stuff(nextStageId, changes, stuffId);
+    return new Stuff(nextStageId, changes, isA, stuffId);
   }
 
   addStuffs(stageId, ...stuffs) {
@@ -104,6 +104,11 @@ export default class Loc {
   _getPhrases = stuffId => {
     return this.phrases.filter(phrase => phrase.stuff_id === stuffId);
   };
+
+  _updateGrad(topicId, gradName){
+    const topic = this._getTopic(topicId)
+    topic.graduation = gradName
+  }
 
   _getParam(name) {
     return this.params.find(param => param.name === name);

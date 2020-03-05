@@ -1,11 +1,11 @@
 import React from "react";
+import Editor from "./components/Editor/Editor";
 
-import Constructor from "./components/Constructor/Constructor";
 
 function App() {
   return (
     <div>
-      <Constructor />
+      <Editor />
     </div>
   );
 }

@@ -1,1 +1,2 @@
-export const GRAD_CONSTRUCTIVE = 'constructive'
+export const GRAD_CONSTRUCTIVE = 'констркутивность'
+export const GRAD_IMPOTENCE = 'бессилие'

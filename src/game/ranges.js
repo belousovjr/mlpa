@@ -1,2 +1,2 @@
-export const RANGE_HYSTERICS = 'hysterics'
-export const RANGE_TRANQUILITY = 'tranquility'
+export const RANGE_HYSTERICS = "истерика";
+export const RANGE_TRANQUILITY = "спокойствие";
