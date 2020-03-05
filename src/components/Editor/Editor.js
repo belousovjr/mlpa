@@ -17,7 +17,7 @@ export default class Editor extends React.Component {
     const loc = new Loc();
     const data = JSON.parse(this.myStorage.getItem("locData"));
     loc.ssign(data);
-    return locE; //loc ? loc : locE;
+    return loc ? loc : locE;
   }
 
   saveLoc() {
