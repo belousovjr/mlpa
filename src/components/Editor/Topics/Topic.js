@@ -3,30 +3,23 @@ import StageItem from "../Stages/StageItem";
 import Stage from "../Stages/Stage";
 
 export default class Topic extends React.Component {
-  constructor(props) {
-    super(props);
-    const currentStage = props.methods.getStages(props.topic.id)[0].id;
-    this.state = { currentStage };
-  }
-  click = id => {
-    this.setState({ currentStage: id });
-  };
+
   render() {
-    const { topic, stat, methods } = this.props;
+    const { topic, stat, methods, currentStage, click, changeStage, allStages } = this.props;
 
     const { grads } = stat;
     const { graduation } = topic;
 
     const stages = methods.getStages(topic.id);
     const stagesItems = stages.map(stage => {
-      const isSelect = stage.id === this.state.currentStage;
+      const isSelect = stage.id === currentStage;
 
       return (
         <StageItem
           key={stage.id}
           stage={stage}
           isSelect={isSelect}
-          click={this.click}
+          click={click}
         />
       );
     });
@@ -39,28 +32,38 @@ export default class Topic extends React.Component {
       );
     });
 
+
+    const curStage = stages.find(stage => stage.id === currentStage)
+
+    const stageView = currentStage ?  <Stage
+          stage={curStage}
+          methods={methods}
+          stat={stat}
+          allStages={allStages}
+           changeStage={changeStage}
+          
+        /> : null
+
     return (
       <div>
         <h1 align="center">
-          Topic "{topic.name}", grad:
+          Topic <input value={topic.name} onChange={(e)=>{methods.updateTopic(topic.id, e.target.value, topic.graduation)}} />, grad:
           <select
             value={graduation}
             onChange={e => {
-              methods.updateGrad(topic.id, e.target.value);
+              methods.updateTopic(topic.id, topic.name, e.target.value);
             }}
           >
             {optItems}
           </select>
+           <button onClick={() => {methods.removeTopic(topic.id)}} style={{marginLeft: '1rem'}}>X</button>
         </h1>
 
         <br />
+        <div><button onClick={() => {methods.addStage(topic.id)}} >+</button></div>
         {stagesItems}
         <br />
-        <Stage
-          stage={stages.find(stage => stage.id === this.state.currentStage)}
-          methods={methods}
-          stat={stat}
-        />
+        {stageView}
       </div>
     );
   }

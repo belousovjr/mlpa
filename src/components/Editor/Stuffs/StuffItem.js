@@ -1,8 +1,26 @@
 import React from "react";
 
 export default class StuffItem extends React.Component {
+  stuffText(id){
+    if(id){
+           const {  methods } = this.props;
+         
+        //const nextStage = allStages.find(s => s.id === stuff.next_stage_id)
+        const nextStuff = methods.getStuffs(id).find(stuff => stuff.isA)
+    
+    if(nextStuff){
+        const nextPhrase = methods.getPhrases(nextStuff.id).find( p => !p.rangeName).text
+        return `${nextPhrase.slice(0, 5)}...`
+        }
+        else return 'NOT FOUND'
+    }
+    return null
+  }
   render() {
-    const { stuff, methods, range, stat } = this.props;
+    const { stuff, methods, range, stat, goStage } = this.props;
+
+    const linkText = this.stuffText(stuff.next_stage_id)
+    
 
     const phrase = methods.getPhrases(stuff.id).find(p => {
       return p.rangeName === range || (range === "none" && !p.rangeName);
@@ -46,9 +64,18 @@ export default class StuffItem extends React.Component {
 
     const next = !stuff.isA ? (
       <div style={{ display: "inline-block", marginRight: "0.5rem" }}>
-        => {stuff.next_stage_id}
+        ====> <div style={{ display: "inline-block", backgroundColor: 'red', cursor: 'pointer', color: 'white'}} 
+        onClick={() => 
+          {
+            goStage(stuff.next_stage_id);
+          }
+        }
+        >({stuff.next_stage_id}) {linkText}
+        </div>
       </div>
     ) : null;
+
+
 
     return (
       <div>

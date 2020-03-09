@@ -54,9 +54,18 @@ export default class Loc {
     return new Stage(stageId);
   }
 
-  addStages(topicId, ...stages) {
+  addStages = (topicId, ...stages) => {
     if (this._getTopic(topicId)) {
-      const newStages = stages.map(stage => ({ ...stage, topic_id: topicId }));
+      const newStages = stages.map(
+        stage => {
+          const stuffs = this._getStuffs(stage.id)
+          stuffs.forEach(stuff => {
+            const {next_topic, isA } = stuff
+            if(!next_topic && !isA)stuff.next_topic = topicId
+          })
+          return { ...stage, topic_id: topicId }}
+
+        );
       this.stages = this.stages.concat(newStages);
     } else console.error(`Topic ${topicId} not found!`);
   }
@@ -105,11 +114,6 @@ export default class Loc {
     return this.phrases.filter(phrase => phrase.stuff_id === stuffId);
   };
 
-  _updateGrad(topicId, gradName){
-    const topic = this._getTopic(topicId)
-    topic.graduation = gradName
-  }
-
   _getParam(name) {
     return this.params.find(param => param.name === name);
   }
@@ -141,7 +145,7 @@ export default class Loc {
     return param.value >= range.min && param.value <= range.max;
   }
 
-  checkGrad(gradName) {
+  checkGrad(gradName) {   //ИЗМЕНИТЬ
     const grad = this._getGrad(gradName);
 
     for (let i = 0; i < grad.rangesNames.length; i++) {
