@@ -1,27 +1,9 @@
 import React from "react";
 
 export default class StuffItem extends React.Component {
-  stuffText(id){
-    if(id){
-           const {  methods } = this.props;
-          
-         
-        const nextStuff = methods.getStuffs(id).find(stuff => stuff.isA)
-    
-    if(nextStuff){
-        const nextPhrases = methods.getPhrases(nextStuff.id)
-        const nextPhrase = nextPhrases.find( p => !p.rangeName)
-        console.log(nextPhrases)
-        if(nextPhrase){
-         return `(${id}) ${nextPhrase.text.slice(0, 7)}...`}
-        else return `(${id}) NOT PHRASE...`
-        }
-        else return 'NOT FOUND'
-    }
-    return null
-  }
+
   render() {
-    const { stuff, methods, range, stat, goStage, allStages } = this.props;
+    const { stuff, methods, range, stat, goStage, allStages, stuffText } = this.props;
 
   
 
@@ -73,7 +55,7 @@ export default class StuffItem extends React.Component {
    const linkItems = allStages.map(s => {
       return (
         <option value={s.id} key={s.id}>
-          {this.stuffText(s.id)}
+          {stuffText(s.id)}
         </option>
       );
     });
@@ -114,7 +96,8 @@ export default class StuffItem extends React.Component {
       <div>
        {removeButton}
         <div style={style}>
-        <input value={text} onChange={e => {methods.updatePhrase(stuff.id, range === 'none' ? null : range, phrase ? phrase.id :  null, e.target.value)}} />
+        <input value={text} style={{width: '90%'}}
+         onChange={e => {methods.updatePhrase(stuff.id, range === 'none' ? null : range, phrase ? phrase.id :  null, e.target.value)}} />
         </div>
         {next}
         {changesItems}

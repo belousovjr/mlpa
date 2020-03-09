@@ -3,7 +3,24 @@ import StageItem from "../Stages/StageItem";
 import Stage from "../Stages/Stage";
 
 export default class Topic extends React.Component {
+  stuffText = (id) => {
+    if(id){
+           const {  methods } = this.props;
 
+        const nextStuff = methods.getStuffs(id).find(stuff => stuff.isA)
+    
+    if(nextStuff){
+        const nextPhrases = methods.getPhrases(nextStuff.id)
+        const nextPhrase = nextPhrases.find( p => !p.rangeName)
+        
+        if(nextPhrase){
+         return `(${id}) ${nextPhrase.text.slice(0, 7)}...`}
+        else return `(${id}) NOT PHRASE...`
+        }
+        else return 'NOT FOUND'
+    }
+    return null
+  }
   render() {
     const { topic, stat, methods, currentStage, click, changeStage, allStages } = this.props;
 
@@ -16,6 +33,7 @@ export default class Topic extends React.Component {
 
       return (
         <StageItem
+          stuffText={this.stuffText}
           key={stage.id}
           stage={stage}
           isSelect={isSelect}
@@ -41,6 +59,7 @@ export default class Topic extends React.Component {
           stat={stat}
           allStages={allStages}
            changeStage={changeStage}
+           stuffText={this.stuffText}
           
         /> : null
 

@@ -8,6 +8,7 @@ export default class Stage extends React.Component {
     super(props);
     this.state = { currentRange: "none" };
   }
+
   click = name => {
     this.setState({ currentRange: name });
   };
@@ -17,7 +18,7 @@ export default class Stage extends React.Component {
     return { answer, pAnswers };
   }
   render() {
-    const { stage, methods, stat, changeStage, allStages } = this.props;
+    const { stage, methods, stat, changeStage, allStages, stuffText } = this.props;
 
     const stuffs = methods.getStuffs(stage.id);
 
@@ -33,6 +34,8 @@ export default class Stage extends React.Component {
             stuff={stuff}
             goStage={changeStage}
             allStages={allStages}
+            stuffText={stuffText}
+
             
           /> : null
 
@@ -60,11 +63,11 @@ export default class Stage extends React.Component {
 
     return (
       <div>
-        <h2 align="center">Stage {stage.id} <button onClick={() => {methods.removeStage(stage.id)}}>X</button></h2>
+        <h2 align="center">{stuffText(stage.id)} <button onClick={() => {methods.removeStage(stage.id)}}>X</button></h2>
         {noRanges}
         {rangesItems}
         {stuffsItems}
-        <AddStuff allStages={allStages} methods={methods} stat={stat} stageId={stage.id} />
+        <AddStuff stuffText={stuffText} allStages={allStages} methods={methods} stat={stat} stageId={stage.id} />
       </div>
     );
   }

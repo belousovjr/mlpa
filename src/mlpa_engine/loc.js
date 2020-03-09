@@ -73,6 +73,7 @@ export default class Loc {
   cStuff(props, ...phrases) {
     const { id: nextStageId, changes, isA } = props ? props : {};
     const stuffId = this.getId("stuffs");
+
     this.addPhrases(stuffId, phrases);
     return new Stuff(nextStageId, !isA ? changes.filter(c => c.term) : [], isA, stuffId);
   }
@@ -92,7 +93,8 @@ export default class Loc {
   }
 
   cPhrase(text, rangeName) {
-    return new Phrase(rangeName, text, this.getId("phrases"));
+    const phraseId = this.getId("phrases")
+    return new Phrase(rangeName, text, phraseId);
   }
 
   cChange(paramName, term) {
@@ -156,15 +158,17 @@ export default class Loc {
   }
 
   idState = {};
-  getId(type) {
+  getId = (type) => {
     if (!this.idState[type]) this.idState[type] = 0;
     this.idState[type]++;
     return this.idState[type];
   }
 
-  ssign(data) {
+  ssign = (data) => {
     for (let key in data) {
-      if (Boolean(this[key])) this[key] = data[key];
+      
+      this[key] = data[key];
+      
     }
   }
 }

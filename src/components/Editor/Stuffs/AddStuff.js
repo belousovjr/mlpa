@@ -10,29 +10,11 @@ export default class AddStuff extends React.Component {
     }
   }
 
- stuffText(id){
-    if(id){
-           const {  methods } = this.props;
-          
-         
-        const nextStuff = methods.getStuffs(id).find(stuff => stuff.isA)
-    
-    if(nextStuff){
-        const nextPhrases = methods.getPhrases(nextStuff.id)
-        const nextPhrase = nextPhrases.find( p => !p.rangeName)
-        if(nextPhrase){
-         return `(${id}) ${nextPhrase.text.slice(0, 7)}...`}
-        else return `(${id}) NOT PHRASE...`
-        }
-        else return 'NOT FOUND'
-    }
-    return null
-  }
 
   render() {
 
 
-    const {allStages, stat, methods, stageId} = this.props
+    const {allStages, stat, methods, stageId, stuffText} = this.props
 
 const {nextStageId, changes} = this.state
 
@@ -40,7 +22,7 @@ const {nextStageId, changes} = this.state
     const linkItems = allStages.map(s => {
       return (
         <option value={s.id} key={s.id}>
-          {this.stuffText(s.id)}
+          {stuffText(s.id)}
         </option>
       );
     });

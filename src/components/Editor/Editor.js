@@ -5,6 +5,7 @@ import locE from "./../../game/loc_example";
 import TopicItem from "./Topics/TopicItem";
 import Topic from "./Topics/Topic";
 import AddTopic from "./Topics/AddTopic"
+import exportFromJSON from 'export-from-json'
 
 export default class Editor extends React.Component {
   constructor() {
@@ -21,11 +22,20 @@ export default class Editor extends React.Component {
     return {topicId, stageId}
   }
 
+  exportFile(){
+    
+    const data = this.loc
+    const fileName = 'mlpa_state'
+    const exportType = 'json'
+ 
+    exportFromJSON({ data, fileName, exportType })
+  }
+
   getLoc() {
     const loc = new Loc();
     const data = JSON.parse(this.myStorage.getItem("locData"));
     loc.ssign(data);
-    return locE//data ? loc : locE;
+    return data ? loc : locE;
   }
 
   saveLoc() {
@@ -39,7 +49,7 @@ export default class Editor extends React.Component {
   };
 
   addStage = topicId => {
-    this.loc.addStages(topicId, this.loc.cStage(  locE.cStuff(
+    this.loc.addStages(topicId, this.loc.cStage(  this.loc.cStuff(
       { isA: true }
     )
     ));
@@ -75,8 +85,8 @@ export default class Editor extends React.Component {
   addStuff = (stageId, isA,  nextStageId, changes = []) => {
      
 
-const newStaff =  locE.cStuff(
-        { isA, id: nextStageId, changes: changes.map(c => locE.cChange(c.paramName, c.term)) }, 
+const newStaff =  this.loc.cStuff(
+        { isA, id: nextStageId, changes: changes.map(c => this.loc.cChange(c.paramName, c.term)) }, 
       )
 
 
@@ -209,6 +219,7 @@ const newStaff =  locE.cStuff(
     return (
       <div>
         <button onClick={() => this.saveLoc()}>save</button>
+        <button onClick={() => this.exportFile()}>export state</button>
         <br />
         <AddTopic methods={methods} stat={stat} />{topicItems}
       {topicView}

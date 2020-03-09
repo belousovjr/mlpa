@@ -2,7 +2,7 @@ import React from "react";
 
 export default class StageItem extends React.Component {
   render() {
-    const { stage, click, isSelect } = this.props;
+    const { stage, click, isSelect, stuffText } = this.props;
 
     const style = {
       backgroundColor: isSelect ? "blue" : "gray",
@@ -19,7 +19,7 @@ export default class StageItem extends React.Component {
         }}
         style={style}
       >
-        Stage {stage.id}{" "}
+        {stuffText(stage.id)}
       </div>
     );
   }
