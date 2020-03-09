@@ -18,7 +18,7 @@ locE.addGrads(
   locE.cGrad(GRAD_IMPOTENCE, RANGE_HYSTERICS, RANGE_TRANQUILITY)
 );
 
-locE.cTopic(
+/*locE.cTopic(
   "терки за семью",
   GRAD_CONSTRUCTIVE,
   locE.cStage(
@@ -104,6 +104,6 @@ locE.cTopic(
       locE.cPhrase("Ну, тест ДНК я не делал...")
     )
   )
-);
+);*/
 
 export default locE;

@@ -4,23 +4,26 @@ export default class StuffItem extends React.Component {
   stuffText(id){
     if(id){
            const {  methods } = this.props;
+          
          
-        //const nextStage = allStages.find(s => s.id === stuff.next_stage_id)
         const nextStuff = methods.getStuffs(id).find(stuff => stuff.isA)
     
     if(nextStuff){
-        const nextPhrase = methods.getPhrases(nextStuff.id).find( p => !p.rangeName).text
-        return `${nextPhrase.slice(0, 5)}...`
+        const nextPhrases = methods.getPhrases(nextStuff.id)
+        const nextPhrase = nextPhrases.find( p => !p.rangeName)
+        console.log(nextPhrases)
+        if(nextPhrase){
+         return `(${id}) ${nextPhrase.text.slice(0, 7)}...`}
+        else return `(${id}) NOT PHRASE...`
         }
         else return 'NOT FOUND'
     }
     return null
   }
   render() {
-    const { stuff, methods, range, stat, goStage } = this.props;
+    const { stuff, methods, range, stat, goStage, allStages } = this.props;
 
-    const linkText = this.stuffText(stuff.next_stage_id)
-    
+  
 
     const phrase = methods.getPhrases(stuff.id).find(p => {
       return p.rangeName === range || (range === "none" && !p.rangeName);
@@ -42,7 +45,11 @@ export default class StuffItem extends React.Component {
               }}
               key={p.name}
             >
-              {p.name}: {term}
+              {p.name}:<input type="number" style={{width: '40px'}} value={term} onChange={
+                e => {
+                  methods.updateStuff(stuff.id, false, stuff.next_stage_id, {paramName: p.name, term: Number(e.target.value)})
+                }
+              } />
             </span>
           );
         })
@@ -60,26 +67,55 @@ export default class StuffItem extends React.Component {
       width: "50%"
     };
 
-    const text = phrase ? phrase.text : "___";
+    const text = phrase ? phrase.text : "";
+
+
+   const linkItems = allStages.map(s => {
+      return (
+        <option value={s.id} key={s.id}>
+          {this.stuffText(s.id)}
+        </option>
+      );
+    });
+
+    if(!allStages.find(s => s.id === stuff.next_stage_id)){linkItems.unshift(<option value={'error'} key="0">
+              {stuff.next_stage_id} NOT FOUND
+            </option>)}
+
+  
+
 
     const next = !stuff.isA ? (
       <div style={{ display: "inline-block", marginRight: "0.5rem" }}>
-        ====> <div style={{ display: "inline-block", backgroundColor: 'red', cursor: 'pointer', color: 'white'}} 
+         <div style={{ display: "inline-block", backgroundColor: 'red', cursor: 'pointer', color: 'white'}} 
         onClick={() => 
           {
             goStage(stuff.next_stage_id);
           }
         }
-        >({stuff.next_stage_id}) {linkText}
+        >===>
         </div>
+          <select
+            value={stuff.next_stage_id}
+            onChange={e => {
+              methods.updateStuff(stuff.id, false, Number(e.target.value))
+            }}
+          >
+            {linkItems}
+          </select>
       </div>
     ) : null;
 
 
+    const removeButton = !stuff.isA ? <button onClick={() => methods.removeStuff(stuff.id)}>X</button> : null
+
 
     return (
       <div>
-        <div style={style}>"{text}"</div>
+       {removeButton}
+        <div style={style}>
+        <input value={text} onChange={e => {methods.updatePhrase(stuff.id, range === 'none' ? null : range, phrase ? phrase.id :  null, e.target.value)}} />
+        </div>
         {next}
         {changesItems}
       </div>

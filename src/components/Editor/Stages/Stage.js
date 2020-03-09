@@ -1,6 +1,7 @@
 import React from "react";
 import StuffItem from "../Stuffs/StuffItem";
 import RangeItem from "../Ranges/RangeItem";
+import AddStuff from "../Stuffs/AddStuff";
 
 export default class Stage extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class Stage extends React.Component {
             stuff={stuff}
             goStage={changeStage}
             allStages={allStages}
+            
           /> : null
 
           return res}
@@ -62,6 +64,7 @@ export default class Stage extends React.Component {
         {noRanges}
         {rangesItems}
         {stuffsItems}
+        <AddStuff allStages={allStages} methods={methods} stat={stat} stageId={stage.id} />
       </div>
     );
   }

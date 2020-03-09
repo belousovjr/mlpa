@@ -25,7 +25,7 @@ export default class Editor extends React.Component {
     const loc = new Loc();
     const data = JSON.parse(this.myStorage.getItem("locData"));
     loc.ssign(data);
-    return data ? loc : locE;
+    return locE//data ? loc : locE;
   }
 
   saveLoc() {
@@ -39,8 +39,10 @@ export default class Editor extends React.Component {
   };
 
   addStage = topicId => {
-    console.log(topicId)
-    this.loc.addStages(topicId, this.loc.cStage());
+    this.loc.addStages(topicId, this.loc.cStage(  locE.cStuff(
+      { isA: true }
+    )
+    ));
     this.forceUpdate();
   };
   updateTopic = (topicId, name, gradName) => {
@@ -49,7 +51,58 @@ export default class Editor extends React.Component {
     topic.graduation = gradName
     this.forceUpdate();
   };
+  addPhrase = (stuffId, range, text) => {
+    this.loc.addPhrases(stuffId,
+      [this.loc.cPhrase(text, range)]
+      )
+ this.forceUpdate();
+  }
+ 
+    updatePhrase = (stuffId, range, id, newText) => {
 
+    const phrase = this.loc.phrases.find(p => p.id === id)
+    if(phrase){
+        phrase.text = newText
+        if(!newText)this.removePhrase(id)
+    }
+    else {
+      this.addPhrase(stuffId, range, newText )
+    }
+    this.forceUpdate();
+  
+  };
+
+  addStuff = (stageId, isA,  nextStageId, changes = []) => {
+     
+
+const newStaff =  locE.cStuff(
+        { isA, id: nextStageId, changes: changes.map(c => locE.cChange(c.paramName, c.term)) }, 
+      )
+
+
+    this.loc.addStuffs(stageId,
+     newStaff
+      )
+  
+     this.forceUpdate();
+  }
+  updateStuff = (id, isA,  nextStageId, ...changes) => {
+    const stuff = this.loc.stuffs.find(s => s.id === id)
+    stuff.next_stage_id = nextStageId
+    changes.forEach(change => {
+      const changeIndex = stuff.changes.findIndex(c => c.paramName === change.paramName)
+      const thisStuff = stuff.changes[changeIndex]
+         if(!thisStuff){
+            stuff.changes.push(this.loc.cChange(change.paramName, change.term))
+        }
+        else {
+          if(change.term)thisStuff.term = change.term
+            else stuff.changes.splice(changeIndex, 1)
+         } 
+        }
+      )
+    this.forceUpdate();
+  };
 
   removeTopic = (id) => {
     const index = this.loc.topics.findIndex(t => t.id === id)
@@ -79,7 +132,7 @@ export default class Editor extends React.Component {
     phrases.forEach(p => {this.removePhrase(p.id)})
     this.forceUpdate();
   }
-  removePhrase = (id) => {
+  removePhrase = id => {
     const index = this.loc.phrases.findIndex(p => p.id === id)
     this.loc.phrases.splice(index, 1)
     this.forceUpdate();
@@ -92,10 +145,12 @@ export default class Editor extends React.Component {
     this.forceUpdate();
   };
   changeStage = id => {
+    
      const stage = this.loc.stages.find(s => s.id === id)
      if(stage){
      this.setState({ currentTopic: stage.topic_id, currentStage: id });
      }
+
       this.forceUpdate();
   }
 
@@ -115,14 +170,15 @@ export default class Editor extends React.Component {
       updateTopic: this.updateTopic,
       removeTopic: this.removeTopic,
       removeStage: this.removeStage,
+      updateStuff: this.updateStuff,
       removeStuff: this.removeStuff,
-      removePhrase: this.removePhrase,
       getStages: this.loc._getStages,
       getStuffs: this.loc._getStuffs,
       getPhrases: this.loc._getPhrases,
-
-      /*  addStuffs: this.loc.addStuffs,
-            addPhrases: this.loc.addPhrases,*/
+      addStuff: this.addStuff,
+      updatePhrase: this.updatePhrase,
+      addPhrase: this.addPhrase,
+      removePhrase: this.removePhrase
     };
 
     const topicItems = topics.map(topic => {
@@ -152,7 +208,6 @@ export default class Editor extends React.Component {
     console.log(this.loc);
     return (
       <div>
-      {currentStage}
         <button onClick={() => this.saveLoc()}>save</button>
         <br />
         <AddTopic methods={methods} stat={stat} />{topicItems}

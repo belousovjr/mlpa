@@ -74,7 +74,7 @@ export default class Loc {
     const { id: nextStageId, changes, isA } = props ? props : {};
     const stuffId = this.getId("stuffs");
     this.addPhrases(stuffId, phrases);
-    return new Stuff(nextStageId, changes, isA, stuffId);
+    return new Stuff(nextStageId, !isA ? changes.filter(c => c.term) : [], isA, stuffId);
   }
 
   addStuffs(stageId, ...stuffs) {
