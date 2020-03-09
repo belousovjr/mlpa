@@ -1,2 +1,2 @@
-export const PARAM_DETERMINATION = "решимость";
-export const PARAM_EQUILIBRIUM = "уравновешенность";
+export const PARAM_DETERMINATION = "РЕШИМОСТЬ";
+export const PARAM_EQUILIBRIUM = "УРАВНОВЕШЕННОСТЬ";

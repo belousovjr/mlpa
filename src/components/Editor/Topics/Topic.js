@@ -3,6 +3,10 @@ import StageItem from "../Stages/StageItem";
 import Stage from "../Stages/Stage";
 
 export default class Topic extends React.Component {
+  constructor(){
+    super()
+    this.state = {newStageStart: false}
+  }
   stuffText = (id) => {
     if(id){
            const {  methods } = this.props;
@@ -66,20 +70,26 @@ export default class Topic extends React.Component {
     return (
       <div>
         <h1 align="center">
-          Topic <input value={topic.name} onChange={(e)=>{methods.updateTopic(topic.id, e.target.value, topic.graduation)}} />, grad:
+          Topic <input value={topic.name} onChange={(e)=>{methods.updateTopic(topic.id, e.target.value, topic.graduation, topic.isFin, topic.isStart)}} />, grad:
           <select
             value={graduation}
             onChange={e => {
-              methods.updateTopic(topic.id, topic.name, e.target.value);
+              methods.updateTopic(topic.id, topic.name, e.target.value, topic.isFin, topic.isStart);
             }}
           >
             {optItems}
           </select>
+
+          Start:<input type="checkbox" checked={topic.isStart} onChange={e => {methods.updateTopic(topic.id, topic.name, topic.graduation, topic.isFin, e.target.checked)}}  />
+          Final:<input type="checkbox" checked={topic.isFin} onChange={e => {methods.updateTopic(topic.id, topic.name, topic.graduation, e.target.checked, topic.isStart)}}/>
+
            <button onClick={() => {methods.removeTopic(topic.id)}} style={{marginLeft: '1rem'}}>X</button>
         </h1>
 
         <br />
-        <div><button onClick={() => {methods.addStage(topic.id)}} >+</button></div>
+        <div>
+        <input type="checkbox" checked={this.state.newStageStart} onChange={e => {this.setState({newStageStart: e.target.checked})}} />
+        <button onClick={() => {methods.addStage(topic.id, this.state.newStageStart)}} >+</button></div>
         {stagesItems}
         <br />
         {stageView}

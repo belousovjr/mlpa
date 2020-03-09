@@ -38,9 +38,9 @@ export default class Loc {
     this.grads = this.grads.concat(grads);
   }
 
-  cTopic(name, gradName, ...stages) {
+  cTopic(name, gradName, isFin, isStart, ...stages) {
     const topicId = this.getId("topics");
-    this.addTopics(new Topic(name, gradName, topicId));
+    this.addTopics(new Topic(name, gradName, isFin, isStart, topicId));
     this.addStages(topicId, ...stages);
   }
 
@@ -48,10 +48,10 @@ export default class Loc {
     this.topics = this.topics.concat(topics);
   }
 
-  cStage(...answers) {
+  cStage(isStart, ...answers) {
     const stageId = this.getId("stages");
     this.addStuffs(stageId, ...answers);
-    return new Stage(stageId);
+    return new Stage(isStart, stageId);
   }
 
   addStages = (topicId, ...stages) => {

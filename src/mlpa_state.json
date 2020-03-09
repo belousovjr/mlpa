@@ -2,63 +2,183 @@
     "params": [
         {
             "lim": 10,
-            "name": "решимость",
+            "name": "РЕШИМОСТЬ",
             "value": 2
         },
         {
             "lim": 10,
-            "name": "уравновешенность",
+            "name": "УРАВНОВЕШЕННОСТЬ",
             "value": 4
         }
     ],
     "ranges": [
         {
-            "name": "истерика",
-            "paramName": "уравновешенность",
-            "min": 0,
-            "max": 3
+            "name": "ПАНИКА",
+            "paramName": "УРАВНОВЕШЕННОСТЬ",
+            "min": 1,
+            "max": 5
         },
         {
-            "name": "спокойствие",
-            "paramName": "решимость",
-            "min": 0,
-            "max": 3
+            "name": "НАПРЯЖЕННОСТЬ",
+            "paramName": "УРАВНОВЕШЕННОСТЬ",
+            "min": 6,
+            "max": 10
+        },
+        {
+            "name": "СТАБИЛЬНОСТЬ",
+            "paramName": "УРАВНОВЕШЕННОСТЬ",
+            "min": 11,
+            "max": 15
+        },
+        {
+            "name": "АПАТИЯ",
+            "paramName": "РЕШИМОСТЬ",
+            "min": 1,
+            "max": 5
+        },
+        {
+            "name": "НЕУВЕРЕННОСТЬ",
+            "paramName": "РЕШИМОСТЬ",
+            "min": 6,
+            "max": 10
+        },
+        {
+            "name": "УВЕРЕННОСТЬ",
+            "paramName": "РЕШИМОСТЬ",
+            "min": 11,
+            "max": 15
         }
     ],
     "grads": [
         {
-            "name": "констркутивность",
+            "name": "ПАН АПАТ",
             "rangesNames": [
-                "истерика",
-                "спокойствие"
+                "ПАНИКА",
+                "АПАТИЯ"
             ]
         },
         {
-            "name": "бессилие",
+            "name": "ПАН НЕУВ",
             "rangesNames": [
-                "истерика",
-                "спокойствие"
+                "ПАНИКА",
+                "НЕУВЕРЕННОСТЬ"
+            ]
+        },
+        {
+            "name": "ПАН УВ",
+            "rangesNames": [
+                "ПАНИКА",
+                "УВЕРЕННОСТЬ"
+            ]
+        },
+        {
+            "name": "НАПР АПАТ",
+            "rangesNames": [
+                "НАПРЯЖЕННОСТЬ",
+                "АПАТИЯ"
+            ]
+        },
+        {
+            "name": "НАПР НЕУВ",
+            "rangesNames": [
+                "НАПРЯЖЕННОСТЬ",
+                "НЕУВЕРЕННОСТЬ"
+            ]
+        },
+        {
+            "name": "НАПР УВ",
+            "rangesNames": [
+                "НАПРЯЖЕННОСТЬ",
+                "УВЕРЕННОСТЬ"
+            ]
+        },
+        {
+            "name": "СТАБ АПАТ",
+            "rangesNames": [
+                "СТАБИЛЬНОСТЬ",
+                "АПАТИЯ"
+            ]
+        },
+        {
+            "name": "СТАБ НЕУВ",
+            "rangesNames": [
+                "СТАБИЛЬНОСТЬ",
+                "НЕУВЕРЕННОСТЬ"
+            ]
+        },
+        {
+            "name": "СТАБ УВ",
+            "rangesNames": [
+                "СТАБИЛЬНОСТЬ",
+                "УВЕРЕННОСТЬ"
             ]
         }
     ],
     "topics": [
         {
-            "name": "Кто твой наниматель",
-            "graduation": "констркутивность",
+            "name": "Приветствие",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": true,
+            "id": 1
+        },
+        {
+            "name": "Беседа о семье",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 2
+        },
+        {
+            "name": "Драка",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 3
+        },
+        {
+            "name": "Смерть чувака",
+            "graduation": "ПАН АПАТ",
+            "isFin": true,
+            "isStart": false,
             "id": 4
         },
         {
-            "name": "терки за Анвара",
-            "graduation": "констркутивность",
+            "name": "Смерть твоя",
+            "graduation": "ПАН АПАТ",
+            "isFin": true,
+            "isStart": false,
             "id": 5
         },
         {
-            "name": "разговор за брата",
-            "graduation": "констркутивность",
+            "name": "Вручение",
+            "graduation": "ПАН АПАТ",
+            "isFin": true,
+            "isStart": false,
             "id": 6
         }
     ],
     "stuffs": [
+        {
+            "stage_id": 1,
+            "changes": [],
+            "isA": true,
+            "id": 1
+        },
+        {
+            "stage_id": 1,
+            "next_stage_id": 2,
+            "changes": [],
+            "isA": false,
+            "id": 2
+        },
+        {
+            "stage_id": 1,
+            "next_stage_id": 3,
+            "changes": [],
+            "isA": false,
+            "id": 3
+        },
         {
             "stage_id": 2,
             "changes": [],
@@ -67,7 +187,7 @@
         },
         {
             "stage_id": 2,
-            "next_stage_id": 7,
+            "next_stage_id": 4,
             "changes": [],
             "isA": false,
             "id": 5
@@ -94,7 +214,7 @@
         },
         {
             "stage_id": 3,
-            "next_stage_id": 6,
+            "next_stage_id": 5,
             "changes": [],
             "isA": false,
             "id": 9
@@ -107,14 +227,14 @@
         },
         {
             "stage_id": 4,
-            "next_stage_id": 8,
+            "next_stage_id": 5,
             "changes": [],
             "isA": false,
             "id": 11
         },
         {
             "stage_id": 4,
-            "next_stage_id": 5,
+            "next_stage_id": 6,
             "changes": [],
             "isA": false,
             "id": 12
@@ -126,502 +246,856 @@
             "id": 13
         },
         {
+            "stage_id": 5,
+            "next_stage_id": 13,
+            "changes": [],
+            "isA": false,
+            "id": 14
+        },
+        {
+            "stage_id": 5,
+            "next_stage_id": 6,
+            "changes": [],
+            "isA": false,
+            "id": 15
+        },
+        {
             "stage_id": 6,
             "changes": [],
             "isA": true,
-            "id": 14
+            "id": 16
         },
         {
             "stage_id": 6,
             "next_stage_id": 7,
             "changes": [],
             "isA": false,
-            "id": 15
+            "id": 17
         },
         {
             "stage_id": 6,
-            "next_stage_id": 4,
+            "next_stage_id": 8,
             "changes": [],
             "isA": false,
-            "id": 16
+            "id": 18
         },
         {
             "stage_id": 7,
             "changes": [],
             "isA": true,
-            "id": 17
-        },
-        {
-            "stage_id": 8,
-            "changes": [],
-            "isA": true,
-            "id": 18
-        },
-        {
-            "stage_id": 9,
-            "changes": [],
-            "isA": true,
             "id": 19
         },
         {
-            "stage_id": 9,
-            "next_stage_id": 10,
+            "stage_id": 7,
+            "next_stage_id": 9,
             "changes": [],
             "isA": false,
             "id": 20
         },
         {
-            "stage_id": 9,
-            "next_stage_id": 12,
+            "stage_id": 7,
+            "next_stage_id": 10,
             "changes": [],
             "isA": false,
             "id": 21
         },
         {
-            "stage_id": 10,
+            "stage_id": 8,
             "changes": [],
             "isA": true,
             "id": 22
         },
         {
-            "stage_id": 10,
-            "next_stage_id": 12,
+            "stage_id": 8,
+            "next_stage_id": 10,
             "changes": [],
             "isA": false,
             "id": 23
         },
         {
-            "stage_id": 10,
+            "stage_id": 8,
             "next_stage_id": 11,
             "changes": [],
             "isA": false,
             "id": 24
         },
         {
-            "stage_id": 11,
+            "stage_id": 9,
             "changes": [],
             "isA": true,
             "id": 25
         },
         {
-            "stage_id": 12,
+            "stage_id": 9,
+            "next_stage_id": 24,
             "changes": [],
-            "isA": true,
+            "isA": false,
             "id": 26
         },
         {
-            "stage_id": 13,
-            "changes": [],
-            "isA": true,
-            "id": 27
-        },
-        {
-            "stage_id": 13,
+            "stage_id": 9,
             "next_stage_id": 12,
             "changes": [],
             "isA": false,
+            "id": 27
+        },
+        {
+            "stage_id": 10,
+            "changes": [],
+            "isA": true,
             "id": 28
         },
         {
-            "stage_id": 13,
-            "next_stage_id": 14,
+            "stage_id": 10,
+            "next_stage_id": 24,
             "changes": [],
             "isA": false,
             "id": 29
         },
         {
-            "stage_id": 13,
-            "next_stage_id": 11,
+            "stage_id": 10,
+            "next_stage_id": 13,
             "changes": [],
             "isA": false,
             "id": 30
         },
         {
-            "stage_id": 14,
+            "stage_id": 11,
             "changes": [],
             "isA": true,
             "id": 31
         },
         {
-            "stage_id": 14,
-            "next_stage_id": 14,
+            "stage_id": 11,
+            "next_stage_id": 13,
             "changes": [],
             "isA": false,
             "id": 32
         },
         {
-            "stage_id": 14,
-            "next_stage_id": 15,
+            "stage_id": 11,
+            "next_stage_id": 24,
             "changes": [],
             "isA": false,
             "id": 33
         },
         {
-            "stage_id": 15,
+            "stage_id": 12,
             "changes": [],
             "isA": true,
             "id": 34
         },
         {
-            "stage_id": 15,
-            "next_stage_id": 14,
+            "stage_id": 12,
+            "next_stage_id": 13,
             "changes": [],
             "isA": false,
             "id": 35
         },
         {
-            "stage_id": 15,
-            "next_stage_id": 16,
+            "stage_id": 12,
+            "next_stage_id": 24,
             "changes": [],
             "isA": false,
             "id": 36
         },
         {
-            "stage_id": 16,
+            "stage_id": 13,
             "changes": [],
             "isA": true,
             "id": 37
         },
         {
-            "stage_id": 16,
+            "stage_id": 13,
+            "next_stage_id": 14,
+            "changes": [],
+            "isA": false,
+            "id": 38
+        },
+        {
+            "stage_id": 13,
             "next_stage_id": 15,
             "changes": [],
             "isA": false,
             "id": 39
         },
         {
-            "stage_id": 16,
-            "next_stage_id": 14,
+            "stage_id": 14,
             "changes": [],
-            "isA": false,
+            "isA": true,
             "id": 40
         },
         {
-            "stage_id": 8,
-            "next_stage_id": 9,
+            "stage_id": 14,
+            "next_stage_id": 20,
             "changes": [],
             "isA": false,
             "id": 41
         },
         {
-            "stage_id": 8,
-            "next_stage_id": 13,
+            "stage_id": 14,
+            "next_stage_id": 15,
             "changes": [],
             "isA": false,
             "id": 42
+        },
+        {
+            "stage_id": 15,
+            "changes": [],
+            "isA": true,
+            "id": 43
+        },
+        {
+            "stage_id": 15,
+            "next_stage_id": 17,
+            "changes": [],
+            "isA": false,
+            "id": 44
+        },
+        {
+            "stage_id": 15,
+            "next_stage_id": 20,
+            "changes": [],
+            "isA": false,
+            "id": 45
+        },
+        {
+            "stage_id": 17,
+            "changes": [],
+            "isA": true,
+            "id": 47
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 20,
+            "changes": [],
+            "isA": false,
+            "id": 48
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 23,
+            "changes": [],
+            "isA": false,
+            "id": 49
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 18,
+            "changes": [],
+            "isA": false,
+            "id": 50
+        },
+        {
+            "stage_id": 18,
+            "changes": [],
+            "isA": true,
+            "id": 51
+        },
+        {
+            "stage_id": 18,
+            "next_stage_id": 24,
+            "changes": [],
+            "isA": false,
+            "id": 52
+        },
+        {
+            "stage_id": 18,
+            "next_stage_id": 19,
+            "changes": [],
+            "isA": false,
+            "id": 53
+        },
+        {
+            "stage_id": 19,
+            "changes": [],
+            "isA": true,
+            "id": 55
+        },
+        {
+            "stage_id": 19,
+            "next_stage_id": 23,
+            "changes": [],
+            "isA": false,
+            "id": 56
+        },
+        {
+            "stage_id": 19,
+            "next_stage_id": 23,
+            "changes": [],
+            "isA": false,
+            "id": 57
+        },
+        {
+            "stage_id": 20,
+            "changes": [],
+            "isA": true,
+            "id": 58
+        },
+        {
+            "stage_id": 20,
+            "next_stage_id": 21,
+            "changes": [],
+            "isA": false,
+            "id": 59
+        },
+        {
+            "stage_id": 20,
+            "next_stage_id": 22,
+            "changes": [],
+            "isA": false,
+            "id": 60
+        },
+        {
+            "stage_id": 21,
+            "changes": [],
+            "isA": true,
+            "id": 61
+        },
+        {
+            "stage_id": 22,
+            "changes": [],
+            "isA": true,
+            "id": 63
+        },
+        {
+            "stage_id": 23,
+            "changes": [],
+            "isA": true,
+            "id": 64
+        },
+        {
+            "stage_id": 23,
+            "next_stage_id": 1,
+            "changes": [],
+            "isA": false,
+            "id": 65
+        },
+        {
+            "stage_id": 24,
+            "changes": [],
+            "isA": true,
+            "id": 66
         }
     ],
     "stages": [
         {
             "isBeen": false,
-            "topic_id": 4,
-            "id": 2
+            "topic_id": 1,
+            "id": 1,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 2,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 3,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 4,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 5,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 6,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 7,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 8,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 9,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 10,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 11,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 12,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 13,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 14,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 15,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 17,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 18,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 19,
+            "isStart": false
         },
         {
             "isBeen": false,
             "topic_id": 4,
-            "id": 3
+            "id": 20,
+            "isStart": true
         },
         {
             "isBeen": false,
             "topic_id": 4,
-            "id": 4
+            "id": 21,
+            "isStart": false
         },
         {
             "isBeen": false,
             "topic_id": 4,
-            "id": 5
-        },
-        {
-            "isBeen": false,
-            "topic_id": 4,
-            "id": 6
-        },
-        {
-            "isBeen": false,
-            "topic_id": 4,
-            "id": 7
-        },
-        {
-            "isBeen": false,
-            "topic_id": 4,
-            "id": 8
+            "id": 22,
+            "isStart": false
         },
         {
             "isBeen": false,
             "topic_id": 5,
-            "id": 9
-        },
-        {
-            "isBeen": false,
-            "topic_id": 5,
-            "id": 10
-        },
-        {
-            "isBeen": false,
-            "topic_id": 5,
-            "id": 11
-        },
-        {
-            "isBeen": false,
-            "topic_id": 5,
-            "id": 12
+            "id": 23,
+            "isStart": true
         },
         {
             "isBeen": false,
             "topic_id": 6,
-            "id": 13
-        },
-        {
-            "isBeen": false,
-            "topic_id": 6,
-            "id": 14
-        },
-        {
-            "isBeen": false,
-            "topic_id": 6,
-            "id": 15
-        },
-        {
-            "isBeen": false,
-            "topic_id": 6,
-            "id": 16
+            "id": 24,
+            "isStart": true
         }
     ],
     "phrases": [
         {
+            "stuff_id": 1,
+            "rangeName": null,
+            "text": "Здравствуйте!",
+            "id": 1
+        },
+        {
+            "stuff_id": 2,
+            "rangeName": null,
+            "text": "Привет! Хотите поговорить о боге и получить библию?",
+            "id": 2
+        },
+        {
+            "stuff_id": 3,
+            "rangeName": null,
+            "text": "Здарова упырь. С Богом отношения имеешь?",
+            "id": 3
+        },
+        {
             "stuff_id": 4,
             "rangeName": null,
-            "text": "Оххх.. Что тебе нужно?",
+            "text": "Привет. Да не особо...",
             "id": 4
         },
         {
             "stuff_id": 5,
             "rangeName": null,
-            "text": "Скажите пожалуйста кто ваш наниматель",
+            "text": "Вы аутист? Кхм... Атеист?",
             "id": 5
         },
         {
             "stuff_id": 6,
             "rangeName": null,
-            "text": "Говори со мной или прижгу утюгом!",
+            "text": "Слышишь, ты меня не раздражай",
             "id": 6
         },
         {
             "stuff_id": 7,
             "rangeName": null,
-            "text": "Ничего не скажу! Делай что хочешь!",
-            "id": 8
+            "text": "Не обращайся со мной так мармон штопаный!",
+            "id": 7
         },
         {
             "stuff_id": 8,
             "rangeName": null,
-            "text": "*Прижечь утюгом*",
-            "id": 9
+            "text": "Ладно, простите. Вы что атеист?",
+            "id": 8
         },
         {
             "stuff_id": 9,
             "rangeName": null,
-            "text": "*Плюнуть в лицо*",
-            "id": 10
+            "text": "Да я тебе въебу сейчас!",
+            "id": 9
         },
         {
             "stuff_id": 10,
             "rangeName": null,
-            "text": "*пшшш* А-а-а-а!",
-            "id": 11
+            "text": "Да, я атеист, и вся моя семья тоже!",
+            "id": 10
         },
         {
             "stuff_id": 11,
             "rangeName": null,
-            "text": "Назови имя нанимателя!",
-            "id": 12
+            "text": "А, ну тогда ты заслуживаешь быть забитым досмерти!",
+            "id": 11
         },
         {
             "stuff_id": 12,
             "rangeName": null,
-            "text": "*Прижечь еще раз*",
-            "id": 13
+            "text": "Семья? Расскажете о ней?",
+            "id": 12
         },
         {
             "stuff_id": 13,
             "rangeName": null,
-            "text": "А!!! *умер*",
-            "id": 14
+            "text": "Что я вам сделал то?",
+            "id": 13
         },
         {
             "stuff_id": 14,
             "rangeName": null,
-            "text": "Мерзкий слизень еще и плюется!",
-            "id": 15
+            "text": "*Въебать*",
+            "id": 14
         },
         {
             "stuff_id": 15,
             "rangeName": null,
-            "text": "Ладно, прости. Ответь плиз.",
-            "id": 16
+            "text": "А ну ка расскажи о родне своей!",
+            "id": 15
         },
         {
             "stuff_id": 16,
             "rangeName": null,
-            "text": "*Прижечь утюгом*",
-            "id": 17
+            "text": "Я обычный атеист и у меня обычная семья, а что?",
+            "id": 16
         },
         {
             "stuff_id": 17,
             "rangeName": null,
-            "text": "А, да без проблем. Его зовут Анвар.",
-            "id": 18
+            "text": "У вас большая семья?",
+            "id": 17
         },
         {
             "stuff_id": 18,
             "rangeName": null,
-            "text": "Ладно, ладно! Анвар его зовут!",
-            "id": 19
+            "text": "Вы любите своих детей?",
+            "id": 18
         },
         {
             "stuff_id": 19,
             "rangeName": null,
-            "text": "Да обычное же имя! Чего пристал?",
-            "id": 20
+            "text": "Обычная, два брата и родители.",
+            "id": 19
         },
         {
             "stuff_id": 20,
             "rangeName": null,
-            "text": "А по моему хач какой-то",
-            "id": 21
+            "text": "Как это мило! Они все не верят в бога?",
+            "id": 20
         },
         {
             "stuff_id": 21,
             "rangeName": null,
-            "text": "Ладно, ты прав. Го дружить?",
-            "id": 22
+            "text": "А детей у тебя нет? Ты их ебешь чтоли?",
+            "id": 21
         },
         {
             "stuff_id": 22,
             "rangeName": null,
-            "text": "Сам ты хач! Расист чертов!",
-            "id": 25
+            "text": "У меня нет детей...",
+            "id": 22
         },
         {
             "stuff_id": 23,
             "rangeName": null,
-            "text": "Ладно прости. Больше не буду. Го дружить?",
-            "id": 26
+            "text": "Ха, ты предпочитаешь их трахать?",
+            "id": 23
         },
         {
             "stuff_id": 24,
             "rangeName": null,
-            "text": "*Ударить по носу*",
-            "id": 27
+            "text": "Как же так вышло?",
+            "id": 25
         },
         {
             "stuff_id": 25,
             "rangeName": null,
-            "text": "*бам* Ауууф! *умер*",
-            "id": 28
+            "text": "Да, все не верят.",
+            "id": 26
         },
         {
             "stuff_id": 26,
             "rangeName": null,
-            "text": "Да конечно! Теперь мы друзья!",
-            "id": 29
+            "text": "Может попробуете хотя бы почитать библию?",
+            "id": 27
         },
         {
             "stuff_id": 27,
             "rangeName": null,
-            "text": "Брат? И что с того?",
-            "id": 31
+            "text": "А ну тогда все все уебки.",
+            "id": 28
         },
         {
             "stuff_id": 28,
             "rangeName": null,
-            "text": "Да просто... Го дружить?",
-            "id": 32
+            "text": "Да не трахаю я детей!",
+            "id": 29
         },
         {
             "stuff_id": 29,
             "rangeName": null,
-            "text": "Да так. Давай в рекурсию играть?",
-            "id": 33
+            "text": "Ладно, простите. Библию возьмете?",
+            "id": 30
         },
         {
             "stuff_id": 30,
             "rangeName": null,
-            "text": "Тебе не интересно? *Ударить в нос*",
-            "id": 34
+            "text": "Щас увидим падла! *Въебать*",
+            "id": 31
         },
         {
             "stuff_id": 31,
             "rangeName": null,
-            "text": "В рекурсию? Конечно!",
-            "id": 36
+            "text": "Папа и мама физики паралитики, так что без бога обошлось.",
+            "id": 32
         },
         {
             "stuff_id": 32,
             "rangeName": null,
-            "text": "Повтори эту фразу. Мы же в рекурсию играем!",
-            "id": 37
+            "text": "Ах ты безбожная тварь! *Въебать*",
+            "id": 34
         },
         {
             "stuff_id": 33,
             "rangeName": null,
-            "text": "Спроси о цветах",
-            "id": 38
+            "text": "Может вы попробуете почитать и станете первым?",
+            "id": 35
         },
         {
             "stuff_id": 34,
             "rangeName": null,
-            "text": "О цветах?",
-            "id": 39
+            "text": "Не смей так говорить мы тебя найдем и закопаем!!!",
+            "id": 36
         },
         {
             "stuff_id": 35,
             "rangeName": null,
-            "text": "Ладно. Давай обратно в рекурсию",
-            "id": 40
+            "text": "Щас я тебя закопаю! *Въебать*",
+            "id": 37
         },
         {
             "stuff_id": 36,
             "rangeName": null,
-            "text": "Да, комнатных.",
-            "id": 41
+            "text": "Ладно, простите. Возьмите книжку в качестве извинения!",
+            "id": 38
         },
         {
             "stuff_id": 37,
             "rangeName": null,
-            "text": "Расскажи о цветах?...",
-            "id": 42
+            "text": "*бах* - А-а-ах ты суука!",
+            "id": 39
+        },
+        {
+            "stuff_id": 38,
+            "rangeName": null,
+            "text": "*Въебать еще раз*",
+            "id": 40
         },
         {
             "stuff_id": 39,
             "rangeName": null,
-            "text": "Спроси еще раз о цветах!",
-            "id": 43
+            "text": "Ну так что библию берешь?",
+            "id": 41
         },
         {
             "stuff_id": 40,
             "rangeName": null,
-            "text": "Забудь о цветах, го в рекурсию.",
-            "id": 44
+            "text": "Ах, да прекрати ты",
+            "id": 43
         },
         {
             "stuff_id": 41,
             "rangeName": null,
-            "text": "Странное имя...",
-            "id": 45
+            "text": "*Въебать еще разок*",
+            "id": 44
         },
         {
             "stuff_id": 42,
             "rangeName": null,
-            "text": "У меня брат с таким же именем!",
+            "text": "Бери библию или еще получишь!",
             "id": 46
+        },
+        {
+            "stuff_id": 43,
+            "rangeName": null,
+            "text": "Не возьму! Ты слишком грубый!",
+            "id": 47
+        },
+        {
+            "stuff_id": 44,
+            "rangeName": null,
+            "text": "Ох, простите пожалуйста. Давайте дружить.",
+            "id": 48
+        },
+        {
+            "stuff_id": 45,
+            "rangeName": null,
+            "text": "*Въебать еще разок*",
+            "id": 50
+        },
+        {
+            "stuff_id": 47,
+            "rangeName": null,
+            "text": "Прощу, если съешь свою библию!",
+            "id": 52
+        },
+        {
+            "stuff_id": 48,
+            "rangeName": null,
+            "text": "*Дать с ноги*",
+            "id": 53
+        },
+        {
+            "stuff_id": 49,
+            "rangeName": null,
+            "text": "*Съесть библию*",
+            "id": 54
+        },
+        {
+            "stuff_id": 50,
+            "rangeName": null,
+            "text": "Давайте решим это мирным путем!",
+            "id": 55
+        },
+        {
+            "stuff_id": 51,
+            "rangeName": null,
+            "text": "Мириться хочешь? Я сказал библию ешь!",
+            "id": 56
+        },
+        {
+            "stuff_id": 52,
+            "rangeName": null,
+            "text": "У меня десять детей если вы не возьмете библию они умрут от голода!",
+            "id": 58
+        },
+        {
+            "stuff_id": 53,
+            "rangeName": null,
+            "text": "Нахуй пошел евнух!",
+            "id": 59
+        },
+        {
+            "stuff_id": 55,
+            "rangeName": null,
+            "text": "*Подбегает и насильно заталкивает библию в рот*",
+            "id": 60
+        },
+        {
+            "stuff_id": 56,
+            "rangeName": null,
+            "text": "*Промычать что-то злое*",
+            "id": 61
+        },
+        {
+            "stuff_id": 57,
+            "rangeName": null,
+            "text": "*Промычать что-то доброе*",
+            "id": 62
+        },
+        {
+            "stuff_id": 58,
+            "rangeName": null,
+            "text": "Аххх *падает на пол*",
+            "id": 63
+        },
+        {
+            "stuff_id": 59,
+            "rangeName": null,
+            "text": "Дядь, ты как?",
+            "id": 66
+        },
+        {
+            "stuff_id": 60,
+            "rangeName": null,
+            "text": "Лежи и не дергайся аметист ебучий!",
+            "id": 67
+        },
+        {
+            "stuff_id": 61,
+            "rangeName": null,
+            "text": "Нормаально *умирает*  НОРМ КОНЦОВКА",
+            "id": 68
+        },
+        {
+            "stuff_id": 63,
+            "rangeName": null,
+            "text": "Я тебя захуярю верун... *умирает* НОРМ КОНЦОВКА",
+            "id": 69
+        },
+        {
+            "stuff_id": 64,
+            "rangeName": null,
+            "text": "Ну что, съел? *библию перекрывает путь к воздуху и ты умираешь* ГОВНО КОНЦОВКА",
+            "id": 70
+        },
+        {
+            "stuff_id": 66,
+            "rangeName": null,
+            "text": "Лааадно *берет библию* ЛУЧШАЯ КОНЦОВКА",
+            "id": 72
         }
     ],
     "idState": {
         "topics": 6,
-        "stuffs": 42,
-        "stages": 17,
-        "phrases": 46
+        "stuffs": 66,
+        "stages": 24,
+        "phrases": 72
     }
 }

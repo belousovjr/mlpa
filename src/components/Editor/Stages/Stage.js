@@ -63,7 +63,7 @@ export default class Stage extends React.Component {
 
     return (
       <div>
-        <h2 align="center">{stuffText(stage.id)} <button onClick={() => {methods.removeStage(stage.id)}}>X</button></h2>
+        <h2 align="center">{stuffText(stage.id)} <button onClick={() => {methods.removeStage(stage.id)}}>X</button> <input type="checkbox" checked={stage.isStart} onChange={e => {methods.updateStage(stage.id, e.target.checked)}} /></h2>
         {noRanges}
         {rangesItems}
         {stuffsItems}

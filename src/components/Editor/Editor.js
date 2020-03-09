@@ -43,22 +43,30 @@ export default class Editor extends React.Component {
     this.myStorage.setItem("locData", locData);
   }
 
-  addTopic = (name, gradName) => {
-    this.loc.cTopic(name, gradName);
+  addTopic = (name, gradName, isFin, isStart) => {
+    this.loc.cTopic(name, gradName, isFin, isStart);
     this.forceUpdate();
   };
 
-  addStage = topicId => {
-    this.loc.addStages(topicId, this.loc.cStage(  this.loc.cStuff(
+  addStage = (topicId, isStart) => {
+    this.loc.addStages(topicId, this.loc.cStage(isStart,  this.loc.cStuff(
       { isA: true }
     )
     ));
     this.forceUpdate();
   };
-  updateTopic = (topicId, name, gradName) => {
+  updateStage = (id, isStart) => {
+    console.log(id + ' ' + isStart)
+    const stage = this.loc.stages.find(s => s.id === id)
+    stage.isStart = isStart
+        this.forceUpdate();
+  }
+  updateTopic = (topicId, name, gradName, isFin, isStart) => {
     const topic = this.loc._getTopic(topicId)
     topic.name = name
     topic.graduation = gradName
+    topic.isFin = isFin
+    topic.isStart = isStart
     this.forceUpdate();
   };
   addPhrase = (stuffId, range, text) => {
@@ -177,6 +185,7 @@ const newStaff =  this.loc.cStuff(
     const methods = {
       addTopic: this.addTopic,
       addStage: this.addStage,
+      updateStage: this.updateStage,
       updateTopic: this.updateTopic,
       removeTopic: this.removeTopic,
       removeStage: this.removeStage,
