@@ -1,0 +1,7 @@
+.answer {
+  background-color: bisque;
+    max-width: 50rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem;
+}

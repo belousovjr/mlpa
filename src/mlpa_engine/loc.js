@@ -56,26 +56,29 @@ export default class Loc {
 
   addStages = (topicId, ...stages) => {
     if (this._getTopic(topicId)) {
-      const newStages = stages.map(
-        stage => {
-          const stuffs = this._getStuffs(stage.id)
-          stuffs.forEach(stuff => {
-            const {next_topic, isA } = stuff
-            if(!next_topic && !isA)stuff.next_topic = topicId
-          })
-          return { ...stage, topic_id: topicId }}
-
-        );
+      const newStages = stages.map(stage => {
+        const stuffs = this._getStuffs(stage.id);
+        stuffs.forEach(stuff => {
+          const { next_topic, isA } = stuff;
+          if (!next_topic && !isA) stuff.next_topic = topicId;
+        });
+        return { ...stage, topic_id: topicId };
+      });
       this.stages = this.stages.concat(newStages);
     } else console.error(`Topic ${topicId} not found!`);
-  }
+  };
 
   cStuff(props, ...phrases) {
     const { id: nextStageId, changes, isA } = props ? props : {};
     const stuffId = this.getId("stuffs");
 
     this.addPhrases(stuffId, phrases);
-    return new Stuff(nextStageId, !isA ? changes.filter(c => c.term) : [], isA, stuffId);
+    return new Stuff(
+      nextStageId,
+      !isA ? changes.filter(c => c.term) : [],
+      isA,
+      stuffId
+    );
   }
 
   addStuffs(stageId, ...stuffs) {
@@ -93,7 +96,7 @@ export default class Loc {
   }
 
   cPhrase(text, rangeName) {
-    const phraseId = this.getId("phrases")
+    const phraseId = this.getId("phrases");
     return new Phrase(rangeName, text, phraseId);
   }
 
@@ -147,7 +150,8 @@ export default class Loc {
     return param.value >= range.min && param.value <= range.max;
   }
 
-  checkGrad(gradName) {   //ИЗМЕНИТЬ
+  checkGrad(gradName) {
+    //ИЗМЕНИТЬ
     const grad = this._getGrad(gradName);
 
     for (let i = 0; i < grad.rangesNames.length; i++) {
@@ -158,17 +162,64 @@ export default class Loc {
   }
 
   idState = {};
-  getId = (type) => {
+  getId = type => {
     if (!this.idState[type]) this.idState[type] = 0;
     this.idState[type]++;
     return this.idState[type];
-  }
+  };
 
-  ssign = (data) => {
-    for (let key in data) {
-      
-      this[key] = data[key];
-      
+  getStartId = () => {
+    const startTopic = this.topics.find(topic => topic.isStart);
+    const stages = this._getStages(startTopic.id);
+    const startStage = stages.find(stage => stage.isStart);
+    return startStage ? startStage.id : null;
+  };
+
+  calcStuff = stuffId => {
+    //ДОБАВИТЬ СОБСТВЕННО РАССЧЕТ
+    const stuff = this.stuffs.find(s => s.id === stuffId);
+    return stuff.next_stage_id;
+  };
+
+  getInterfaceStage = id => {
+    //ДОБАВИТЬ ЗАВИСИМОСТЬ ОТ ДОСТУПНЫХ ТЕМ
+    const stuffs = this._getStuffs(id);
+
+    class Interf {
+      constructor(phrase, id) {
+        this.phrase = phrase;
+        this.id = id;
+      }
     }
-  }
+
+    const getCorrectPhrase = stuff => {
+      const phrases = this._getPhrases(stuff.id);
+      const neutralPhrase = phrases.find(phrase => !phrase.rangeName);
+      for (let i in phrases) {
+        const phrase = phrases[i];
+        if (phrase.rangeName && this.checkRange(phrase.rangeName))
+          return phrase.text;
+      }
+      return neutralPhrase.text;
+    };
+
+    const interf = { replic: null, answers: [] };
+
+    const charStuff = stuffs.find(stuff => stuff.isA);
+
+    interf.replic = charStuff ? new Interf(getCorrectPhrase(charStuff)) : null;
+    interf.answers = stuffs
+      .filter(stuff => !stuff.isA)
+      .map(stuff => {
+        return new Interf(getCorrectPhrase(stuff), stuff.id);
+      });
+
+    return interf;
+  };
+
+  ssign = data => {
+    for (let key in data) {
+      this[key] = data[key];
+    }
+  };
 }
