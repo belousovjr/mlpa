@@ -96,7 +96,7 @@ export default class StuffItem extends React.Component {
       <div>
        {removeButton}
         <div style={style}>
-        <input value={text} style={{width: '90%'}}
+        ({stuff.id}) <input value={text} style={{width: '90%'}}
          onChange={e => {methods.updatePhrase(stuff.id, range === 'none' ? null : range, phrase ? phrase.id :  null, e.target.value)}} />
         </div>
         {next}

@@ -6,6 +6,8 @@ import TopicItem from "./Topics/TopicItem";
 import Topic from "./Topics/Topic";
 import AddTopic from "./Topics/AddTopic"
 import exportFromJSON from 'export-from-json'
+import mlpaState from "../../mlpa_state";
+
 
 export default class Editor extends React.Component {
   constructor() {
@@ -14,6 +16,12 @@ export default class Editor extends React.Component {
     this.loc = this.getLoc();
     const {topicId, stageId} = this.getTopStag()
     this.state = { currentTopic: topicId, currentStage: stageId };
+  }
+
+  import(){
+    this.loc = new Loc();
+    this.loc.ssign(mlpaState);
+    this.forceUpdate();
   }
 
   getTopStag(){
@@ -35,7 +43,7 @@ export default class Editor extends React.Component {
     const loc = new Loc();
     const data = JSON.parse(this.myStorage.getItem("locData"));
     loc.ssign(data);
-    return data ? loc : locE;
+    return locE//data ? loc : locE;
   }
 
   saveLoc() {
@@ -81,7 +89,6 @@ export default class Editor extends React.Component {
     const phrase = this.loc.phrases.find(p => p.id === id)
     if(phrase){
         phrase.text = newText
-        if(!newText)this.removePhrase(id)
     }
     else {
       this.addPhrase(stuffId, range, newText )
@@ -94,7 +101,8 @@ export default class Editor extends React.Component {
      
 
 const newStaff =  this.loc.cStuff(
-        { isA, id: nextStageId, changes: changes.map(c => this.loc.cChange(c.paramName, c.term)) }, 
+        { isA, id: nextStageId, changes: changes.map(c => this.loc.cChange(c.paramName, c.term)) },
+        this.loc.cPhrase("space") 
       )
 
 
@@ -229,6 +237,7 @@ const newStaff =  this.loc.cStuff(
       <div>
         <button onClick={() => this.saveLoc()}>save</button>
         <button onClick={() => this.exportFile()}>export state</button>
+        <button onClick={() => this.import()} >import</button>
         <br />
         <AddTopic methods={methods} stat={stat} />{topicItems}
       {topicView}

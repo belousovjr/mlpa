@@ -3,5 +3,4 @@ export default class Parameter {
     this.name = name;
     this.value = value;
   }
-  lim = 10;
 }

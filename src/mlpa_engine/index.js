@@ -7,6 +7,7 @@ import Stuff from "./stuff";
 import Topic from "./topic";
 import Loc from "./loc";
 import Change from "./change";
+import Interf from "./interf"
 
 export {
   Graduation,
@@ -17,5 +18,6 @@ export {
   Stuff,
   Topic,
   Loc,
-  Change
+  Change,
+  Interf
 };
