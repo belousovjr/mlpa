@@ -4,6 +4,7 @@ import "./style.css";
 export default class AnswerI extends React.Component {
   render() {
     const { answer, updateStage } = this.props;
+
     return (
       <div
         className="answer"
@@ -11,7 +12,7 @@ export default class AnswerI extends React.Component {
           updateStage();
         }}
       >
-        {answer.phrase}
+        {answer.generalPhrase}
       </div>
     );
   }

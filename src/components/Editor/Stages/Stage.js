@@ -51,7 +51,19 @@ export default class Stage extends React.Component {
       return res;
     });
 
+    if ("GENERAL" === this.state.currentRange) {
+      stuffsItems.shift();
+    }
+
     const { ranges } = stat;
+
+    const generStuff = (
+      <RangeItem
+        isSelect={"GENERAL" === this.state.currentRange}
+        range={{ name: "GENERAL" }}
+        click={this.click}
+      />
+    );
 
     const noRanges = (
       <RangeItem
@@ -89,6 +101,7 @@ export default class Stage extends React.Component {
             }}
           />
         </h2>
+        {generStuff}
         {noRanges}
         {rangesItems}
         {stuffsItems}

@@ -114,18 +114,11 @@
     ],
     "topics": [
         {
-            "name": "Первая",
+            "name": "Вступление",
             "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": true,
             "id": 1
-        },
-        {
-            "name": "ПАН УВ епта",
-            "graduation": "НАПР АПАТ",
-            "isFin": false,
-            "isStart": false,
-            "id": 2
         }
     ],
     "stuffs": [
@@ -147,53 +140,149 @@
             "next_stage_id": 3,
             "changes": [],
             "isA": false,
-            "id": 3
-        },
-        {
-            "stage_id": 2,
-            "changes": [],
-            "isA": true,
             "id": 4
-        },
-        {
-            "stage_id": 3,
-            "changes": [],
-            "isA": true,
-            "id": 5
-        },
-        {
-            "stage_id": 4,
-            "changes": [],
-            "isA": true,
-            "id": 6
         },
         {
             "stage_id": 1,
             "next_stage_id": 4,
             "changes": [],
             "isA": false,
+            "id": 5
+        },
+        {
+            "stage_id": 2,
+            "changes": [],
+            "isA": true,
+            "id": 6
+        },
+        {
+            "stage_id": 2,
+            "next_stage_id": 5,
+            "changes": [],
+            "isA": false,
             "id": 7
         },
         {
             "stage_id": 2,
-            "next_stage_id": 1,
+            "next_stage_id": 6,
             "changes": [],
             "isA": false,
             "id": 8
         },
         {
-            "stage_id": 3,
-            "next_stage_id": 1,
+            "stage_id": 2,
+            "next_stage_id": 7,
             "changes": [],
             "isA": false,
             "id": 9
         },
         {
-            "stage_id": 4,
-            "next_stage_id": 1,
+            "stage_id": 3,
+            "changes": [],
+            "isA": true,
+            "id": 10
+        },
+        {
+            "stage_id": 3,
+            "next_stage_id": 8,
             "changes": [],
             "isA": false,
-            "id": 10
+            "id": 11
+        },
+        {
+            "stage_id": 3,
+            "next_stage_id": 9,
+            "changes": [],
+            "isA": false,
+            "id": 12
+        },
+        {
+            "stage_id": 3,
+            "next_stage_id": 10,
+            "changes": [],
+            "isA": false,
+            "id": 13
+        },
+        {
+            "stage_id": 4,
+            "changes": [],
+            "isA": true,
+            "id": 14
+        },
+        {
+            "stage_id": 4,
+            "next_stage_id": 11,
+            "changes": [],
+            "isA": false,
+            "id": 15
+        },
+        {
+            "stage_id": 4,
+            "next_stage_id": 12,
+            "changes": [],
+            "isA": false,
+            "id": 16
+        },
+        {
+            "stage_id": 4,
+            "next_stage_id": 13,
+            "changes": [],
+            "isA": false,
+            "id": 17
+        },
+        {
+            "stage_id": 5,
+            "changes": [],
+            "isA": true,
+            "id": 18
+        },
+        {
+            "stage_id": 6,
+            "changes": [],
+            "isA": true,
+            "id": 19
+        },
+        {
+            "stage_id": 7,
+            "changes": [],
+            "isA": true,
+            "id": 20
+        },
+        {
+            "stage_id": 8,
+            "changes": [],
+            "isA": true,
+            "id": 21
+        },
+        {
+            "stage_id": 9,
+            "changes": [],
+            "isA": true,
+            "id": 22
+        },
+        {
+            "stage_id": 10,
+            "changes": [],
+            "isA": true,
+            "id": 23
+        },
+        {
+            "stage_id": 11,
+            "changes": [],
+            "isA": true,
+            "id": 24
+        },
+        {
+            "stage_id": 12,
+            "changes": [],
+            "isA": true,
+            "id": 25
+        },
+        {
+            "stage_id": 13,
+            "changes": [],
+            "isA": true,
+            "id": 26
         }
     ],
     "stages": [
@@ -217,72 +306,294 @@
         },
         {
             "isBeen": false,
-            "topic_id": 2,
+            "topic_id": 1,
             "id": 4,
-            "isStart": true
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 5,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 6,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 7,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 8,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 9,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 10,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 11,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 12,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 1,
+            "id": 13,
+            "isStart": false
         }
     ],
     "phrases": [
         {
             "stuff_id": 1,
-            "rangeName": null,
-            "text": "Здарова сучки",
+            "text": "...",
+            "isGeneral": false,
             "id": 1
         },
         {
             "stuff_id": 2,
-            "text": "Здарова сучки",
+            "text": "Добрый вечер.",
+            "isGeneral": false,
             "id": 2
         },
         {
-            "stuff_id": 3,
-            "text": "Здарова сучки два",
+            "stuff_id": 2,
+            "text": "Вечер",
+            "isGeneral": true,
             "id": 3
         },
         {
             "stuff_id": 4,
-            "rangeName": null,
-            "text": "Как дела",
-            "id": 4
-        },
-        {
-            "stuff_id": 5,
-            "rangeName": null,
-            "text": "В смысле два ты чо охуел",
-            "id": 5
-        },
-        {
-            "stuff_id": 6,
-            "rangeName": null,
-            "text": "что ж, у нас тут ПАН НАВ",
+            "text": "Здравствуй. Выглядишь не очень...",
+            "isGeneral": false,
             "id": 6
         },
         {
-            "stuff_id": 7,
-            "text": "попробовать в другую",
+            "stuff_id": 4,
+            "text": "Плохо выглядишь",
+            "isGeneral": true,
             "id": 7
         },
         {
-            "stuff_id": 8,
-            "text": "назад",
+            "stuff_id": 5,
+            "text": "Привет.",
+            "isGeneral": false,
             "id": 8
         },
         {
-            "stuff_id": 9,
-            "text": "назад",
+            "stuff_id": 5,
+            "text": "Приветствие",
+            "isGeneral": true,
             "id": 9
         },
         {
-            "stuff_id": 10,
-            "text": "Назад",
+            "stuff_id": 6,
+            "text": "Привет... Почему ты так смотришь?",
+            "isGeneral": false,
             "id": 10
+        },
+        {
+            "stuff_id": 7,
+            "text": "У тебя кажется руки трясутся.",
+            "isGeneral": false,
+            "id": 11
+        },
+        {
+            "stuff_id": 7,
+            "text": "Руки",
+            "isGeneral": true,
+            "id": 12
+        },
+        {
+            "stuff_id": 8,
+            "text": "У тебя пот на лбу.",
+            "isGeneral": false,
+            "id": 13
+        },
+        {
+            "stuff_id": 8,
+            "text": "Пот",
+            "isGeneral": true,
+            "id": 14
+        },
+        {
+            "stuff_id": 9,
+            "text": "Ты дышишь очень часто.",
+            "isGeneral": false,
+            "id": 15
+        },
+        {
+            "stuff_id": 9,
+            "text": "Дыхание",
+            "isGeneral": true,
+            "id": 16
+        },
+        {
+            "stuff_id": 10,
+            "text": "Не очень... В смысле?",
+            "isGeneral": false,
+            "id": 17
+        },
+        {
+            "stuff_id": 11,
+            "text": "Ты кажешься растерянной.",
+            "isGeneral": false,
+            "id": 18
+        },
+        {
+            "stuff_id": 11,
+            "text": "Растеряна",
+            "isGeneral": true,
+            "id": 19
+        },
+        {
+            "stuff_id": 12,
+            "text": "Ты кажешься очень печальной.",
+            "isGeneral": false,
+            "id": 20
+        },
+        {
+            "stuff_id": 12,
+            "text": "Печальна",
+            "isGeneral": true,
+            "id": 21
+        },
+        {
+            "stuff_id": 13,
+            "text": "Ты выглядишь разбитой.",
+            "isGeneral": false,
+            "id": 22
+        },
+        {
+            "stuff_id": 13,
+            "text": "Разбита",
+            "isGeneral": true,
+            "id": 23
+        },
+        {
+            "stuff_id": 14,
+            "text": "Привет...",
+            "isGeneral": false,
+            "id": 24
+        },
+        {
+            "stuff_id": 15,
+            "text": "Ты в порядке?",
+            "isGeneral": false,
+            "id": 25
+        },
+        {
+            "stuff_id": 15,
+            "text": "В порядке",
+            "isGeneral": true,
+            "id": 26
+        },
+        {
+            "stuff_id": 16,
+            "text": "Тебе плохо?",
+            "isGeneral": false,
+            "id": 27
+        },
+        {
+            "stuff_id": 16,
+            "text": "Плохо",
+            "isGeneral": true,
+            "id": 28
+        },
+        {
+            "stuff_id": 17,
+            "text": "Тебе страшно?",
+            "isGeneral": false,
+            "id": 29
+        },
+        {
+            "stuff_id": 17,
+            "text": "Страшно",
+            "isGeneral": true,
+            "id": 30
+        },
+        {
+            "stuff_id": 18,
+            "text": "Да, они сами...",
+            "isGeneral": false,
+            "id": 31
+        },
+        {
+            "stuff_id": 19,
+            "text": "Пот? Я не знаю... Мне холодно.",
+            "isGeneral": false,
+            "id": 32
+        },
+        {
+            "stuff_id": 20,
+            "text": "Я не знаю, я не чувствую как дышу...",
+            "isGeneral": false,
+            "id": 33
+        },
+        {
+            "stuff_id": 21,
+            "text": "Да, я растерялась.",
+            "isGeneral": false,
+            "id": 34
+        },
+        {
+            "stuff_id": 22,
+            "text": "Печальной? Я не знаю...",
+            "isGeneral": false,
+            "id": 35
+        },
+        {
+            "stuff_id": 23,
+            "text": "Я ничего не чувствую.",
+            "isGeneral": false,
+            "id": 36
+        },
+        {
+            "stuff_id": 24,
+            "text": "Кажется нет...",
+            "isGeneral": false,
+            "id": 37
+        },
+        {
+            "stuff_id": 25,
+            "text": "Не знаю, правда...",
+            "isGeneral": false,
+            "id": 38
+        },
+        {
+            "stuff_id": 26,
+            "text": "Наверно, я ничего не понимаю...",
+            "isGeneral": false,
+            "id": 39
         }
     ],
     "lim": 15,
     "idState": {
-        "topics": 2,
-        "stuffs": 10,
-        "stages": 4,
-        "phrases": 10
+        "topics": 1,
+        "phrases": 39,
+        "stuffs": 26,
+        "stages": 13
     }
 }

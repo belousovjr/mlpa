@@ -13,21 +13,23 @@ export default class UI extends React.Component {
     this.defaultParams();
     const currentStage = this.loc.getStartId();
     this.state = {
-      currentStage
+      currentStage,
+      prevAnswer: "..."
     };
   }
 
   defaultParams() {
-    this.loc.params.forEach(p => (p.value = 5));
+    this.loc.params.forEach(p => (p.value = 7));
   }
 
   updateStage(stuffId) {
     const newStageId = this.loc.calcStuff(stuffId);
-    this.setState({ currentStage: newStageId });
+    const newPrevAnswer = this.loc.getCorrectPhrase(stuffId);
+    this.setState({ currentStage: newStageId, prevAnswer: newPrevAnswer });
   }
 
   render() {
-    const { currentStage } = this.state;
+    const { currentStage, prevAnswer } = this.state;
     const currentInterface = this.loc.getInterfaceStage(currentStage);
 
     const { answers, replic } = currentInterface;
@@ -55,6 +57,7 @@ export default class UI extends React.Component {
           grads={this.loc.grads}
           checkGrad={this.loc.checkGrad}
         />
+        <ReplicI replic={{ phrase: prevAnswer }} isPlayerReplic={true} />
         <ReplicI replic={replic} />
         {answersItems}
       </div>

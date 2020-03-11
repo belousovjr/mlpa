@@ -93,9 +93,9 @@ export default class Loc {
     this.phrases = this.phrases.concat(newPhrases);
   }
 
-  cPhrase(text, rangeName) {
+  cPhrase(text, isGeneral = false, rangeName) {
     const phraseId = this.getId("phrases");
-    return new Phrase(rangeName, text, phraseId);
+    return new Phrase(rangeName, text, isGeneral, phraseId);
   }
 
   cChange(paramName, term) {
@@ -184,7 +184,15 @@ export default class Loc {
     return stuff.next_stage_id;
   };
 
-  getCorrectPhrase = stuff => {
+  getGeneralPhrase = stuffId => {
+    const stuff = this.stuffs.find(s => s.id === stuffId);
+    const phrases = this._getPhrases(stuff.id);
+    const generalPhrase = phrases.find(phrase => phrase.isGeneral);
+    return generalPhrase?.text;
+  };
+
+  getCorrectPhrase = stuffId => {
+    const stuff = this.stuffs.find(s => s.id === stuffId);
     const phrases = this._getPhrases(stuff.id);
     const neutralPhrase = phrases.find(phrase => !phrase.rangeName);
     for (let i in phrases) {
@@ -207,7 +215,7 @@ export default class Loc {
   getInterfaceStage = id => {
     //ДОБАВИТЬ ПОДКЛЮЧЕНИЕ ФИНАЛОЧЕК КОГДА НАДО
 
-    const necessity = 2;
+    /* const necessity = 2;*/
 
     const stage = this.stages.find(s => s.id === id);
     stage.isBeen = true;
@@ -215,29 +223,38 @@ export default class Loc {
     const stuffs = this._getStuffs(id);
 
     const replicStuff = stuffs.find(stuff => stuff.isA);
-    const replic = new Interf(this.getCorrectPhrase(replicStuff));
+    const replic = new Interf(null, this.getCorrectPhrase(replicStuff.id));
 
+    //ОГРАНИЧЕНИЯ ПО *БЫЛ ТУТ*
     const answersAll = stuffs.filter(stuff => {
-      if (!stuff.isA) {
+      /*if (!stuff.isA) {
         const stage = this.stages.find(s => s.id === stuff.next_stage_id);
         return !stage.isBeen;
-      } else return false;
+      } else return false;*/
+      return !stuff.isA;
     });
 
-    const gradAnswers = answersAll.filter(stuff => this.checkAnswToGrad(stuff));
+    //ПОДХОДЯЩИЕ И НЕ ПОДХОДЯЩИЕ ПО ГРАДАЦИИ
+    /* const gradAnswers = answersAll.filter(stuff => this.checkAnswToGrad(stuff));
     const notGradAnswers = answersAll.filter(
       stuff => !this.checkAnswToGrad(stuff)
-    );
+    );*/
 
-    const gradDiff = necessity - gradAnswers.length;
+    //РАЗНИЦА
+    /*const gradDiff = necessity - gradAnswers.length;*/
 
-    const resAnswers = gradAnswers.concat(
+    //РЕЗУЛЬТАТ
+    const resAnswers = answersAll; /*gradAnswers.concat(
       notGradAnswers.slice(0, gradDiff > necessity ? 0 : gradDiff)
-    );
+    );*/
 
     const interf = {
       answers: resAnswers.map(stuff => {
-        return new Interf(this.getCorrectPhrase(stuff), stuff.id);
+        return new Interf(
+          this.getGeneralPhrase(stuff.id),
+          this.getCorrectPhrase(stuff.id),
+          stuff.id
+        );
       }),
       replic
     };

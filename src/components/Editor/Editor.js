@@ -80,8 +80,8 @@ export default class Editor extends React.Component {
     topic.isStart = isStart;
     this.forceUpdate();
   };
-  addPhrase = (stuffId, range, text) => {
-    this.loc.addPhrases(stuffId, [this.loc.cPhrase(text, range)]);
+  addPhrase = (stuffId, range, text, isGeneral) => {
+    this.loc.addPhrases(stuffId, [this.loc.cPhrase(text, isGeneral, range)]);
     this.forceUpdate();
   };
 
@@ -89,6 +89,8 @@ export default class Editor extends React.Component {
     const phrase = this.loc.phrases.find(p => p.id === id);
     if (phrase) {
       phrase.text = newText;
+      if (!newText && !phrase.isGeneral && phrase.rangeName)
+        this.removePhrase(phrase.id);
     } else {
       this.addPhrase(stuffId, range, newText);
     }
@@ -102,14 +104,15 @@ export default class Editor extends React.Component {
         id: nextStageId,
         changes: changes.map(c => this.loc.cChange(c.paramName, c.term))
       },
-      this.loc.cPhrase("space")
+      this.loc.cPhrase("space"),
+      this.loc.cPhrase("generalSpace", true)
     );
 
     this.loc.addStuffs(stageId, newStaff);
 
     this.forceUpdate();
   };
-  updateStuff = (id, isA, nextStageId, ...changes) => {
+  updateStuff = (id, nextStageId, ...changes) => {
     const stuff = this.loc.stuffs.find(s => s.id === id);
     stuff.next_stage_id = nextStageId;
     changes.forEach(change => {
@@ -240,6 +243,7 @@ export default class Editor extends React.Component {
     return (
       <div>
         <button onClick={() => this.import()}>import</button>
+        <button onClick={() => this.exportFile()}>export</button>
         <br />
         <AddTopic methods={methods} stat={stat} />
         {topicItems}

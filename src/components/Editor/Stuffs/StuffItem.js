@@ -26,7 +26,11 @@ export default class StuffItem extends React.Component {
     } = this.props;
 
     const phrase = methods.getPhrases(stuff.id).find(p => {
-      return p.rangeName === range || (range === "none" && !p.rangeName);
+      return (
+        p.rangeName === range ||
+        (range === "none" && !p.rangeName) ||
+        (range === "GENERAL" && p.isGeneral)
+      );
     });
 
     const { changes } = stuff;
@@ -52,7 +56,7 @@ export default class StuffItem extends React.Component {
                 style={{ width: "40px" }}
                 value={term}
                 onChange={e => {
-                  methods.updateStuff(stuff.id, false, stuff.next_stage_id, {
+                  methods.updateStuff(stuff.id, stuff.next_stage_id, {
                     paramName: p.name,
                     term: Number(e.target.value)
                   });
@@ -129,7 +133,7 @@ export default class StuffItem extends React.Component {
               topicStages.length &&
               !topicStages.find(s => s.id === stuff.next_stage_id)
             )
-              methods.updateStuff(stuff.id, false, topicStages[0].id);
+              methods.updateStuff(stuff.id, topicStages[0].id);
           }}
         >
           {linkThemesItems}
@@ -138,7 +142,7 @@ export default class StuffItem extends React.Component {
         <select
           value={stuff.next_stage_id}
           onChange={e => {
-            methods.updateStuff(stuff.id, false, Number(e.target.value));
+            methods.updateStuff(stuff.id, Number(e.target.value));
           }}
         >
           {linkItems}
