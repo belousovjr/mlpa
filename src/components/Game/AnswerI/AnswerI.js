@@ -1,12 +1,12 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 
 export default class AnswerI extends React.Component {
   render() {
     const { answer, updateStage } = this.props;
     return (
       <div
-          className="answer"
+        className="answer"
         onClick={() => {
           updateStage();
         }}

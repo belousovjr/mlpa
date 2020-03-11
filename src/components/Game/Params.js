@@ -1,40 +1,66 @@
 import React from "react";
 
 export default class Params extends React.Component {
- /* constructor() {
+  /* constructor() {
     super();
 
   }*/
 
-  correctGrads(){
-    const {grads, checkGrad} = this.props
-    const corrGrads = grads.filter(g => checkGrad(g.name))
-    
-    return corrGrads
+  correctGrads() {
+    const { grads, checkGrad } = this.props;
+    const corrGrads = grads.filter(g => checkGrad(g.name));
+
+    return corrGrads;
   }
   render() {
-  	const {params, lim, edit} = this.props
+    const { params, lim, edit } = this.props;
 
-    const correctGrads = this.correctGrads()
-    const correctGradsItems = correctGrads.map(g => <div key={g.name}>{g.name}</div>)
+    const correctGrads = this.correctGrads();
+    const correctGradsItems = correctGrads.map(g => (
+      <div key={g.name}>{g.name}</div>
+    ));
 
-  	const paramItems = params.map(param => <div key={param.name}>
-  		<div>
-      <button onClick={() => {edit(param.name,- 1)}}>-</button>
-      <div 
-  		style={{display:'inline-block', height: '15px', width: `${param.value*10}px`, backgroundColor: 'red'}}
-  		></div>
-  		<div 
-  		style={{display:'inline-block', height: '15px', width: `${(lim - param.value)*10}px`, backgroundColor: 'gray'}}
-  		></div>
+    const paramItems = params.map(param => (
+      <div key={param.name}>
+        <div>
+          <button
+            onClick={() => {
+              edit(param.name, -1);
+            }}
+          >
+            -
+          </button>
+          <div
+            style={{
+              display: "inline-block",
+              height: "15px",
+              width: `${param.value * 10}px`,
+              backgroundColor: "red"
+            }}
+          ></div>
+          <div
+            style={{
+              display: "inline-block",
+              height: "15px",
+              width: `${(lim - param.value) * 10}px`,
+              backgroundColor: "gray"
+            }}
+          ></div>
 
-      <button onClick={() => {edit(param.name, 1)}}>+</button>{param.name}
+          <button
+            onClick={() => {
+              edit(param.name, 1);
+            }}
+          >
+            +
+          </button>
+          {param.name}
+        </div>
       </div>
-  		</div>)
+    ));
 
     return (
       <div>
-
         {paramItems}
         {correctGradsItems}
       </div>

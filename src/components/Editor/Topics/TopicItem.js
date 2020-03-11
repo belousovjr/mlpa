@@ -10,7 +10,7 @@ export default class TopicItem extends React.Component {
       margin: "0.2rem",
       padding: "0.5rem",
       cursor: "pointer",
-        color: 'white'
+      color: "white"
     };
     return (
       <div

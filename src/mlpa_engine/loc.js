@@ -6,7 +6,7 @@ import Stuff from "./stuff";
 import Change from "./change";
 import Stage from "./stage";
 import Topic from "./topic";
-import Interf from "./interf"
+import Interf from "./interf";
 
 export default class Loc {
   params = [];
@@ -18,7 +18,7 @@ export default class Loc {
   stages = [];
   phrases = [];
 
-  lim = 15
+  lim = 15;
 
   cParam(name, value) {
     return new Parameter(name, value);
@@ -148,20 +148,20 @@ export default class Loc {
     return param.value >= range.min && param.value <= range.max;
   }
 
-  checkGrad = (gradName) => {
+  checkGrad = gradName => {
     const grad = this._getGrad(gradName);
-    const ranges = grad.rangesNames.map(rName => this._getRange(rName))
-    const params = []
+    const ranges = grad.rangesNames.map(rName => this._getRange(rName));
+    const params = [];
     ranges.forEach(range => {
-      if(!params[range.paramName]){
-        params[range.paramName] = this.checkRange(range.name)
+      if (!params[range.paramName]) {
+        params[range.paramName] = this.checkRange(range.name);
       }
-    })
-    for(let key in params){
-      if(!params[key])return false
+    });
+    for (let key in params) {
+      if (!params[key]) return false;
     }
-  return true
-  }
+    return true;
+  };
 
   idState = {};
   getId = type => {
@@ -180,65 +180,67 @@ export default class Loc {
   calcStuff = stuffId => {
     const stuff = this.stuffs.find(s => s.id === stuffId);
 
-    this._editParams(stuff.changes)
+    this._editParams(stuff.changes);
     return stuff.next_stage_id;
   };
 
+  getCorrectPhrase = stuff => {
+    const phrases = this._getPhrases(stuff.id);
+    const neutralPhrase = phrases.find(phrase => !phrase.rangeName);
+    for (let i in phrases) {
+      const phrase = phrases[i];
+      if (phrase.rangeName && this.checkRange(phrase.rangeName))
+        return phrase.text;
+    }
 
- getCorrectPhrase = stuff => {
-      const phrases = this._getPhrases(stuff.id);
-      const neutralPhrase = phrases.find(phrase => !phrase.rangeName);
-      for (let i in phrases) {
-        const phrase = phrases[i];
-        if (phrase.rangeName && this.checkRange(phrase.rangeName))
-          return phrase.text;
-      }
-
-      return neutralPhrase.text;
-    };
+    return neutralPhrase.text;
+  };
 
   checkAnswToGrad = stuff => {
-      const nextStage = this.stages.find(stage => stage.id === stuff.next_stage_id)
-      const topic = this._getTopic(nextStage.topic_id)
-      return this.checkGrad(topic.graduation)
-    }
+    const nextStage = this.stages.find(
+      stage => stage.id === stuff.next_stage_id
+    );
+    const topic = this._getTopic(nextStage.topic_id);
+    return this.checkGrad(topic.graduation);
+  };
 
   getInterfaceStage = id => {
     //ДОБАВИТЬ ПОДКЛЮЧЕНИЕ ФИНАЛОЧЕК КОГДА НАДО
 
-    const necessity = 2
+    const necessity = 2;
 
-    const stage = this.stages.find(s => s.id === id)
-    stage.isBeen = true
+    const stage = this.stages.find(s => s.id === id);
+    stage.isBeen = true;
 
-    const stuffs = this._getStuffs(id);    
+    const stuffs = this._getStuffs(id);
 
-    const charStuff = stuffs.find(stuff => stuff.isA);
+    const replicStuff = stuffs.find(stuff => stuff.isA);
+    const replic = new Interf(this.getCorrectPhrase(replicStuff));
 
-    const answersAll = stuffs.filter(stuff =>  {
-      if(!stuff.isA ){
-            const stage = this.stages.find(s => s.id === stuff.next_stage_id)
-            return !stage.isBeen
-          }
-      else return false
-    } )
+    const answersAll = stuffs.filter(stuff => {
+      if (!stuff.isA) {
+        const stage = this.stages.find(s => s.id === stuff.next_stage_id);
+        return !stage.isBeen;
+      } else return false;
+    });
 
-    const gradAnswers = answersAll.filter(stuff => this.checkAnswToGrad(stuff))
-    const notGradAnswers = answersAll.filter(stuff => !this.checkAnswToGrad(stuff))
+    const gradAnswers = answersAll.filter(stuff => this.checkAnswToGrad(stuff));
+    const notGradAnswers = answersAll.filter(
+      stuff => !this.checkAnswToGrad(stuff)
+    );
 
-    const gradDiff = necessity - gradAnswers.length
+    const gradDiff = necessity - gradAnswers.length;
 
-    const resAnswers = gradAnswers.concat(notGradAnswers.slice(0, gradDiff > necessity ? 0 : gradDiff))
-
-
-    const replic = new Interf(this.getCorrectPhrase(charStuff))
+    const resAnswers = gradAnswers.concat(
+      notGradAnswers.slice(0, gradDiff > necessity ? 0 : gradDiff)
+    );
 
     const interf = {
       answers: resAnswers.map(stuff => {
-             return new Interf(this.getCorrectPhrase(stuff), stuff.id);
-           }), 
+        return new Interf(this.getCorrectPhrase(stuff), stuff.id);
+      }),
       replic
-    }
+    };
 
     return interf;
   };

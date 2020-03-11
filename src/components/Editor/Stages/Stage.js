@@ -18,29 +18,38 @@ export default class Stage extends React.Component {
     return { answer, pAnswers };
   }
   render() {
-    const { stage, methods, stat, changeStage, allStages, stuffText } = this.props;
+    const {
+      stage,
+      methods,
+      stat,
+      changeStage,
+      allStages,
+      stuffText,
+      topic,
+      allTopics
+    } = this.props;
 
     const stuffs = methods.getStuffs(stage.id);
 
     const { answer, pAnswers } = this.splitStuffs(stuffs);
 
- 
     const stuffsItems = [answer, ...pAnswers].map(stuff => {
-      const res = stuff ? <StuffItem
-            stat={stat}
-            range={this.state.currentRange}
-            methods={methods}
-            key={stuff.id}
-            stuff={stuff}
-            goStage={changeStage}
-            allStages={allStages}
-            stuffText={stuffText}
+      const res = stuff ? (
+        <StuffItem
+          stat={stat}
+          range={this.state.currentRange}
+          methods={methods}
+          key={stuff.id}
+          stuff={stuff}
+          goStage={changeStage}
+          allStages={allStages}
+          allTopics={allTopics}
+          stuffText={stuffText}
+        />
+      ) : null;
 
-            
-          /> : null
-
-          return res}
-    );
+      return res;
+    });
 
     const { ranges } = stat;
 
@@ -63,11 +72,27 @@ export default class Stage extends React.Component {
 
     return (
       <div>
-        <h2 align="center">{stuffText(stage.id)} <button onClick={() => {methods.removeStage(stage.id)}}>X</button> <input type="checkbox" checked={stage.isStart} onChange={e => {methods.updateStage(stage.id, e.target.checked)}} /></h2>
+        <h2 align="center">
+          {stuffText(stage.id)}{" "}
+          <button
+            onClick={() => {
+              methods.removeStage(stage.id);
+            }}
+          >
+            X
+          </button>{" "}
+          <input
+            type="checkbox"
+            checked={stage.isStart}
+            onChange={e => {
+              methods.updateStage(stage.id, e.target.checked);
+            }}
+          />
+        </h2>
         {noRanges}
         {rangesItems}
         {stuffsItems}
-        <AddStuff stuffText={stuffText} allStages={allStages} methods={methods} stat={stat} stageId={stage.id} />
+        <AddStuff topic={topic} methods={methods} stageId={stage.id} />
       </div>
     );
   }

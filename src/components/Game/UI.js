@@ -3,22 +3,22 @@ import { Loc } from "../../mlpa_engine";
 import mlpaState from "../../mlpa_state";
 import ReplicI from "./ReplicI/ReplicI";
 import AnswerI from "./AnswerI/AnswerI";
-import Params from "./Params"
+import Params from "./Params";
 
 export default class UI extends React.Component {
   constructor() {
     super();
     this.loc = new Loc();
     this.loc.ssign(mlpaState);
-    this.defaultParams()
+    this.defaultParams();
     const currentStage = this.loc.getStartId();
     this.state = {
       currentStage
     };
   }
 
-  defaultParams(){
-		this.loc.params.forEach(p => p.value = 5)
+  defaultParams() {
+    this.loc.params.forEach(p => (p.value = 5));
   }
 
   updateStage(stuffId) {
@@ -45,13 +45,16 @@ export default class UI extends React.Component {
 
     return (
       <div>
-      <Params params={this.loc.params} lim={this.loc.lim} edit={(paramName, term) => {
-      	this.loc._editParams([this.loc.cChange(paramName, term)])
-      	this.forceUpdate();
-      }}
-      grads={this.loc.grads}
-      checkGrad={this.loc.checkGrad}
-       />
+        <Params
+          params={this.loc.params}
+          lim={this.loc.lim}
+          edit={(paramName, term) => {
+            this.loc._editParams([this.loc.cChange(paramName, term)]);
+            this.forceUpdate();
+          }}
+          grads={this.loc.grads}
+          checkGrad={this.loc.checkGrad}
+        />
         <ReplicI replic={replic} />
         {answersItems}
       </div>
