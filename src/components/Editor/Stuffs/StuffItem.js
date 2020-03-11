@@ -7,7 +7,7 @@ export default class StuffItem extends React.Component {
     const nextStage = props.allStages.find(
       s => s.id === props.stuff.next_stage_id
     );
-    const currentTopic = nextStage ? nextStage.topic_id : null;
+    const currentTopic = nextStage?.topic_id;
 
     this.state = {
       currentTopic
@@ -121,16 +121,15 @@ export default class StuffItem extends React.Component {
         <select
           value={this.state.currentTopic}
           onChange={e => {
-            this.setState({ currentTopic: Number(e.target.value) });
-            const topicStages = methods.getStages(currentTopic);
+            const newCurrTopic = Number(e.target.value);
+            this.setState({ currentTopic: newCurrTopic });
+            const topicStages = methods.getStages(newCurrTopic);
 
             if (
-              !stuff.isA &&
+              topicStages.length &&
               !topicStages.find(s => s.id === stuff.next_stage_id)
-            ) {
-              if (topicStages.length)
-                methods.updateStuff(stuff.id, false, topicStages[0].id);
-            }
+            )
+              methods.updateStuff(stuff.id, false, topicStages[0].id);
           }}
         >
           {linkThemesItems}
