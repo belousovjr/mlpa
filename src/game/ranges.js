@@ -5,3 +5,5 @@ export const RANGE_STABILITY = "СТАБИЛЬНОСТЬ";
 export const RANGE_APATHY = "АПАТИЯ";
 export const RANGE_UNCERTAINTY = "НЕУВЕРЕННОСТЬ";
 export const RANGE_CONFIDENCE = "УВЕРЕННОСТЬ";
+
+export const RANGE_DOG = "ЗНАЕТ ПРО СОБАКУ";

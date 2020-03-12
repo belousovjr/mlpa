@@ -1,5 +1,5 @@
 import React from "react";
-import { Loc } from "../../mlpa_engine";
+import locE from "../../game/loc_example";
 import mlpaState from "../../mlpa_state";
 import ReplicI from "./ReplicI/ReplicI";
 import AnswerI from "./AnswerI/AnswerI";
@@ -8,7 +8,7 @@ import Params from "./Params";
 export default class UI extends React.Component {
   constructor() {
     super();
-    this.loc = new Loc();
+    this.loc = locE;
     this.loc.ssign(mlpaState);
     this.defaultParams();
     const currentStage = this.loc.getStartId();
@@ -19,7 +19,9 @@ export default class UI extends React.Component {
   }
 
   defaultParams() {
-    this.loc.params.forEach(p => (p.value = 7));
+    this.loc.params.forEach(p => {
+      if (!p.isAchiev) p.value = 7;
+    });
   }
 
   updateStage(stuffId) {

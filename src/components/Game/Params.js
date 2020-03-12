@@ -20,44 +20,50 @@ export default class Params extends React.Component {
       <div key={g.name}>{g.name}</div>
     ));
 
-    const paramItems = params.map(param => (
-      <div key={param.name}>
-        <div>
-          <button
-            onClick={() => {
-              edit(param.name, -1);
-            }}
-          >
-            -
-          </button>
-          <div
-            style={{
-              display: "inline-block",
-              height: "15px",
-              width: `${param.value * 10}px`,
-              backgroundColor: "red"
-            }}
-          ></div>
-          <div
-            style={{
-              display: "inline-block",
-              height: "15px",
-              width: `${(lim - param.value) * 10}px`,
-              backgroundColor: "gray"
-            }}
-          ></div>
-
-          <button
-            onClick={() => {
-              edit(param.name, 1);
-            }}
-          >
-            +
-          </button>
-          {param.name}
+    const paramItems = params.map(param => {
+      return param.isAchiev ? (
+        <div key={param.name}>
+          <input type="checkbox" disabled checked={param.value} /> {param.name}
         </div>
-      </div>
-    ));
+      ) : (
+        <div key={param.name}>
+          <div>
+            <button
+              onClick={() => {
+                edit(param.name, -1);
+              }}
+            >
+              -
+            </button>
+            <div
+              style={{
+                display: "inline-block",
+                height: "15px",
+                width: `${param.value * 10}px`,
+                backgroundColor: "red"
+              }}
+            ></div>
+            <div
+              style={{
+                display: "inline-block",
+                height: "15px",
+                width: `${(lim - param.value) * 10}px`,
+                backgroundColor: "gray"
+              }}
+            ></div>
+
+            <button
+              onClick={() => {
+                edit(param.name, 1);
+              }}
+            >
+              +
+            </button>
+            {param.name}
+          </div>
+        </div>
+      );
+    });
 
     return (
       <div>

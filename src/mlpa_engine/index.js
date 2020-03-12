@@ -5,9 +5,9 @@ import Range from "./range";
 import Stage from "./stage";
 import Stuff from "./stuff";
 import Topic from "./topic";
-import Loc from "./loc";
 import Change from "./change";
 import Interf from "./interf";
+import Loc from "./loc";
 
 export {
   Graduation,
@@ -17,7 +17,7 @@ export {
   Stage,
   Stuff,
   Topic,
-  Loc,
   Change,
-  Interf
+  Interf,
+  Loc
 };

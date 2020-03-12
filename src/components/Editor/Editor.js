@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Loc } from "../../mlpa_engine";
-import locE from "./../../game/loc_example";
+import locE from "../../game/loc_example";
+//import locE from "./../../game/loc_example";
 import TopicItem from "./Topics/TopicItem";
 import Topic from "./Topics/Topic";
 import AddTopic from "./Topics/AddTopic";
@@ -12,15 +12,17 @@ export default class Editor extends React.Component {
   constructor() {
     super();
     this.myStorage = window.localStorage;
-    this.loc = this.getLoc();
+    this.loc = {};
+    this.import(true);
     const { topicId, stageId } = this.getTopStag();
     this.state = { currentTopic: topicId, currentStage: stageId };
   }
 
-  import() {
-    this.loc = new Loc();
-    this.loc.ssign(mlpaState);
-    this.forceUpdate();
+  import(firstTime) {
+    this.loc = locE;
+
+    this.loc.ssign({ ...mlpaState });
+    if (!firstTime) this.forceUpdate();
   }
 
   getTopStag() {
@@ -37,13 +39,6 @@ export default class Editor extends React.Component {
     const exportType = "json";
 
     exportFromJSON({ data, fileName, exportType });
-  }
-
-  getLoc() {
-    const loc = new Loc();
-    const data = JSON.parse(this.myStorage.getItem("locData"));
-    loc.ssign(data);
-    return locE; //data ? loc : locE;
   }
 
   saveLoc() {
@@ -67,7 +62,6 @@ export default class Editor extends React.Component {
     this.forceUpdate();
   };
   updateStage = (id, isStart) => {
-    console.log(id + " " + isStart);
     const stage = this.loc.stages.find(s => s.id === id);
     stage.isStart = isStart;
     this.forceUpdate();
@@ -101,8 +95,7 @@ export default class Editor extends React.Component {
     const newStaff = this.loc.cStuff(
       {
         isA,
-        id: nextStageId,
-        changes: changes.map(c => this.loc.cChange(c.paramName, c.term))
+        id: nextStageId
       },
       this.loc.cPhrase("space"),
       this.loc.cPhrase("generalSpace", true)
@@ -119,12 +112,16 @@ export default class Editor extends React.Component {
       const changeIndex = stuff.changes.findIndex(
         c => c.paramName === change.paramName
       );
-      const thisStuff = stuff.changes[changeIndex];
-      if (!thisStuff) {
-        stuff.changes.push(this.loc.cChange(change.paramName, change.term));
+      const thisStuffCh = stuff.changes[changeIndex];
+
+      const changeTerm = change.term;
+
+      if (!thisStuffCh) {
+        stuff.changes.push(this.loc.cChange(change.paramName, changeTerm));
       } else {
-        if (change.term) thisStuff.term = change.term;
+        if (changeTerm) thisStuffCh.term = changeTerm;
         else stuff.changes.splice(changeIndex, 1);
+        console.log(thisStuffCh);
       }
     });
     this.forceUpdate();

@@ -20,8 +20,8 @@ export default class Loc {
 
   lim = 15;
 
-  cParam(name, value) {
-    return new Parameter(name, value);
+  cParam(name, value, isAchiev) {
+    return new Parameter(name, value, isAchiev);
   }
   addParams(...params) {
     this.params = this.params.concat(params);
@@ -133,19 +133,26 @@ export default class Loc {
     changes.forEach(change => {
       const param = this._getParam(change.paramName);
 
-      const newValue = param.value + change.term;
-      if (newValue > this.lim) {
-        param.value = this.lim;
-      } else if (newValue < 1) {
-        param.value = 1;
-      } else param.value = newValue;
+      if (param.isAchiev) {
+        param.value = true;
+      } else {
+        const newValue = param.value + change.term;
+        if (newValue > this.lim) {
+          param.value = this.lim;
+        } else if (newValue < 1) {
+          param.value = 1;
+        } else param.value = newValue;
+      }
     });
   }
 
   checkRange(rangeName) {
     const range = this._getRange(rangeName);
     const param = this._getParam(range.paramName);
-    return param.value >= range.min && param.value <= range.max;
+    const res = param.isAchiev
+      ? param.value === range.max
+      : param.value >= range.min && param.value <= range.max;
+    return res;
   }
 
   checkGrad = gradName => {
@@ -212,6 +219,7 @@ export default class Loc {
     return this.checkGrad(topic.graduation);
   };
 
+  //ДОБАВИТЬ БЕЗУСЛОВНЫЕ ОГРАНИЧЕНИЯ ДЛЯ ТЕМ ЗАВИСИМЫХ ОТ АЧИВОК
   getInterfaceStage = id => {
     //ДОБАВИТЬ ПОДКЛЮЧЕНИЕ ФИНАЛОЧЕК КОГДА НАДО
 
@@ -264,7 +272,9 @@ export default class Loc {
 
   ssign = data => {
     for (let key in data) {
-      this[key] = data[key];
+      if (!["params", "grads", "ranges"].find(k => k === key)) {
+        this[key] = data[key];
+      }
     }
   };
 }

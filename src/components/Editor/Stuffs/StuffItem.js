@@ -39,7 +39,34 @@ export default class StuffItem extends React.Component {
     const changesItems = !stuff.isA
       ? stat.params.map(p => {
           const c = changes.find(change => change.paramName === p.name);
-          const term = c ? c.term : 0;
+
+          const term = c ? c.term : p.isAchiev ? false : 0;
+
+          const inputElem = p.isAchiev ? (
+            <input
+              type="checkbox"
+              checked={term}
+              onChange={e => {
+                methods.updateStuff(stuff.id, stuff.next_stage_id, {
+                  paramName: p.name,
+                  term: Boolean(e.target.checked)
+                });
+              }}
+            />
+          ) : (
+            <input
+              type="number"
+              style={{ width: "40px" }}
+              value={term}
+              onChange={e => {
+                methods.updateStuff(stuff.id, stuff.next_stage_id, {
+                  paramName: p.name,
+                  term: Number(e.target.value)
+                });
+              }}
+            />
+          );
+
           return (
             <span
               style={{
@@ -50,18 +77,7 @@ export default class StuffItem extends React.Component {
               }}
               key={p.name}
             >
-              {p.name}:
-              <input
-                type="number"
-                style={{ width: "40px" }}
-                value={term}
-                onChange={e => {
-                  methods.updateStuff(stuff.id, stuff.next_stage_id, {
-                    paramName: p.name,
-                    term: Number(e.target.value)
-                  });
-                }}
-              />
+              {p.name}:{inputElem}
             </span>
           );
         })

@@ -2,11 +2,13 @@
     "params": [
         {
             "name": "РЕШИМОСТЬ",
-            "value": 2
+            "value": 2,
+            "isAchiev": false
         },
         {
             "name": "УРАВНОВЕШЕННОСТЬ",
-            "value": 4
+            "value": 4,
+            "isAchiev": false
         }
     ],
     "ranges": [
