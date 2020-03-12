@@ -147,7 +147,6 @@ export default class Loc {
   }
 
   checkStageFinal = stageId => {
-    //const stage = this.find(s => s.id === stageId)
     const stuffs = this._getStuffs(stageId);
     return !stuffs.find(s => !s.isA);
   };
@@ -217,6 +216,55 @@ export default class Loc {
     return neutralPhrase.text;
   };
 
+  _getCorrectStuffs(id) {
+    //НЕОБХОДИМОЕ ЧИСЛО ОТВЕТОВ
+    const necessity = 3;
+    const stuffs = this._getStuffs(id);
+
+    //ОГРАНИЧЕНИЕ ПО *БЫЛ ЗДЕСЬ*
+    const answersAll = stuffs.filter(stuff => {
+      if (stuff.isA) return false;
+      else {
+        const stage = this.stages.find(s => s.id === stuff.next_stage_id);
+        return !stage.isBeen;
+      }
+    });
+
+    const correctNeutAchiev = [];
+    const correctFinal = [];
+    const incrrectNeutral = [];
+
+    answersAll.forEach(stuff => {
+      const nextStage = this.stages.find(
+        stage => stage.id === stuff.next_stage_id
+      );
+      const topic = this._getTopic(nextStage.topic_id);
+      const grad = this._getGrad(topic.graduation);
+      const ranges = grad.rangesNames(rName => this._getRange(rName));
+      const params = ranges.rangesNames(r => this._getParam(r.paramName));
+
+      const isAchiev = params.find(p => p.isAchiev);
+      const correct = this.checkGrad(grad.name);
+      const { isFin } = topic;
+
+      if (correct) {
+        //подходящее по градации
+        //если не финал
+        if (!isFin) correctNeutAchiev.push(stuff);
+        //если финал
+        else correctFinal.push(stuff);
+      } else if (!isAchiev && !isFin) {
+        //неподходящие если не ачивный и не финальный
+        incrrectNeutral.push(stuff);
+      }
+    });
+
+    let resultStuffs = correctNeutAchiev.concat(incrrectNeutral);
+    //если пришло время для финалочек
+    if (false) resultStuffs = resultStuffs.concat(correctFinal);
+    return resultStuffs.slice(0, necessity);
+  }
+
   checkAnswToGrad = stuff => {
     const nextStage = this.stages.find(
       stage => stage.id === stuff.next_stage_id
@@ -229,8 +277,6 @@ export default class Loc {
   getInterfaceStage = id => {
     //ДОБАВИТЬ ПОДКЛЮЧЕНИЕ ФИНАЛОЧЕК КОГДА НАДО
 
-    /* const necessity = 2;*/
-
     const stage = this.stages.find(s => s.id === id);
     stage.isBeen = true;
 
@@ -241,26 +287,11 @@ export default class Loc {
 
     //ОГРАНИЧЕНИЯ ПО *БЫЛ ТУТ*
     const answersAll = stuffs.filter(stuff => {
-      /*if (!stuff.isA) {
-        const stage = this.stages.find(s => s.id === stuff.next_stage_id);
-        return !stage.isBeen;
-      } else return false;*/
       return !stuff.isA;
     });
 
-    //ПОДХОДЯЩИЕ И НЕ ПОДХОДЯЩИЕ ПО ГРАДАЦИИ
-    /* const gradAnswers = answersAll.filter(stuff => this.checkAnswToGrad(stuff));
-    const notGradAnswers = answersAll.filter(
-      stuff => !this.checkAnswToGrad(stuff)
-    );*/
-
-    //РАЗНИЦА
-    /*const gradDiff = necessity - gradAnswers.length;*/
-
     //РЕЗУЛЬТАТ
-    const resAnswers = answersAll; /*gradAnswers.concat(
-      notGradAnswers.slice(0, gradDiff > necessity ? 0 : gradDiff)
-    );*/
+    const resAnswers = answersAll;
 
     const interf = {
       answers: resAnswers.map(stuff => {
