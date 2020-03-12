@@ -10,7 +10,8 @@ export default class StuffItem extends React.Component {
     const currentTopic = nextStage?.topic_id;
 
     this.state = {
-      currentTopic
+      currentTopic,
+      viewAchievs: false
     };
   }
   render() {
@@ -34,7 +35,7 @@ export default class StuffItem extends React.Component {
     });
 
     const { changes } = stuff;
-    const { currentTopic } = this.state;
+    const { currentTopic, viewAchievs } = this.state;
 
     const changesItems = !stuff.isA
       ? stat.params.map(p => {
@@ -67,6 +68,7 @@ export default class StuffItem extends React.Component {
             />
           );
 
+          if (!viewAchievs && p.isAchiev) return null;
           return (
             <span
               style={{
@@ -170,6 +172,16 @@ export default class StuffItem extends React.Component {
       <button onClick={() => methods.removeStuff(stuff.id)}>X</button>
     ) : null;
 
+    const viewBox = stuff.isA ? null : (
+      <input
+        type="checkbox"
+        checked={viewAchievs}
+        onChange={e => {
+          this.setState({ viewAchievs: e.target.checked });
+        }}
+      />
+    );
+
     return (
       <div>
         {removeButton}
@@ -190,6 +202,7 @@ export default class StuffItem extends React.Component {
         </div>
         {next}
         {changesItems}
+        {viewBox}
       </div>
     );
   }

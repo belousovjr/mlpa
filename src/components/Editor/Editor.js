@@ -206,7 +206,9 @@ export default class Editor extends React.Component {
       addStuff: this.addStuff,
       updatePhrase: this.updatePhrase,
       addPhrase: this.addPhrase,
-      removePhrase: this.removePhrase
+      removePhrase: this.removePhrase,
+      getParam: this.loc._getParam,
+      checkStageFinal: this.loc.checkStageFinal
     };
 
     const topicItems = topics.map(topic => {

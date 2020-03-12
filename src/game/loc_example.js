@@ -32,9 +32,9 @@ import {
 const locE = new Loc();
 locE.addParams(
   locE.cParam(PARAM_DETERMINATION, 2),
-  locE.cParam(PARAM_EQUILIBRIUM, 4)
+  locE.cParam(PARAM_EQUILIBRIUM, 4),
 
-  //locE.cParam(PARAM_DOG, false, true)
+  locE.cParam(PARAM_DOG, false, true)
 );
 
 locE.addRanges(
@@ -44,9 +44,9 @@ locE.addRanges(
 
   locE.cRange(RANGE_APATHY, 1, 5, PARAM_DETERMINATION),
   locE.cRange(RANGE_UNCERTAINTY, 6, 10, PARAM_DETERMINATION),
-  locE.cRange(RANGE_CONFIDENCE, 11, 15, PARAM_DETERMINATION)
+  locE.cRange(RANGE_CONFIDENCE, 11, 15, PARAM_DETERMINATION),
 
-  //locE.cRange(RANGE_DOG, true, true, PARAM_DOG)
+  locE.cRange(RANGE_DOG, true, true, PARAM_DOG)
 );
 locE.addGrads(
   locE.cGrad(GRAD_PAN_APA, RANGE_PANIC, RANGE_APATHY),
@@ -59,9 +59,9 @@ locE.addGrads(
 
   locE.cGrad(GRAD_STAB_APA, RANGE_STABILITY, RANGE_APATHY),
   locE.cGrad(GRAD_STAB_UNC, RANGE_STABILITY, RANGE_UNCERTAINTY),
-  locE.cGrad(GRAD_STAB_CON, RANGE_STABILITY, RANGE_CONFIDENCE)
+  locE.cGrad(GRAD_STAB_CON, RANGE_STABILITY, RANGE_CONFIDENCE),
 
-  // locE.cGrad(GRAD_DOG, RANGE_DOG)
+  locE.cGrad(GRAD_DOG, RANGE_DOG)
 );
 
 export default locE;

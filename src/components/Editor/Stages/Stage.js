@@ -73,14 +73,19 @@ export default class Stage extends React.Component {
       />
     );
 
-    const rangesItems = ranges.map(range => (
-      <RangeItem
-        isSelect={range.name === this.state.currentRange}
-        key={range.name}
-        range={range}
-        click={this.click}
-      />
-    ));
+    const rangesItems = ranges
+      .filter(r => {
+        const param = methods.getParam(r.paramName);
+        return !param.isAchiev;
+      })
+      .map(range => (
+        <RangeItem
+          isSelect={range.name === this.state.currentRange}
+          key={range.name}
+          range={range}
+          click={this.click}
+        />
+      ));
 
     return (
       <div>

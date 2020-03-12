@@ -67,7 +67,7 @@ export default class Loc {
   };
 
   cStuff(props, ...phrases) {
-    const { id: nextStageId, changes, isA } = props ? props : {};
+    const { id: nextStageId, changes = [], isA } = props ? props : {};
     const stuffId = this.getId("stuffs");
 
     this.addPhrases(stuffId, phrases);
@@ -117,9 +117,9 @@ export default class Loc {
     return this.phrases.filter(phrase => phrase.stuff_id === stuffId);
   };
 
-  _getParam(name) {
+  _getParam = name => {
     return this.params.find(param => param.name === name);
-  }
+  };
 
   _getRange(name) {
     return this.ranges.find(range => range.name === name);
@@ -145,6 +145,12 @@ export default class Loc {
       }
     });
   }
+
+  checkStageFinal = stageId => {
+    //const stage = this.find(s => s.id === stageId)
+    const stuffs = this._getStuffs(stageId);
+    return !stuffs.find(s => !s.isA);
+  };
 
   checkRange(rangeName) {
     const range = this._getRange(rangeName);

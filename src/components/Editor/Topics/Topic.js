@@ -45,6 +45,7 @@ export default class Topic extends React.Component {
 
       return (
         <StageItem
+          methods={methods}
           stuffText={this.stuffText}
           key={stage.id}
           stage={stage}
