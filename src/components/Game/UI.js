@@ -54,7 +54,7 @@ export default class UI extends React.Component {
         isHiding: false,
         dDelay: 500 //ДОБАВИТЬ ЗАВИСИМОСТЬ ОТ ПОТРЯСЕНИЯ
       });
-    }, 300);
+    }, 500);
   }
   defaultParams() {
     this.loc.params.forEach(p => {
