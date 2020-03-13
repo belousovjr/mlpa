@@ -4,6 +4,7 @@ import mlpaState from "../../mlpa_state";
 import ReplicI from "./ReplicI/ReplicI";
 import AnswerI from "./AnswerI/AnswerI";
 import Params from "./Params";
+import DialogBox from "./DialogBox/DialogBox";
 
 export default class UI extends React.Component {
   constructor() {
@@ -59,9 +60,11 @@ export default class UI extends React.Component {
           grads={this.loc.grads}
           checkGrad={this.loc.checkGrad}
         />
+
         <ReplicI replic={{ phrase: prevAnswer }} isPlayerReplic={true} />
         <ReplicI replic={replic} />
         {answersItems}
+        <DialogBox />
       </div>
     );
   }

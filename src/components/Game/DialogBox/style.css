@@ -1,0 +1,65 @@
+.dialog-box {
+  background-color: black;
+  color: white;
+  width: 80%;
+
+  height: 6rem;
+  left: 10%;
+  bottom: 0;
+  position: absolute;
+}
+
+.phrase-interface {
+  display: flex;
+  overflow: hidden;
+}
+
+.phrase-showing {
+  animation-name: showing;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.phrase-hiding {
+  animation-name: hiding;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.phrase-text {
+  align-self: flex-end;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hiding {
+  0% {
+    max-height: 100%;
+  }
+  1% {
+    max-height: 50%;
+  }
+
+  100% {
+    background-color: black;
+    max-height: 0%;
+  }
+}
+
+.text-p {
+  color: hotpink;
+}
+
+.text-c {
+  color: deepskyblue;
+}
