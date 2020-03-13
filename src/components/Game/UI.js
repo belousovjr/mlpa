@@ -14,7 +14,7 @@ export default class UI extends React.Component {
     const currentStage = this.loc.getStartId();
     this.state = {
       currentStage,
-      prevAnswer: "..."
+      prevAnswer: "Что с тобой?"
     };
   }
 

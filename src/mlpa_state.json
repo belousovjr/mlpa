@@ -9,6 +9,11 @@
             "name": "УРАВНОВЕШЕННОСТЬ",
             "value": 4,
             "isAchiev": false
+        },
+        {
+            "name": "УЗНАЛ СОБ МЕРТВА",
+            "value": false,
+            "isAchiev": true
         }
     ],
     "ranges": [
@@ -47,6 +52,12 @@
             "paramName": "РЕШИМОСТЬ",
             "min": 11,
             "max": 15
+        },
+        {
+            "name": "ЗНАЕТ ПРО СОБАКУ",
+            "paramName": "УЗНАЛ СОБ МЕРТВА",
+            "min": true,
+            "max": true
         }
     ],
     "grads": [
@@ -112,6 +123,12 @@
                 "СТАБИЛЬНОСТЬ",
                 "УВЕРЕННОСТЬ"
             ]
+        },
+        {
+            "name": "ЗНАЕТ ПРО СОБАКУ",
+            "rangesNames": [
+                "ЗНАЕТ ПРО СОБАКУ"
+            ]
         }
     ],
     "topics": [
@@ -119,8 +136,15 @@
             "name": "Вступление",
             "graduation": "ПАН АПАТ",
             "isFin": false,
-            "isStart": true,
+            "isStart": false,
             "id": 1
+        },
+        {
+            "name": "Что с ней?",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": true,
+            "id": 2
         }
     ],
     "stuffs": [
@@ -285,6 +309,519 @@
             "changes": [],
             "isA": true,
             "id": 26
+        },
+        {
+            "stage_id": 14,
+            "changes": [],
+            "isA": true,
+            "id": 27
+        },
+        {
+            "stage_id": 14,
+            "next_stage_id": 15,
+            "changes": [],
+            "isA": false,
+            "id": 28
+        },
+        {
+            "stage_id": 14,
+            "next_stage_id": 16,
+            "changes": [],
+            "isA": false,
+            "id": 29
+        },
+        {
+            "stage_id": 14,
+            "next_stage_id": 17,
+            "changes": [],
+            "isA": false,
+            "id": 30
+        },
+        {
+            "stage_id": 15,
+            "changes": [],
+            "isA": true,
+            "id": 31
+        },
+        {
+            "stage_id": 16,
+            "changes": [],
+            "isA": true,
+            "id": 32
+        },
+        {
+            "stage_id": 17,
+            "changes": [],
+            "isA": true,
+            "id": 33
+        },
+        {
+            "stage_id": 18,
+            "changes": [],
+            "isA": true,
+            "id": 34
+        },
+        {
+            "stage_id": 15,
+            "next_stage_id": 18,
+            "changes": [],
+            "isA": false,
+            "id": 35
+        },
+        {
+            "stage_id": 15,
+            "next_stage_id": 19,
+            "changes": [],
+            "isA": false,
+            "id": 36
+        },
+        {
+            "stage_id": 15,
+            "next_stage_id": 20,
+            "changes": [],
+            "isA": false,
+            "id": 37
+        },
+        {
+            "stage_id": 16,
+            "next_stage_id": 21,
+            "changes": [],
+            "isA": false,
+            "id": 38
+        },
+        {
+            "stage_id": 16,
+            "next_stage_id": 22,
+            "changes": [],
+            "isA": false,
+            "id": 39
+        },
+        {
+            "stage_id": 16,
+            "next_stage_id": 23,
+            "changes": [],
+            "isA": false,
+            "id": 40
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 24,
+            "changes": [],
+            "isA": false,
+            "id": 41
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 25,
+            "changes": [],
+            "isA": false,
+            "id": 42
+        },
+        {
+            "stage_id": 17,
+            "next_stage_id": 26,
+            "changes": [],
+            "isA": false,
+            "id": 43
+        },
+        {
+            "stage_id": 19,
+            "changes": [],
+            "isA": true,
+            "id": 44
+        },
+        {
+            "stage_id": 20,
+            "changes": [],
+            "isA": true,
+            "id": 45
+        },
+        {
+            "stage_id": 21,
+            "changes": [],
+            "isA": true,
+            "id": 46
+        },
+        {
+            "stage_id": 22,
+            "changes": [],
+            "isA": true,
+            "id": 47
+        },
+        {
+            "stage_id": 23,
+            "changes": [],
+            "isA": true,
+            "id": 48
+        },
+        {
+            "stage_id": 24,
+            "changes": [],
+            "isA": true,
+            "id": 49
+        },
+        {
+            "stage_id": 25,
+            "changes": [],
+            "isA": true,
+            "id": 50
+        },
+        {
+            "stage_id": 26,
+            "changes": [],
+            "isA": true,
+            "id": 51
+        },
+        {
+            "stage_id": 18,
+            "next_stage_id": 27,
+            "changes": [],
+            "isA": false,
+            "id": 52
+        },
+        {
+            "stage_id": 18,
+            "next_stage_id": 28,
+            "changes": [],
+            "isA": false,
+            "id": 53
+        },
+        {
+            "stage_id": 18,
+            "next_stage_id": 29,
+            "changes": [],
+            "isA": false,
+            "id": 54
+        },
+        {
+            "stage_id": 19,
+            "next_stage_id": 30,
+            "changes": [],
+            "isA": false,
+            "id": 55
+        },
+        {
+            "stage_id": 19,
+            "next_stage_id": 31,
+            "changes": [],
+            "isA": false,
+            "id": 56
+        },
+        {
+            "stage_id": 19,
+            "next_stage_id": 32,
+            "changes": [],
+            "isA": false,
+            "id": 57
+        },
+        {
+            "stage_id": 20,
+            "next_stage_id": 33,
+            "changes": [],
+            "isA": false,
+            "id": 58
+        },
+        {
+            "stage_id": 20,
+            "next_stage_id": 34,
+            "changes": [],
+            "isA": false,
+            "id": 59
+        },
+        {
+            "stage_id": 20,
+            "next_stage_id": 35,
+            "changes": [],
+            "isA": false,
+            "id": 60
+        },
+        {
+            "stage_id": 21,
+            "next_stage_id": 36,
+            "changes": [],
+            "isA": false,
+            "id": 61
+        },
+        {
+            "stage_id": 21,
+            "next_stage_id": 37,
+            "changes": [],
+            "isA": false,
+            "id": 62
+        },
+        {
+            "stage_id": 21,
+            "next_stage_id": 38,
+            "changes": [],
+            "isA": false,
+            "id": 63
+        },
+        {
+            "stage_id": 22,
+            "next_stage_id": 39,
+            "changes": [],
+            "isA": false,
+            "id": 64
+        },
+        {
+            "stage_id": 22,
+            "next_stage_id": 40,
+            "changes": [],
+            "isA": false,
+            "id": 65
+        },
+        {
+            "stage_id": 22,
+            "next_stage_id": 41,
+            "changes": [],
+            "isA": false,
+            "id": 66
+        },
+        {
+            "stage_id": 23,
+            "next_stage_id": 42,
+            "changes": [],
+            "isA": false,
+            "id": 67
+        },
+        {
+            "stage_id": 23,
+            "next_stage_id": 43,
+            "changes": [],
+            "isA": false,
+            "id": 68
+        },
+        {
+            "stage_id": 23,
+            "next_stage_id": 44,
+            "changes": [],
+            "isA": false,
+            "id": 69
+        },
+        {
+            "stage_id": 24,
+            "next_stage_id": 45,
+            "changes": [],
+            "isA": false,
+            "id": 70
+        },
+        {
+            "stage_id": 24,
+            "next_stage_id": 46,
+            "changes": [],
+            "isA": false,
+            "id": 71
+        },
+        {
+            "stage_id": 24,
+            "next_stage_id": 47,
+            "changes": [],
+            "isA": false,
+            "id": 72
+        },
+        {
+            "stage_id": 25,
+            "next_stage_id": 48,
+            "changes": [],
+            "isA": false,
+            "id": 73
+        },
+        {
+            "stage_id": 25,
+            "next_stage_id": 49,
+            "changes": [],
+            "isA": false,
+            "id": 74
+        },
+        {
+            "stage_id": 25,
+            "next_stage_id": 50,
+            "changes": [],
+            "isA": false,
+            "id": 75
+        },
+        {
+            "stage_id": 26,
+            "next_stage_id": 51,
+            "changes": [],
+            "isA": false,
+            "id": 76
+        },
+        {
+            "stage_id": 26,
+            "next_stage_id": 52,
+            "changes": [],
+            "isA": false,
+            "id": 77
+        },
+        {
+            "stage_id": 26,
+            "next_stage_id": 53,
+            "changes": [],
+            "isA": false,
+            "id": 78
+        },
+        {
+            "stage_id": 27,
+            "changes": [],
+            "isA": true,
+            "id": 79
+        },
+        {
+            "stage_id": 28,
+            "changes": [],
+            "isA": true,
+            "id": 80
+        },
+        {
+            "stage_id": 29,
+            "changes": [],
+            "isA": true,
+            "id": 81
+        },
+        {
+            "stage_id": 30,
+            "changes": [],
+            "isA": true,
+            "id": 82
+        },
+        {
+            "stage_id": 31,
+            "changes": [],
+            "isA": true,
+            "id": 83
+        },
+        {
+            "stage_id": 32,
+            "changes": [],
+            "isA": true,
+            "id": 84
+        },
+        {
+            "stage_id": 33,
+            "changes": [],
+            "isA": true,
+            "id": 85
+        },
+        {
+            "stage_id": 34,
+            "changes": [],
+            "isA": true,
+            "id": 86
+        },
+        {
+            "stage_id": 35,
+            "changes": [],
+            "isA": true,
+            "id": 87
+        },
+        {
+            "stage_id": 36,
+            "changes": [],
+            "isA": true,
+            "id": 88
+        },
+        {
+            "stage_id": 37,
+            "changes": [],
+            "isA": true,
+            "id": 89
+        },
+        {
+            "stage_id": 38,
+            "changes": [],
+            "isA": true,
+            "id": 90
+        },
+        {
+            "stage_id": 39,
+            "changes": [],
+            "isA": true,
+            "id": 91
+        },
+        {
+            "stage_id": 40,
+            "changes": [],
+            "isA": true,
+            "id": 92
+        },
+        {
+            "stage_id": 41,
+            "changes": [],
+            "isA": true,
+            "id": 93
+        },
+        {
+            "stage_id": 42,
+            "changes": [],
+            "isA": true,
+            "id": 94
+        },
+        {
+            "stage_id": 43,
+            "changes": [],
+            "isA": true,
+            "id": 95
+        },
+        {
+            "stage_id": 44,
+            "changes": [],
+            "isA": true,
+            "id": 96
+        },
+        {
+            "stage_id": 45,
+            "changes": [],
+            "isA": true,
+            "id": 97
+        },
+        {
+            "stage_id": 46,
+            "changes": [],
+            "isA": true,
+            "id": 98
+        },
+        {
+            "stage_id": 47,
+            "changes": [],
+            "isA": true,
+            "id": 99
+        },
+        {
+            "stage_id": 48,
+            "changes": [],
+            "isA": true,
+            "id": 100
+        },
+        {
+            "stage_id": 49,
+            "changes": [],
+            "isA": true,
+            "id": 101
+        },
+        {
+            "stage_id": 50,
+            "changes": [],
+            "isA": true,
+            "id": 102
+        },
+        {
+            "stage_id": 51,
+            "changes": [],
+            "isA": true,
+            "id": 103
+        },
+        {
+            "stage_id": 52,
+            "changes": [],
+            "isA": true,
+            "id": 104
+        },
+        {
+            "stage_id": 53,
+            "changes": [],
+            "isA": true,
+            "id": 105
         }
     ],
     "stages": [
@@ -364,6 +901,246 @@
             "isBeen": false,
             "topic_id": 1,
             "id": 13,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 14,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 15,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 16,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 17,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 18,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 19,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 20,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 21,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 22,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 23,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 24,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 25,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 26,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 27,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 28,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 29,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 30,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 31,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 32,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 33,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 34,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 35,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 36,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 37,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 38,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 39,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 40,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 41,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 42,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 43,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 44,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 45,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 46,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 47,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 48,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 49,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 50,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 51,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 52,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 2,
+            "id": 53,
             "isStart": false
         }
     ],
@@ -589,13 +1366,721 @@
             "text": "Наверно, я ничего не понимаю...",
             "isGeneral": false,
             "id": 39
+        },
+        {
+            "stuff_id": 27,
+            "text": "Мне нехорошо, меня тошнит.",
+            "isGeneral": false,
+            "id": 40
+        },
+        {
+            "stuff_id": 28,
+            "text": "Да уж, с тобой явно что-то не так.",
+            "isGeneral": false,
+            "id": 41
+        },
+        {
+            "stuff_id": 28,
+            "text": "Что-то не так",
+            "isGeneral": true,
+            "id": 42
+        },
+        {
+            "stuff_id": 29,
+            "text": "Ты еще и выглядишь пугающе.",
+            "isGeneral": false,
+            "id": 43
+        },
+        {
+            "stuff_id": 29,
+            "text": "Пугающе",
+            "isGeneral": true,
+            "id": 44
+        },
+        {
+            "stuff_id": 30,
+            "text": "Расскажи подробней чтоб я мог помочь.",
+            "isGeneral": false,
+            "id": 45
+        },
+        {
+            "stuff_id": 30,
+            "text": "Подробности",
+            "isGeneral": true,
+            "id": 46
+        },
+        {
+            "stuff_id": 31,
+            "text": "Зачем ты так говоришь?",
+            "isGeneral": false,
+            "id": 47
+        },
+        {
+            "stuff_id": 32,
+            "text": "Почему пугающе?",
+            "isGeneral": false,
+            "id": 48
+        },
+        {
+            "stuff_id": 33,
+            "text": "Думаешь ты сможешь помочь?",
+            "isGeneral": false,
+            "id": 49
+        },
+        {
+            "stuff_id": 34,
+            "text": "Откуда тебе знать что с моей головой?..",
+            "isGeneral": false,
+            "id": 50
+        },
+        {
+            "stuff_id": 35,
+            "text": "Ну, выглядишь будто у тебя с головой проблемы.",
+            "isGeneral": false,
+            "id": 51
+        },
+        {
+            "stuff_id": 35,
+            "text": "Безумна",
+            "isGeneral": true,
+            "id": 52
+        },
+        {
+            "stuff_id": 36,
+            "text": "Не знаю, сама скажи в чем твоя проблема.",
+            "isGeneral": false,
+            "id": 53
+        },
+        {
+            "stuff_id": 36,
+            "text": "Не знаю",
+            "isGeneral": true,
+            "id": 54
+        },
+        {
+            "stuff_id": 37,
+            "text": "Ты просто выглядишь травмированной.",
+            "isGeneral": false,
+            "id": 55
+        },
+        {
+            "stuff_id": 37,
+            "text": "Травма",
+            "isGeneral": true,
+            "id": 56
+        },
+        {
+            "stuff_id": 38,
+            "text": "Ты будто умираешь. Ты должна помочь себе успокоиться.",
+            "isGeneral": false,
+            "id": 57
+        },
+        {
+            "stuff_id": 38,
+            "text": "Помочь себе",
+            "isGeneral": true,
+            "id": 58
+        },
+        {
+            "stuff_id": 39,
+            "text": "Ты какая-то бессильная.",
+            "isGeneral": false,
+            "id": 59
+        },
+        {
+            "stuff_id": 39,
+            "text": "Бессильна",
+            "isGeneral": true,
+            "id": 60
+        },
+        {
+            "stuff_id": 40,
+            "text": "Ты выглядишь будто задумала что-то плохое.",
+            "isGeneral": false,
+            "id": 61
+        },
+        {
+            "stuff_id": 40,
+            "text": "Что-то задумала",
+            "isGeneral": true,
+            "id": 62
+        },
+        {
+            "stuff_id": 41,
+            "text": "Я постараюсь, хорошо?",
+            "isGeneral": false,
+            "id": 63
+        },
+        {
+            "stuff_id": 41,
+            "text": "Постараюсь",
+            "isGeneral": true,
+            "id": 64
+        },
+        {
+            "stuff_id": 42,
+            "text": "Не знаю, скажи что мне сделать.",
+            "isGeneral": false,
+            "id": 65
+        },
+        {
+            "stuff_id": 42,
+            "text": "Скажи сама",
+            "isGeneral": true,
+            "id": 66
+        },
+        {
+            "stuff_id": 43,
+            "text": "Да, но мне нужно знать что именно ты ощущаешь.",
+            "isGeneral": false,
+            "id": 67
+        },
+        {
+            "stuff_id": 43,
+            "text": "Ощущения",
+            "isGeneral": true,
+            "id": 68
+        },
+        {
+            "stuff_id": 44,
+            "text": "Я не знаю, мне очень плохо...",
+            "isGeneral": false,
+            "id": 69
+        },
+        {
+            "stuff_id": 45,
+            "text": "Думаешь меня что-то травмировало?",
+            "isGeneral": false,
+            "id": 70
+        },
+        {
+            "stuff_id": 46,
+            "text": "Как я могу помочь себе?",
+            "isGeneral": false,
+            "id": 71
+        },
+        {
+            "stuff_id": 47,
+            "text": "Почему я бессильная?",
+            "isGeneral": false,
+            "id": 72
+        },
+        {
+            "stuff_id": 48,
+            "text": "Я ничего не задумала! О чем ты?",
+            "isGeneral": false,
+            "id": 73
+        },
+        {
+            "stuff_id": 49,
+            "text": "Тебе это не нужно и смысла нет...",
+            "isGeneral": false,
+            "id": 74
+        },
+        {
+            "stuff_id": 50,
+            "text": "Я не думаю что ты сможешь что-то сделать.",
+            "isGeneral": false,
+            "id": 75
+        },
+        {
+            "stuff_id": 51,
+            "text": "Я ощущаю слабость и сердце бьется очень быстро.",
+            "isGeneral": false,
+            "id": 76
+        },
+        {
+            "stuff_id": 52,
+            "text": "В некотором смысле я и есть твоя голова. Точнее твой разум. Так что я представляю о чем говорю.",
+            "isGeneral": false,
+            "id": 77
+        },
+        {
+            "stuff_id": 52,
+            "text": "Представиться",
+            "isGeneral": true,
+            "id": 78
+        },
+        {
+            "stuff_id": 53,
+            "text": "На лицо признаки шизофрении. Это выражается в твоих заторможенных ответах.",
+            "isGeneral": false,
+            "id": 79
+        },
+        {
+            "stuff_id": 53,
+            "text": "Безумие",
+            "isGeneral": true,
+            "id": 80
+        },
+        {
+            "stuff_id": 54,
+            "text": "Ты будто на стадии отрицания, я правда не знаю что ты пытаешься отрицать.",
+            "isGeneral": false,
+            "id": 81
+        },
+        {
+            "stuff_id": 54,
+            "text": "Отрицание",
+            "isGeneral": true,
+            "id": 82
+        },
+        {
+            "stuff_id": 55,
+            "text": "Видимо ты очень напугана.",
+            "isGeneral": false,
+            "id": 83
+        },
+        {
+            "stuff_id": 55,
+            "text": "Напугана",
+            "isGeneral": true,
+            "id": 84
+        },
+        {
+            "stuff_id": 56,
+            "text": "Возможно ты больна.",
+            "isGeneral": false,
+            "id": 85
+        },
+        {
+            "stuff_id": 56,
+            "text": "Больна",
+            "isGeneral": true,
+            "id": 86
+        },
+        {
+            "stuff_id": 57,
+            "text": "Не хочу пугать, но возможно ты сходишь с ума.",
+            "isGeneral": false,
+            "id": 87
+        },
+        {
+            "stuff_id": 57,
+            "text": "Сумасшествие",
+            "isGeneral": true,
+            "id": 88
+        },
+        {
+            "stuff_id": 58,
+            "text": "Если твоей жизни что-то угрожает, это бы все объяснило.",
+            "isGeneral": false,
+            "id": 89
+        },
+        {
+            "stuff_id": 58,
+            "text": "Опасность",
+            "isGeneral": true,
+            "id": 90
+        },
+        {
+            "stuff_id": 59,
+            "text": "Тебя могло травмировать страшное событие.",
+            "isGeneral": false,
+            "id": 91
+        },
+        {
+            "stuff_id": 59,
+            "text": "Событие",
+            "isGeneral": true,
+            "id": 92
+        },
+        {
+            "stuff_id": 60,
+            "text": "Возможно ты вспомнила что-то страшное?",
+            "isGeneral": false,
+            "id": 93
+        },
+        {
+            "stuff_id": 60,
+            "text": "Воспоминание",
+            "isGeneral": true,
+            "id": 94
+        },
+        {
+            "stuff_id": 61,
+            "text": "Постарайся размеренно дышать, это поможет собраться с мыслями.",
+            "isGeneral": false,
+            "id": 95
+        },
+        {
+            "stuff_id": 61,
+            "text": "Дыхание",
+            "isGeneral": true,
+            "id": 96
+        },
+        {
+            "stuff_id": 62,
+            "text": "Соберись уже.",
+            "isGeneral": false,
+            "id": 97
+        },
+        {
+            "stuff_id": 62,
+            "text": "Собраться",
+            "isGeneral": true,
+            "id": 98
+        },
+        {
+            "stuff_id": 63,
+            "text": "Откуда мне знать, тебе же плохо.",
+            "isGeneral": false,
+            "id": 99
+        },
+        {
+            "stuff_id": 63,
+            "text": "Не знаю",
+            "isGeneral": true,
+            "id": 100
+        },
+        {
+            "stuff_id": 64,
+            "text": "Ну, ты так выглядишь.",
+            "isGeneral": false,
+            "id": 101
+        },
+        {
+            "stuff_id": 64,
+            "text": "Вид",
+            "isGeneral": true,
+            "id": 102
+        },
+        {
+            "stuff_id": 65,
+            "text": "Мне так показалось из-за твоих ответов.",
+            "isGeneral": false,
+            "id": 103
+        },
+        {
+            "stuff_id": 65,
+            "text": "Ответы",
+            "isGeneral": true,
+            "id": 104
+        },
+        {
+            "stuff_id": 66,
+            "text": "Ты ничего не делаешь, ведешь себя пассивно.",
+            "isGeneral": false,
+            "id": 105
+        },
+        {
+            "stuff_id": 66,
+            "text": "Поступки",
+            "isGeneral": true,
+            "id": 106
+        },
+        {
+            "stuff_id": 67,
+            "text": "Все выглядит будто ты собралась на свое первое убийство...",
+            "isGeneral": false,
+            "id": 107
+        },
+        {
+            "stuff_id": 67,
+            "text": "Преступление",
+            "isGeneral": true,
+            "id": 108
+        },
+        {
+            "stuff_id": 68,
+            "text": "Прости, мне так показалось.",
+            "isGeneral": false,
+            "id": 109
+        },
+        {
+            "stuff_id": 68,
+            "text": "Извиниться",
+            "isGeneral": true,
+            "id": 110
+        },
+        {
+            "stuff_id": 69,
+            "text": "Ну, я же не знаю о чем именно ты думаешь.",
+            "isGeneral": false,
+            "id": 111
+        },
+        {
+            "stuff_id": 69,
+            "text": "Не знаю",
+            "isGeneral": true,
+            "id": 112
+        },
+        {
+            "stuff_id": 70,
+            "text": "Если откажешься тебе никто не поможет.",
+            "isGeneral": false,
+            "id": 113
+        },
+        {
+            "stuff_id": 70,
+            "text": "Никто не поможет",
+            "isGeneral": true,
+            "id": 114
+        },
+        {
+            "stuff_id": 71,
+            "text": "Я - грубо говоря, твое подсознание, так что смысл есть.",
+            "isGeneral": false,
+            "id": 115
+        },
+        {
+            "stuff_id": 71,
+            "text": "Представиться",
+            "isGeneral": true,
+            "id": 116
+        },
+        {
+            "stuff_id": 72,
+            "text": "Ладно, давай просто продолжим разговор.",
+            "isGeneral": false,
+            "id": 117
+        },
+        {
+            "stuff_id": 72,
+            "text": "Продолжить",
+            "isGeneral": true,
+            "id": 118
+        },
+        {
+            "stuff_id": 73,
+            "text": "Плохая идея отказываться от моей помощи.",
+            "isGeneral": false,
+            "id": 119
+        },
+        {
+            "stuff_id": 73,
+            "text": "Плохая идея",
+            "isGeneral": true,
+            "id": 120
+        },
+        {
+            "stuff_id": 74,
+            "text": "Ну, ты явно не справляешься сама.",
+            "isGeneral": false,
+            "id": 121
+        },
+        {
+            "stuff_id": 74,
+            "text": "Не справляешься",
+            "isGeneral": true,
+            "id": 122
+        },
+        {
+            "stuff_id": 75,
+            "text": "Постарайся успокоиться, ладно?",
+            "isGeneral": false,
+            "id": 123
+        },
+        {
+            "stuff_id": 75,
+            "text": "Успокойся",
+            "isGeneral": true,
+            "id": 124
+        },
+        {
+            "stuff_id": 76,
+            "text": "Тебе не станет лучше пока ты ничего с этим не делаешь...",
+            "isGeneral": false,
+            "id": 125
+        },
+        {
+            "stuff_id": 76,
+            "text": "Бездействие",
+            "isGeneral": true,
+            "id": 126
+        },
+        {
+            "stuff_id": 77,
+            "text": "Ты ведешь себя как слабый человек.",
+            "isGeneral": false,
+            "id": 127
+        },
+        {
+            "stuff_id": 77,
+            "text": "Слабая",
+            "isGeneral": true,
+            "id": 128
+        },
+        {
+            "stuff_id": 78,
+            "text": "Мне кажется ты очень устала.",
+            "isGeneral": false,
+            "id": 129
+        },
+        {
+            "stuff_id": 78,
+            "text": "Устала",
+            "isGeneral": true,
+            "id": 130
+        },
+        {
+            "stuff_id": 79,
+            "text": "Я поняла...",
+            "isGeneral": false,
+            "id": 131
+        },
+        {
+            "stuff_id": 80,
+            "text": "Нет, я просто не могу ничего сделать...",
+            "isGeneral": false,
+            "id": 132
+        },
+        {
+            "stuff_id": 81,
+            "text": "Может быть...",
+            "isGeneral": false,
+            "id": 133
+        },
+        {
+            "stuff_id": 82,
+            "text": "Думаю ты прав...",
+            "isGeneral": false,
+            "id": 134
+        },
+        {
+            "stuff_id": 83,
+            "text": "Я здорова, мне кажется дело в чем-то другом.",
+            "isGeneral": false,
+            "id": 135
+        },
+        {
+            "stuff_id": 84,
+            "text": "Нет! Я не хочу терять рассудок...",
+            "isGeneral": false,
+            "id": 136
+        },
+        {
+            "stuff_id": 85,
+            "text": "Но я в безопасности...",
+            "isGeneral": false,
+            "id": 137
+        },
+        {
+            "stuff_id": 86,
+            "text": "Да, я думаю событие...",
+            "isGeneral": false,
+            "id": 138
+        },
+        {
+            "stuff_id": 87,
+            "text": "Я не хочу думать об этом... Я могу вспомнить что-то плохое.",
+            "isGeneral": false,
+            "id": 139
+        },
+        {
+            "stuff_id": 88,
+            "text": "Я постараюсь.",
+            "isGeneral": false,
+            "id": 140
+        },
+        {
+            "stuff_id": 89,
+            "text": "Как я должна собраться?! О чем ты говоришь?",
+            "isGeneral": false,
+            "id": 141
+        },
+        {
+            "stuff_id": 90,
+            "text": "Но я сама не знаю, я ничего не могу...",
+            "isGeneral": false,
+            "id": 142
+        },
+        {
+            "stuff_id": 91,
+            "text": "Я не контролирую это, мне очень жаль.",
+            "isGeneral": false,
+            "id": 143
+        },
+        {
+            "stuff_id": 92,
+            "text": "Мне сложно отвечать.",
+            "isGeneral": false,
+            "id": 144
+        },
+        {
+            "stuff_id": 93,
+            "text": "Я сейчас не могу иначе, мне нехорошо.",
+            "isGeneral": false,
+            "id": 145
+        },
+        {
+            "stuff_id": 94,
+            "text": "Нет, не говори так... Я никогда бы не сделала такого...",
+            "isGeneral": false,
+            "id": 146
+        },
+        {
+            "stuff_id": 95,
+            "text": "Хорошо...",
+            "isGeneral": false,
+            "id": 147
+        },
+        {
+            "stuff_id": 96,
+            "text": "Мне нехорошо, мысли путаются.",
+            "isGeneral": false,
+            "id": 148
+        },
+        {
+            "stuff_id": 97,
+            "text": "Я поняла. Не хочу оставаться одна сейчас...",
+            "isGeneral": false,
+            "id": 149
+        },
+        {
+            "stuff_id": 98,
+            "text": "Я поняла. Хорошо...",
+            "isGeneral": false,
+            "id": 150
+        },
+        {
+            "stuff_id": 99,
+            "text": "Продолжим...",
+            "isGeneral": false,
+            "id": 151
+        },
+        {
+            "stuff_id": 100,
+            "text": "В смысле плохая? Я не вижу смысла!",
+            "isGeneral": false,
+            "id": 152
+        },
+        {
+            "stuff_id": 101,
+            "text": "Да, мне очень страшно...",
+            "isGeneral": false,
+            "id": 153
+        },
+        {
+            "stuff_id": 102,
+            "text": "Я постараюсь...",
+            "isGeneral": false,
+            "id": 154
+        },
+        {
+            "stuff_id": 103,
+            "text": "Мне страшно, я не могу ничего сделать!",
+            "isGeneral": false,
+            "id": 155
+        },
+        {
+            "stuff_id": 104,
+            "text": "Да. Я чувствую себя очень слабой...",
+            "isGeneral": false,
+            "id": 156
+        },
+        {
+            "stuff_id": 105,
+            "text": "Да, устала... Я не могу двигаться.",
+            "isGeneral": false,
+            "id": 157
         }
     ],
     "lim": 15,
     "idState": {
-        "topics": 1,
-        "phrases": 39,
-        "stuffs": 26,
-        "stages": 13
+        "topics": 2,
+        "phrases": 157,
+        "stuffs": 105,
+        "stages": 53
     }
 }

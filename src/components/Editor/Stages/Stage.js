@@ -6,7 +6,7 @@ import AddStuff from "../Stuffs/AddStuff";
 export default class Stage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentRange: "none" };
+    this.state = { currentRange: "none", acheivs: false };
   }
 
   click = name => {
@@ -76,7 +76,7 @@ export default class Stage extends React.Component {
     const rangesItems = ranges
       .filter(r => {
         const param = methods.getParam(r.paramName);
-        return !param.isAchiev;
+        return this.state.acheivs || !param.isAchiev;
       })
       .map(range => (
         <RangeItem
@@ -109,6 +109,13 @@ export default class Stage extends React.Component {
         {generStuff}
         {noRanges}
         {rangesItems}
+        <input
+          type="checkbox"
+          checked={this.state.acheivs}
+          onChange={e => {
+            this.setState({ acheivs: e.target.checked });
+          }}
+        />
         {stuffsItems}
         <AddStuff topic={topic} methods={methods} stageId={stage.id} />
       </div>
