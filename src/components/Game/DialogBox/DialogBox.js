@@ -1,16 +1,18 @@
 import React from "react";
 import "./style.css";
-import PhraseI from "./PhraseI";
+import PhraseText from "./PhraseText";
 
 export default class DialogBox extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
+    const { pPhrase, cPhrase } = this.props;
     return (
       <div className="dialog-box">
-        <PhraseI  />
+        <div className="phrase-interface">
+          <PhraseText text={pPhrase} isPlayer />
+        </div>
+        <div className="phrase-interface">
+          <PhraseText text={cPhrase} />
+        </div>
       </div>
     );
   }

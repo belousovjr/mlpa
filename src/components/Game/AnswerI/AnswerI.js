@@ -3,16 +3,10 @@ import "./style.css";
 
 export default class AnswerI extends React.Component {
   render() {
-    const { answer, updateStage } = this.props;
-
+    const { text, click } = this.props;
     return (
-      <div
-        className="answer"
-        onClick={() => {
-          updateStage();
-        }}
-      >
-        {answer.generalPhrase}
+      <div className="answer" onClick={click}>
+        {text}
       </div>
     );
   }

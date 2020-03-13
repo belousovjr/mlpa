@@ -14,12 +14,6 @@
   overflow: hidden;
 }
 
-.phrase-showing {
-  animation-name: showing;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
-}
-
 .phrase-hiding {
   animation-name: hiding;
   animation-duration: 0.7s;
@@ -31,6 +25,10 @@
   align-self: flex-end;
   padding-left: 2rem;
   padding-right: 2rem;
+
+  animation-name: showing;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes showing {
@@ -51,7 +49,7 @@
   }
 
   100% {
-    background-color: black;
+    opacity: 0;
     max-height: 0%;
   }
 }
