@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mlpa/static/css/main.adfa9749.chunk.css",
+    "main.css": "/mlpa/static/css/main.1672cd5c.chunk.css",
     "main.js": "/mlpa/static/js/main.f0f76af6.chunk.js",
     "main.js.map": "/mlpa/static/js/main.f0f76af6.chunk.js.map",
     "runtime-main.js": "/mlpa/static/js/runtime-main.7c12251b.js",
@@ -8,15 +8,15 @@
     "static/js/2.d1dc3dc0.chunk.js": "/mlpa/static/js/2.d1dc3dc0.chunk.js",
     "static/js/2.d1dc3dc0.chunk.js.map": "/mlpa/static/js/2.d1dc3dc0.chunk.js.map",
     "index.html": "/mlpa/index.html",
-    "precache-manifest.245056a591bdf46661bd75c4c890c792.js": "/mlpa/precache-manifest.245056a591bdf46661bd75c4c890c792.js",
+    "precache-manifest.d55053656d56550c5976be3ec7f632df.js": "/mlpa/precache-manifest.d55053656d56550c5976be3ec7f632df.js",
     "service-worker.js": "/mlpa/service-worker.js",
-    "static/css/main.adfa9749.chunk.css.map": "/mlpa/static/css/main.adfa9749.chunk.css.map",
+    "static/css/main.1672cd5c.chunk.css.map": "/mlpa/static/css/main.1672cd5c.chunk.css.map",
     "static/js/2.d1dc3dc0.chunk.js.LICENSE.txt": "/mlpa/static/js/2.d1dc3dc0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7c12251b.js",
     "static/js/2.d1dc3dc0.chunk.js",
-    "static/css/main.adfa9749.chunk.css",
+    "static/css/main.1672cd5c.chunk.css",
     "static/js/main.f0f76af6.chunk.js"
   ]
 }
