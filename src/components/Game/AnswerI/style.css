@@ -7,5 +7,6 @@
 }
 
 .disabled {
+  display: none;
   background-color: gray;
 }

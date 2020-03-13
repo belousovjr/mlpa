@@ -20,7 +20,9 @@ export default class UI extends React.Component {
       pPhrase: "Что с тобой?",
       answers,
       disabled: true,
-      currStageId
+      currStageId,
+      isHiding: false,
+      dDelay: 2000
     };
   }
   getStageData(stageId) {
@@ -34,33 +36,50 @@ export default class UI extends React.Component {
     };
   }
   update(stuffId) {
-    //ответ игрока
-    //ответ персонажа
-    //варианты
-    //текущий stage
     const newStageId = this.loc.calcStuff(stuffId);
     const pPhrase = this.loc.getCorrectPhrase(stuffId);
     const { cPhrase, answers } = this.getStageData(newStageId);
 
     this.setState({
-      pPhrase,
-      cPhrase,
-      currStageId: newStageId,
-      answers
+      isHiding: true
     });
+
+    setTimeout(() => {
+      this.setState({
+        pPhrase,
+        cPhrase,
+        currStageId: newStageId,
+        answers,
+        disabled: true,
+        isHiding: false,
+        dDelay: 500 //ДОБАВИТЬ ЗАВИСИМОСТЬ ОТ ПОТРЯСЕНИЯ
+      });
+    }, 300);
   }
   defaultParams() {
     this.loc.params.forEach(p => {
       if (!p.isAchiev) p.value = 7;
     });
   }
+  writingFinish() {
+    this.setState({ disabled: false });
+  }
   render() {
-    const { pPhrase, cPhrase, currStageId, answers } = this.state;
+    const {
+      pPhrase,
+      cPhrase,
+      currStageId,
+      answers,
+      disabled,
+      isHiding,
+      dDelay
+    } = this.state;
     const answersItems = answers.map(answer => {
       return (
         <AnswerI
           key={answer.id}
           text={answer.generalPhrase}
+          disabled={disabled}
           click={() => {
             this.update(answer.id);
           }}
@@ -70,7 +89,16 @@ export default class UI extends React.Component {
     return (
       <div>
         {answersItems}
-        <DialogBox key={currStageId} pPhrase={pPhrase} cPhrase={cPhrase} />
+        <DialogBox
+          hiding={isHiding}
+          key={currStageId}
+          pPhrase={pPhrase}
+          cPhrase={cPhrase}
+          dDelay={dDelay}
+          writingFinish={() => {
+            this.writingFinish();
+          }}
+        />
       </div>
     );
   }

@@ -16,19 +16,20 @@
 
 .phrase-hiding {
   animation-name: hiding;
-  animation-duration: 0.7s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
 .phrase-text {
+  animation-name: showing;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.phrase-content {
   align-self: flex-end;
   padding-left: 2rem;
   padding-right: 2rem;
-
-  animation-name: showing;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes showing {

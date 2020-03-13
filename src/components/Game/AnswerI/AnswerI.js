@@ -3,9 +3,15 @@ import "./style.css";
 
 export default class AnswerI extends React.Component {
   render() {
-    const { text, click } = this.props;
+    const { text, click, disabled } = this.props;
+    const disClass = disabled ? "disabled" : "";
     return (
-      <div className="answer" onClick={click}>
+      <div
+        className={`answer ${disClass}`}
+        onClick={() => {
+          if (!disabled) click();
+        }}
+      >
         {text}
       </div>
     );

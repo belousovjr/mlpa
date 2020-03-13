@@ -2,13 +2,33 @@ import React from "react";
 import "./style.css";
 
 export default class PhraseText extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isStart: true, curText: "" };
+  }
+  nextLetterLoop() {
+    const { text, pAnsswerd, writingFinish, isPlayer } = this.props;
+
+    const { curText } = this.state;
+    if (text !== curText) {
+      const curLen = curText.length;
+      const newText = text.slice(0, curLen + 1);
+
+      setTimeout(() => {
+        this.setState({ curText: newText, isStart: false });
+        this.nextLetterLoop();
+      }, 40);
+    } else isPlayer ? pAnsswerd() : writingFinish();
+  }
   render() {
-    const { isPlayer, text } = this.props;
+    const { isPlayer } = this.props;
+    const { isStart, curText } = this.state;
+    if (isStart) this.nextLetterLoop();
     const title = isPlayer ? "Я" : "Она";
     const titleClass = isPlayer ? "text-p" : "text-c";
     return (
-      <div className={`phrase-text`}>
-        <span className={titleClass}>{title}/</span> {text}
+      <div className="phrase-text">
+        <span className={titleClass}>{title}/</span> {curText}
       </div>
     );
   }
