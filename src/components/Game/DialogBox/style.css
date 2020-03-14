@@ -1,7 +1,7 @@
 .dialog-box {
   background-color: black;
   color: white;
-  width: 80%;
+  width: 50%;
 
   height: 6rem;
   left: 10%;
@@ -57,4 +57,8 @@
 
 .text-c {
   color: deepskyblue;
+}
+
+.bal-text {
+  opacity: 0;
 }
