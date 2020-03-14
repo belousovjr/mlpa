@@ -1,10 +1,10 @@
 .dialog-box {
   background-color: black;
   color: white;
-  width: 50%;
+  width: 90%;
 
   height: 6rem;
-  left: 10%;
+  left: 5%;
   bottom: 0;
   position: absolute;
 }
