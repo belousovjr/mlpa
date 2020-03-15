@@ -143,8 +143,15 @@
             "name": "Что с ней?",
             "graduation": "ПАН АПАТ",
             "isFin": false,
-            "isStart": true,
+            "isStart": false,
             "id": 2
+        },
+        {
+            "name": "Как ей помочь?",
+            "graduation": "ПАН НЕУВ",
+            "isFin": false,
+            "isStart": true,
+            "id": 3
         }
     ],
     "stuffs": [
@@ -822,6 +829,519 @@
             "changes": [],
             "isA": true,
             "id": 105
+        },
+        {
+            "stage_id": 54,
+            "changes": [],
+            "isA": true,
+            "id": 106
+        },
+        {
+            "stage_id": 54,
+            "next_stage_id": 55,
+            "changes": [],
+            "isA": false,
+            "id": 107
+        },
+        {
+            "stage_id": 54,
+            "next_stage_id": 56,
+            "changes": [],
+            "isA": false,
+            "id": 108
+        },
+        {
+            "stage_id": 54,
+            "next_stage_id": 57,
+            "changes": [],
+            "isA": false,
+            "id": 109
+        },
+        {
+            "stage_id": 55,
+            "changes": [],
+            "isA": true,
+            "id": 110
+        },
+        {
+            "stage_id": 56,
+            "changes": [],
+            "isA": true,
+            "id": 111
+        },
+        {
+            "stage_id": 57,
+            "changes": [],
+            "isA": true,
+            "id": 112
+        },
+        {
+            "stage_id": 55,
+            "next_stage_id": 58,
+            "changes": [],
+            "isA": false,
+            "id": 113
+        },
+        {
+            "stage_id": 55,
+            "next_stage_id": 59,
+            "changes": [],
+            "isA": false,
+            "id": 114
+        },
+        {
+            "stage_id": 55,
+            "next_stage_id": 60,
+            "changes": [],
+            "isA": false,
+            "id": 115
+        },
+        {
+            "stage_id": 56,
+            "next_stage_id": 61,
+            "changes": [],
+            "isA": false,
+            "id": 116
+        },
+        {
+            "stage_id": 56,
+            "next_stage_id": 62,
+            "changes": [],
+            "isA": false,
+            "id": 117
+        },
+        {
+            "stage_id": 56,
+            "next_stage_id": 63,
+            "changes": [],
+            "isA": false,
+            "id": 118
+        },
+        {
+            "stage_id": 57,
+            "next_stage_id": 64,
+            "changes": [],
+            "isA": false,
+            "id": 119
+        },
+        {
+            "stage_id": 57,
+            "next_stage_id": 65,
+            "changes": [],
+            "isA": false,
+            "id": 120
+        },
+        {
+            "stage_id": 57,
+            "next_stage_id": 66,
+            "changes": [],
+            "isA": false,
+            "id": 121
+        },
+        {
+            "stage_id": 58,
+            "changes": [],
+            "isA": true,
+            "id": 122
+        },
+        {
+            "stage_id": 59,
+            "changes": [],
+            "isA": true,
+            "id": 124
+        },
+        {
+            "stage_id": 60,
+            "changes": [],
+            "isA": true,
+            "id": 125
+        },
+        {
+            "stage_id": 61,
+            "changes": [],
+            "isA": true,
+            "id": 126
+        },
+        {
+            "stage_id": 62,
+            "changes": [],
+            "isA": true,
+            "id": 127
+        },
+        {
+            "stage_id": 63,
+            "changes": [],
+            "isA": true,
+            "id": 128
+        },
+        {
+            "stage_id": 64,
+            "changes": [],
+            "isA": true,
+            "id": 129
+        },
+        {
+            "stage_id": 65,
+            "changes": [],
+            "isA": true,
+            "id": 130
+        },
+        {
+            "stage_id": 66,
+            "changes": [],
+            "isA": true,
+            "id": 131
+        },
+        {
+            "stage_id": 58,
+            "next_stage_id": 67,
+            "changes": [],
+            "isA": false,
+            "id": 132
+        },
+        {
+            "stage_id": 58,
+            "next_stage_id": 68,
+            "changes": [],
+            "isA": false,
+            "id": 133
+        },
+        {
+            "stage_id": 58,
+            "next_stage_id": 69,
+            "changes": [],
+            "isA": false,
+            "id": 134
+        },
+        {
+            "stage_id": 59,
+            "next_stage_id": 70,
+            "changes": [],
+            "isA": false,
+            "id": 135
+        },
+        {
+            "stage_id": 59,
+            "next_stage_id": 71,
+            "changes": [],
+            "isA": false,
+            "id": 136
+        },
+        {
+            "stage_id": 59,
+            "next_stage_id": 72,
+            "changes": [],
+            "isA": false,
+            "id": 137
+        },
+        {
+            "stage_id": 60,
+            "next_stage_id": 73,
+            "changes": [],
+            "isA": false,
+            "id": 138
+        },
+        {
+            "stage_id": 60,
+            "next_stage_id": 74,
+            "changes": [],
+            "isA": false,
+            "id": 139
+        },
+        {
+            "stage_id": 60,
+            "next_stage_id": 75,
+            "changes": [],
+            "isA": false,
+            "id": 140
+        },
+        {
+            "stage_id": 61,
+            "next_stage_id": 76,
+            "changes": [],
+            "isA": false,
+            "id": 141
+        },
+        {
+            "stage_id": 61,
+            "next_stage_id": 77,
+            "changes": [],
+            "isA": false,
+            "id": 142
+        },
+        {
+            "stage_id": 61,
+            "next_stage_id": 93,
+            "changes": [],
+            "isA": false,
+            "id": 143
+        },
+        {
+            "stage_id": 62,
+            "next_stage_id": 78,
+            "changes": [],
+            "isA": false,
+            "id": 144
+        },
+        {
+            "stage_id": 62,
+            "next_stage_id": 79,
+            "changes": [],
+            "isA": false,
+            "id": 145
+        },
+        {
+            "stage_id": 62,
+            "next_stage_id": 80,
+            "changes": [],
+            "isA": false,
+            "id": 146
+        },
+        {
+            "stage_id": 63,
+            "next_stage_id": 81,
+            "changes": [],
+            "isA": false,
+            "id": 147
+        },
+        {
+            "stage_id": 63,
+            "next_stage_id": 82,
+            "changes": [],
+            "isA": false,
+            "id": 148
+        },
+        {
+            "stage_id": 63,
+            "next_stage_id": 83,
+            "changes": [],
+            "isA": false,
+            "id": 149
+        },
+        {
+            "stage_id": 64,
+            "next_stage_id": 84,
+            "changes": [],
+            "isA": false,
+            "id": 150
+        },
+        {
+            "stage_id": 64,
+            "next_stage_id": 85,
+            "changes": [],
+            "isA": false,
+            "id": 151
+        },
+        {
+            "stage_id": 64,
+            "next_stage_id": 86,
+            "changes": [],
+            "isA": false,
+            "id": 152
+        },
+        {
+            "stage_id": 65,
+            "next_stage_id": 87,
+            "changes": [],
+            "isA": false,
+            "id": 153
+        },
+        {
+            "stage_id": 65,
+            "next_stage_id": 88,
+            "changes": [],
+            "isA": false,
+            "id": 154
+        },
+        {
+            "stage_id": 65,
+            "next_stage_id": 89,
+            "changes": [],
+            "isA": false,
+            "id": 155
+        },
+        {
+            "stage_id": 66,
+            "next_stage_id": 90,
+            "changes": [],
+            "isA": false,
+            "id": 156
+        },
+        {
+            "stage_id": 66,
+            "next_stage_id": 91,
+            "changes": [],
+            "isA": false,
+            "id": 157
+        },
+        {
+            "stage_id": 66,
+            "next_stage_id": 92,
+            "changes": [],
+            "isA": false,
+            "id": 158
+        },
+        {
+            "stage_id": 67,
+            "changes": [],
+            "isA": true,
+            "id": 159
+        },
+        {
+            "stage_id": 68,
+            "changes": [],
+            "isA": true,
+            "id": 160
+        },
+        {
+            "stage_id": 69,
+            "changes": [],
+            "isA": true,
+            "id": 161
+        },
+        {
+            "stage_id": 70,
+            "changes": [],
+            "isA": true,
+            "id": 162
+        },
+        {
+            "stage_id": 71,
+            "changes": [],
+            "isA": true,
+            "id": 163
+        },
+        {
+            "stage_id": 72,
+            "changes": [],
+            "isA": true,
+            "id": 164
+        },
+        {
+            "stage_id": 73,
+            "changes": [],
+            "isA": true,
+            "id": 165
+        },
+        {
+            "stage_id": 74,
+            "changes": [],
+            "isA": true,
+            "id": 166
+        },
+        {
+            "stage_id": 75,
+            "changes": [],
+            "isA": true,
+            "id": 167
+        },
+        {
+            "stage_id": 76,
+            "changes": [],
+            "isA": true,
+            "id": 168
+        },
+        {
+            "stage_id": 77,
+            "changes": [],
+            "isA": true,
+            "id": 169
+        },
+        {
+            "stage_id": 78,
+            "changes": [],
+            "isA": true,
+            "id": 170
+        },
+        {
+            "stage_id": 79,
+            "changes": [],
+            "isA": true,
+            "id": 171
+        },
+        {
+            "stage_id": 80,
+            "changes": [],
+            "isA": true,
+            "id": 172
+        },
+        {
+            "stage_id": 81,
+            "changes": [],
+            "isA": true,
+            "id": 173
+        },
+        {
+            "stage_id": 82,
+            "changes": [],
+            "isA": true,
+            "id": 174
+        },
+        {
+            "stage_id": 83,
+            "changes": [],
+            "isA": true,
+            "id": 175
+        },
+        {
+            "stage_id": 84,
+            "changes": [],
+            "isA": true,
+            "id": 176
+        },
+        {
+            "stage_id": 85,
+            "changes": [],
+            "isA": true,
+            "id": 177
+        },
+        {
+            "stage_id": 86,
+            "changes": [],
+            "isA": true,
+            "id": 178
+        },
+        {
+            "stage_id": 87,
+            "changes": [],
+            "isA": true,
+            "id": 179
+        },
+        {
+            "stage_id": 88,
+            "changes": [],
+            "isA": true,
+            "id": 180
+        },
+        {
+            "stage_id": 89,
+            "changes": [],
+            "isA": true,
+            "id": 181
+        },
+        {
+            "stage_id": 90,
+            "changes": [],
+            "isA": true,
+            "id": 182
+        },
+        {
+            "stage_id": 91,
+            "changes": [],
+            "isA": true,
+            "id": 183
+        },
+        {
+            "stage_id": 92,
+            "changes": [],
+            "isA": true,
+            "id": 184
+        },
+        {
+            "stage_id": 93,
+            "changes": [],
+            "isA": true,
+            "id": 185
         }
     ],
     "stages": [
@@ -1142,6 +1662,246 @@
             "topic_id": 2,
             "id": 53,
             "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 54,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 55,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 56,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 57,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 58,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 59,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 60,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 61,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 62,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 63,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 64,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 65,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 66,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 67,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 68,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 69,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 70,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 71,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 72,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 73,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 74,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 75,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 76,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 77,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 78,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 79,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 80,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 81,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 82,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 83,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 84,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 85,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 86,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 87,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 88,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 89,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 90,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 91,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 92,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 3,
+            "id": 93,
+            "isStart": false
         }
     ],
     "phrases": [
@@ -1153,25 +1913,25 @@
         },
         {
             "stuff_id": 2,
-            "text": "Добрый вечер.",
+            "text": "Добрый вечер, ты, кажется, не диспетчер.",
             "isGeneral": false,
             "id": 2
         },
         {
             "stuff_id": 2,
-            "text": "Вечер",
+            "text": "Здравствуй",
             "isGeneral": true,
             "id": 3
         },
         {
             "stuff_id": 4,
-            "text": "Здравствуй. Выглядишь не очень...",
+            "text": "Здравствуй. Выглядишь, будто тебя распяли вместо Иисуса.",
             "isGeneral": false,
             "id": 6
         },
         {
             "stuff_id": 4,
-            "text": "Плохо выглядишь",
+            "text": "Выглядишь не очень",
             "isGeneral": true,
             "id": 7
         },
@@ -1183,7 +1943,7 @@
         },
         {
             "stuff_id": 5,
-            "text": "Приветствие",
+            "text": "Привет",
             "isGeneral": true,
             "id": 9
         },
@@ -1195,7 +1955,7 @@
         },
         {
             "stuff_id": 7,
-            "text": "У тебя кажется руки трясутся.",
+            "text": "У тебя руки трясутся как у припадочной.",
             "isGeneral": false,
             "id": 11
         },
@@ -1207,7 +1967,7 @@
         },
         {
             "stuff_id": 8,
-            "text": "У тебя пот на лбу.",
+            "text": "У тебя лоб в испарине.",
             "isGeneral": false,
             "id": 13
         },
@@ -1219,7 +1979,7 @@
         },
         {
             "stuff_id": 9,
-            "text": "Ты дышишь очень часто.",
+            "text": "Ты дышишь очень часто. Слишком часто.",
             "isGeneral": false,
             "id": 15
         },
@@ -1243,31 +2003,31 @@
         },
         {
             "stuff_id": 11,
-            "text": "Растеряна",
+            "text": "Ты растеряна",
             "isGeneral": true,
             "id": 19
         },
         {
             "stuff_id": 12,
-            "text": "Ты кажешься очень печальной.",
+            "text": "Ты кажешься очень печальной. Наверное, носишь траур.",
             "isGeneral": false,
             "id": 20
         },
         {
             "stuff_id": 12,
-            "text": "Печальна",
+            "text": "Ты печальна",
             "isGeneral": true,
             "id": 21
         },
         {
             "stuff_id": 13,
-            "text": "Ты выглядишь разбитой.",
+            "text": "Ты выглядишь сокрушенной как борт Титаника.",
             "isGeneral": false,
             "id": 22
         },
         {
             "stuff_id": 13,
-            "text": "Разбита",
+            "text": "Ты разбита",
             "isGeneral": true,
             "id": 23
         },
@@ -1285,7 +2045,7 @@
         },
         {
             "stuff_id": 15,
-            "text": "В порядке",
+            "text": "Состояние",
             "isGeneral": true,
             "id": 26
         },
@@ -1297,7 +2057,7 @@
         },
         {
             "stuff_id": 16,
-            "text": "Плохо",
+            "text": "Самочувствие",
             "isGeneral": true,
             "id": 28
         },
@@ -1309,7 +2069,7 @@
         },
         {
             "stuff_id": 17,
-            "text": "Страшно",
+            "text": "Страх",
             "isGeneral": true,
             "id": 30
         },
@@ -1321,13 +2081,13 @@
         },
         {
             "stuff_id": 19,
-            "text": "Пот? Я не знаю... Мне холодно.",
+            "text": "Испарина? Я не знаю... Мне холодно.",
             "isGeneral": false,
             "id": 32
         },
         {
             "stuff_id": 20,
-            "text": "Я не знаю, я не чувствую как дышу...",
+            "text": "Не знаю, я не чувствую как дышу...",
             "isGeneral": false,
             "id": 33
         },
@@ -1339,7 +2099,7 @@
         },
         {
             "stuff_id": 22,
-            "text": "Печальной? Я не знаю...",
+            "text": "Печальной? Какой траур? О чем ты? Я не знаю...",
             "isGeneral": false,
             "id": 35
         },
@@ -1351,7 +2111,7 @@
         },
         {
             "stuff_id": 24,
-            "text": "Кажется нет...",
+            "text": "Кажется, нет...",
             "isGeneral": false,
             "id": 37
         },
@@ -1369,13 +2129,13 @@
         },
         {
             "stuff_id": 27,
-            "text": "Мне нехорошо, меня тошнит.",
+            "text": "Мне нехорошо. Тошнит. Очень сильно.",
             "isGeneral": false,
             "id": 40
         },
         {
             "stuff_id": 28,
-            "text": "Да уж, с тобой явно что-то не так.",
+            "text": "Да уж, очевидно  что у тебя какие-то проблемы.",
             "isGeneral": false,
             "id": 41
         },
@@ -1387,19 +2147,19 @@
         },
         {
             "stuff_id": 29,
-            "text": "Ты еще и выглядишь пугающе.",
+            "text": "Да ты еще и выглядишь пугающе.",
             "isGeneral": false,
             "id": 43
         },
         {
             "stuff_id": 29,
-            "text": "Пугающе",
+            "text": "Ты пугаешь",
             "isGeneral": true,
             "id": 44
         },
         {
             "stuff_id": 30,
-            "text": "Расскажи подробней чтоб я мог помочь.",
+            "text": "Расскажи подробнее, чтобы я мог помочь.",
             "isGeneral": false,
             "id": 45
         },
@@ -1423,43 +2183,43 @@
         },
         {
             "stuff_id": 33,
-            "text": "Думаешь ты сможешь помочь?",
+            "text": "Думаешь, ты сможешь помочь?",
             "isGeneral": false,
             "id": 49
         },
         {
             "stuff_id": 34,
-            "text": "Откуда тебе знать что с моей головой?..",
+            "text": "Да откуда тебе знать, что с моей головой?!",
             "isGeneral": false,
             "id": 50
         },
         {
             "stuff_id": 35,
-            "text": "Ну, выглядишь будто у тебя с головой проблемы.",
+            "text": "Ну, выглядишь , будто у тебя с головой проблемы. Как насчет лоботомии? ",
             "isGeneral": false,
             "id": 51
         },
         {
             "stuff_id": 35,
-            "text": "Безумна",
+            "text": "Безумие",
             "isGeneral": true,
             "id": 52
         },
         {
             "stuff_id": 36,
-            "text": "Не знаю, сама скажи в чем твоя проблема.",
+            "text": "Сама скажи, в чем твоя проблема.  Я не буду ничего решать за тебя.",
             "isGeneral": false,
             "id": 53
         },
         {
             "stuff_id": 36,
-            "text": "Не знаю",
+            "text": "Незнание",
             "isGeneral": true,
             "id": 54
         },
         {
             "stuff_id": 37,
-            "text": "Ты просто выглядишь травмированной.",
+            "text": "Ты выглядишь травмированной. Это нехорошо.",
             "isGeneral": false,
             "id": 55
         },
@@ -1477,31 +2237,31 @@
         },
         {
             "stuff_id": 38,
-            "text": "Помочь себе",
+            "text": "Помощь себе",
             "isGeneral": true,
             "id": 58
         },
         {
             "stuff_id": 39,
-            "text": "Ты какая-то бессильная.",
+            "text": "Ты какая-то немощная.",
             "isGeneral": false,
             "id": 59
         },
         {
             "stuff_id": 39,
-            "text": "Бессильна",
+            "text": "Бессилие",
             "isGeneral": true,
             "id": 60
         },
         {
             "stuff_id": 40,
-            "text": "Ты выглядишь будто задумала что-то плохое.",
+            "text": "Ты выглядишь будто задумала что-то плохое. Умываться кровью детей - это великий грех.Так, для справки.",
             "isGeneral": false,
             "id": 61
         },
         {
             "stuff_id": 40,
-            "text": "Что-то задумала",
+            "text": "План",
             "isGeneral": true,
             "id": 62
         },
@@ -1519,7 +2279,7 @@
         },
         {
             "stuff_id": 42,
-            "text": "Не знаю, скажи что мне сделать.",
+            "text": "Господи, да откуда мне знать? Просто скажи ,что мне сделать.",
             "isGeneral": false,
             "id": 65
         },
@@ -1531,7 +2291,7 @@
         },
         {
             "stuff_id": 43,
-            "text": "Да, но мне нужно знать что именно ты ощущаешь.",
+            "text": "Да, но мне нужно знать, что именно ты ощущаешь. Иначе ничего не выйдет.",
             "isGeneral": false,
             "id": 67
         },
@@ -1549,7 +2309,7 @@
         },
         {
             "stuff_id": 45,
-            "text": "Думаешь меня что-то травмировало?",
+            "text": "Думаешь, меня что-то травмировало?",
             "isGeneral": false,
             "id": 70
         },
@@ -1573,31 +2333,31 @@
         },
         {
             "stuff_id": 49,
-            "text": "Тебе это не нужно и смысла нет...",
+            "text": "Тебе это не нужно и никакого смысла нет...",
             "isGeneral": false,
             "id": 74
         },
         {
             "stuff_id": 50,
-            "text": "Я не думаю что ты сможешь что-то сделать.",
+            "text": "Сомневаюсь, что ты сможешь что-то сделать. Отстань! Просто оставь меня в покое...",
             "isGeneral": false,
             "id": 75
         },
         {
             "stuff_id": 51,
-            "text": "Я ощущаю слабость и сердце бьется очень быстро.",
+            "text": "Я ощущаю слабость и сердце бьется очень быстро. От этого хочется задохнуться и очень больно.",
             "isGeneral": false,
             "id": 76
         },
         {
             "stuff_id": 52,
-            "text": "В некотором смысле я и есть твоя голова. Точнее твой разум. Так что я представляю о чем говорю.",
+            "text": "В некотором смысле я и есть твоя голова. Или ты, как душе угодно. Только со способностью к анализу. Так что я представляю о чем говорю., истеричка.",
             "isGeneral": false,
             "id": 77
         },
         {
             "stuff_id": 52,
-            "text": "Представиться",
+            "text": "Знакомство",
             "isGeneral": true,
             "id": 78
         },
@@ -1615,7 +2375,7 @@
         },
         {
             "stuff_id": 54,
-            "text": "Ты будто на стадии отрицания, я правда не знаю что ты пытаешься отрицать.",
+            "text": "Ты будто бы на стадии отрицания, только непонятно, что ты пытаешься отрицать.",
             "isGeneral": false,
             "id": 81
         },
@@ -1627,31 +2387,31 @@
         },
         {
             "stuff_id": 55,
-            "text": "Видимо ты очень напугана.",
+            "text": "Ты очень напугана.",
             "isGeneral": false,
             "id": 83
         },
         {
             "stuff_id": 55,
-            "text": "Напугана",
+            "text": "Испуг",
             "isGeneral": true,
             "id": 84
         },
         {
             "stuff_id": 56,
-            "text": "Возможно ты больна.",
+            "text": "Возможно, ты больна.",
             "isGeneral": false,
             "id": 85
         },
         {
             "stuff_id": 56,
-            "text": "Больна",
+            "text": "Болезнь",
             "isGeneral": true,
             "id": 86
         },
         {
             "stuff_id": 57,
-            "text": "Не хочу пугать, но возможно ты сходишь с ума.",
+            "text": "Не хочу пугать, но есть шанс того, что ты сходишь с ума. Ой, напугал. Очень жаль.",
             "isGeneral": false,
             "id": 87
         },
@@ -1675,7 +2435,7 @@
         },
         {
             "stuff_id": 59,
-            "text": "Тебя могло травмировать страшное событие.",
+            "text": "Тебя могло травмировать какое-то неприятное событие.",
             "isGeneral": false,
             "id": 91
         },
@@ -1687,7 +2447,7 @@
         },
         {
             "stuff_id": 60,
-            "text": "Возможно ты вспомнила что-то страшное?",
+            "text": "Может, ты вспомнила о чем-то жутком?",
             "isGeneral": false,
             "id": 93
         },
@@ -1711,7 +2471,7 @@
         },
         {
             "stuff_id": 62,
-            "text": "Соберись уже.",
+            "text": "Не будь тряпой, ты не главный герой гаремника. Соберись.",
             "isGeneral": false,
             "id": 97
         },
@@ -1723,7 +2483,7 @@
         },
         {
             "stuff_id": 63,
-            "text": "Откуда мне знать, тебе же плохо.",
+            "text": "Откуда мне знать? Ведь проблема в тебе.",
             "isGeneral": false,
             "id": 99
         },
@@ -1735,7 +2495,7 @@
         },
         {
             "stuff_id": 64,
-            "text": "Ну, ты так выглядишь.",
+            "text": "Ну, ты так выглядишь. Как маленький котеночек с износившимся бантиком..ну,и так далее.",
             "isGeneral": false,
             "id": 101
         },
@@ -1747,7 +2507,7 @@
         },
         {
             "stuff_id": 65,
-            "text": "Мне так показалось из-за твоих ответов.",
+            "text": "Мне так показалось. Из-за твоих ответов.",
             "isGeneral": false,
             "id": 103
         },
@@ -1759,7 +2519,7 @@
         },
         {
             "stuff_id": 66,
-            "text": "Ты ничего не делаешь, ведешь себя пассивно.",
+            "text": "Ты абсолютно ничего не делаешь и ведешь себя пассивно. ",
             "isGeneral": false,
             "id": 105
         },
@@ -1771,7 +2531,7 @@
         },
         {
             "stuff_id": 67,
-            "text": "Все выглядит будто ты собралась на свое первое убийство...",
+            "text": "Все выглядит будто ты собралась на свое первое убийство...Вы всегда нервничаете в первый раз...",
             "isGeneral": false,
             "id": 107
         },
@@ -1789,13 +2549,13 @@
         },
         {
             "stuff_id": 68,
-            "text": "Извиниться",
+            "text": "Извинения",
             "isGeneral": true,
             "id": 110
         },
         {
             "stuff_id": 69,
-            "text": "Ну, я же не знаю о чем именно ты думаешь.",
+            "text": "Ну, я же не читаю твои мысли, дурочка.",
             "isGeneral": false,
             "id": 111
         },
@@ -1807,7 +2567,7 @@
         },
         {
             "stuff_id": 70,
-            "text": "Если откажешься тебе никто не поможет.",
+            "text": "Если откажешься, то тебе никто не поможет. Подумай своей тупой головой.",
             "isGeneral": false,
             "id": 113
         },
@@ -1819,7 +2579,7 @@
         },
         {
             "stuff_id": 71,
-            "text": "Я - грубо говоря, твое подсознание, так что смысл есть.",
+            "text": "Я — грубо говоря, твое подсознание, так что смысл есть.",
             "isGeneral": false,
             "id": 115
         },
@@ -1879,7 +2639,7 @@
         },
         {
             "stuff_id": 76,
-            "text": "Тебе не станет лучше пока ты ничего с этим не делаешь...",
+            "text": "Но тебе не станет лучше пока ты ничего с этим что-то не сделаешь..",
             "isGeneral": false,
             "id": 125
         },
@@ -1891,7 +2651,7 @@
         },
         {
             "stuff_id": 77,
-            "text": "Ты ведешь себя как слабый человек.",
+            "text": "Ты ведешь себя как слабый человек. Это разочаровывает.",
             "isGeneral": false,
             "id": 127
         },
@@ -1903,13 +2663,13 @@
         },
         {
             "stuff_id": 78,
-            "text": "Мне кажется ты очень устала.",
+            "text": "Мне кажется, ты очень устала.",
             "isGeneral": false,
             "id": 129
         },
         {
             "stuff_id": 78,
-            "text": "Устала",
+            "text": "Усталость",
             "isGeneral": true,
             "id": 130
         },
@@ -1933,13 +2693,13 @@
         },
         {
             "stuff_id": 82,
-            "text": "Думаю ты прав...",
+            "text": "Думаю, ты прав...",
             "isGeneral": false,
             "id": 134
         },
         {
             "stuff_id": 83,
-            "text": "Я здорова, мне кажется дело в чем-то другом.",
+            "text": "Я здорова, мне кажется, дело в чем-то другом.",
             "isGeneral": false,
             "id": 135
         },
@@ -2074,13 +2834,721 @@
             "text": "Да, устала... Я не могу двигаться.",
             "isGeneral": false,
             "id": 157
+        },
+        {
+            "stuff_id": 106,
+            "text": "Не представляю.",
+            "isGeneral": false,
+            "id": 158
+        },
+        {
+            "stuff_id": 107,
+            "text": "Ну, надо представлять, это же ты у нас дамочка в беде.",
+            "isGeneral": false,
+            "id": 159
+        },
+        {
+            "stuff_id": 107,
+            "text": "Давить",
+            "isGeneral": true,
+            "id": 160
+        },
+        {
+            "stuff_id": 108,
+            "text": "Давай придумаем что-нибудь?",
+            "isGeneral": false,
+            "id": 161
+        },
+        {
+            "stuff_id": 108,
+            "text": "Вместе",
+            "isGeneral": true,
+            "id": 162
+        },
+        {
+            "stuff_id": 109,
+            "text": "У меня в запасе есть пара идей.",
+            "isGeneral": false,
+            "id": 163
+        },
+        {
+            "stuff_id": 109,
+            "text": "Идеи",
+            "isGeneral": true,
+            "id": 164
+        },
+        {
+            "stuff_id": 110,
+            "text": "Прошу, не надо на меня давить...",
+            "isGeneral": false,
+            "id": 165
+        },
+        {
+            "stuff_id": 111,
+            "text": "Я не знаю что из этого получится.",
+            "isGeneral": false,
+            "id": 166
+        },
+        {
+            "stuff_id": 112,
+            "text": "Что за идеи?..",
+            "isGeneral": false,
+            "id": 167
+        },
+        {
+            "stuff_id": 113,
+            "text": "Советую придержать язык при себе и не указывать мне.",
+            "isGeneral": false,
+            "id": 168
+        },
+        {
+            "stuff_id": 113,
+            "text": "Одернуть",
+            "isGeneral": true,
+            "id": 169
+        },
+        {
+            "stuff_id": 114,
+            "text": "Извини, не было такой цели.",
+            "isGeneral": false,
+            "id": 170
+        },
+        {
+            "stuff_id": 114,
+            "text": "Извиниться",
+            "isGeneral": true,
+            "id": 171
+        },
+        {
+            "stuff_id": 115,
+            "text": "Ну, тебя надо было как-то мотивировать.",
+            "isGeneral": false,
+            "id": 172
+        },
+        {
+            "stuff_id": 115,
+            "text": "Объяснить",
+            "isGeneral": true,
+            "id": 173
+        },
+        {
+            "stuff_id": 116,
+            "text": "От каких симптомов ты бы хотела избавиться?",
+            "isGeneral": false,
+            "id": 174
+        },
+        {
+            "stuff_id": 116,
+            "text": "Симптомы",
+            "isGeneral": true,
+            "id": 175
+        },
+        {
+            "stuff_id": 117,
+            "text": "От чего тебе стало бы легче?",
+            "isGeneral": false,
+            "id": 176
+        },
+        {
+            "stuff_id": 117,
+            "text": "Облегчение",
+            "isGeneral": true,
+            "id": 177
+        },
+        {
+            "stuff_id": 118,
+            "text": "Ну раз не знаешь, можем не стараться.",
+            "isGeneral": false,
+            "id": 178
+        },
+        {
+            "stuff_id": 118,
+            "text": "Все зря",
+            "isGeneral": true,
+            "id": 179
+        },
+        {
+            "stuff_id": 119,
+            "text": "Порежь себе руку.",
+            "isGeneral": false,
+            "id": 180
+        },
+        {
+            "stuff_id": 119,
+            "text": "Самоповреждение",
+            "isGeneral": true,
+            "id": 181
+        },
+        {
+            "stuff_id": 120,
+            "text": "Видео с милыми зверятами всегда помогают.",
+            "isGeneral": false,
+            "id": 182
+        },
+        {
+            "stuff_id": 120,
+            "text": "Милые видео",
+            "isGeneral": true,
+            "id": 183
+        },
+        {
+            "stuff_id": 121,
+            "text": "Подумай о чем-то хорошем.",
+            "isGeneral": false,
+            "id": 184
+        },
+        {
+            "stuff_id": 121,
+            "text": "Хорошие мысли",
+            "isGeneral": true,
+            "id": 185
+        },
+        {
+            "stuff_id": 122,
+            "text": "Ты делаешь только хуже!",
+            "isGeneral": false,
+            "id": 186
+        },
+        {
+            "stuff_id": 124,
+            "text": "Ладно...",
+            "isGeneral": false,
+            "id": 189
+        },
+        {
+            "stuff_id": 125,
+            "text": "У тебя не вышло.",
+            "isGeneral": false,
+            "id": 190
+        },
+        {
+            "stuff_id": 126,
+            "text": "Эм... Ну, наверное от боли в сердце. Оно очень часто стучит и мешает.",
+            "isGeneral": false,
+            "id": 191
+        },
+        {
+            "stuff_id": 127,
+            "text": "Если все станет хорошо..?",
+            "isGeneral": false,
+            "id": 192
+        },
+        {
+            "stuff_id": 128,
+            "text": "Нет... Мне нужна помощь, я постараюсь... Не оставляй меня одну.",
+            "isGeneral": false,
+            "id": 193
+        },
+        {
+            "stuff_id": 129,
+            "text": "Нет, не сейчас.",
+            "isGeneral": false,
+            "id": 194
+        },
+        {
+            "stuff_id": 130,
+            "text": "...",
+            "isGeneral": false,
+            "id": 195
+        },
+        {
+            "stuff_id": 131,
+            "text": "...О чем?",
+            "isGeneral": false,
+            "id": 196
+        },
+        {
+            "stuff_id": 132,
+            "text": "Прости. Знаешь, в английском есть выражение \"soft-hearted\", тебе бы очень подошло.",
+            "isGeneral": false,
+            "id": 197
+        },
+        {
+            "stuff_id": 132,
+            "text": "Извиниться",
+            "isGeneral": true,
+            "id": 198
+        },
+        {
+            "stuff_id": 133,
+            "text": "Я хоть что-то делаю в отличии от тебя!",
+            "isGeneral": false,
+            "id": 199
+        },
+        {
+            "stuff_id": 133,
+            "text": "Упрекнуть",
+            "isGeneral": true,
+            "id": 200
+        },
+        {
+            "stuff_id": 134,
+            "text": "Окей, давай забудем.",
+            "isGeneral": false,
+            "id": 201
+        },
+        {
+            "stuff_id": 134,
+            "text": "Замять тему",
+            "isGeneral": true,
+            "id": 202
+        },
+        {
+            "stuff_id": 135,
+            "text": "Слушай, может пойдешь домой?",
+            "isGeneral": false,
+            "id": 203
+        },
+        {
+            "stuff_id": 135,
+            "text": "Домой",
+            "isGeneral": true,
+            "id": 204
+        },
+        {
+            "stuff_id": 136,
+            "text": "Может позвонишь кому-то из близких? Парню?...",
+            "isGeneral": false,
+            "id": 205
+        },
+        {
+            "stuff_id": 136,
+            "text": "Звонок",
+            "isGeneral": true,
+            "id": 206
+        },
+        {
+            "stuff_id": 137,
+            "text": "Но если не станешь слушать, станет прохладно.",
+            "isGeneral": false,
+            "id": 207
+        },
+        {
+            "stuff_id": 137,
+            "text": "Обида",
+            "isGeneral": true,
+            "id": 208
+        },
+        {
+            "stuff_id": 138,
+            "text": "Мне жаль.",
+            "isGeneral": false,
+            "id": 209
+        },
+        {
+            "stuff_id": 138,
+            "text": "Сожаление",
+            "isGeneral": true,
+            "id": 210
+        },
+        {
+            "stuff_id": 139,
+            "text": "Это твоя проблема, милочка.",
+            "isGeneral": false,
+            "id": 211
+        },
+        {
+            "stuff_id": 139,
+            "text": "Обвинить",
+            "isGeneral": true,
+            "id": 212
+        },
+        {
+            "stuff_id": 140,
+            "text": "Ну, ты ведь мне отвечаешь. Выходит, я справился.",
+            "isGeneral": false,
+            "id": 213
+        },
+        {
+            "stuff_id": 140,
+            "text": "Возразить",
+            "isGeneral": true,
+            "id": 214
+        },
+        {
+            "stuff_id": 141,
+            "text": "Выпей таблетку.",
+            "isGeneral": false,
+            "id": 215
+        },
+        {
+            "stuff_id": 141,
+            "text": "Лекарство",
+            "isGeneral": true,
+            "id": 216
+        },
+        {
+            "stuff_id": 142,
+            "text": "Попробуй присесть.",
+            "isGeneral": false,
+            "id": 217
+        },
+        {
+            "stuff_id": 142,
+            "text": "Отдых",
+            "isGeneral": true,
+            "id": 218
+        },
+        {
+            "stuff_id": 143,
+            "text": "У тебя сейчас есть проблемы и поважнее. Побеспокойся лучше о них.",
+            "isGeneral": false,
+            "id": 219
+        },
+        {
+            "stuff_id": 143,
+            "text": "Незначительно",
+            "isGeneral": true,
+            "id": 220
+        },
+        {
+            "stuff_id": 144,
+            "text": "А что не хорошо? Ты цела и невредима если так посмотреть.",
+            "isGeneral": false,
+            "id": 221
+        },
+        {
+            "stuff_id": 144,
+            "text": "В порядке",
+            "isGeneral": true,
+            "id": 222
+        },
+        {
+            "stuff_id": 145,
+            "text": "Могу я что-нибудь исправить?",
+            "isGeneral": false,
+            "id": 223
+        },
+        {
+            "stuff_id": 145,
+            "text": "Участие",
+            "isGeneral": true,
+            "id": 224
+        },
+        {
+            "stuff_id": 146,
+            "text": "Вообще все хорошо никогда не бывает. Сперва подумай о себе.",
+            "isGeneral": false,
+            "id": 225
+        },
+        {
+            "stuff_id": 146,
+            "text": "Образумить",
+            "isGeneral": true,
+            "id": 226
+        },
+        {
+            "stuff_id": 147,
+            "text": "Судя по тому, как ты себя ведешь, ты обойдешься и без моих советов.",
+            "isGeneral": false,
+            "id": 227
+        },
+        {
+            "stuff_id": 147,
+            "text": "Сомнение",
+            "isGeneral": true,
+            "id": 228
+        },
+        {
+            "stuff_id": 148,
+            "text": "Твои мольбы были услышаны.",
+            "isGeneral": false,
+            "id": 229
+        },
+        {
+            "stuff_id": 148,
+            "text": "Прощение",
+            "isGeneral": true,
+            "id": 230
+        },
+        {
+            "stuff_id": 149,
+            "text": "Нервничать — это нормально. Главное — не замыкайся в себе.",
+            "isGeneral": false,
+            "id": 231
+        },
+        {
+            "stuff_id": 149,
+            "text": "Ободрить",
+            "isGeneral": true,
+            "id": 232
+        },
+        {
+            "stuff_id": 150,
+            "text": "Ведешь себя как слабачка.",
+            "isGeneral": false,
+            "id": 233
+        },
+        {
+            "stuff_id": 150,
+            "text": "Разочарование",
+            "isGeneral": true,
+            "id": 234
+        },
+        {
+            "stuff_id": 151,
+            "text": "Признаю, паршивая идея.",
+            "isGeneral": false,
+            "id": 235
+        },
+        {
+            "stuff_id": 151,
+            "text": "Согласие",
+            "isGeneral": true,
+            "id": 236
+        },
+        {
+            "stuff_id": 152,
+            "text": "По статистике около 17% населения планеты занимаются селфхармом. Видимо, это помогает.",
+            "isGeneral": false,
+            "id": 237
+        },
+        {
+            "stuff_id": 152,
+            "text": "Статистика",
+            "isGeneral": true,
+            "id": 238
+        },
+        {
+            "stuff_id": 153,
+            "text": "Да что с тобой?!",
+            "isGeneral": false,
+            "id": 239
+        },
+        {
+            "stuff_id": 153,
+            "text": "Вопрос",
+            "isGeneral": true,
+            "id": 240
+        },
+        {
+            "stuff_id": 154,
+            "text": "Ох, похоже задел за живое.",
+            "isGeneral": false,
+            "id": 241
+        },
+        {
+            "stuff_id": 154,
+            "text": "Провокация",
+            "isGeneral": true,
+            "id": 242
+        },
+        {
+            "stuff_id": 155,
+            "text": "Ты что, не любишь животных?",
+            "isGeneral": false,
+            "id": 243
+        },
+        {
+            "stuff_id": 155,
+            "text": "Животные",
+            "isGeneral": true,
+            "id": 244
+        },
+        {
+            "stuff_id": 156,
+            "text": "Раз собака, два собака, три, четыре, пять... Двадцать восемь, тридцать девять, всех не сосчитать... Видишь — город, целый город, город для собак... Там собаки носят фраки, и ночной колпак....",
+            "isGeneral": false,
+            "id": 245
+        },
+        {
+            "stuff_id": 156,
+            "text": "Спеть песенку",
+            "isGeneral": true,
+            "id": 246
+        },
+        {
+            "stuff_id": 157,
+            "text": "К примеру, о первом свидании..?",
+            "isGeneral": false,
+            "id": 247
+        },
+        {
+            "stuff_id": 157,
+            "text": "Любовь",
+            "isGeneral": true,
+            "id": 248
+        },
+        {
+            "stuff_id": 158,
+            "text": "У тебя есть хобби? Подумай о нем.",
+            "isGeneral": false,
+            "id": 249
+        },
+        {
+            "stuff_id": 158,
+            "text": "Увлечения",
+            "isGeneral": true,
+            "id": 250
+        },
+        {
+            "stuff_id": 159,
+            "text": "Если не собираешься мне помогать, не мешай!!",
+            "isGeneral": false,
+            "id": 251
+        },
+        {
+            "stuff_id": 160,
+            "text": "Зачем ты... Ты... Я не могу...",
+            "isGeneral": false,
+            "id": 252
+        },
+        {
+            "stuff_id": 161,
+            "text": "...",
+            "isGeneral": false,
+            "id": 253
+        },
+        {
+            "stuff_id": 162,
+            "text": "Я не прощу себя если уйду сейчас!",
+            "isGeneral": false,
+            "id": 254
+        },
+        {
+            "stuff_id": 163,
+            "text": "...",
+            "isGeneral": false,
+            "id": 255
+        },
+        {
+            "stuff_id": 164,
+            "text": "Мне не становится легче.",
+            "isGeneral": false,
+            "id": 256
+        },
+        {
+            "stuff_id": 165,
+            "text": "Ладно.",
+            "isGeneral": false,
+            "id": 257
+        },
+        {
+            "stuff_id": 166,
+            "text": "Это и твоя проблема тоже.",
+            "isGeneral": false,
+            "id": 258
+        },
+        {
+            "stuff_id": 167,
+            "text": "Ты не понимаешь меня...",
+            "isGeneral": false,
+            "id": 259
+        },
+        {
+            "stuff_id": 168,
+            "text": "У меня нет с собой лекарств.",
+            "isGeneral": false,
+            "id": 260
+        },
+        {
+            "stuff_id": 169,
+            "text": "Я боюсь, меня стошнит.",
+            "isGeneral": false,
+            "id": 261
+        },
+        {
+            "stuff_id": 170,
+            "text": "Ты совсем слепой что ли!?",
+            "isGeneral": false,
+            "id": 262
+        },
+        {
+            "stuff_id": 171,
+            "text": "Попробуй...",
+            "isGeneral": false,
+            "id": 263
+        },
+        {
+            "stuff_id": 172,
+            "text": "А кто подумает об остальном?",
+            "isGeneral": false,
+            "id": 264
+        },
+        {
+            "stuff_id": 173,
+            "text": "Пожалуйста... Будь со мной...",
+            "isGeneral": false,
+            "id": 265
+        },
+        {
+            "stuff_id": 174,
+            "text": "Ага...",
+            "isGeneral": false,
+            "id": 266
+        },
+        {
+            "stuff_id": 175,
+            "text": "Спасибо что ты со мной.",
+            "isGeneral": false,
+            "id": 267
+        },
+        {
+            "stuff_id": 176,
+            "text": "Да... Ты прав...",
+            "isGeneral": false,
+            "id": 268
+        },
+        {
+            "stuff_id": 177,
+            "text": "Может, есть еще варианты?",
+            "isGeneral": false,
+            "id": 269
+        },
+        {
+            "stuff_id": 178,
+            "text": "Может, я сделаю это потом.",
+            "isGeneral": false,
+            "id": 270
+        },
+        {
+            "stuff_id": 179,
+            "text": "Ничего...",
+            "isGeneral": false,
+            "id": 271
+        },
+        {
+            "stuff_id": 180,
+            "text": "Иди к черту!!",
+            "isGeneral": false,
+            "id": 272
+        },
+        {
+            "stuff_id": 181,
+            "text": "Люблю...",
+            "isGeneral": false,
+            "id": 273
+        },
+        {
+            "stuff_id": 182,
+            "text": "ПРЕКРАТИ!!!",
+            "isGeneral": false,
+            "id": 274
+        },
+        {
+            "stuff_id": 183,
+            "text": "Нет!",
+            "isGeneral": false,
+            "id": 275
+        },
+        {
+            "stuff_id": 184,
+            "text": "Я люблю... Люблю фотографировать всякое.",
+            "isGeneral": false,
+            "id": 276
+        },
+        {
+            "stuff_id": 185,
+            "text": "Я знаю, о чем мне беспокоиться.",
+            "isGeneral": false,
+            "id": 277
         }
     ],
     "lim": 15,
     "idState": {
-        "topics": 2,
-        "phrases": 157,
-        "stuffs": 105,
-        "stages": 53
+        "topics": 3,
+        "phrases": 277,
+        "stuffs": 185,
+        "stages": 93
     }
 }
