@@ -1,7 +1,8 @@
 .dialog-box {
   color: white;
   width: 90%;
-  min-height: 5rem;
+  height: 5rem;
+  overflow: auto;
   background-color: black;
   left: 5%;
   bottom: 0;
