@@ -1,9 +1,8 @@
 .dialog-box {
-  background-color: black;
   color: white;
   width: 90%;
-
-  height: 6rem;
+  min-height: 5rem;
+  background-color: black;
   left: 5%;
   bottom: 0;
   position: absolute;
@@ -12,6 +11,7 @@
 .phrase-interface {
   display: flex;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .phrase-hiding {
@@ -27,6 +27,7 @@
   animation-fill-mode: forwards;
 }
 .phrase-content {
+  width: 100%;
   align-self: flex-end;
   padding-left: 2rem;
   padding-right: 2rem;

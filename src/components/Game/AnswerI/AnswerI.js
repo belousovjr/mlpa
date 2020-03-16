@@ -3,8 +3,8 @@ import "./style.css";
 
 export default class AnswerI extends React.Component {
   render() {
-    const { text, click, disabled } = this.props;
-    const disClass = disabled ? "disabled" : "";
+    const { text, click, disabled, isHiding } = this.props;
+    const disClass = disabled ? (isHiding ? "disabled" : "") : "undisabled";
     return (
       <div
         className={`answer ${disClass}`}
@@ -12,7 +12,7 @@ export default class AnswerI extends React.Component {
           if (!disabled) click();
         }}
       >
-        {text}
+        {text.toUpperCase()}
       </div>
     );
   }

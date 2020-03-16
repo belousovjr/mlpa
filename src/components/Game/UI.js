@@ -5,6 +5,7 @@ import mlpaState from "../../mlpa_state";
 import Params from "./Params";
 import AnswerI from "./AnswerI/AnswerI";
 import DialogBox from "./DialogBox/DialogBox";
+import "./style.css";
 
 export default class UI extends React.Component {
   constructor() {
@@ -41,7 +42,8 @@ export default class UI extends React.Component {
     const { cPhrase, answers } = this.getStageData(newStageId);
 
     this.setState({
-      isHiding: true
+      isHiding: true,
+      disabled: true
     });
 
     setTimeout(() => {
@@ -50,7 +52,6 @@ export default class UI extends React.Component {
         cPhrase,
         currStageId: newStageId,
         answers,
-        disabled: true,
         isHiding: false,
         dDelay: 500 //ДОБАВИТЬ ЗАВИСИМОСТЬ ОТ ПОТРЯСЕНИЯ
       });
@@ -80,6 +81,7 @@ export default class UI extends React.Component {
           key={answer.id}
           text={answer.generalPhrase}
           disabled={disabled}
+          isHiding={isHiding}
           click={() => {
             this.update(answer.id);
           }}
