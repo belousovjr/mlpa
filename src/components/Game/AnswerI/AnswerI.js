@@ -6,13 +6,15 @@ export default class AnswerI extends React.Component {
     const { text, click, disabled, isHiding } = this.props;
     const disClass = disabled ? (isHiding ? "disabled" : "") : "undisabled";
     return (
-      <div
-        className={`answer ${disClass}`}
-        onClick={() => {
-          if (!disabled) click();
-        }}
-      >
-        {text.toUpperCase()}
+      <div>
+        <div
+          className={`answer ${disClass}`}
+          onClick={() => {
+            if (!disabled) click();
+          }}
+        >
+          {text.toUpperCase()}
+        </div>
       </div>
     );
   }

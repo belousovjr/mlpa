@@ -7,6 +7,7 @@ export default class DialogBox extends React.Component {
     super();
     this.state = { isPAnsserd: false };
   }
+
   pAnsswerd = () => {
     const { dDelay } = this.props;
     setTimeout(() => {

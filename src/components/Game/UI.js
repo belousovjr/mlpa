@@ -18,7 +18,7 @@ export default class UI extends React.Component {
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
       cPhrase,
-      pPhrase: "...",
+      pPhrase: "Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... ",
       answers,
       disabled: true,
       currStageId,
@@ -90,7 +90,9 @@ export default class UI extends React.Component {
     });
     return (
       <div>
+        <div className="answers">
         {answersItems}
+        </div>
         <DialogBox
           hiding={isHiding}
           key={currStageId}

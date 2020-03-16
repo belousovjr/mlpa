@@ -1,17 +1,33 @@
 .dialog-box {
   color: white;
-  width: 90%;
-  height: 5rem;
-  overflow: auto;
+  width: 100%;
+  height: 25%;
+
   background-color: black;
-  left: 5%;
+
   bottom: 0;
   position: absolute;
+  font-size: 1.5rem;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007399;
+  border-radius: 0.2rem;
 }
 
 .phrase-interface {
   display: flex;
-  overflow: hidden;
   margin-bottom: 1rem;
 }
 
@@ -23,6 +39,7 @@
 }
 
 .phrase-text {
+  margin-top: 0.5rem;
   animation-name: showing;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -30,8 +47,8 @@
 .phrase-content {
   width: 100%;
   align-self: flex-end;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 @keyframes showing {

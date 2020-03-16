@@ -1,3 +1,15 @@
 body {
-  background-color: #0d0d0d;
+    /*background-color: #0d0d0d;*/
+
+    font-family: 'Bellota Text', cursive;
+    overflow: hidden;
+    /*font-family: 'Amatic SC', cursive;*/
+}
+
+.answers {
+    margin-left: 40%;
+    margin-top: 5%;
+    display: inline-block;
+    font-size: 2rem;
+
 }

@@ -19,7 +19,7 @@ export default class PhraseText extends React.Component {
       setTimeout(() => {
         this.setState({ curText: newText, isStart: false, balText });
         this.nextLetterLoop();
-      }, 40);
+      }, 20);
     } else isPlayer ? pAnsswerd() : writingFinish();
   }
   render() {
