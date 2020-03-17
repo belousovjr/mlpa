@@ -1,21 +1,17 @@
 import React from "react";
-import locE from "../../game/loc_example";
-import mlpaState from "../../mlpa_state";
 
 import Params from "./Params";
 import AnswerI from "./AnswerI/AnswerI";
 import DialogBox from "./DialogBox/DialogBox";
 import "./style.css";
 import Visual from "./Visual/Visual";
-import Screen from "./Screen";
+import Loading from "./Loading/Loading";
 
 export default class UI extends React.Component {
-  constructor() {
-    super();
-    this.loc = locE;
-    this.loc.ssign(mlpaState);
-    this.defaultParams();
+  constructor(props) {
+    super(props);
 
+    this.loc = props.loc;
     const currStageId = this.loc.getStartId();
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
@@ -25,7 +21,8 @@ export default class UI extends React.Component {
       disabled: true,
       currStageId,
       isHiding: false,
-      dDelay: 2000
+      dDelay: 2000,
+      isLoaded: false
     };
   }
   getStageData(stageId) {
@@ -59,11 +56,7 @@ export default class UI extends React.Component {
       });
     }, 500);
   }
-  defaultParams() {
-    this.loc.params.forEach(p => {
-      if (!p.isAchiev) p.value = 7;
-    });
-  }
+
   writingFinish() {
     this.setState({ disabled: false });
   }
@@ -75,7 +68,8 @@ export default class UI extends React.Component {
       answers,
       disabled,
       isHiding,
-      dDelay
+      dDelay,
+      isLoaded
     } = this.state;
     const answersItems = answers.map(answer => {
       return (
@@ -91,12 +85,10 @@ export default class UI extends React.Component {
       );
     });
 
-    const { width, height } = this.props;
+    const { width, height, landSizes } = this.props;
 
-    return (
+    const gameUI = isLoaded ? (
       <div>
-        <Visual width={width} height={height} />
-
         <div className="answers">{answersItems}</div>
         <DialogBox
           hiding={isHiding}
@@ -108,6 +100,23 @@ export default class UI extends React.Component {
             this.writingFinish();
           }}
         />
+      </div>
+    ) : null;
+
+    const loadingAnim = !isLoaded ? <Loading /> : null;
+
+    return (
+      <div>
+        <Visual
+          width={width}
+          height={height}
+          isLoaded={isLoaded}
+          loadFinished={() => this.setState({ isLoaded: true })}
+          landSizes={landSizes}
+        />
+        {gameUI}
+
+        {loadingAnim}
       </div>
     );
   }

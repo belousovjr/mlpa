@@ -1,0 +1,5 @@
+.loaded{
+    animation-name: showing;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}

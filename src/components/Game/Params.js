@@ -70,7 +70,7 @@ export default class Params extends React.Component {
     });
 
     return (
-      <div>
+      <div style={{position: 'absolute', top: '0'}}>
         {paramItems}
         {correctGradsItems}
       </div>

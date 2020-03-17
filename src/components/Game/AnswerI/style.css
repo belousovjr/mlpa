@@ -4,8 +4,9 @@
   margin-top: 1%;
   margin-bottom: 1%;
 
-  min-width: 4rem;
-  display: inline-block;
+  transition: color 0.5s;
+
+  display: none;
 
   color: #d9d9d9;
 
@@ -16,19 +17,24 @@
 
 .answer:hover {
   color: #fff;
+
+  transition: color 0.5s;
 }
 
 .answer:active {
+  transition: color 0.3s;
   color: #80dfff;
 }
 
 .disabled {
+  display: inline-block;
   animation-name: dis;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .undisabled {
+  display: inline-block;
   animation-name: undis;
   animation-duration: 1s;
   animation-fill-mode: forwards;

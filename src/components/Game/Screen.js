@@ -1,22 +1,27 @@
 import React from "react";
+import Settings from "./Settings/Settiings";
+import "./Settings/style.css";
 
 export default class Screen extends React.Component {
-  constructor() {
-    super();
-
-  }
-
   render() {
     const { width, height } = this.props;
     const style = {
       width,
       height,
       display: "inline-block",
-      backgroundColor: "gray",
+      backgroundColor: "black",
+
       marginLeft: `calc(50% - ${width / 2}px)`,
-        position: 'absolute',
-        overflow: 'hidden'
+      position: "absolute"
+      //overflow: "hidden"
     };
-    return <div style={style}>{this.props.children}</div>;
+    return (
+      <div id="screenDom">
+        <div style={style}>
+          <Settings />
+          {this.props.children}
+        </div>
+      </div>
+    );
   }
 }
