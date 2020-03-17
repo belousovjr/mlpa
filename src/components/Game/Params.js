@@ -17,13 +17,17 @@ export default class Params extends React.Component {
 
     const correctGrads = this.correctGrads();
     const correctGradsItems = correctGrads.map(g => (
-      <div key={g.name}>{g.name}</div>
+      <div key={g.name}>
+        
+        <span style={{ color: "white" }}>{g.name}</span>
+      </div>
     ));
 
     const paramItems = params.map(param => {
       return param.isAchiev ? (
         <div key={param.name}>
-          <input type="checkbox" disabled checked={param.value} /> {param.name}
+          <input type="checkbox" disabled checked={param.value} />{" "}
+          <span style={{ color: "white" }}>{param.name}</span>
         </div>
       ) : (
         <div key={param.name}>
@@ -59,7 +63,7 @@ export default class Params extends React.Component {
             >
               +
             </button>
-            {param.name}
+            <span style={{ color: "white" }}>{param.name}</span>
           </div>
         </div>
       );

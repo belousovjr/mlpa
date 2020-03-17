@@ -1,14 +1,14 @@
-
 .answer {
   cursor: default;
-  padding: 1rem;
-  display: inline-block;
-  min-width: 4rem;
+  padding: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 
+  min-width: 4rem;
+  display: inline-block;
 
   color: #d9d9d9;
-  transition: color 0.3s;
-  text-align: left;
+
   opacity: 0;
   white-space: nowrap;
   overflow: hidden;

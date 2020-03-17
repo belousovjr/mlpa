@@ -6,6 +6,8 @@ import Params from "./Params";
 import AnswerI from "./AnswerI/AnswerI";
 import DialogBox from "./DialogBox/DialogBox";
 import "./style.css";
+import Visual from "./Visual/Visual";
+import Screen from "./Screen";
 
 export default class UI extends React.Component {
   constructor() {
@@ -18,7 +20,7 @@ export default class UI extends React.Component {
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
       cPhrase,
-      pPhrase: "Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... Lorem ipsum... ",
+      pPhrase: "О чем ты сейчас думаешь?",
       answers,
       disabled: true,
       currStageId,
@@ -88,11 +90,14 @@ export default class UI extends React.Component {
         />
       );
     });
+
+    const { width, height } = this.props;
+
     return (
       <div>
-        <div className="answers">
-        {answersItems}
-        </div>
+        <Visual width={width} height={height} />
+
+        <div className="answers">{answersItems}</div>
         <DialogBox
           hiding={isHiding}
           key={currStageId}

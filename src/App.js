@@ -1,11 +1,11 @@
 import React from "react";
-import UI from "./components/Game/UI";
+import Game from "./components/Game/Game";
 import Editor from "./components/Editor/Editor";
 
 function App() {
   return (
     <div>
-      <Editor />
+      <Game />
     </div>
   );
 }
