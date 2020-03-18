@@ -1,6 +1,7 @@
-.settings{
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    text-align: right;
+.settings {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
 }

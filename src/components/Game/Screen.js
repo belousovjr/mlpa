@@ -18,8 +18,8 @@ export default class Screen extends React.Component {
     return (
       <div id="screenDom">
         <div style={style}>
-          <Settings />
           {this.props.children}
+          <Settings />
         </div>
       </div>
     );
