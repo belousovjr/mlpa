@@ -7,12 +7,17 @@ import {
   PARAM_EQUILIBRIUM,
   PARAM_DETERMINATION
 } from "../../../game/parameters";
+import Shaking from "./shaking";
 
 export default class Visual extends React.Component {
   constructor(props) {
     super(props);
     this.c = null;
     this.ctx = null;
+    this.shaking = {
+      x: new Shaking(0.05, 10),
+      y: new Shaking(0.05, 7)
+    };
     this.objects = [
       new ImgObject("road", "back"),
       new ImgObject("legs", "legs"),
@@ -28,6 +33,8 @@ export default class Visual extends React.Component {
     ];
 
     this.progress = 0;
+    this.currProgress = 0;
+
     this.maxProg = 1000;
 
     this.positions = [
@@ -37,7 +44,7 @@ export default class Visual extends React.Component {
 
       { prog: 600, camX: 942, camY: 440, camZoom: 3.82 },
       { prog: 800, camX: 951, camY: 480, camZoom: 1.98 },
-      { prog: 1000, camX: 960, camY: 540, camZoom: 1 }
+      { prog: 1000, camX: 960, camY: 540, camZoom: 1.4 }
     ];
 
     const girlX = 800;
@@ -62,16 +69,15 @@ export default class Visual extends React.Component {
     if (this.positions.length === 1) return this.positions[0];
     for (let index = 0; index < this.positions.length; index++) {
       const pos = this.positions[index];
-      if (this.progress < pos.prog) {
+      if (this.currProgress < pos.prog) {
         const first = this.positions[index - 1];
         const last = pos;
-        const factor = (this.progress - first.prog) / (last.prog - first.prog);
+        const factor = (this.currProgress - first.prog) / (last.prog - first.prog);
         const camZoom = first.camZoom + (last.camZoom - first.camZoom) * factor;
         const camX = first.camX + (last.camX - first.camX) * factor;
         const camY = first.camY + (last.camY - first.camY) * factor;
         return { camZoom, camX, camY };
       } else if (index === this.positions.length - 1) {
-
         return pos;
       }
     }
@@ -85,15 +91,17 @@ export default class Visual extends React.Component {
     const height = img.height * locFactor;
 
     const { camZoom, camX, camY } = this.getPosition();
-    if (this.progress < this.maxProg) this.progress += 0.1;
+    if (this.progress > this.currProgress) {
+      this.currProgress += 0.5
+    }
 
     const screenWidth = this.landWidth / 2;
     const screenHeight = this.landHeight / 2;
 
     ctx.drawImage(
       img,
-      (x - camX) * camZoom + screenWidth,
-      (y - camY) * camZoom + screenHeight,
+      (x - camX) * camZoom + screenWidth + this.shaking.x.value,
+      (y - camY) * camZoom + screenHeight + this.shaking.y.value,
       width * camZoom,
       height * camZoom
     );
@@ -147,6 +155,12 @@ export default class Visual extends React.Component {
   }
 
   drawSceneLopp = () => {
+    const { params } = this.props;
+    const param = params.find(p => p.name === PARAM_EQUILIBRIUM);
+
+    this.shaking.x.update(param);
+    this.shaking.y.update();
+
     const { isStarted } = this.state;
     if (!isStarted) this.setState({ isStarted: true });
 
@@ -178,6 +192,7 @@ export default class Visual extends React.Component {
 
     return (
       <div>
+
         <canvas
           className={className}
           ref="myCanvas"
@@ -185,6 +200,7 @@ export default class Visual extends React.Component {
           height={this.landHeight}
           style={{ width, height }}
         ></canvas>
+        <button style={{position: 'absolute', top: 100, left: 0}} onClick={() => {this.progress+=10}}>PGORGESS + </button>
       </div>
     );
   }
