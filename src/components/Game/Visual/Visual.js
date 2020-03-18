@@ -1,7 +1,12 @@
 import React from "react";
 import ImgObject from "./img-object";
 import SceneObject from "./scene-object";
-import './style.css'
+import "./style.css";
+
+import {
+  PARAM_EQUILIBRIUM,
+  PARAM_DETERMINATION
+} from "../../../game/parameters";
 
 export default class Visual extends React.Component {
   constructor(props) {
@@ -9,23 +14,36 @@ export default class Visual extends React.Component {
     this.c = null;
     this.ctx = null;
     this.objects = [
-      new ImgObject("background", ""),
-      new ImgObject("legs", ""),
-      new ImgObject("doubt", "body"),
-      new ImgObject("readiness", "body"),
-      new ImgObject("tension", "body"),
-      new ImgObject("uncertainty", "body"),
-      new ImgObject("apathy", "head"),
-      new ImgObject("fear", "head"),
-      new ImgObject("horror", "head"),
-      new ImgObject("squinted", "head"),
-      new ImgObject("trembling", "head")
+      new ImgObject("road", "back"),
+      new ImgObject("legs", "legs"),
+      new ImgObject("doubt", "body", 1, 5, PARAM_DETERMINATION),
+      new ImgObject("uncertainty", "body", 6, 10, PARAM_DETERMINATION),
+      new ImgObject("readiness", "body", 11, 15, PARAM_DETERMINATION),
+      //new ImgObject("tension", "body"),
+      new ImgObject("squinted", "head", 1, 5, PARAM_EQUILIBRIUM),
+      new ImgObject("horror", "head", 6, 10, PARAM_EQUILIBRIUM),
+      new ImgObject("fear", "head", 11, 15, PARAM_EQUILIBRIUM)
+      /* new ImgObject("apathy", "head"),
+      new ImgObject("trembling", "head")*/
+    ];
+
+    this.progress = 0;
+    this.maxProg = 1000;
+
+    this.positions = [
+      { prog: 0, camX: 915, camY: 386, camZoom: 20 },
+      { prog: 200, camX: 924, camY: 395, camZoom: 13.82 },
+      { prog: 400, camX: 933, camY: 410, camZoom: 8.24 },
+
+      { prog: 600, camX: 942, camY: 440, camZoom: 3.82 },
+      { prog: 800, camX: 951, camY: 480, camZoom: 1.98 },
+      { prog: 1000, camX: 960, camY: 540, camZoom: 1 }
     ];
 
     const girlX = 800;
-    const girlY = 385;
+    const girlY = 345;
     this.scene = {
-      background: new SceneObject(0, -200, "background", 1920),
+      back: new SceneObject(0, 0, "road", 1920),
       legs: new SceneObject(girlX, girlY, "legs", 200),
       body: new SceneObject(girlX, girlY, "doubt", 200),
       head: new SceneObject(girlX, girlY, "horror", 200)
@@ -36,21 +54,50 @@ export default class Visual extends React.Component {
 
     this.landWidth = landWidth;
     this.landHeight = landHeight;
-    /*
-    this.startCam = {
-      zoom: 23,
-      x: -872,
-      y: -400
-    };
 
-    this.endCam = {
-      zoom: 1,
-      x: 0,
-      y: 0
-    };*/
-
-    this.progress = 1;
+    this.state = { isStarted: false };
   }
+
+  getPosition() {
+    if (this.positions.length === 1) return this.positions[0];
+    for (let index = 0; index < this.positions.length; index++) {
+      const pos = this.positions[index];
+      if (this.progress < pos.prog) {
+        const first = this.positions[index - 1];
+        const last = pos;
+        const factor = (this.progress - first.prog) / (last.prog - first.prog);
+        const camZoom = first.camZoom + (last.camZoom - first.camZoom) * factor;
+        const camX = first.camX + (last.camX - first.camX) * factor;
+        const camY = first.camY + (last.camY - first.camY) * factor;
+        return { camZoom, camX, camY };
+      } else if (index === this.positions.length - 1) {
+
+        return pos;
+      }
+    }
+  }
+
+  drawImg = (obj, ctx) => {
+    const { img } = this.images.find(image => image.name === obj.imgName);
+    const { width, x, y } = obj;
+
+    const locFactor = width / img.width;
+    const height = img.height * locFactor;
+
+    const { camZoom, camX, camY } = this.getPosition();
+    if (this.progress < this.maxProg) this.progress += 0.1;
+
+    const screenWidth = this.landWidth / 2;
+    const screenHeight = this.landHeight / 2;
+
+    ctx.drawImage(
+      img,
+      (x - camX) * camZoom + screenWidth,
+      (y - camY) * camZoom + screenHeight,
+      width * camZoom,
+      height * camZoom
+    );
+  };
   async componentDidMount() {
     if (!this.c && this.refs.myCanvas) {
       this.c = this.refs.myCanvas;
@@ -68,18 +115,13 @@ export default class Visual extends React.Component {
 
   loadImage(sceneObject) {
     const { slot, image } = sceneObject;
-
     let img = new Image();
     let url = slot ? `${slot}/` : "";
     url += image;
-
     img.src = `${window.location.href}/img/${url}.png`;
-
     img.onload = event => {
       const { target } = event;
-
       this.images.push({ name: image, img: target });
-
       if (this.images.length === this.objects.length) {
         const { loadFinished } = this.props;
         loadFinished();
@@ -87,7 +129,27 @@ export default class Visual extends React.Component {
     };
   }
 
-  drawScene() {
+  getCorrImgName(slotName) {
+    const { params } = this.props;
+    const corrImages = this.objects.filter(obj => obj.slot === slotName);
+    let corrImg = corrImages.find(obj => {
+      if (obj.param) {
+        const param = params.find(p => p.name === obj.param);
+
+        return param.value <= obj.max && param.value >= obj.min;
+      } else return false;
+    });
+
+    if (!corrImg) {
+      corrImg = corrImages.find(img => !img.param);
+    }
+    return corrImg.image;
+  }
+
+  drawSceneLopp = () => {
+    const { isStarted } = this.state;
+    if (!isStarted) this.setState({ isStarted: true });
+
     const newCanvas = document.createElement("CANVAS");
     newCanvas.width = this.landWidth;
     newCanvas.height = this.landHeight;
@@ -95,22 +157,22 @@ export default class Visual extends React.Component {
 
     for (let key in this.scene) {
       const obj = this.scene[key];
-      const { img } = this.images.find(image => image.name === obj.imgName);
-      const { width, x, y } = obj;
-
-      const locFactor = width / img.width;
-      const height = img.height * locFactor;
-
-      newCtx.drawImage(img, x, y, width, height);
+      obj.imgName = this.getCorrImgName(key);
+      this.drawImg(obj, newCtx);
     }
 
     this.ctx.drawImage(newCanvas, 0, 0);
-  }
+
+    window.requestAnimationFrame(this.drawSceneLopp);
+  };
 
   render() {
     const { width, height, isLoaded } = this.props;
+    const { isStarted } = this.state;
 
-    if (isLoaded) this.drawScene();
+    if (isLoaded && !isStarted) {
+      window.requestAnimationFrame(this.drawSceneLopp);
+    }
 
     const className = isLoaded ? "loaded" : "";
 

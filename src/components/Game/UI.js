@@ -89,6 +89,16 @@ export default class UI extends React.Component {
 
     const gameUI = isLoaded ? (
       <div>
+        <Params
+            params={this.loc.params}
+            lim={this.loc.lim}
+            edit={(paramName, term) => {
+              this.loc._editParams([this.loc.cChange(paramName, term)]);
+              this.forceUpdate();
+            }}
+            grads={this.loc.grads}
+            checkGrad={this.loc.checkGrad}
+        />
         <div className="answers">{answersItems}</div>
         <DialogBox
           hiding={isHiding}
@@ -108,6 +118,7 @@ export default class UI extends React.Component {
     return (
       <div>
         <Visual
+            params={this.loc.params}
           width={width}
           height={height}
           isLoaded={isLoaded}

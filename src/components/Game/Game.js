@@ -20,14 +20,25 @@ export default class Game extends React.Component {
       if (!p.isAchiev) p.value = 7;
     });
   }
-  render() {
+  getSizes() {
     const { width, height } = window.screen;
 
-    const newWidth = Math.max(width, height);
+    const max = Math.max(width, height);
+    const min = Math.min(width, height);
 
-    const factor = newWidth / this.landWidth;
-    const newHeight = this.landHeight * factor;
+    let newWidth = max;
 
+    const factorW = newWidth / this.landWidth;
+    let newHeight = this.landHeight * factorW;
+    if (newHeight > min) {
+      newHeight = min;
+      const factorH = newHeight / this.landHeight;
+      newWidth = this.landWidth * factorH;
+    }
+    return { newWidth, newHeight };
+  }
+  render() {
+    const { newWidth, newHeight } = this.getSizes();
     return (
       <Screen width={newWidth} height={newHeight}>
         <UI
