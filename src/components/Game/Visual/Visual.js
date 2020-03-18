@@ -72,7 +72,8 @@ export default class Visual extends React.Component {
       if (this.currProgress < pos.prog) {
         const first = this.positions[index - 1];
         const last = pos;
-        const factor = (this.currProgress - first.prog) / (last.prog - first.prog);
+        const factor =
+          (this.currProgress - first.prog) / (last.prog - first.prog);
         const camZoom = first.camZoom + (last.camZoom - first.camZoom) * factor;
         const camX = first.camX + (last.camX - first.camX) * factor;
         const camY = first.camY + (last.camY - first.camY) * factor;
@@ -87,13 +88,14 @@ export default class Visual extends React.Component {
     const { img } = this.images.find(image => image.name === obj.imgName);
     const { width, x, y } = obj;
 
+    if (this.progress > this.currProgress) {
+      this.currProgress += 0.5;
+    }
+
     const locFactor = width / img.width;
     const height = img.height * locFactor;
 
     const { camZoom, camX, camY } = this.getPosition();
-    if (this.progress > this.currProgress) {
-      this.currProgress += 0.5
-    }
 
     const screenWidth = this.landWidth / 2;
     const screenHeight = this.landHeight / 2;
@@ -192,7 +194,6 @@ export default class Visual extends React.Component {
 
     return (
       <div>
-
         <canvas
           className={className}
           ref="myCanvas"
@@ -200,7 +201,14 @@ export default class Visual extends React.Component {
           height={this.landHeight}
           style={{ width, height }}
         ></canvas>
-        <button style={{position: 'absolute', top: 100, left: 0}} onClick={() => {this.progress+=10}}>PGORGESS + </button>
+        <button
+          style={{ position: "absolute", top: 100, left: 0 }}
+          onClick={() => {
+            this.progress += 10;
+          }}
+        >
+          PGORGESS +{" "}
+        </button>
       </div>
     );
   }
