@@ -32,10 +32,10 @@ export default class Visual extends React.Component {
       new ImgObject("trembling", "head")*/
     ];
 
-    this.progress = 0;
-    this.currProgress = 0;
+    this.progress = 500;
+    this.currProgress = 500;
 
-    this.maxProg = 1000;
+
 
     this.positions = [
       { prog: 0, camX: 915, camY: 386, camZoom: 20 },
@@ -89,7 +89,7 @@ export default class Visual extends React.Component {
     const { width, x, y } = obj;
 
     if (this.progress > this.currProgress) {
-      this.currProgress += 0.5;
+      this.currProgress += 1;
     }
 
     const locFactor = width / img.width;
@@ -161,7 +161,7 @@ export default class Visual extends React.Component {
     const param = params.find(p => p.name === PARAM_EQUILIBRIUM);
 
     this.shaking.x.update(param);
-    this.shaking.y.update();
+    this.shaking.y.update(param);
 
     const { isStarted } = this.state;
     if (!isStarted) this.setState({ isStarted: true });
@@ -204,7 +204,7 @@ export default class Visual extends React.Component {
         <button
           style={{ position: "absolute", top: 100, left: 0 }}
           onClick={() => {
-            this.progress += 10;
+            this.progress += 100;
           }}
         >
           PGORGESS +{" "}

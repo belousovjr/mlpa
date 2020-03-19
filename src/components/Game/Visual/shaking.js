@@ -23,8 +23,8 @@ export default class Shaking {
       this.calcAmpl();
       this.calcSpeed();
     } else if (param) {
-      const newMaxSpeed = 11.25 / Math.pow(param.value + 1, 2);
-      const newMaxAmpl = Math.pow(param.value + 1, 1.5) / 5.809;
+      const newMaxSpeed = 0.75 / param.value;
+      const newMaxAmpl = -Math.sin((param.value / 15) * (-Math.PI / 2)) * 10;
       if (this.maxSpeed !== newMaxSpeed) {
         this.maxSpeed = newMaxSpeed;
         this.calcSpeed();
