@@ -151,14 +151,14 @@ export default class Loc {
     return !stuffs.find(s => !s.isA);
   };
 
-  checkRange(rangeName) {
+  checkRange = rangeName => {
     const range = this._getRange(rangeName);
     const param = this._getParam(range.paramName);
     const res = param.isAchiev
       ? param.value === range.max
       : param.value >= range.min && param.value <= range.max;
     return res;
-  }
+  };
 
   checkGrad = gradName => {
     const grad = this._getGrad(gradName);

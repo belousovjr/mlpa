@@ -6,6 +6,7 @@ import DialogBox from "./DialogBox/DialogBox";
 import "./style.css";
 import Visual from "./Visual/Visual";
 import Loading from "./Loading/Loading";
+import Audio from "./Audio/Audio";
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -90,14 +91,14 @@ export default class UI extends React.Component {
     const gameUI = isLoaded ? (
       <div>
         <Params
-            params={this.loc.params}
-            lim={this.loc.lim}
-            edit={(paramName, term) => {
-              this.loc._editParams([this.loc.cChange(paramName, term)]);
-              this.forceUpdate();
-            }}
-            grads={this.loc.grads}
-            checkGrad={this.loc.checkGrad}
+          params={this.loc.params}
+          lim={this.loc.lim}
+          edit={(paramName, term) => {
+            this.loc._editParams([this.loc.cChange(paramName, term)]);
+            this.forceUpdate();
+          }}
+          grads={this.loc.grads}
+          checkGrad={this.loc.checkGrad}
         />
         <div className="answers">{answersItems}</div>
         <DialogBox
@@ -118,13 +119,14 @@ export default class UI extends React.Component {
     return (
       <div>
         <Visual
-            params={this.loc.params}
+          params={this.loc.params}
           width={width}
           height={height}
           isLoaded={isLoaded}
           loadFinished={() => this.setState({ isLoaded: true })}
           landSizes={landSizes}
         />
+        <Audio ranges={this.loc.ranges} checkRange={this.loc.checkRange} />
         {gameUI}
 
         {loadingAnim}
