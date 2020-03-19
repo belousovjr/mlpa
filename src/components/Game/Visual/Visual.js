@@ -32,8 +32,8 @@ export default class Visual extends React.Component {
       new ImgObject("trembling", "head")*/
     ];
 
-    this.progress = 500;
-    this.currProgress = 500;
+    this.progress = 0;
+    this.currProgress = 0;
 
 
 
