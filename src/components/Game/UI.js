@@ -8,6 +8,7 @@ import Visual from "./Visual/Visual";
 import Loading from "./Loading/Loading";
 import AudioPlayer from "./Audio/AudioPlayer";
 import Settings from "./Settings/Settiings";
+import Ending from "./Ending/Ending";
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -25,7 +26,8 @@ export default class UI extends React.Component {
       isHiding: false,
       dDelay: 2000,
       isLoaded: false,
-      audioPlayed: false
+      audioPlayed: false,
+      isEnding: true
     };
   }
   getStageData(stageId) {
@@ -69,78 +71,81 @@ export default class UI extends React.Component {
   };
   render() {
     const {
-      pPhrase,
-      cPhrase,
-      currStageId,
-      answers,
-      disabled,
-      isHiding,
-      dDelay,
-      isLoaded,
-      audioPlayed
-    } = this.state;
-    const answersItems = answers.map(answer => {
-      return (
-        <AnswerI
-          key={answer.id}
-          text={answer.generalPhrase}
-          disabled={disabled}
-          isHiding={isHiding}
-          click={() => {
-            this.update(answer.id);
-          }}
-        />
-      );
-    });
-
-    const { width, height, landSizes } = this.props;
-
-    const gameUI = isLoaded ? (
-      <div>
-        <Params
-          params={this.loc.params}
-          lim={this.loc.lim}
-          edit={(paramName, term) => {
-            this.loc._editParams([this.loc.cChange(paramName, term)]);
-            this.forceUpdate();
-          }}
-          grads={this.loc.grads}
-          checkGrad={this.loc.checkGrad}
-        />
-        <div className="answers">{answersItems}</div>
-        <DialogBox
-          hiding={isHiding}
-          key={currStageId}
-          pPhrase={pPhrase}
-          cPhrase={cPhrase}
-          dDelay={dDelay}
-          writingFinish={() => {
-            this.writingFinish();
-          }}
-        />
-      </div>
+        pPhrase,
+        cPhrase,
+        currStageId,
+        answers,
+        disabled,
+        isHiding,
+        dDelay,
+        isLoaded,
+        audioPlayed,
+        isEnding
+      } = this.state,
+      answersItems = answers.map(answer => {
+        return (
+          <AnswerI
+            key={answer.id}
+            text={answer.generalPhrase}
+            disabled={disabled}
+            isHiding={isHiding}
+            click={() => {
+              this.update(answer.id);
+            }}
+          />
+        );
+      }),
+      { width, height, landSizes } = this.props,
+      gameUI = isLoaded ? (
+        <div>
+          <Params
+            params={this.loc.params}
+            lim={this.loc.lim}
+            edit={(paramName, term) => {
+              this.loc._editParams([this.loc.cChange(paramName, term)]);
+              this.forceUpdate();
+            }}
+            grads={this.loc.grads}
+            checkGrad={this.loc.checkGrad}
+          />
+          <div className="answers">{answersItems}</div>
+          <DialogBox
+            hiding={isHiding}
+            key={currStageId}
+            pPhrase={pPhrase}
+            cPhrase={cPhrase}
+            dDelay={dDelay}
+            writingFinish={() => {
+              this.writingFinish();
+            }}
+          />
+        </div>
+      ) : null,
+      loadingAnim = !isLoaded ? <Loading /> : null;
+    const visual = !isEnding ? (
+      <Visual
+        params={this.loc.params}
+        width={width}
+        height={height}
+        isLoaded={isLoaded}
+        loadFinished={() => this.setState({ isLoaded: true })}
+        landSizes={landSizes}
+      />
     ) : null;
 
-    const loadingAnim = !isLoaded ? <Loading /> : null;
+    const ending = isEnding ? <Ending /> : null;
 
     return (
       <div>
-        <Visual
-          params={this.loc.params}
-          width={width}
-          height={height}
-          isLoaded={isLoaded}
-          loadFinished={() => this.setState({ isLoaded: true })}
-          landSizes={landSizes}
-        />
+        {/*loadingAnim*/}
+        {visual}
+        {ending}
         <AudioPlayer
           ranges={this.loc.ranges}
           checkRange={this.loc.checkRange}
           audioPlayed={audioPlayed}
         />
         {gameUI}
-
-        {loadingAnim}
 
         <Settings
           methods={{ audioSwitch: this.audioSwitch }}

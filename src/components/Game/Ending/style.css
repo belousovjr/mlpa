@@ -1,0 +1,85 @@
+.ending {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.end-cont {
+  margin-top: 5%;
+  display: inline-block;
+  left: 110%;
+  position: absolute;
+  height: 80%;
+}
+
+.end-img {
+  height: 100%;
+  animation: float 7s infinite ease-in-out;
+}
+
+.end-cont :hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 23px 6px rgba(0, 238, 255, 1);
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.15, 0.67, 0, 0.98);
+}
+
+.extin {
+  animation-name: extin;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes extin {
+  from {
+    opacity: 1;
+    cursor: default;
+    left: 33%;
+  }
+  to {
+    opacity: 0;
+    cursor: default;
+    left: -50%;
+  }
+}
+
+@keyframes appear {
+  from {
+    cursor: default;
+    left: 110%;
+    opacity: 0;
+    transform: rotate(-15deg);
+  }
+  to {
+    left: 33%;
+    opacity: 1;
+    cursor: pointer;
+    transform: rotate(0deg);
+  }
+}
