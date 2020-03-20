@@ -1,5 +1,4 @@
 import React from "react";
-import Settings from "./Settings/Settiings";
 import "./Settings/style.css";
 
 export default class Screen extends React.Component {
@@ -19,7 +18,7 @@ export default class Screen extends React.Component {
       <div id="screenDom">
         <div style={style}>
           {this.props.children}
-          <Settings />
+
         </div>
       </div>
     );

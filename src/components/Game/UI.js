@@ -6,7 +6,8 @@ import DialogBox from "./DialogBox/DialogBox";
 import "./style.css";
 import Visual from "./Visual/Visual";
 import Loading from "./Loading/Loading";
-import Audio from "./Audio/Audio";
+import AudioPlayer from "./Audio/AudioPlayer";
+import Settings from "./Settings/Settiings";
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -23,7 +24,8 @@ export default class UI extends React.Component {
       currStageId,
       isHiding: false,
       dDelay: 2000,
-      isLoaded: false
+      isLoaded: false,
+      audioPlayed: false
     };
   }
   getStageData(stageId) {
@@ -61,6 +63,10 @@ export default class UI extends React.Component {
   writingFinish() {
     this.setState({ disabled: false });
   }
+  audioSwitch = () => {
+    const { audioPlayed } = this.state;
+    this.setState({ audioPlayed: !audioPlayed });
+  };
   render() {
     const {
       pPhrase,
@@ -70,7 +76,8 @@ export default class UI extends React.Component {
       disabled,
       isHiding,
       dDelay,
-      isLoaded
+      isLoaded,
+      audioPlayed
     } = this.state;
     const answersItems = answers.map(answer => {
       return (
@@ -126,10 +133,19 @@ export default class UI extends React.Component {
           loadFinished={() => this.setState({ isLoaded: true })}
           landSizes={landSizes}
         />
-        <Audio ranges={this.loc.ranges} checkRange={this.loc.checkRange} />
+        <AudioPlayer
+          ranges={this.loc.ranges}
+          checkRange={this.loc.checkRange}
+          audioPlayed={audioPlayed}
+        />
         {gameUI}
 
         {loadingAnim}
+
+        <Settings
+          methods={{ audioSwitch: this.audioSwitch }}
+          data={{ audioPlayed }}
+        />
       </div>
     );
   }
