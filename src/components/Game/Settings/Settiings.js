@@ -7,8 +7,9 @@ export default class Settings extends React.Component {
     const {methods, data} = this.props
     return (
       <div className="settings">
-        <FullScreen />
+
         <AudioSwitcher audioSwitch={methods.audioSwitch} audioPlayed={data.audioPlayed} />
+          <FullScreen />
       </div>
     );
   }

@@ -8,7 +8,7 @@ export default class ImageItem extends React.Component {
 
     return (
       <div className={`end-cont ${className}`}>
-        <img onClick={goNext} className="end-img" src={src} />
+        <img onClick={goNext} className="end-img" src={src} alt={'img'} />
       </div>
     );
   }

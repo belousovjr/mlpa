@@ -11,8 +11,8 @@ export default class Screen extends React.Component {
       backgroundColor: "black",
 
       marginLeft: `calc(50% - ${width / 2}px)`,
-      position: "absolute"
-      //overflow: "hidden"
+      position: "absolute",
+      overflow: "hidden"
     };
     return (
       <div id="screenDom">

@@ -20,7 +20,12 @@
   animation: float 7s infinite ease-in-out;
 }
 
-.end-cont :hover {
+.end-cont:hover > .end-img {
+  transition: box-shadow 0.5s;
+  box-shadow: 0px 0px 23px 6px rgba(255, 255, 255, 0.5);
+}
+
+.end-cont:active > .end-img {
   transition: box-shadow 0.5s;
   box-shadow: 0px 0px 23px 6px rgba(0, 238, 255, 1);
 }
@@ -42,17 +47,14 @@
 @keyframes float {
   0% {
     transform: translateY(0);
-    -webkit-transform: translateY(0);
   }
 
   50% {
     transform: translateY(1rem);
-    -webkit-transform: translateY(1rem);
   }
 
   100% {
     transform: translateY(0);
-    -webkit-transform: translateY(0);
   }
 }
 

@@ -49,7 +49,8 @@ export default class AudioPlayer extends React.Component {
     const fileName = this.getAudioName();
 
     this.musics.forEach(m => {
-      if (m.fileName === fileName && audioPlayed) m.isPlayed = true;
+      m.isOn = audioPlayed
+      if (m.fileName === fileName) m.isPlayed = true;
       else m.isPlayed = false;
     });
 

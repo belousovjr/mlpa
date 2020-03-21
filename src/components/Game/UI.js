@@ -19,7 +19,7 @@ export default class UI extends React.Component {
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
       cPhrase,
-      pPhrase: "О чем ты сейчас думаешь?",
+      pPhrase: "Давай мы тебя успокоим?",
       answers,
       disabled: true,
       currStageId,
@@ -27,7 +27,7 @@ export default class UI extends React.Component {
       dDelay: 2000,
       isLoaded: false,
       audioPlayed: false,
-      isEnding: true
+      isEnding: false
     };
   }
   getStageData(stageId) {
@@ -96,7 +96,7 @@ export default class UI extends React.Component {
         );
       }),
       { width, height, landSizes } = this.props,
-      gameUI = isLoaded ? (
+      gameUI = isLoaded && !isEnding ? (
         <div>
           <Params
             params={this.loc.params}
@@ -137,7 +137,7 @@ export default class UI extends React.Component {
 
     return (
       <div>
-        {/*loadingAnim*/}
+        {loadingAnim}
         {visual}
         {ending}
         <AudioPlayer
