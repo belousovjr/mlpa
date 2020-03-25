@@ -15,20 +15,42 @@ export default class DialogBox extends React.Component {
     }, dDelay);
   };
   render() {
-    const { pPhrase, cPhrase, writingFinish, hiding } = this.props;
+    const {
+      pPhrase,
+      cPhrase,
+      writingFinish,
+      hiding,
+      isEnding,
+      isLoaded
+    } = this.props;
     const { isPAnsserd } = this.state;
 
     const hidingClass = hiding ? "phrase-hiding" : "";
 
-    const cAnswer = isPAnsserd ? (
-      <PhraseText text={cPhrase} writingFinish={writingFinish} />
-    ) : null;
+    const pAnswer =
+      isLoaded && !isEnding ? (
+        <PhraseText
+          isEnding={isEnding}
+          text={pPhrase}
+          isPlayer
+          pAnsswerd={this.pAnsswerd}
+        />
+      ) : null;
+
+    const cAnswer =
+      isPAnsserd || isEnding ? (
+        <PhraseText
+          isEnding={isEnding}
+          text={cPhrase}
+          writingFinish={writingFinish}
+        />
+      ) : null;
 
     return (
       <div className="dialog-box">
         <div className={`phrase-interface ${hidingClass}`}>
           <div className="phrase-content">
-            <PhraseText text={pPhrase} isPlayer pAnsswerd={this.pAnsswerd} />
+            {pAnswer}
             {cAnswer}
           </div>
         </div>

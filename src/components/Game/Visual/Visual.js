@@ -35,8 +35,6 @@ export default class Visual extends React.Component {
     this.progress = 0;
     this.currProgress = 0;
 
-
-
     this.positions = [
       { prog: 0, camX: 915, camY: 386, camZoom: 20 },
       { prog: 200, camX: 924, camY: 395, camZoom: 13.82 },
@@ -157,7 +155,7 @@ export default class Visual extends React.Component {
   }
 
   drawSceneLopp = () => {
-    const { params } = this.props;
+    const { params, isEnding } = this.props;
     const param = params.find(p => p.name === PARAM_EQUILIBRIUM);
 
     this.shaking.x.update(param);
@@ -179,7 +177,7 @@ export default class Visual extends React.Component {
 
     this.ctx.drawImage(newCanvas, 0, 0);
 
-    window.requestAnimationFrame(this.drawSceneLopp);
+    if (!isEnding) window.requestAnimationFrame(this.drawSceneLopp);
   };
 
   render() {

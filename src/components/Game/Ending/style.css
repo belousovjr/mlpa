@@ -5,6 +5,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 .end-cont {
@@ -20,12 +21,12 @@
   animation: float 7s infinite ease-in-out;
 }
 
-.end-cont:hover > .end-img {
+.not-dis > .end-img {
   transition: box-shadow 0.5s;
   box-shadow: 0px 0px 23px 6px rgba(255, 255, 255, 0.5);
 }
 
-.end-cont:active > .end-img {
+.not-dis:active > .end-img {
   transition: box-shadow 0.5s;
   box-shadow: 0px 0px 23px 6px rgba(0, 238, 255, 1);
 }

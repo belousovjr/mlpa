@@ -23,10 +23,10 @@ export default class PhraseText extends React.Component {
     } else isPlayer ? pAnsswerd() : writingFinish();
   }
   render() {
-    const { isPlayer } = this.props;
+    const { isPlayer, isEnding } = this.props;
     const { isStart, curText, balText } = this.state;
     if (isStart) this.nextLetterLoop();
-    const title = isPlayer ? "Я" : "Она";
+    const title = isEnding ? "" : isPlayer ? "Я" : "Она";
     const titleClass = isPlayer ? "text-p" : "text-c";
     return (
       <div className="phrase-text">
