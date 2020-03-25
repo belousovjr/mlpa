@@ -123,27 +123,24 @@ export default class UI extends React.Component {
           </div>
         ) : null,
       loadingAnim = !isLoaded ? <Loading /> : null;
-    const visual = (
-      <Visual
-        isEnding={isEnding}
-        params={this.loc.params}
-        width={width}
-        height={height}
-        isLoaded={isLoaded}
-        loadFinished={() => this.setState({ isLoaded: true })}
-        landSizes={landSizes}
-      />
-    );
-
-    const ending = isEnding ? (
-      <Ending disabled={disabled} endingNext={this.endingNext} />
-    ) : null;
 
     return (
       <div>
         {loadingAnim}
-        {visual}
-        {ending}
+        <Visual
+          isEnding={isEnding}
+          params={this.loc.params}
+          width={width}
+          height={height}
+          isLoaded={isLoaded}
+          loadFinished={() => this.setState({ isLoaded: true })}
+          landSizes={landSizes}
+        />
+        <Ending
+          isEnding={isEnding}
+          disabled={disabled}
+          endingNext={this.endingNext}
+        />
         <AudioPlayer
           ranges={this.loc.ranges}
           checkRange={this.loc.checkRange}
