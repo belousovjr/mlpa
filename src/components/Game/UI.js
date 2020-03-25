@@ -19,7 +19,7 @@ export default class UI extends React.Component {
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
       cPhrase,
-      pPhrase: "Давай мы тебя успокоим?",
+      pPhrase: "Шевелись уже, убожество.",
       answers,
       disabled: true,
       currStageId,

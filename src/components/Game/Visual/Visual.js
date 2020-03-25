@@ -122,12 +122,15 @@ export default class Visual extends React.Component {
   }
 
   loadImage(sceneObject) {
+
     const { slot, image } = sceneObject;
     let img = new Image();
     let url = slot ? `${slot}/` : "";
     url += image;
     img.src = `${window.location.href}/img/${url}.png`;
+    console.log(img.src)
     img.onload = event => {
+
       const { target } = event;
       this.images.push({ name: image, img: target });
       if (this.images.length === this.objects.length) {
