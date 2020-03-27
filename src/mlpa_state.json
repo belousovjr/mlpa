@@ -185,8 +185,64 @@
             "name": "Провоцировать действия",
             "graduation": "НАПР НЕУВ",
             "isFin": false,
-            "isStart": true,
+            "isStart": false,
             "id": 8
+        },
+        {
+            "name": "Журить за ранимость",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 9
+        },
+        {
+            "name": "Давление",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 10
+        },
+        {
+            "name": "Собака",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 11
+        },
+        {
+            "name": "Личность игрока",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 12
+        },
+        {
+            "name": "Краш",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 13
+        },
+        {
+            "name": "Паста",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 14
+        },
+        {
+            "name": "Фотография",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": false,
+            "id": 15
+        },
+        {
+            "name": "Паники",
+            "graduation": "ПАН АПАТ",
+            "isFin": false,
+            "isStart": true,
+            "id": 16
         }
     ],
     "stuffs": [
@@ -3942,6 +3998,1536 @@
             "changes": [],
             "isA": false,
             "id": 580
+        },
+        {
+            "stage_id": 294,
+            "changes": [],
+            "isA": true,
+            "id": 581
+        },
+        {
+            "stage_id": 295,
+            "changes": [],
+            "isA": true,
+            "id": 582
+        },
+        {
+            "stage_id": 296,
+            "changes": [],
+            "isA": true,
+            "id": 583
+        },
+        {
+            "stage_id": 297,
+            "changes": [],
+            "isA": true,
+            "id": 584
+        },
+        {
+            "stage_id": 294,
+            "next_stage_id": 295,
+            "changes": [],
+            "isA": false,
+            "id": 585
+        },
+        {
+            "stage_id": 294,
+            "next_stage_id": 296,
+            "changes": [],
+            "isA": false,
+            "id": 586
+        },
+        {
+            "stage_id": 294,
+            "next_stage_id": 297,
+            "changes": [],
+            "isA": false,
+            "id": 587
+        },
+        {
+            "stage_id": 295,
+            "next_stage_id": 298,
+            "changes": [],
+            "isA": false,
+            "id": 588
+        },
+        {
+            "stage_id": 295,
+            "next_stage_id": 299,
+            "changes": [],
+            "isA": false,
+            "id": 589
+        },
+        {
+            "stage_id": 295,
+            "next_stage_id": 300,
+            "changes": [],
+            "isA": false,
+            "id": 590
+        },
+        {
+            "stage_id": 296,
+            "next_stage_id": 301,
+            "changes": [],
+            "isA": false,
+            "id": 591
+        },
+        {
+            "stage_id": 296,
+            "next_stage_id": 302,
+            "changes": [],
+            "isA": false,
+            "id": 592
+        },
+        {
+            "stage_id": 296,
+            "next_stage_id": 303,
+            "changes": [],
+            "isA": false,
+            "id": 593
+        },
+        {
+            "stage_id": 297,
+            "next_stage_id": 304,
+            "changes": [],
+            "isA": false,
+            "id": 594
+        },
+        {
+            "stage_id": 297,
+            "next_stage_id": 305,
+            "changes": [],
+            "isA": false,
+            "id": 595
+        },
+        {
+            "stage_id": 297,
+            "next_stage_id": 306,
+            "changes": [],
+            "isA": false,
+            "id": 596
+        },
+        {
+            "stage_id": 298,
+            "changes": [],
+            "isA": true,
+            "id": 597
+        },
+        {
+            "stage_id": 299,
+            "changes": [],
+            "isA": true,
+            "id": 598
+        },
+        {
+            "stage_id": 300,
+            "changes": [],
+            "isA": true,
+            "id": 599
+        },
+        {
+            "stage_id": 301,
+            "changes": [],
+            "isA": true,
+            "id": 600
+        },
+        {
+            "stage_id": 302,
+            "changes": [],
+            "isA": true,
+            "id": 601
+        },
+        {
+            "stage_id": 303,
+            "changes": [],
+            "isA": true,
+            "id": 602
+        },
+        {
+            "stage_id": 304,
+            "changes": [],
+            "isA": true,
+            "id": 603
+        },
+        {
+            "stage_id": 305,
+            "changes": [],
+            "isA": true,
+            "id": 604
+        },
+        {
+            "stage_id": 306,
+            "changes": [],
+            "isA": true,
+            "id": 605
+        },
+        {
+            "stage_id": 298,
+            "next_stage_id": 307,
+            "changes": [],
+            "isA": false,
+            "id": 606
+        },
+        {
+            "stage_id": 298,
+            "next_stage_id": 308,
+            "changes": [],
+            "isA": false,
+            "id": 607
+        },
+        {
+            "stage_id": 298,
+            "next_stage_id": 309,
+            "changes": [],
+            "isA": false,
+            "id": 608
+        },
+        {
+            "stage_id": 299,
+            "next_stage_id": 310,
+            "changes": [],
+            "isA": false,
+            "id": 609
+        },
+        {
+            "stage_id": 299,
+            "next_stage_id": 311,
+            "changes": [],
+            "isA": false,
+            "id": 610
+        },
+        {
+            "stage_id": 299,
+            "next_stage_id": 312,
+            "changes": [],
+            "isA": false,
+            "id": 611
+        },
+        {
+            "stage_id": 300,
+            "next_stage_id": 313,
+            "changes": [],
+            "isA": false,
+            "id": 612
+        },
+        {
+            "stage_id": 300,
+            "next_stage_id": 314,
+            "changes": [],
+            "isA": false,
+            "id": 613
+        },
+        {
+            "stage_id": 300,
+            "next_stage_id": 315,
+            "changes": [],
+            "isA": false,
+            "id": 614
+        },
+        {
+            "stage_id": 301,
+            "next_stage_id": 316,
+            "changes": [],
+            "isA": false,
+            "id": 615
+        },
+        {
+            "stage_id": 301,
+            "next_stage_id": 317,
+            "changes": [],
+            "isA": false,
+            "id": 616
+        },
+        {
+            "stage_id": 301,
+            "next_stage_id": 318,
+            "changes": [],
+            "isA": false,
+            "id": 617
+        },
+        {
+            "stage_id": 302,
+            "next_stage_id": 319,
+            "changes": [],
+            "isA": false,
+            "id": 618
+        },
+        {
+            "stage_id": 302,
+            "next_stage_id": 320,
+            "changes": [],
+            "isA": false,
+            "id": 619
+        },
+        {
+            "stage_id": 302,
+            "next_stage_id": 321,
+            "changes": [],
+            "isA": false,
+            "id": 620
+        },
+        {
+            "stage_id": 303,
+            "next_stage_id": 322,
+            "changes": [],
+            "isA": false,
+            "id": 621
+        },
+        {
+            "stage_id": 303,
+            "next_stage_id": 323,
+            "changes": [],
+            "isA": false,
+            "id": 622
+        },
+        {
+            "stage_id": 303,
+            "next_stage_id": 324,
+            "changes": [],
+            "isA": false,
+            "id": 623
+        },
+        {
+            "stage_id": 304,
+            "next_stage_id": 325,
+            "changes": [],
+            "isA": false,
+            "id": 624
+        },
+        {
+            "stage_id": 304,
+            "next_stage_id": 326,
+            "changes": [],
+            "isA": false,
+            "id": 625
+        },
+        {
+            "stage_id": 304,
+            "next_stage_id": 327,
+            "changes": [],
+            "isA": false,
+            "id": 626
+        },
+        {
+            "stage_id": 305,
+            "next_stage_id": 328,
+            "changes": [],
+            "isA": false,
+            "id": 627
+        },
+        {
+            "stage_id": 305,
+            "next_stage_id": 329,
+            "changes": [],
+            "isA": false,
+            "id": 628
+        },
+        {
+            "stage_id": 305,
+            "next_stage_id": 330,
+            "changes": [],
+            "isA": false,
+            "id": 629
+        },
+        {
+            "stage_id": 306,
+            "next_stage_id": 331,
+            "changes": [],
+            "isA": false,
+            "id": 630
+        },
+        {
+            "stage_id": 306,
+            "next_stage_id": 332,
+            "changes": [],
+            "isA": false,
+            "id": 631
+        },
+        {
+            "stage_id": 306,
+            "next_stage_id": 333,
+            "changes": [],
+            "isA": false,
+            "id": 632
+        },
+        {
+            "stage_id": 307,
+            "changes": [],
+            "isA": true,
+            "id": 633
+        },
+        {
+            "stage_id": 308,
+            "changes": [],
+            "isA": true,
+            "id": 634
+        },
+        {
+            "stage_id": 309,
+            "changes": [],
+            "isA": true,
+            "id": 635
+        },
+        {
+            "stage_id": 310,
+            "changes": [],
+            "isA": true,
+            "id": 636
+        },
+        {
+            "stage_id": 311,
+            "changes": [],
+            "isA": true,
+            "id": 637
+        },
+        {
+            "stage_id": 312,
+            "changes": [],
+            "isA": true,
+            "id": 638
+        },
+        {
+            "stage_id": 313,
+            "changes": [],
+            "isA": true,
+            "id": 639
+        },
+        {
+            "stage_id": 314,
+            "changes": [],
+            "isA": true,
+            "id": 640
+        },
+        {
+            "stage_id": 315,
+            "changes": [],
+            "isA": true,
+            "id": 641
+        },
+        {
+            "stage_id": 316,
+            "changes": [],
+            "isA": true,
+            "id": 642
+        },
+        {
+            "stage_id": 317,
+            "changes": [],
+            "isA": true,
+            "id": 643
+        },
+        {
+            "stage_id": 318,
+            "changes": [],
+            "isA": true,
+            "id": 644
+        },
+        {
+            "stage_id": 319,
+            "changes": [],
+            "isA": true,
+            "id": 645
+        },
+        {
+            "stage_id": 320,
+            "changes": [],
+            "isA": true,
+            "id": 646
+        },
+        {
+            "stage_id": 321,
+            "changes": [],
+            "isA": true,
+            "id": 647
+        },
+        {
+            "stage_id": 322,
+            "changes": [],
+            "isA": true,
+            "id": 648
+        },
+        {
+            "stage_id": 323,
+            "changes": [],
+            "isA": true,
+            "id": 649
+        },
+        {
+            "stage_id": 324,
+            "changes": [],
+            "isA": true,
+            "id": 650
+        },
+        {
+            "stage_id": 325,
+            "changes": [],
+            "isA": true,
+            "id": 651
+        },
+        {
+            "stage_id": 326,
+            "changes": [],
+            "isA": true,
+            "id": 652
+        },
+        {
+            "stage_id": 327,
+            "changes": [],
+            "isA": true,
+            "id": 653
+        },
+        {
+            "stage_id": 328,
+            "changes": [],
+            "isA": true,
+            "id": 654
+        },
+        {
+            "stage_id": 329,
+            "changes": [],
+            "isA": true,
+            "id": 655
+        },
+        {
+            "stage_id": 330,
+            "changes": [],
+            "isA": true,
+            "id": 656
+        },
+        {
+            "stage_id": 331,
+            "changes": [],
+            "isA": true,
+            "id": 657
+        },
+        {
+            "stage_id": 332,
+            "changes": [],
+            "isA": true,
+            "id": 658
+        },
+        {
+            "stage_id": 333,
+            "changes": [],
+            "isA": true,
+            "id": 659
+        },
+        {
+            "stage_id": 334,
+            "changes": [],
+            "isA": true,
+            "id": 660
+        },
+        {
+            "stage_id": 335,
+            "changes": [],
+            "isA": true,
+            "id": 661
+        },
+        {
+            "stage_id": 336,
+            "changes": [],
+            "isA": true,
+            "id": 662
+        },
+        {
+            "stage_id": 337,
+            "changes": [],
+            "isA": true,
+            "id": 663
+        },
+        {
+            "stage_id": 334,
+            "next_stage_id": 335,
+            "changes": [],
+            "isA": false,
+            "id": 664
+        },
+        {
+            "stage_id": 334,
+            "next_stage_id": 336,
+            "changes": [],
+            "isA": false,
+            "id": 665
+        },
+        {
+            "stage_id": 334,
+            "next_stage_id": 337,
+            "changes": [],
+            "isA": false,
+            "id": 666
+        },
+        {
+            "stage_id": 335,
+            "next_stage_id": 338,
+            "changes": [],
+            "isA": false,
+            "id": 667
+        },
+        {
+            "stage_id": 335,
+            "next_stage_id": 339,
+            "changes": [],
+            "isA": false,
+            "id": 668
+        },
+        {
+            "stage_id": 335,
+            "next_stage_id": 340,
+            "changes": [],
+            "isA": false,
+            "id": 669
+        },
+        {
+            "stage_id": 338,
+            "changes": [],
+            "isA": true,
+            "id": 670
+        },
+        {
+            "stage_id": 339,
+            "changes": [],
+            "isA": true,
+            "id": 671
+        },
+        {
+            "stage_id": 340,
+            "changes": [],
+            "isA": true,
+            "id": 672
+        },
+        {
+            "stage_id": 341,
+            "changes": [],
+            "isA": true,
+            "id": 673
+        },
+        {
+            "stage_id": 342,
+            "changes": [],
+            "isA": true,
+            "id": 674
+        },
+        {
+            "stage_id": 343,
+            "changes": [],
+            "isA": true,
+            "id": 675
+        },
+        {
+            "stage_id": 344,
+            "changes": [],
+            "isA": true,
+            "id": 676
+        },
+        {
+            "stage_id": 345,
+            "changes": [],
+            "isA": true,
+            "id": 677
+        },
+        {
+            "stage_id": 346,
+            "changes": [],
+            "isA": true,
+            "id": 678
+        },
+        {
+            "stage_id": 336,
+            "next_stage_id": 341,
+            "changes": [],
+            "isA": false,
+            "id": 679
+        },
+        {
+            "stage_id": 336,
+            "next_stage_id": 342,
+            "changes": [],
+            "isA": false,
+            "id": 680
+        },
+        {
+            "stage_id": 336,
+            "next_stage_id": 343,
+            "changes": [],
+            "isA": false,
+            "id": 681
+        },
+        {
+            "stage_id": 337,
+            "next_stage_id": 344,
+            "changes": [],
+            "isA": false,
+            "id": 682
+        },
+        {
+            "stage_id": 337,
+            "next_stage_id": 345,
+            "changes": [],
+            "isA": false,
+            "id": 683
+        },
+        {
+            "stage_id": 337,
+            "next_stage_id": 346,
+            "changes": [],
+            "isA": false,
+            "id": 684
+        },
+        {
+            "stage_id": 338,
+            "next_stage_id": 347,
+            "changes": [],
+            "isA": false,
+            "id": 685
+        },
+        {
+            "stage_id": 338,
+            "next_stage_id": 348,
+            "changes": [],
+            "isA": false,
+            "id": 686
+        },
+        {
+            "stage_id": 338,
+            "next_stage_id": 349,
+            "changes": [],
+            "isA": false,
+            "id": 687
+        },
+        {
+            "stage_id": 339,
+            "next_stage_id": 350,
+            "changes": [],
+            "isA": false,
+            "id": 688
+        },
+        {
+            "stage_id": 339,
+            "next_stage_id": 351,
+            "changes": [],
+            "isA": false,
+            "id": 689
+        },
+        {
+            "stage_id": 339,
+            "next_stage_id": 352,
+            "changes": [],
+            "isA": false,
+            "id": 690
+        },
+        {
+            "stage_id": 340,
+            "next_stage_id": 353,
+            "changes": [],
+            "isA": false,
+            "id": 691
+        },
+        {
+            "stage_id": 340,
+            "next_stage_id": 354,
+            "changes": [],
+            "isA": false,
+            "id": 692
+        },
+        {
+            "stage_id": 340,
+            "next_stage_id": 355,
+            "changes": [],
+            "isA": false,
+            "id": 693
+        },
+        {
+            "stage_id": 341,
+            "next_stage_id": 356,
+            "changes": [],
+            "isA": false,
+            "id": 694
+        },
+        {
+            "stage_id": 341,
+            "next_stage_id": 357,
+            "changes": [],
+            "isA": false,
+            "id": 695
+        },
+        {
+            "stage_id": 341,
+            "next_stage_id": 358,
+            "changes": [],
+            "isA": false,
+            "id": 696
+        },
+        {
+            "stage_id": 342,
+            "next_stage_id": 359,
+            "changes": [],
+            "isA": false,
+            "id": 697
+        },
+        {
+            "stage_id": 342,
+            "next_stage_id": 360,
+            "changes": [],
+            "isA": false,
+            "id": 698
+        },
+        {
+            "stage_id": 342,
+            "next_stage_id": 361,
+            "changes": [],
+            "isA": false,
+            "id": 699
+        },
+        {
+            "stage_id": 343,
+            "next_stage_id": 362,
+            "changes": [],
+            "isA": false,
+            "id": 700
+        },
+        {
+            "stage_id": 343,
+            "next_stage_id": 363,
+            "changes": [],
+            "isA": false,
+            "id": 701
+        },
+        {
+            "stage_id": 343,
+            "next_stage_id": 364,
+            "changes": [],
+            "isA": false,
+            "id": 702
+        },
+        {
+            "stage_id": 344,
+            "next_stage_id": 365,
+            "changes": [],
+            "isA": false,
+            "id": 703
+        },
+        {
+            "stage_id": 344,
+            "next_stage_id": 366,
+            "changes": [],
+            "isA": false,
+            "id": 704
+        },
+        {
+            "stage_id": 344,
+            "next_stage_id": 367,
+            "changes": [],
+            "isA": false,
+            "id": 705
+        },
+        {
+            "stage_id": 345,
+            "next_stage_id": 368,
+            "changes": [],
+            "isA": false,
+            "id": 706
+        },
+        {
+            "stage_id": 345,
+            "next_stage_id": 369,
+            "changes": [],
+            "isA": false,
+            "id": 707
+        },
+        {
+            "stage_id": 345,
+            "next_stage_id": 370,
+            "changes": [],
+            "isA": false,
+            "id": 708
+        },
+        {
+            "stage_id": 346,
+            "next_stage_id": 371,
+            "changes": [],
+            "isA": false,
+            "id": 709
+        },
+        {
+            "stage_id": 346,
+            "next_stage_id": 372,
+            "changes": [],
+            "isA": false,
+            "id": 710
+        },
+        {
+            "stage_id": 346,
+            "next_stage_id": 373,
+            "changes": [],
+            "isA": false,
+            "id": 711
+        },
+        {
+            "stage_id": 347,
+            "changes": [],
+            "isA": true,
+            "id": 712
+        },
+        {
+            "stage_id": 348,
+            "changes": [],
+            "isA": true,
+            "id": 713
+        },
+        {
+            "stage_id": 349,
+            "changes": [],
+            "isA": true,
+            "id": 714
+        },
+        {
+            "stage_id": 350,
+            "changes": [],
+            "isA": true,
+            "id": 715
+        },
+        {
+            "stage_id": 351,
+            "changes": [],
+            "isA": true,
+            "id": 716
+        },
+        {
+            "stage_id": 352,
+            "changes": [],
+            "isA": true,
+            "id": 717
+        },
+        {
+            "stage_id": 353,
+            "changes": [],
+            "isA": true,
+            "id": 718
+        },
+        {
+            "stage_id": 354,
+            "changes": [],
+            "isA": true,
+            "id": 719
+        },
+        {
+            "stage_id": 355,
+            "changes": [],
+            "isA": true,
+            "id": 720
+        },
+        {
+            "stage_id": 356,
+            "changes": [],
+            "isA": true,
+            "id": 721
+        },
+        {
+            "stage_id": 357,
+            "changes": [],
+            "isA": true,
+            "id": 722
+        },
+        {
+            "stage_id": 358,
+            "changes": [],
+            "isA": true,
+            "id": 723
+        },
+        {
+            "stage_id": 359,
+            "changes": [],
+            "isA": true,
+            "id": 724
+        },
+        {
+            "stage_id": 360,
+            "changes": [],
+            "isA": true,
+            "id": 725
+        },
+        {
+            "stage_id": 361,
+            "changes": [],
+            "isA": true,
+            "id": 726
+        },
+        {
+            "stage_id": 362,
+            "changes": [],
+            "isA": true,
+            "id": 727
+        },
+        {
+            "stage_id": 363,
+            "changes": [],
+            "isA": true,
+            "id": 728
+        },
+        {
+            "stage_id": 364,
+            "changes": [],
+            "isA": true,
+            "id": 729
+        },
+        {
+            "stage_id": 365,
+            "changes": [],
+            "isA": true,
+            "id": 730
+        },
+        {
+            "stage_id": 366,
+            "changes": [],
+            "isA": true,
+            "id": 731
+        },
+        {
+            "stage_id": 367,
+            "changes": [],
+            "isA": true,
+            "id": 732
+        },
+        {
+            "stage_id": 368,
+            "changes": [],
+            "isA": true,
+            "id": 733
+        },
+        {
+            "stage_id": 369,
+            "changes": [],
+            "isA": true,
+            "id": 734
+        },
+        {
+            "stage_id": 370,
+            "changes": [],
+            "isA": true,
+            "id": 735
+        },
+        {
+            "stage_id": 371,
+            "changes": [],
+            "isA": true,
+            "id": 736
+        },
+        {
+            "stage_id": 372,
+            "changes": [],
+            "isA": true,
+            "id": 737
+        },
+        {
+            "stage_id": 373,
+            "changes": [],
+            "isA": true,
+            "id": 738
+        },
+        {
+            "stage_id": 374,
+            "changes": [],
+            "isA": true,
+            "id": 739
+        },
+        {
+            "stage_id": 374,
+            "next_stage_id": 375,
+            "changes": [],
+            "isA": false,
+            "id": 740
+        },
+        {
+            "stage_id": 374,
+            "next_stage_id": 376,
+            "changes": [],
+            "isA": false,
+            "id": 741
+        },
+        {
+            "stage_id": 375,
+            "changes": [],
+            "isA": true,
+            "id": 742
+        },
+        {
+            "stage_id": 376,
+            "changes": [],
+            "isA": true,
+            "id": 743
+        },
+        {
+            "stage_id": 375,
+            "next_stage_id": 377,
+            "changes": [],
+            "isA": false,
+            "id": 744
+        },
+        {
+            "stage_id": 375,
+            "next_stage_id": 378,
+            "changes": [],
+            "isA": false,
+            "id": 745
+        },
+        {
+            "stage_id": 376,
+            "next_stage_id": 379,
+            "changes": [],
+            "isA": false,
+            "id": 746
+        },
+        {
+            "stage_id": 376,
+            "next_stage_id": 380,
+            "changes": [],
+            "isA": false,
+            "id": 747
+        },
+        {
+            "stage_id": 377,
+            "changes": [],
+            "isA": true,
+            "id": 748
+        },
+        {
+            "stage_id": 378,
+            "changes": [],
+            "isA": true,
+            "id": 749
+        },
+        {
+            "stage_id": 379,
+            "changes": [],
+            "isA": true,
+            "id": 750
+        },
+        {
+            "stage_id": 380,
+            "changes": [],
+            "isA": true,
+            "id": 751
+        },
+        {
+            "stage_id": 381,
+            "changes": [],
+            "isA": true,
+            "id": 752
+        },
+        {
+            "stage_id": 382,
+            "changes": [],
+            "isA": true,
+            "id": 753
+        },
+        {
+            "stage_id": 383,
+            "changes": [],
+            "isA": true,
+            "id": 754
+        },
+        {
+            "stage_id": 384,
+            "changes": [],
+            "isA": true,
+            "id": 755
+        },
+        {
+            "stage_id": 385,
+            "changes": [],
+            "isA": true,
+            "id": 756
+        },
+        {
+            "stage_id": 386,
+            "changes": [],
+            "isA": true,
+            "id": 757
+        },
+        {
+            "stage_id": 387,
+            "changes": [],
+            "isA": true,
+            "id": 758
+        },
+        {
+            "stage_id": 381,
+            "next_stage_id": 382,
+            "changes": [],
+            "isA": false,
+            "id": 759
+        },
+        {
+            "stage_id": 381,
+            "next_stage_id": 383,
+            "changes": [],
+            "isA": false,
+            "id": 760
+        },
+        {
+            "stage_id": 382,
+            "next_stage_id": 384,
+            "changes": [],
+            "isA": false,
+            "id": 761
+        },
+        {
+            "stage_id": 382,
+            "next_stage_id": 385,
+            "changes": [],
+            "isA": false,
+            "id": 762
+        },
+        {
+            "stage_id": 383,
+            "next_stage_id": 386,
+            "changes": [],
+            "isA": false,
+            "id": 763
+        },
+        {
+            "stage_id": 383,
+            "next_stage_id": 387,
+            "changes": [],
+            "isA": false,
+            "id": 764
+        },
+        {
+            "stage_id": 388,
+            "changes": [],
+            "isA": true,
+            "id": 765
+        },
+        {
+            "stage_id": 389,
+            "changes": [],
+            "isA": true,
+            "id": 766
+        },
+        {
+            "stage_id": 390,
+            "changes": [],
+            "isA": true,
+            "id": 767
+        },
+        {
+            "stage_id": 391,
+            "changes": [],
+            "isA": true,
+            "id": 768
+        },
+        {
+            "stage_id": 392,
+            "changes": [],
+            "isA": true,
+            "id": 769
+        },
+        {
+            "stage_id": 393,
+            "changes": [],
+            "isA": true,
+            "id": 770
+        },
+        {
+            "stage_id": 394,
+            "changes": [],
+            "isA": true,
+            "id": 771
+        },
+        {
+            "stage_id": 388,
+            "next_stage_id": 389,
+            "changes": [],
+            "isA": false,
+            "id": 772
+        },
+        {
+            "stage_id": 388,
+            "next_stage_id": 390,
+            "changes": [],
+            "isA": false,
+            "id": 773
+        },
+        {
+            "stage_id": 389,
+            "next_stage_id": 391,
+            "changes": [],
+            "isA": false,
+            "id": 774
+        },
+        {
+            "stage_id": 389,
+            "next_stage_id": 392,
+            "changes": [],
+            "isA": false,
+            "id": 775
+        },
+        {
+            "stage_id": 390,
+            "next_stage_id": 393,
+            "changes": [],
+            "isA": false,
+            "id": 776
+        },
+        {
+            "stage_id": 390,
+            "next_stage_id": 394,
+            "changes": [],
+            "isA": false,
+            "id": 777
+        },
+        {
+            "stage_id": 395,
+            "changes": [],
+            "isA": true,
+            "id": 778
+        },
+        {
+            "stage_id": 396,
+            "changes": [],
+            "isA": true,
+            "id": 779
+        },
+        {
+            "stage_id": 397,
+            "changes": [],
+            "isA": true,
+            "id": 780
+        },
+        {
+            "stage_id": 398,
+            "changes": [],
+            "isA": true,
+            "id": 781
+        },
+        {
+            "stage_id": 399,
+            "changes": [],
+            "isA": true,
+            "id": 782
+        },
+        {
+            "stage_id": 400,
+            "changes": [],
+            "isA": true,
+            "id": 783
+        },
+        {
+            "stage_id": 401,
+            "changes": [],
+            "isA": true,
+            "id": 784
+        },
+        {
+            "stage_id": 395,
+            "next_stage_id": 396,
+            "changes": [],
+            "isA": false,
+            "id": 785
+        },
+        {
+            "stage_id": 395,
+            "next_stage_id": 397,
+            "changes": [],
+            "isA": false,
+            "id": 786
+        },
+        {
+            "stage_id": 396,
+            "next_stage_id": 398,
+            "changes": [],
+            "isA": false,
+            "id": 787
+        },
+        {
+            "stage_id": 396,
+            "next_stage_id": 399,
+            "changes": [],
+            "isA": false,
+            "id": 788
+        },
+        {
+            "stage_id": 397,
+            "next_stage_id": 400,
+            "changes": [],
+            "isA": false,
+            "id": 789
+        },
+        {
+            "stage_id": 397,
+            "next_stage_id": 401,
+            "changes": [],
+            "isA": false,
+            "id": 790
+        },
+        {
+            "stage_id": 402,
+            "changes": [],
+            "isA": true,
+            "id": 791
+        },
+        {
+            "stage_id": 403,
+            "changes": [],
+            "isA": true,
+            "id": 792
+        },
+        {
+            "stage_id": 404,
+            "changes": [],
+            "isA": true,
+            "id": 793
+        },
+        {
+            "stage_id": 405,
+            "changes": [],
+            "isA": true,
+            "id": 794
+        },
+        {
+            "stage_id": 406,
+            "changes": [],
+            "isA": true,
+            "id": 795
+        },
+        {
+            "stage_id": 407,
+            "changes": [],
+            "isA": true,
+            "id": 796
+        },
+        {
+            "stage_id": 408,
+            "changes": [],
+            "isA": true,
+            "id": 797
+        },
+        {
+            "stage_id": 402,
+            "next_stage_id": 403,
+            "changes": [],
+            "isA": false,
+            "id": 798
+        },
+        {
+            "stage_id": 402,
+            "next_stage_id": 404,
+            "changes": [],
+            "isA": false,
+            "id": 799
+        },
+        {
+            "stage_id": 403,
+            "next_stage_id": 405,
+            "changes": [],
+            "isA": false,
+            "id": 800
+        },
+        {
+            "stage_id": 403,
+            "next_stage_id": 406,
+            "changes": [],
+            "isA": false,
+            "id": 801
+        },
+        {
+            "stage_id": 404,
+            "next_stage_id": 407,
+            "changes": [],
+            "isA": false,
+            "id": 802
+        },
+        {
+            "stage_id": 404,
+            "next_stage_id": 408,
+            "changes": [],
+            "isA": false,
+            "id": 803
+        },
+        {
+            "stage_id": 409,
+            "changes": [],
+            "isA": true,
+            "id": 804
+        },
+        {
+            "stage_id": 410,
+            "changes": [],
+            "isA": true,
+            "id": 805
+        },
+        {
+            "stage_id": 411,
+            "changes": [],
+            "isA": true,
+            "id": 806
+        },
+        {
+            "stage_id": 412,
+            "changes": [],
+            "isA": true,
+            "id": 807
+        },
+        {
+            "stage_id": 413,
+            "changes": [],
+            "isA": true,
+            "id": 808
+        },
+        {
+            "stage_id": 414,
+            "changes": [],
+            "isA": true,
+            "id": 809
+        },
+        {
+            "stage_id": 415,
+            "changes": [],
+            "isA": true,
+            "id": 810
+        },
+        {
+            "stage_id": 409,
+            "next_stage_id": 410,
+            "changes": [],
+            "isA": false,
+            "id": 811
+        },
+        {
+            "stage_id": 409,
+            "next_stage_id": 411,
+            "changes": [],
+            "isA": false,
+            "id": 812
+        },
+        {
+            "stage_id": 410,
+            "next_stage_id": 412,
+            "changes": [],
+            "isA": false,
+            "id": 813
+        },
+        {
+            "stage_id": 410,
+            "next_stage_id": 413,
+            "changes": [],
+            "isA": false,
+            "id": 814
+        },
+        {
+            "stage_id": 411,
+            "next_stage_id": 414,
+            "changes": [],
+            "isA": false,
+            "id": 815
+        },
+        {
+            "stage_id": 411,
+            "next_stage_id": 415,
+            "changes": [],
+            "isA": false,
+            "id": 816
         }
     ],
     "stages": [
@@ -5701,6 +7287,738 @@
             "isBeen": false,
             "topic_id": 8,
             "id": 293,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 294,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 295,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 296,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 297,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 298,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 299,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 300,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 301,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 302,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 303,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 304,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 305,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 306,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 307,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 308,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 309,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 310,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 311,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 312,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 313,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 314,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 315,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 316,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 317,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 318,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 319,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 320,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 321,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 322,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 323,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 324,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 325,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 326,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 327,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 328,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 329,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 330,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 331,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 332,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 9,
+            "id": 333,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 334,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 335,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 336,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 337,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 338,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 339,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 340,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 341,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 342,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 343,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 344,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 345,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 346,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 347,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 348,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 349,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 350,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 351,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 352,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 353,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 354,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 355,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 356,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 357,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 358,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 359,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 360,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 361,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 362,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 363,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 364,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 365,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 366,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 367,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 368,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 369,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 370,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 371,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 372,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 10,
+            "id": 373,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 374,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 375,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 376,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 377,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 378,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 379,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 11,
+            "id": 380,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 381,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 382,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 383,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 384,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 385,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 386,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 12,
+            "id": 387,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 388,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 389,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 390,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 391,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 392,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 393,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 13,
+            "id": 394,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 395,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 396,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 397,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 398,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 399,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 400,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 14,
+            "id": 401,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 402,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 403,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 404,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 405,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 406,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 407,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 15,
+            "id": 408,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 409,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 410,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 411,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 412,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 413,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 414,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 16,
+            "id": 415,
             "isStart": false
         }
     ],
@@ -10882,13 +13200,2113 @@
             "text": "Устал",
             "isGeneral": true,
             "id": 867
+        },
+        {
+            "stuff_id": 581,
+            "text": "...А ты взялся обличать чужие слабости?",
+            "isGeneral": false,
+            "id": 868
+        },
+        {
+            "stuff_id": 582,
+            "text": "Ну, проще говоря - обзываешься... Что ты вообще думаешь обо мне?..",
+            "isGeneral": false,
+            "id": 869
+        },
+        {
+            "stuff_id": 583,
+            "text": "Что ты имеешь в виду?",
+            "isGeneral": false,
+            "id": 870
+        },
+        {
+            "stuff_id": 584,
+            "text": "Решил мне мораль читать?",
+            "isGeneral": false,
+            "id": 871
+        },
+        {
+            "stuff_id": 585,
+            "text": "Обличать -низко.А я констатирую факты.",
+            "isGeneral": false,
+            "id": 872
+        },
+        {
+            "stuff_id": 585,
+            "text": "Низко",
+            "isGeneral": true,
+            "id": 873
+        },
+        {
+            "stuff_id": 586,
+            "text": "Можно подумать, ты мне чужая.",
+            "isGeneral": false,
+            "id": 874
+        },
+        {
+            "stuff_id": 586,
+            "text": "Не чужие",
+            "isGeneral": true,
+            "id": 875
+        },
+        {
+            "stuff_id": 587,
+            "text": "У нас тут свобода слова. По Конституции. Или ты не чтишь закон?",
+            "isGeneral": false,
+            "id": 876
+        },
+        {
+            "stuff_id": 587,
+            "text": "Право",
+            "isGeneral": true,
+            "id": 877
+        },
+        {
+            "stuff_id": 588,
+            "text": "Ты хороший человек, с которым случилось много плохого. И несмотря на окружающий хаос, ты все равно пытаешься помочь тем, кому хуже. Это похвально.",
+            "isGeneral": false,
+            "id": 878
+        },
+        {
+            "stuff_id": 588,
+            "text": "Сложности",
+            "isGeneral": true,
+            "id": 879
+        },
+        {
+            "stuff_id": 589,
+            "text": "Знаешь китайскую притчу, про труп врага, который проплывет мимо тебя, если долго ждать? Ты не тот, кто сидит на берегу. Ты тот, кто в воде.",
+            "isGeneral": false,
+            "id": 880
+        },
+        {
+            "stuff_id": 589,
+            "text": "Китайская мудрость",
+            "isGeneral": true,
+            "id": 881
+        },
+        {
+            "stuff_id": 590,
+            "text": "Ты думаешь, будто весь мир вращается вокруг тебя. Почему твои мысли, твоя боль и твое нервное напряжение должны кого-то трогать, если только ты не чирлидерша из американской школы? Ты одинока в своей дешевой мелодраме. Публики нет. Никто на тебя не смотрит. Можешь вытирать глицериновые слезы.",
+            "isGeneral": false,
+            "id": 882
+        },
+        {
+            "stuff_id": 590,
+            "text": "Королева драмы",
+            "isGeneral": true,
+            "id": 883
+        },
+        {
+            "stuff_id": 591,
+            "text": "Мы друзья. Мы дружим. Друзья могут отпускать такие замечания друг другу.",
+            "isGeneral": false,
+            "id": 887
+        },
+        {
+            "stuff_id": 591,
+            "text": "Друзья",
+            "isGeneral": true,
+            "id": 888
+        },
+        {
+            "stuff_id": 592,
+            "text": "Мы похожи, а значит я указываю не только на твои недостатки, но и на свои.",
+            "isGeneral": false,
+            "id": 889
+        },
+        {
+            "stuff_id": 592,
+            "text": "Похожи",
+            "isGeneral": true,
+            "id": 890
+        },
+        {
+            "stuff_id": 593,
+            "text": "Мы две стороны одой монеты. Мы одинаковые по своей сущности. Оскорбляя тебя, я оскорбляю и себя тоже.",
+            "isGeneral": false,
+            "id": 891
+        },
+        {
+            "stuff_id": 593,
+            "text": "Едины",
+            "isGeneral": true,
+            "id": 892
+        },
+        {
+            "stuff_id": 594,
+            "text": "Мораль — это слабость. То, что ты не совершаешь  поступков, окрашенных обществом в черный цвет или наоборот, строишь из себя лапочку, лишь бы кто дурного слова о тебе не сказал — это не проявление благоразумия. Только тупость и стадный инстинкт. Плевать, кто и что скажет про твой нравствннный облик. Мораль для снобов, для догматиков и ничтожеств. Так что, дамочка, мои слова — это просто сарказм. От греческого \"разрывать плоть\".",
+            "isGeneral": false,
+            "id": 893
+        },
+        {
+            "stuff_id": 594,
+            "text": "Слабость",
+            "isGeneral": true,
+            "id": 894
+        },
+        {
+            "stuff_id": 595,
+            "text": "Если бы я не прочищал твой разум и не взывал к высокоморальности, нам бы сейчас было совсем плохо.",
+            "isGeneral": false,
+            "id": 895
+        },
+        {
+            "stuff_id": 595,
+            "text": "Необходимость",
+            "isGeneral": true,
+            "id": 896
+        },
+        {
+            "stuff_id": 596,
+            "text": "Знала ли ты, как сложно вообще научится читать?",
+            "isGeneral": false,
+            "id": 897
+        },
+        {
+            "stuff_id": 596,
+            "text": "Читать непросто",
+            "isGeneral": true,
+            "id": 898
+        },
+        {
+            "stuff_id": 597,
+            "text": "Похвалы всегда вызывали у меня смешанные чувства. Я ощущала, что заслуживаю их, но все пыталась обьяснить - вы идеализируете, я вовсе не такая, какой кажусь, будьте обьективнее. Меня никто не слушал. А потом они уходили, разочаровавшись. Можно подумать, я не предупрежлала.",
+            "isGeneral": false,
+            "id": 899
+        },
+        {
+            "stuff_id": 598,
+            "text": "Я не люблю воду. В своих кошмарах я часто ухожу на дно, пока в легких заканчивается кислород. Но нв помощь никто не спешит.Потом я вспоминаю, что я сплю одна, и никто не ринется в толщу вод спасать меня. Некому. И я просыпаюсь.",
+            "isGeneral": false,
+            "id": 900
+        },
+        {
+            "stuff_id": 599,
+            "text": "Я хотела быть славной и милой для всех. Я так старалась, что перестала существовать, став лишь отражением их эмоций, амбиций и притязаний. Грусть позволяет чувствовать, что где-то глубоко внутри еще теплится жизнь.",
+            "isGeneral": false,
+            "id": 901
+        },
+        {
+            "stuff_id": 600,
+            "text": "У меня был только один друг. Но я его потеряла. А ты не он.",
+            "isGeneral": false,
+            "id": 902
+        },
+        {
+            "stuff_id": 601,
+            "text": "Я не считаю способность чувствовать недостатком.",
+            "isGeneral": false,
+            "id": 903
+        },
+        {
+            "stuff_id": 602,
+            "text": "Орел и решка вообще-то разные.",
+            "isGeneral": false,
+            "id": 904
+        },
+        {
+            "stuff_id": 603,
+            "text": "Прочитал пару псевдонаучных статей и возомнил себя революционкром. Смешно...",
+            "isGeneral": false,
+            "id": 905
+        },
+        {
+            "stuff_id": 604,
+            "text": "Да, неприятно признавать, но это правда...",
+            "isGeneral": false,
+            "id": 906
+        },
+        {
+            "stuff_id": 605,
+            "text": "Угу, если у тебя лишняя хромосома...",
+            "isGeneral": false,
+            "id": 907
+        },
+        {
+            "stuff_id": 606,
+            "text": "Позволь поинтересоваться, кто тебя хвалил? Они просто идиоты с раздутым самомнением, раз не замечали очевидного. Это не твоя вина. Ты заслужила компанию получше.  - Хах, только она, похоже, не заслужила меня...",
+            "isGeneral": false,
+            "id": 908
+        },
+        {
+            "stuff_id": 606,
+            "text": "Кто хвалил",
+            "isGeneral": true,
+            "id": 909
+        },
+        {
+            "stuff_id": 607,
+            "text": "Я искренне считаю тебя хорошей вопреки всему.",
+            "isGeneral": false,
+            "id": 910
+        },
+        {
+            "stuff_id": 607,
+            "text": "Искренне",
+            "isGeneral": true,
+            "id": 911
+        },
+        {
+            "stuff_id": 608,
+            "text": "Я знаю о твоих сильных и слабых сторонах, но все равно считаю тебя большой умницей.",
+            "isGeneral": false,
+            "id": 912
+        },
+        {
+            "stuff_id": 608,
+            "text": "Недостатки",
+            "isGeneral": true,
+            "id": 913
+        },
+        {
+            "stuff_id": 609,
+            "text": "Тебе часто снятся плохие сны?",
+            "isGeneral": false,
+            "id": 914
+        },
+        {
+            "stuff_id": 609,
+            "text": "Сны",
+            "isGeneral": true,
+            "id": 915
+        },
+        {
+            "stuff_id": 610,
+            "text": "О чем ты мечтаешь?",
+            "isGeneral": false,
+            "id": 916
+        },
+        {
+            "stuff_id": 610,
+            "text": "Мечты",
+            "isGeneral": true,
+            "id": 917
+        },
+        {
+            "stuff_id": 611,
+            "text": "Ты кажешься очень одинокой. Но рядом ведь кто-то есть.",
+            "isGeneral": false,
+            "id": 918
+        },
+        {
+            "stuff_id": 611,
+            "text": "Окружение",
+            "isGeneral": true,
+            "id": 919
+        },
+        {
+            "stuff_id": 612,
+            "text": "В чем была ценность этого?",
+            "isGeneral": false,
+            "id": 920
+        },
+        {
+            "stuff_id": 612,
+            "text": "Ценность",
+            "isGeneral": true,
+            "id": 921
+        },
+        {
+            "stuff_id": 613,
+            "text": "Кто представлял для тебя важность?",
+            "isGeneral": false,
+            "id": 922
+        },
+        {
+            "stuff_id": 613,
+            "text": "Кто был важен",
+            "isGeneral": true,
+            "id": 923
+        },
+        {
+            "stuff_id": 614,
+            "text": "Зачем все это?",
+            "isGeneral": false,
+            "id": 924
+        },
+        {
+            "stuff_id": 614,
+            "text": "Зачем",
+            "isGeneral": true,
+            "id": 925
+        },
+        {
+            "stuff_id": 615,
+            "text": "Уверяю, что я он и есть.",
+            "isGeneral": false,
+            "id": 926
+        },
+        {
+            "stuff_id": 615,
+            "text": "Я он",
+            "isGeneral": true,
+            "id": 927
+        },
+        {
+            "stuff_id": 616,
+            "text": "Конечно, я куда лучше.",
+            "isGeneral": false,
+            "id": 928
+        },
+        {
+            "stuff_id": 616,
+            "text": "Я лучше",
+            "isGeneral": true,
+            "id": 929
+        },
+        {
+            "stuff_id": 617,
+            "text": "Хватит скулить.",
+            "isGeneral": false,
+            "id": 930
+        },
+        {
+            "stuff_id": 617,
+            "text": "Хватит",
+            "isGeneral": true,
+            "id": 931
+        },
+        {
+            "stuff_id": 618,
+            "text": "Ты абсолютно права, моя дорогая.",
+            "isGeneral": false,
+            "id": 932
+        },
+        {
+            "stuff_id": 618,
+            "text": "Права",
+            "isGeneral": true,
+            "id": 933
+        },
+        {
+            "stuff_id": 619,
+            "text": "Эмпатия и подобная чушь делает тебя тряпкой. И все.",
+            "isGeneral": false,
+            "id": 934
+        },
+        {
+            "stuff_id": 619,
+            "text": "Не права",
+            "isGeneral": true,
+            "id": 935
+        },
+        {
+            "stuff_id": 620,
+            "text": "Да плевать.Хорошо теюе стоится?",
+            "isGeneral": false,
+            "id": 936
+        },
+        {
+            "stuff_id": 620,
+            "text": "Не важно",
+            "isGeneral": true,
+            "id": 937
+        },
+        {
+            "stuff_id": 621,
+            "text": "Не придирайся. Я тебя тут вообще-то подбодрить пытаюсь...",
+            "isGeneral": false,
+            "id": 938
+        },
+        {
+            "stuff_id": 621,
+            "text": "Не придирайся",
+            "isGeneral": true,
+            "id": 939
+        },
+        {
+            "stuff_id": 622,
+            "text": "Ты ничего не поняла. Зря только силы тратил.",
+            "isGeneral": false,
+            "id": 940
+        },
+        {
+            "stuff_id": 622,
+            "text": "Ничего не поняла",
+            "isGeneral": true,
+            "id": 941
+        },
+        {
+            "stuff_id": 623,
+            "text": "ДА КОГО ВОЛНУЕТ?!",
+            "isGeneral": false,
+            "id": 942
+        },
+        {
+            "stuff_id": 623,
+            "text": "Не важно",
+            "isGeneral": true,
+            "id": 943
+        },
+        {
+            "stuff_id": 624,
+            "text": "...",
+            "isGeneral": false,
+            "id": 944
+        },
+        {
+            "stuff_id": 624,
+            "text": "Игнорировать",
+            "isGeneral": true,
+            "id": 945
+        },
+        {
+            "stuff_id": 625,
+            "text": "Хоть капля разума в твоей глупой голове должна подсказать тебе, что так говорить — себе вредить. Это обдуманно? Ты действительно горишь желанием лишиться моей поддержки или опять просто проявляешь все свои жалкие стороны?",
+            "isGeneral": false,
+            "id": 946
+        },
+        {
+            "stuff_id": 625,
+            "text": "Заставить передумать",
+            "isGeneral": true,
+            "id": 947
+        },
+        {
+            "stuff_id": 626,
+            "text": "Ну окей, пошутили и хватит...",
+            "isGeneral": false,
+            "id": 948
+        },
+        {
+            "stuff_id": 626,
+            "text": "Сменить тему",
+            "isGeneral": true,
+            "id": 949
+        },
+        {
+            "stuff_id": 627,
+            "text": "Лучше просто признай.",
+            "isGeneral": false,
+            "id": 950
+        },
+        {
+            "stuff_id": 627,
+            "text": "Признай",
+            "isGeneral": true,
+            "id": 951
+        },
+        {
+            "stuff_id": 628,
+            "text": "Ты действительно отлично справилась. И без меня, наверняка, тоже.",
+            "isGeneral": false,
+            "id": 952
+        },
+        {
+            "stuff_id": 628,
+            "text": "Похвалить",
+            "isGeneral": true,
+            "id": 953
+        },
+        {
+            "stuff_id": 629,
+            "text": "Эй, выше нос, он у тебя красивый.",
+            "isGeneral": false,
+            "id": 954
+        },
+        {
+            "stuff_id": 629,
+            "text": "Обходить",
+            "isGeneral": true,
+            "id": 955
+        },
+        {
+            "stuff_id": 630,
+            "text": "Ты хочешь поговорить об этом? У кого что болит, тот о том и говорит...",
+            "isGeneral": false,
+            "id": 956
+        },
+        {
+            "stuff_id": 630,
+            "text": "Поговорить об этом",
+            "isGeneral": true,
+            "id": 957
+        },
+        {
+            "stuff_id": 631,
+            "text": "Какое бесчестное предположение.",
+            "isGeneral": false,
+            "id": 958
+        },
+        {
+            "stuff_id": 631,
+            "text": "Оскорбиться",
+            "isGeneral": true,
+            "id": 959
+        },
+        {
+            "stuff_id": 632,
+            "text": "Скучная. Ты чудовищно скучная. И ответы предсказуемые.",
+            "isGeneral": false,
+            "id": 960
+        },
+        {
+            "stuff_id": 632,
+            "text": "Разочароваться",
+            "isGeneral": true,
+            "id": 961
+        },
+        {
+            "stuff_id": 633,
+            "text": "Хах, только она, похоже, не заслужила меня...",
+            "isGeneral": false,
+            "id": 962
+        },
+        {
+            "stuff_id": 634,
+            "text": "Не думаю, что я делаю достаточно...",
+            "isGeneral": false,
+            "id": 963
+        },
+        {
+            "stuff_id": 635,
+            "text": "Мне очень приятно это слышать. Спасибо.",
+            "isGeneral": false,
+            "id": 964
+        },
+        {
+            "stuff_id": 636,
+            "text": "Почти каждую ночь. Они не дают мне успокоятся и просто сводят с ума. Конечно, я о вещах похуже ледяной воды.",
+            "isGeneral": false,
+            "id": 965
+        },
+        {
+            "stuff_id": 637,
+            "text": "Я хочу начать все с чистого листа, потеряв память. Жаль, что это невозможно...",
+            "isGeneral": false,
+            "id": 966
+        },
+        {
+            "stuff_id": 638,
+            "text": "Увы, у меня есть только я сама...",
+            "isGeneral": false,
+            "id": 967
+        },
+        {
+            "stuff_id": 639,
+            "text": "Все нуждались во мне. Казалось, я делаю их жизнь светлее. Я чувствовала себя богиней, чувствовала свою силу и была зависима от этого ощущения. Я могла вертеть миром, как захочу. Иначе начиналась ломка, что болезненнее героиновой. Этот идеал был ошибочным, но украл меня надолго.",
+            "isGeneral": false,
+            "id": 968
+        },
+        {
+            "stuff_id": 640,
+            "text": "Никто. Был только один человек. Был.",
+            "isGeneral": false,
+            "id": 969
+        },
+        {
+            "stuff_id": 641,
+            "text": "Не знаю... Глупо...",
+            "isGeneral": false,
+            "id": 970
+        },
+        {
+            "stuff_id": 642,
+            "text": "ХВАТИТ!!! Прекрати..!",
+            "isGeneral": false,
+            "id": 971
+        },
+        {
+            "stuff_id": 643,
+            "text": "Заткнись!! Как ты смеешь..!",
+            "isGeneral": false,
+            "id": 972
+        },
+        {
+            "stuff_id": 644,
+            "text": "Я не...",
+            "isGeneral": false,
+            "id": 973
+        },
+        {
+            "stuff_id": 645,
+            "text": "Чего..?",
+            "isGeneral": false,
+            "id": 974
+        },
+        {
+            "stuff_id": 646,
+            "text": "Ну как скажешь...",
+            "isGeneral": false,
+            "id": 975
+        },
+        {
+            "stuff_id": 647,
+            "text": "Да, очень удобно.",
+            "isGeneral": false,
+            "id": 976
+        },
+        {
+            "stuff_id": 648,
+            "text": "Окей...",
+            "isGeneral": false,
+            "id": 977
+        },
+        {
+            "stuff_id": 649,
+            "text": "Прости... Пожалуйста...",
+            "isGeneral": false,
+            "id": 978
+        },
+        {
+            "stuff_id": 650,
+            "text": "..Никого...",
+            "isGeneral": false,
+            "id": 979
+        },
+        {
+            "stuff_id": 651,
+            "text": "Не заладился разговор...",
+            "isGeneral": false,
+            "id": 980
+        },
+        {
+            "stuff_id": 652,
+            "text": "Эм... да... мне не стоило. Прости...",
+            "isGeneral": false,
+            "id": 981
+        },
+        {
+            "stuff_id": 653,
+            "text": "Хорошо...",
+            "isGeneral": false,
+            "id": 982
+        },
+        {
+            "stuff_id": 654,
+            "text": "Благодарю...",
+            "isGeneral": false,
+            "id": 983
+        },
+        {
+            "stuff_id": 655,
+            "text": "Неловко как-то...",
+            "isGeneral": false,
+            "id": 984
+        },
+        {
+            "stuff_id": 656,
+            "text": "Ага, а еще первое слово дороже второго...",
+            "isGeneral": false,
+            "id": 985
+        },
+        {
+            "stuff_id": 657,
+            "text": "Да ладно.",
+            "isGeneral": false,
+            "id": 986
+        },
+        {
+            "stuff_id": 658,
+            "text": "Сам такой.",
+            "isGeneral": false,
+            "id": 987
+        },
+        {
+            "stuff_id": 659,
+            "text": "space",
+            "isGeneral": false,
+            "id": 988
+        },
+        {
+            "stuff_id": 660,
+            "text": "А что мне еще делать?",
+            "isGeneral": false,
+            "id": 989
+        },
+        {
+            "stuff_id": 661,
+            "text": "Нет идей... А у тебя?",
+            "isGeneral": false,
+            "id": 990
+        },
+        {
+            "stuff_id": 662,
+            "text": "Хватит добиваться своего давлением...",
+            "isGeneral": false,
+            "id": 991
+        },
+        {
+            "stuff_id": 663,
+            "text": "Слушаюсь и повинуюсь.",
+            "isGeneral": false,
+            "id": 992
+        },
+        {
+            "stuff_id": 664,
+            "text": "Как минимум решить, что ты должна предпринять, чтобы не стать еще большим ничтожеством.",
+            "isGeneral": false,
+            "id": 993
+        },
+        {
+            "stuff_id": 664,
+            "text": "Решать",
+            "isGeneral": true,
+            "id": 994
+        },
+        {
+            "stuff_id": 665,
+            "text": "Думать. Я же вижу, какое в твоей голове перекатиполе. Думай, что должна сделать.",
+            "isGeneral": false,
+            "id": 995
+        },
+        {
+            "stuff_id": 665,
+            "text": "Думать",
+            "isGeneral": true,
+            "id": 996
+        },
+        {
+            "stuff_id": 666,
+            "text": "А, ну наверное найти ближайшую высотку и спрыгнуть с нее.",
+            "isGeneral": false,
+            "id": 997
+        },
+        {
+            "stuff_id": 666,
+            "text": "Умереть",
+            "isGeneral": true,
+            "id": 998
+        },
+        {
+            "stuff_id": 667,
+            "text": "Оглядись. Не замечаешь ничего странного?",
+            "isGeneral": false,
+            "id": 999
+        },
+        {
+            "stuff_id": 667,
+            "text": "Оглядеться",
+            "isGeneral": true,
+            "id": 1000
+        },
+        {
+            "stuff_id": 668,
+            "text": "Осмотри себя. Что у тебя есть? Что ты можешь использовать?",
+            "isGeneral": false,
+            "id": 1001
+        },
+        {
+            "stuff_id": 668,
+            "text": "Осмотреть себя",
+            "isGeneral": true,
+            "id": 1002
+        },
+        {
+            "stuff_id": 669,
+            "text": "Вспомни, как ты здесь оказалась.",
+            "isGeneral": false,
+            "id": 1003
+        },
+        {
+            "stuff_id": 669,
+            "text": "Вспомнить",
+            "isGeneral": true,
+            "id": 1004
+        },
+        {
+            "stuff_id": 670,
+            "text": "Там дорога. И что-то лежит. Не могу разобрать.",
+            "isGeneral": false,
+            "id": 1005
+        },
+        {
+            "stuff_id": 671,
+            "text": "У меня с собой только телефон. Могу позвонить кому-нибудь.",
+            "isGeneral": false,
+            "id": 1006
+        },
+        {
+            "stuff_id": 672,
+            "text": "Я возвращалась домой. Хотела сделать пару фотографий по пути.",
+            "isGeneral": false,
+            "id": 1007
+        },
+        {
+            "stuff_id": 673,
+            "text": "Ты и не пытался...",
+            "isGeneral": false,
+            "id": 1008
+        },
+        {
+            "stuff_id": 674,
+            "text": "И что дальше?",
+            "isGeneral": false,
+            "id": 1009
+        },
+        {
+            "stuff_id": 675,
+            "text": "Я способна на все...",
+            "isGeneral": false,
+            "id": 1010
+        },
+        {
+            "stuff_id": 676,
+            "text": "Не похоже, что ты мне поможешь.",
+            "isGeneral": false,
+            "id": 1011
+        },
+        {
+            "stuff_id": 677,
+            "text": "Я тебе не мешаю...",
+            "isGeneral": false,
+            "id": 1012
+        },
+        {
+            "stuff_id": 678,
+            "text": "Извинения приняты.",
+            "isGeneral": false,
+            "id": 1013
+        },
+        {
+            "stuff_id": 679,
+            "text": "С тобой иначе не выходит.",
+            "isGeneral": false,
+            "id": 1014
+        },
+        {
+            "stuff_id": 679,
+            "text": "Рабочий метод",
+            "isGeneral": true,
+            "id": 1015
+        },
+        {
+            "stuff_id": 680,
+            "text": "Следи за словами. Я ведь и обидеться могу.",
+            "isGeneral": false,
+            "id": 1016
+        },
+        {
+            "stuff_id": 680,
+            "text": "Следи за словами",
+            "isGeneral": true,
+            "id": 1017
+        },
+        {
+            "stuff_id": 681,
+            "text": "Вот видишь, даже ты признаешь, что я добиваюсь своего. Если ты не способна к действию, придется взять часть ответственности на себя.",
+            "isGeneral": false,
+            "id": 1018
+        },
+        {
+            "stuff_id": 681,
+            "text": "Уместно",
+            "isGeneral": true,
+            "id": 1019
+        },
+        {
+            "stuff_id": 682,
+            "text": "Не похоже на то.",
+            "isGeneral": false,
+            "id": 1020
+        },
+        {
+            "stuff_id": 682,
+            "text": "Не похоже",
+            "isGeneral": true,
+            "id": 1021
+        },
+        {
+            "stuff_id": 683,
+            "text": "Ну, я хоть каких-то действий от тебя жду.",
+            "isGeneral": false,
+            "id": 1022
+        },
+        {
+            "stuff_id": 683,
+            "text": "Я жду",
+            "isGeneral": true,
+            "id": 1023
+        },
+        {
+            "stuff_id": 684,
+            "text": "Извини, я шутил, если что.",
+            "isGeneral": false,
+            "id": 1024
+        },
+        {
+            "stuff_id": 684,
+            "text": "Извиниться",
+            "isGeneral": true,
+            "id": 1025
+        },
+        {
+            "stuff_id": 685,
+            "text": "У тебя все в порядке со зрением?",
+            "isGeneral": false,
+            "id": 1026
+        },
+        {
+            "stuff_id": 685,
+            "text": "Зрение",
+            "isGeneral": true,
+            "id": 1027
+        },
+        {
+            "stuff_id": 686,
+            "text": "Проселочная дорога или типа того..?",
+            "isGeneral": false,
+            "id": 1028
+        },
+        {
+            "stuff_id": 686,
+            "text": "Дорога",
+            "isGeneral": true,
+            "id": 1029
+        },
+        {
+            "stuff_id": 687,
+            "text": "Где ты находишься?",
+            "isGeneral": false,
+            "id": 1030
+        },
+        {
+            "stuff_id": 687,
+            "text": "Где ты",
+            "isGeneral": true,
+            "id": 1031
+        },
+        {
+            "stuff_id": 688,
+            "text": "Так почему до сих пор не позвонила?",
+            "isGeneral": false,
+            "id": 1032
+        },
+        {
+            "stuff_id": 688,
+            "text": "Звонок",
+            "isGeneral": true,
+            "id": 1033
+        },
+        {
+            "stuff_id": 689,
+            "text": "Отправь SMS, если боишься звонить.",
+            "isGeneral": false,
+            "id": 1034
+        },
+        {
+            "stuff_id": 689,
+            "text": "SMS",
+            "isGeneral": true,
+            "id": 1035
+        },
+        {
+            "stuff_id": 690,
+            "text": "И кому?",
+            "isGeneral": false,
+            "id": 1036
+        },
+        {
+            "stuff_id": 690,
+            "text": "Кому",
+            "isGeneral": true,
+            "id": 1037
+        },
+        {
+            "stuff_id": 691,
+            "text": "Это твое увлечение?",
+            "isGeneral": false,
+            "id": 1038
+        },
+        {
+            "stuff_id": 691,
+            "text": "Увлечение",
+            "isGeneral": true,
+            "id": 1039
+        },
+        {
+            "stuff_id": 692,
+            "text": "Это такой школьный проект, хах?",
+            "isGeneral": false,
+            "id": 1040
+        },
+        {
+            "stuff_id": 692,
+            "text": "Школьный проект",
+            "isGeneral": true,
+            "id": 1041
+        },
+        {
+            "stuff_id": 693,
+            "text": "И что ты надеялась запечатлеть?",
+            "isGeneral": false,
+            "id": 1042
+        },
+        {
+            "stuff_id": 693,
+            "text": "Что фотографируем",
+            "isGeneral": true,
+            "id": 1043
+        },
+        {
+            "stuff_id": 694,
+            "text": "Это ложь. Ты меня за дурака держишь?",
+            "isGeneral": false,
+            "id": 1044
+        },
+        {
+            "stuff_id": 694,
+            "text": "Ложь",
+            "isGeneral": true,
+            "id": 1045
+        },
+        {
+            "stuff_id": 695,
+            "text": "Цель оправдывает средства.",
+            "isGeneral": false,
+            "id": 1046
+        },
+        {
+            "stuff_id": 695,
+            "text": "Цель",
+            "isGeneral": true,
+            "id": 1047
+        },
+        {
+            "stuff_id": 696,
+            "text": "Ты нуждалась в пинке под зад. Ты до сих пор дышишь, а это моя заслуга. Во многом.",
+            "isGeneral": false,
+            "id": 1048
+        },
+        {
+            "stuff_id": 696,
+            "text": "Средство",
+            "isGeneral": true,
+            "id": 1049
+        },
+        {
+            "stuff_id": 697,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1050
+        },
+        {
+            "stuff_id": 697,
+            "text": "Молчать",
+            "isGeneral": true,
+            "id": 1051
+        },
+        {
+            "stuff_id": 698,
+            "text": "Первая, кто пострадает от моей обиды — ты.",
+            "isGeneral": false,
+            "id": 1052
+        },
+        {
+            "stuff_id": 698,
+            "text": "Будет хуже",
+            "isGeneral": true,
+            "id": 1053
+        },
+        {
+            "stuff_id": 699,
+            "text": "Я ухожу. С меня довольно.",
+            "isGeneral": false,
+            "id": 1054
+        },
+        {
+            "stuff_id": 699,
+            "text": "Уйти",
+            "isGeneral": true,
+            "id": 1055
+        },
+        {
+            "stuff_id": 700,
+            "text": "Да ну? Я что-то не заметил. Продемонстрируешь?",
+            "isGeneral": false,
+            "id": 1056
+        },
+        {
+            "stuff_id": 700,
+            "text": "Сомнение",
+            "isGeneral": true,
+            "id": 1057
+        },
+        {
+            "stuff_id": 701,
+            "text": "И людей воскрешать можешь? И воду в вино превращаешь? И чудо пяти хлебов и двух рыб совершаешь вместо чистки зубов?",
+            "isGeneral": false,
+            "id": 1058
+        },
+        {
+            "stuff_id": 701,
+            "text": "Вопрос",
+            "isGeneral": true,
+            "id": 1059
+        },
+        {
+            "stuff_id": 702,
+            "text": "Не-а. Не способна.",
+            "isGeneral": false,
+            "id": 1060
+        },
+        {
+            "stuff_id": 702,
+            "text": "Отрицать",
+            "isGeneral": true,
+            "id": 1061
+        },
+        {
+            "stuff_id": 703,
+            "text": "Никто кроме тебя самой тебе не поможет.",
+            "isGeneral": false,
+            "id": 1062
+        },
+        {
+            "stuff_id": 703,
+            "text": "Сама",
+            "isGeneral": true,
+            "id": 1063
+        },
+        {
+            "stuff_id": 704,
+            "text": "Я уже тебе помог.",
+            "isGeneral": false,
+            "id": 1064
+        },
+        {
+            "stuff_id": 704,
+            "text": "Уже",
+            "isGeneral": true,
+            "id": 1065
+        },
+        {
+            "stuff_id": 705,
+            "text": "Один я не справляюсь. Но мы обязательно справимся вместе.",
+            "isGeneral": false,
+            "id": 1066
+        },
+        {
+            "stuff_id": 705,
+            "text": "Вместе",
+            "isGeneral": true,
+            "id": 1067
+        },
+        {
+            "stuff_id": 706,
+            "text": "Ты вообще-то должна справляться сама. А я - приятный бонус. А ты не справляешься, милочка.",
+            "isGeneral": false,
+            "id": 1068
+        },
+        {
+            "stuff_id": 706,
+            "text": "Сама",
+            "isGeneral": true,
+            "id": 1069
+        },
+        {
+            "stuff_id": 707,
+            "text": "Но и не помогаешь.",
+            "isGeneral": false,
+            "id": 1070
+        },
+        {
+            "stuff_id": 707,
+            "text": "Не помогаешь",
+            "isGeneral": true,
+            "id": 1071
+        },
+        {
+            "stuff_id": 708,
+            "text": "Не мешать будешь, когда научишься.",
+            "isGeneral": false,
+            "id": 1072
+        },
+        {
+            "stuff_id": 708,
+            "text": "Издевка",
+            "isGeneral": true,
+            "id": 1073
+        },
+        {
+            "stuff_id": 709,
+            "text": "И дальше-то что?",
+            "isGeneral": false,
+            "id": 1074
+        },
+        {
+            "stuff_id": 709,
+            "text": "Что дальше",
+            "isGeneral": true,
+            "id": 1075
+        },
+        {
+            "stuff_id": 710,
+            "text": "О господи! Она простила меня! Я счастлив, будто только что поцеловал Иисуса!",
+            "isGeneral": false,
+            "id": 1076
+        },
+        {
+            "stuff_id": 710,
+            "text": "Восторг",
+            "isGeneral": true,
+            "id": 1077
+        },
+        {
+            "stuff_id": 711,
+            "text": "Думаем, что делать?",
+            "isGeneral": false,
+            "id": 1078
+        },
+        {
+            "stuff_id": 711,
+            "text": "Действия",
+            "isGeneral": true,
+            "id": 1079
+        },
+        {
+            "stuff_id": 712,
+            "text": "Да, но сейчас все будто в тумане. Не могу сфокусировать взгляд.",
+            "isGeneral": false,
+            "id": 1080
+        },
+        {
+            "stuff_id": 713,
+            "text": "Нет, шоссе...",
+            "isGeneral": false,
+            "id": 1081
+        },
+        {
+            "stuff_id": 714,
+            "text": "Стою на тротуаре. За моей спиной какой-то водоем. Вроде озера.",
+            "isGeneral": false,
+            "id": 1082
+        },
+        {
+            "stuff_id": 715,
+            "text": "Мне некому. Разве только маме. Но я еще не поела...Она будет недовольна. Да и смысла нет.",
+            "isGeneral": false,
+            "id": 1083
+        },
+        {
+            "stuff_id": 716,
+            "text": "Не могу придумать, что написать и кому...Меня сочтут сумасшедшей.",
+            "isGeneral": false,
+            "id": 1084
+        },
+        {
+            "stuff_id": 717,
+            "text": "Да черт знает...",
+            "isGeneral": false,
+            "id": 1085
+        },
+        {
+            "stuff_id": 718,
+            "text": "Да.",
+            "isGeneral": false,
+            "id": 1086
+        },
+        {
+            "stuff_id": 719,
+            "text": "Да нет...просто нравится...",
+            "isGeneral": false,
+            "id": 1087
+        },
+        {
+            "stuff_id": 720,
+            "text": "Красивый пейзаж. Здесь же просто чудесная атмосфера... Была.",
+            "isGeneral": false,
+            "id": 1088
+        },
+        {
+            "stuff_id": 721,
+            "text": "Я не хотела... Прости...",
+            "isGeneral": false,
+            "id": 1089
+        },
+        {
+            "stuff_id": 722,
+            "text": "Не в этом случае!",
+            "isGeneral": false,
+            "id": 1090
+        },
+        {
+            "stuff_id": 723,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1091
+        },
+        {
+            "stuff_id": 724,
+            "text": "Ну помолчим...",
+            "isGeneral": false,
+            "id": 1092
+        },
+        {
+            "stuff_id": 725,
+            "text": "Ну да, естественно...",
+            "isGeneral": false,
+            "id": 1093
+        },
+        {
+            "stuff_id": 726,
+            "text": "Нет!! Стой!! Извини за что бы там ни было!! Оставайся со мной...",
+            "isGeneral": false,
+            "id": 1094
+        },
+        {
+            "stuff_id": 727,
+            "text": "Не издевайся...",
+            "isGeneral": false,
+            "id": 1095
+        },
+        {
+            "stuff_id": 728,
+            "text": "Прекрати...Ты прекрасно понял, что я имела в виду...",
+            "isGeneral": false,
+            "id": 1096
+        },
+        {
+            "stuff_id": 729,
+            "text": "..Ладно.",
+            "isGeneral": false,
+            "id": 1097
+        },
+        {
+            "stuff_id": 730,
+            "text": "Вот как...",
+            "isGeneral": false,
+            "id": 1098
+        },
+        {
+            "stuff_id": 731,
+            "text": "Незаметно.",
+            "isGeneral": false,
+            "id": 1099
+        },
+        {
+            "stuff_id": 732,
+            "text": "Шанс есть...",
+            "isGeneral": false,
+            "id": 1100
+        },
+        {
+            "stuff_id": 733,
+            "text": "Как вульгарно...",
+            "isGeneral": false,
+            "id": 1101
+        },
+        {
+            "stuff_id": 734,
+            "text": "Ну прости...",
+            "isGeneral": false,
+            "id": 1102
+        },
+        {
+            "stuff_id": 735,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1103
+        },
+        {
+            "stuff_id": 736,
+            "text": "То же, что и сейчас.",
+            "isGeneral": false,
+            "id": 1104
+        },
+        {
+            "stuff_id": 737,
+            "text": "Мда. Видимо, зря...",
+            "isGeneral": false,
+            "id": 1105
+        },
+        {
+            "stuff_id": 738,
+            "text": "Угу, думаем...",
+            "isGeneral": false,
+            "id": 1106
+        },
+        {
+            "stuff_id": 739,
+            "text": "Да?",
+            "isGeneral": false,
+            "id": 1107
+        },
+        {
+            "stuff_id": 740,
+            "text": "Не переживай. Псины живучие. Ничего с ней не будет. Можешь забить.",
+            "isGeneral": false,
+            "id": 1108
+        },
+        {
+            "stuff_id": 740,
+            "text": "Успокоить",
+            "isGeneral": true,
+            "id": 1109
+        },
+        {
+            "stuff_id": 741,
+            "text": "Лучше помочь.Ей, похоже, не очень хорошо. Что именно с ней, кстати?",
+            "isGeneral": false,
+            "id": 1110
+        },
+        {
+            "stuff_id": 741,
+            "text": "Помоги",
+            "isGeneral": true,
+            "id": 1111
+        },
+        {
+            "stuff_id": 742,
+            "text": "Просто оставить ее умирать..?",
+            "isGeneral": false,
+            "id": 1112
+        },
+        {
+            "stuff_id": 743,
+            "text": "Ее сбила машина.",
+            "isGeneral": false,
+            "id": 1113
+        },
+        {
+            "stuff_id": 744,
+            "text": "Да, тебе какое дело? Не ты же не сбила.",
+            "isGeneral": false,
+            "id": 1114
+        },
+        {
+            "stuff_id": 744,
+            "text": "Да",
+            "isGeneral": true,
+            "id": 1115
+        },
+        {
+            "stuff_id": 745,
+            "text": "Нет. Но нервничать не стоит.",
+            "isGeneral": false,
+            "id": 1116
+        },
+        {
+            "stuff_id": 745,
+            "text": "Нет",
+            "isGeneral": true,
+            "id": 1117
+        },
+        {
+            "stuff_id": 746,
+            "text": "Помоги ей, пожалуйста.",
+            "isGeneral": false,
+            "id": 1118
+        },
+        {
+            "stuff_id": 746,
+            "text": "Помоги",
+            "isGeneral": true,
+            "id": 1119
+        },
+        {
+            "stuff_id": 747,
+            "text": "Лучше оставь ее тогда. Это тебя не касается.",
+            "isGeneral": false,
+            "id": 1120
+        },
+        {
+            "stuff_id": 747,
+            "text": "Оставь её",
+            "isGeneral": true,
+            "id": 1121
+        },
+        {
+            "stuff_id": 748,
+            "text": "...Нет! Я так не могу!! Жестоко...Слишком жестоко!! Бесчеловечно...",
+            "isGeneral": false,
+            "id": 1122
+        },
+        {
+            "stuff_id": 749,
+            "text": "А..ага, наверное...",
+            "isGeneral": false,
+            "id": 1123
+        },
+        {
+            "stuff_id": 750,
+            "text": "Стараюсь...",
+            "isGeneral": false,
+            "id": 1124
+        },
+        {
+            "stuff_id": 751,
+            "text": "Не могу, это аморально.",
+            "isGeneral": false,
+            "id": 1125
+        },
+        {
+            "stuff_id": 752,
+            "text": "Давай конкретно, кто ты?",
+            "isGeneral": false,
+            "id": 1126
+        },
+        {
+            "stuff_id": 753,
+            "text": "Ты...ты сейчас серьезно?",
+            "isGeneral": false,
+            "id": 1127
+        },
+        {
+            "stuff_id": 754,
+            "text": "Ты — это я?",
+            "isGeneral": false,
+            "id": 1128
+        },
+        {
+            "stuff_id": 755,
+            "text": "..Черт ...Черт ...Черт...",
+            "isGeneral": false,
+            "id": 1129
+        },
+        {
+            "stuff_id": 756,
+            "text": "И что это было?.. Ну ладно...",
+            "isGeneral": false,
+            "id": 1130
+        },
+        {
+            "stuff_id": 757,
+            "text": "Вау... немного неожиданно, что я вот так болтаю сама с собой...",
+            "isGeneral": false,
+            "id": 1131
+        },
+        {
+            "stuff_id": 758,
+            "text": "Ну... хм,да, это здорово... Я... удивлена.",
+            "isGeneral": false,
+            "id": 1132
+        },
+        {
+            "stuff_id": 759,
+            "text": "Жаль признавать, но у тебя шизофрения, милочка. Меня нет.",
+            "isGeneral": false,
+            "id": 1133
+        },
+        {
+            "stuff_id": 759,
+            "text": "Расстройство",
+            "isGeneral": true,
+            "id": 1134
+        },
+        {
+            "stuff_id": 760,
+            "text": "Я уже говорил. Я твое подсознание, и сейчас тебе нужна именно моя помощь.",
+            "isGeneral": false,
+            "id": 1135
+        },
+        {
+            "stuff_id": 760,
+            "text": "Подсознание",
+            "isGeneral": true,
+            "id": 1136
+        },
+        {
+            "stuff_id": 761,
+            "text": "Да, абсолютно.",
+            "isGeneral": false,
+            "id": 1137
+        },
+        {
+            "stuff_id": 761,
+            "text": "Да",
+            "isGeneral": true,
+            "id": 1138
+        },
+        {
+            "stuff_id": 762,
+            "text": "Нет. Не важно, забудь.",
+            "isGeneral": false,
+            "id": 1139
+        },
+        {
+            "stuff_id": 762,
+            "text": "Нет",
+            "isGeneral": true,
+            "id": 1140
+        },
+        {
+            "stuff_id": 763,
+            "text": "Да, можно и так сказать.",
+            "isGeneral": false,
+            "id": 1141
+        },
+        {
+            "stuff_id": 763,
+            "text": "Да",
+            "isGeneral": true,
+            "id": 1142
+        },
+        {
+            "stuff_id": 764,
+            "text": "В общих чертах, но не совсем. Я, по крайней мере, не могу паниковать.",
+            "isGeneral": false,
+            "id": 1143
+        },
+        {
+            "stuff_id": 764,
+            "text": "Не совсем",
+            "isGeneral": true,
+            "id": 1144
+        },
+        {
+            "stuff_id": 765,
+            "text": "..Что?",
+            "isGeneral": false,
+            "id": 1145
+        },
+        {
+            "stuff_id": 766,
+            "text": "Очень хороший человек. Из тех, кто идеален во всем, за что берется. Был для меня своего рода божеством.",
+            "isGeneral": false,
+            "id": 1146
+        },
+        {
+            "stuff_id": 767,
+            "text": "Потому что он умер по моей вине.",
+            "isGeneral": false,
+            "id": 1147
+        },
+        {
+            "stuff_id": 768,
+            "text": "Он появился в моей жизни, когда я умирала от одиночества. И спас меня. От себя самой и от враждебной среды.",
+            "isGeneral": false,
+            "id": 1148
+        },
+        {
+            "stuff_id": 769,
+            "text": "Потому что сейчас он мертв. Я всегда была слишком никчемной для него. Я ничем не смогла помочь. В очередной раз...",
+            "isGeneral": false,
+            "id": 1149
+        },
+        {
+            "stuff_id": 770,
+            "text": "Он всегда был таким жизнерадостным... Я ничего не подозревала. А потом он застрелился.",
+            "isGeneral": false,
+            "id": 1150
+        },
+        {
+            "stuff_id": 771,
+            "text": "Я должна была что-то заподозрить...С самого начала. Но я была так зациклена на себе и своих проблемах, что спохватилась слишком поздно. И помочь ему было уже нельзя.",
+            "isGeneral": false,
+            "id": 1151
+        },
+        {
+            "stuff_id": 772,
+            "text": "Кто он?",
+            "isGeneral": false,
+            "id": 1152
+        },
+        {
+            "stuff_id": 772,
+            "text": "Он",
+            "isGeneral": true,
+            "id": 1153
+        },
+        {
+            "stuff_id": 773,
+            "text": "Почему ты так нервничаешь из-за него?",
+            "isGeneral": false,
+            "id": 1154
+        },
+        {
+            "stuff_id": 773,
+            "text": "Восприятие",
+            "isGeneral": true,
+            "id": 1155
+        },
+        {
+            "stuff_id": 774,
+            "text": "Почему он так зацепил тебя?",
+            "isGeneral": false,
+            "id": 1156
+        },
+        {
+            "stuff_id": 774,
+            "text": "Причина",
+            "isGeneral": true,
+            "id": 1157
+        },
+        {
+            "stuff_id": 775,
+            "text": "Почему ты сказала про него в прошедшем времени?",
+            "isGeneral": false,
+            "id": 1158
+        },
+        {
+            "stuff_id": 775,
+            "text": "Прошедшее время",
+            "isGeneral": true,
+            "id": 1159
+        },
+        {
+            "stuff_id": 776,
+            "text": "Что послужило причиной его смерти?",
+            "isGeneral": false,
+            "id": 1160
+        },
+        {
+            "stuff_id": 776,
+            "text": "Причина",
+            "isGeneral": true,
+            "id": 1161
+        },
+        {
+            "stuff_id": 777,
+            "text": "С чего ты взяла, что ты виновата?",
+            "isGeneral": false,
+            "id": 1162
+        },
+        {
+            "stuff_id": 777,
+            "text": "Вина",
+            "isGeneral": true,
+            "id": 1163
+        },
+        {
+            "stuff_id": 778,
+            "text": "Чего..? Лапша?",
+            "isGeneral": false,
+            "id": 1164
+        },
+        {
+            "stuff_id": 779,
+            "text": "А...ага.",
+            "isGeneral": false,
+            "id": 1165
+        },
+        {
+            "stuff_id": 780,
+            "text": "Я тоже.",
+            "isGeneral": false,
+            "id": 1166
+        },
+        {
+            "stuff_id": 781,
+            "text": "Хах... забавно, у нас много общего.",
+            "isGeneral": false,
+            "id": 1167
+        },
+        {
+            "stuff_id": 782,
+            "text": "Неплохая мысль, но чуть позже.",
+            "isGeneral": false,
+            "id": 1168
+        },
+        {
+            "stuff_id": 783,
+            "text": "Меня подташнивает, но от пасты все равно не откажусь...",
+            "isGeneral": false,
+            "id": 1169
+        },
+        {
+            "stuff_id": 784,
+            "text": "Ясно...",
+            "isGeneral": false,
+            "id": 1170
+        },
+        {
+            "stuff_id": 785,
+            "text": "Ты упоминала, что любишь пасту.",
+            "isGeneral": false,
+            "id": 1171
+        },
+        {
+            "stuff_id": 785,
+            "text": "Напомнить",
+            "isGeneral": true,
+            "id": 1172
+        },
+        {
+            "stuff_id": 786,
+            "text": "Я считаю ее чертовски вкусной.",
+            "isGeneral": false,
+            "id": 1173
+        },
+        {
+            "stuff_id": 786,
+            "text": "Вкусно",
+            "isGeneral": true,
+            "id": 1174
+        },
+        {
+            "stuff_id": 787,
+            "text": "Я тоже обожаю.",
+            "isGeneral": false,
+            "id": 1175
+        },
+        {
+            "stuff_id": 787,
+            "text": "Я тоже",
+            "isGeneral": true,
+            "id": 1176
+        },
+        {
+            "stuff_id": 788,
+            "text": "Тебе наверняка стоило бы сейчас подкрепиться любимой едой.",
+            "isGeneral": false,
+            "id": 1177
+        },
+        {
+            "stuff_id": 788,
+            "text": "Голод",
+            "isGeneral": true,
+            "id": 1178
+        },
+        {
+            "stuff_id": 789,
+            "text": "Нам бы не помешал вкусный обед.",
+            "isGeneral": false,
+            "id": 1179
+        },
+        {
+            "stuff_id": 789,
+            "text": "Обед",
+            "isGeneral": true,
+            "id": 1180
+        },
+        {
+            "stuff_id": 790,
+            "text": "Это я так, чтобы атмосеру разрядить.",
+            "isGeneral": false,
+            "id": 1181
+        },
+        {
+            "stuff_id": 790,
+            "text": "Атмосфера",
+            "isGeneral": true,
+            "id": 1182
+        },
+        {
+            "stuff_id": 791,
+            "text": "Ну да, я увлекаюсь этим...",
+            "isGeneral": false,
+            "id": 1183
+        },
+        {
+            "stuff_id": 792,
+            "text": "Ну...с тех пор, как осталась одна.",
+            "isGeneral": false,
+            "id": 1184
+        },
+        {
+            "stuff_id": 793,
+            "text": "После смерти одного близко человека мне нужно было найти что-то новое.",
+            "isGeneral": false,
+            "id": 1185
+        },
+        {
+            "stuff_id": 794,
+            "text": "Единственный, кто понимал меня... Умер. Мне надо было чем-то занять себя.",
+            "isGeneral": false,
+            "id": 1186
+        },
+        {
+            "stuff_id": 795,
+            "text": "Я... Я... Да... Неудачница... Да... Да...",
+            "isGeneral": false,
+            "id": 1187
+        },
+        {
+            "stuff_id": 796,
+            "text": "Мой парень.",
+            "isGeneral": false,
+            "id": 1188
+        },
+        {
+            "stuff_id": 797,
+            "text": "Застрелился.",
+            "isGeneral": false,
+            "id": 1189
+        },
+        {
+            "stuff_id": 798,
+            "text": "Как давно увлекаешься?",
+            "isGeneral": false,
+            "id": 1190
+        },
+        {
+            "stuff_id": 798,
+            "text": "Как давно",
+            "isGeneral": true,
+            "id": 1191
+        },
+        {
+            "stuff_id": 799,
+            "text": "Откуда взялось увлечение?",
+            "isGeneral": false,
+            "id": 1192
+        },
+        {
+            "stuff_id": 799,
+            "text": "Почему",
+            "isGeneral": true,
+            "id": 1193
+        },
+        {
+            "stuff_id": 800,
+            "text": "Почему?",
+            "isGeneral": false,
+            "id": 1194
+        },
+        {
+            "stuff_id": 800,
+            "text": "Почему",
+            "isGeneral": true,
+            "id": 1195
+        },
+        {
+            "stuff_id": 801,
+            "text": "Господи, ну ты и неудачница. Еще и одиночка.",
+            "isGeneral": false,
+            "id": 1196
+        },
+        {
+            "stuff_id": 801,
+            "text": "Неудачница",
+            "isGeneral": true,
+            "id": 1197
+        },
+        {
+            "stuff_id": 802,
+            "text": "Кто это был?",
+            "isGeneral": false,
+            "id": 1198
+        },
+        {
+            "stuff_id": 802,
+            "text": "Близкий",
+            "isGeneral": true,
+            "id": 1199
+        },
+        {
+            "stuff_id": 803,
+            "text": "Как он умер?",
+            "isGeneral": false,
+            "id": 1200
+        },
+        {
+            "stuff_id": 803,
+            "text": "Смерть",
+            "isGeneral": true,
+            "id": 1201
+        },
+        {
+            "stuff_id": 804,
+            "text": "Да, а что?",
+            "isGeneral": false,
+            "id": 1202
+        },
+        {
+            "stuff_id": 805,
+            "text": "Ну, я ничего об этом не знаю...",
+            "isGeneral": false,
+            "id": 1203
+        },
+        {
+            "stuff_id": 806,
+            "text": "Когда я оказалась абсолютно беспомощной...",
+            "isGeneral": false,
+            "id": 1204
+        },
+        {
+            "stuff_id": 807,
+            "text": "Да не сказала бы... Все скучно.",
+            "isGeneral": false,
+            "id": 1205
+        },
+        {
+            "stuff_id": 808,
+            "text": "Ну... мне пришлось видеть смерть. Может, дело в этом.",
+            "isGeneral": false,
+            "id": 1206
+        },
+        {
+            "stuff_id": 809,
+            "text": "По моей вине погиб человек. Я могла помочь, но была слишком увлечена собой, и заметила неполадку слишком поздно. Это вечно будет мучить меня.",
+            "isGeneral": false,
+            "id": 1207
+        },
+        {
+            "stuff_id": 810,
+            "text": "Ты меня перебил вообще-то. Ну окей...",
+            "isGeneral": false,
+            "id": 1208
+        },
+        {
+            "stuff_id": 811,
+            "text": "У тебя какое-то расстройство?",
+            "isGeneral": false,
+            "id": 1209
+        },
+        {
+            "stuff_id": 811,
+            "text": "Расстройство",
+            "isGeneral": true,
+            "id": 1210
+        },
+        {
+            "stuff_id": 812,
+            "text": "Когда это все началось?",
+            "isGeneral": false,
+            "id": 1211
+        },
+        {
+            "stuff_id": 812,
+            "text": "Начало",
+            "isGeneral": true,
+            "id": 1212
+        },
+        {
+            "stuff_id": 813,
+            "text": "Может, в твоей жизни много стресса?",
+            "isGeneral": false,
+            "id": 1213
+        },
+        {
+            "stuff_id": 813,
+            "text": "Тревожность",
+            "isGeneral": true,
+            "id": 1214
+        },
+        {
+            "stuff_id": 814,
+            "text": "Может, был какой-то травмирующий момент в прошлом?",
+            "isGeneral": false,
+            "id": 1215
+        },
+        {
+            "stuff_id": 814,
+            "text": "Травма",
+            "isGeneral": true,
+            "id": 1216
+        },
+        {
+            "stuff_id": 815,
+            "text": "Расскажи подробнее.",
+            "isGeneral": false,
+            "id": 1217
+        },
+        {
+            "stuff_id": 815,
+            "text": "Подробнее",
+            "isGeneral": true,
+            "id": 1218
+        },
+        {
+            "stuff_id": 816,
+            "text": "Ну, я из тебя ответ вытягивать не буду. Не хочешь говорить — не говори.",
+            "isGeneral": false,
+            "id": 1219
+        },
+        {
+            "stuff_id": 816,
+            "text": "Не важно",
+            "isGeneral": true,
+            "id": 1220
         }
     ],
     "lim": 15,
     "idState": {
-        "topics": 8,
-        "phrases": 867,
-        "stuffs": 580,
-        "stages": 293
+        "topics": 16,
+        "phrases": 1220,
+        "stuffs": 816,
+        "stages": 415
     }
 }
