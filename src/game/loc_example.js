@@ -3,7 +3,12 @@ import { Loc } from "./../mlpa_engine";
 import {
   PARAM_EQUILIBRIUM,
   PARAM_DETERMINATION,
-  PARAM_DOG
+  PARAM_DOG,
+  PARAM_CRUSH,
+  PARAM_GC,
+  PARAM_NOODLE,
+  PARAM_PANICS,
+  PARAM_PHOTO
 } from "./parameters";
 
 import {
@@ -13,7 +18,12 @@ import {
   RANGE_APATHY,
   RANGE_UNCERTAINTY,
   RANGE_CONFIDENCE,
-  RANGE_DOG
+  RANGE_DOG,
+  RANGE_CRUSH,
+  RANGE_GC,
+  RANGE_NOODLE,
+  RANGE_PANICS,
+  RANGE_PHOTO
 } from "./ranges";
 
 import {
@@ -26,7 +36,12 @@ import {
   GRAD_STAB_APA,
   GRAD_STAB_UNC,
   GRAD_STAB_CON,
-  GRAD_DOG
+  GRAD_DOG,
+  GRAD_CRUSH,
+  GRAD_GC,
+  GRAD_NOODLE,
+  GRAD_PANICS,
+  GRAD_PHOTO
 } from "./grads";
 
 const locE = new Loc();
@@ -34,7 +49,13 @@ locE.addParams(
   locE.cParam(PARAM_DETERMINATION, 2),
   locE.cParam(PARAM_EQUILIBRIUM, 4),
 
-  locE.cParam(PARAM_DOG, false, true)
+  locE.cParam(PARAM_DOG, false, true),
+
+  locE.cParam(PARAM_CRUSH, false, true),
+  locE.cParam(PARAM_GC, false, true),
+  locE.cParam(PARAM_NOODLE, false, true),
+  locE.cParam(PARAM_PANICS, false, true),
+  locE.cParam(PARAM_PHOTO, false, true)
 );
 
 locE.addRanges(
@@ -46,7 +67,12 @@ locE.addRanges(
   locE.cRange(RANGE_UNCERTAINTY, 6, 10, PARAM_DETERMINATION),
   locE.cRange(RANGE_CONFIDENCE, 11, 15, PARAM_DETERMINATION),
 
-  locE.cRange(RANGE_DOG, true, true, PARAM_DOG)
+  locE.cRange(RANGE_DOG, true, true, PARAM_DOG),
+  locE.cRange(RANGE_CRUSH, true, true, PARAM_CRUSH),
+  locE.cRange(RANGE_GC, true, true, PARAM_GC),
+  locE.cRange(RANGE_NOODLE, true, true, PARAM_NOODLE),
+  locE.cRange(RANGE_PANICS, true, true, PARAM_PANICS),
+  locE.cRange(RANGE_PHOTO, true, true, PARAM_PHOTO)
 );
 locE.addGrads(
   locE.cGrad(GRAD_PAN_APA, RANGE_PANIC, RANGE_APATHY),
@@ -61,7 +87,12 @@ locE.addGrads(
   locE.cGrad(GRAD_STAB_UNC, RANGE_STABILITY, RANGE_UNCERTAINTY),
   locE.cGrad(GRAD_STAB_CON, RANGE_STABILITY, RANGE_CONFIDENCE),
 
-  locE.cGrad(GRAD_DOG, RANGE_DOG)
+  locE.cGrad(GRAD_DOG, RANGE_DOG),
+  locE.cGrad(GRAD_CRUSH, RANGE_CRUSH),
+  locE.cGrad(GRAD_GC, RANGE_GC),
+  locE.cGrad(GRAD_NOODLE, RANGE_NOODLE),
+  locE.cGrad(GRAD_PANICS, RANGE_PANICS),
+  locE.cGrad(GRAD_PHOTO, RANGE_PHOTO)
 );
 
 export default locE;

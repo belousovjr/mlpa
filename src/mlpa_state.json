@@ -11,7 +11,32 @@
             "isAchiev": false
         },
         {
-            "name": "УЗНАЛ СОБ МЕРТВА",
+            "name": "Собака",
+            "value": false,
+            "isAchiev": true
+        },
+        {
+            "name": "Мертвец",
+            "value": false,
+            "isAchiev": true
+        },
+        {
+            "name": "Знакомство",
+            "value": false,
+            "isAchiev": true
+        },
+        {
+            "name": "Любовь к лапше",
+            "value": false,
+            "isAchiev": true
+        },
+        {
+            "name": "Панические атаки",
+            "value": false,
+            "isAchiev": true
+        },
+        {
+            "name": "Фотограф",
             "value": false,
             "isAchiev": true
         }
@@ -54,8 +79,38 @@
             "max": 15
         },
         {
-            "name": "ЗНАЕТ ПРО СОБАКУ",
-            "paramName": "УЗНАЛ СОБ МЕРТВА",
+            "name": "УПОМИНАЛА О СОБАКЕ",
+            "paramName": "Собака",
+            "min": true,
+            "max": true
+        },
+        {
+            "name": "УПОМИНАЛА О ПАРНЕ",
+            "paramName": "Мертвец",
+            "min": true,
+            "max": true
+        },
+        {
+            "name": "УПОМИНАЛ О СЕБЕ",
+            "paramName": "Знакомство",
+            "min": true,
+            "max": true
+        },
+        {
+            "name": "УПОМИНАЛА О ЛАПШЕ",
+            "paramName": "Любовь к лапше",
+            "min": true,
+            "max": true
+        },
+        {
+            "name": "УПОМИНАЛА О ПАНИКАХ",
+            "paramName": "Панические атаки",
+            "min": true,
+            "max": true
+        },
+        {
+            "name": "УПОМИНАЛА О ФОТО",
+            "paramName": "Фотограф",
             "min": true,
             "max": true
         }
@@ -125,9 +180,39 @@
             ]
         },
         {
-            "name": "ЗНАЕТ ПРО СОБАКУ",
+            "name": "УПОМИНАЛА О СОБАКЕ",
             "rangesNames": [
-                "ЗНАЕТ ПРО СОБАКУ"
+                "УПОМИНАЛА О СОБАКЕ"
+            ]
+        },
+        {
+            "name": "УПОМИНАЛА О ПАРНЕ",
+            "rangesNames": [
+                "УПОМИНАЛА О ПАРНЕ"
+            ]
+        },
+        {
+            "name": "УПОМИНАЛ О СЕБЕ",
+            "rangesNames": [
+                "УПОМИНАЛ О СЕБЕ"
+            ]
+        },
+        {
+            "name": "УПОМИНАЛА О ЛАПШЕ",
+            "rangesNames": [
+                "УПОМИНАЛА О ЛАПШЕ"
+            ]
+        },
+        {
+            "name": "УПОМИНАЛА О ПАНИКАХ",
+            "rangesNames": [
+                "УПОМИНАЛА О ПАНИКАХ"
+            ]
+        },
+        {
+            "name": "УПОМИНАЛА О ФОТО",
+            "rangesNames": [
+                "УПОМИНАЛА О ФОТО"
             ]
         }
     ],
@@ -204,42 +289,42 @@
         },
         {
             "name": "Собака",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛА О СОБАКЕ",
             "isFin": false,
             "isStart": false,
             "id": 11
         },
         {
             "name": "Личность игрока",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛ О СЕБЕ",
             "isFin": false,
             "isStart": false,
             "id": 12
         },
         {
             "name": "Краш",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛА О ПАРНЕ",
             "isFin": false,
             "isStart": false,
             "id": 13
         },
         {
             "name": "Паста",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛА О ЛАПШЕ",
             "isFin": false,
             "isStart": false,
             "id": 14
         },
         {
             "name": "Фотография",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛА О ФОТО",
             "isFin": false,
             "isStart": false,
             "id": 15
         },
         {
             "name": "Паники",
-            "graduation": "ПАН АПАТ",
+            "graduation": "УПОМИНАЛА О ПАНИКАХ",
             "isFin": false,
             "isStart": true,
             "id": 16
