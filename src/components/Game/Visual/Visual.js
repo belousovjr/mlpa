@@ -128,7 +128,6 @@ export default class Visual extends React.Component {
     let url = slot ? `${slot}/` : "";
     url += image;
     img.src = `${window.location.href}/img/${url}.png`;
-    console.log(img.src)
     img.onload = event => {
 
       const { target } = event;
