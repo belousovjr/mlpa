@@ -41,24 +41,23 @@ export default class Editor extends React.Component {
     exportFromJSON({ data, fileName, exportType });
   }
 
-  saveLoc() {
-    const locData = JSON.stringify(this.loc);
-    this.myStorage.setItem("locData", locData);
-  }
-
   addTopic = (name, gradName, isFin, isStart) => {
     this.loc.cTopic(name, gradName, isFin, isStart);
     this.forceUpdate();
   };
 
   addStage = (topicId, isStart) => {
-    this.loc.addStages(
-      topicId,
-      this.loc.cStage(
-        isStart,
-        this.loc.cStuff({ isA: true }, this.loc.cPhrase("space"))
-      )
+    const intro = this.loc.cStuff(
+      { isIntro: true },
+      this.loc.cPhrase("introSpace"),
+      this.loc.cPhrase("introGenSpace", true)
     );
+
+    const space = this.loc.cStuff({ isA: true }, this.loc.cPhrase("space"));
+
+    const stuffs = isStart ? [intro, space] : [space];
+
+    this.loc.addStages(topicId, this.loc.cStage(isStart, ...stuffs));
     this.forceUpdate();
   };
   updateStage = (id, isStart) => {
@@ -66,14 +65,25 @@ export default class Editor extends React.Component {
     stage.isStart = isStart;
     this.forceUpdate();
   };
-  updateTopic = (topicId, name, gradName, isFin, isStart) => {
+  updateTopic = (topicId, name, gradNames, isFin, isStart) => {
     const topic = this.loc._getTopic(topicId);
     topic.name = name;
-    topic.graduation = gradName;
+    topic.gradNames = gradNames;
     topic.isFin = isFin;
     topic.isStart = isStart;
     this.forceUpdate();
   };
+  updateTopicGrads = (id, gradName, isDelete = false) => {
+    const topic = this.loc._getTopic(id)
+    if(isDelete){
+      const index = topic.gradNames.findIndex(g => g === gradName)
+      topic.gradNames.splice(index, 1)
+    }
+    else {
+      topic.gradNames.push(gradName)
+    }
+    this.forceUpdate();
+  }
   addPhrase = (stuffId, range, text, isGeneral) => {
     this.loc.addPhrases(stuffId, [this.loc.cPhrase(text, isGeneral, range)]);
     this.forceUpdate();
@@ -196,6 +206,7 @@ export default class Editor extends React.Component {
       addStage: this.addStage,
       updateStage: this.updateStage,
       updateTopic: this.updateTopic,
+      updateTopicGrads: this.updateTopicGrads,
       removeTopic: this.removeTopic,
       removeStage: this.removeStage,
       updateStuff: this.updateStuff,

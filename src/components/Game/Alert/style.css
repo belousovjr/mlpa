@@ -1,0 +1,36 @@
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: yellow;
+
+  padding: 2rem;
+  font-size: 1.5rem;
+  animation: alert-showing 1.3s ease-in-out forwards;
+}
+.alert-ico {
+  margin-right: 1rem;
+}
+
+.alert-text {
+  display: inline-block;
+}
+
+@keyframes alert-showing {
+  0% {
+    opacity: 0;
+    top: -6rem;
+  }
+  35% {
+    opacity: 1;
+    top: 0;
+  }
+  65% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: -6rem;
+  }
+}

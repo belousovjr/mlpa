@@ -6,20 +6,30 @@ export default class PhraseText extends React.Component {
     super(props);
     this.state = { isStart: true, curText: "", balText: "" };
   }
+  checkPoint(string) {
+    const points = [".", "!", "?"];
+    return Boolean(points.find(p => `${p} ` === string));
+  }
   nextLetterLoop() {
     const { text, pAnsswerd, writingFinish, isPlayer } = this.props;
 
     const { curText } = this.state;
     if (text !== curText) {
       const curLen = curText.length;
-      const newText = text.slice(0, curLen + 1);
 
+      const newText = text.slice(0, curLen + 1);
       const balText = text.slice(curLen + 1);
+
+      const isPoint = this.checkPoint(
+        newText.substr(newText.length - 2, newText.length)
+      );
+
+      const timeout = isPoint ? Math.random() * 350 + 150 : 20;
 
       setTimeout(() => {
         this.setState({ curText: newText, isStart: false, balText });
         this.nextLetterLoop();
-      }, 20);
+      }, timeout);
     } else isPlayer ? pAnsswerd() : writingFinish();
   }
   render() {

@@ -32,7 +32,7 @@ export default class Visual extends React.Component {
       new ImgObject("trembling", "head")*/
     ];
 
-    this.progress = 0;
+
     this.currProgress = 0;
 
     this.positions = [
@@ -83,11 +83,12 @@ export default class Visual extends React.Component {
   }
 
   drawImg = (obj, ctx) => {
+    const {progress} = this.props
     const { img } = this.images.find(image => image.name === obj.imgName);
     const { width, x, y } = obj;
 
-    if (this.progress > this.currProgress) {
-      this.currProgress += 1;
+    if (progress > this.currProgress) {
+      this.currProgress += 0.1;
     }
 
     const locFactor = width / img.width;
@@ -183,6 +184,7 @@ export default class Visual extends React.Component {
   };
 
   render() {
+
     const { width, height, isLoaded } = this.props;
     const { isStarted } = this.state;
 
@@ -201,14 +203,6 @@ export default class Visual extends React.Component {
           height={this.landHeight}
           style={{ width, height }}
         ></canvas>
-        <button
-          style={{ position: "absolute", top: 100, left: 0 }}
-          onClick={() => {
-            this.progress += 100;
-          }}
-        >
-          PGORGESS +{" "}
-        </button>
       </div>
     );
   }

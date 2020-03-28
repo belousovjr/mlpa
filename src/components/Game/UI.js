@@ -9,6 +9,8 @@ import Loading from "./Loading/Loading";
 import AudioPlayer from "./Audio/AudioPlayer";
 import Settings from "./Settings/Settiings";
 import Ending from "./Ending/Ending";
+import { PARAM_DETERMINATION } from "../../game/parameters";
+import Alert from "./Alert/Alert";
 
 export default class UI extends React.Component {
   constructor(props) {
@@ -16,18 +18,24 @@ export default class UI extends React.Component {
 
     this.loc = props.loc;
     const currStageId = this.loc.getStartId();
+    const currentStuff = this.loc._getStuffs(currStageId).find(s => s.isIntro);
+    const { text: pPhrase } = this.loc
+      ._getPhrases(currentStuff.id)
+      .find(p => !p.isGeneral);
+
     const { cPhrase, answers } = this.getStageData(currStageId);
     this.state = {
       cPhrase,
-      pPhrase: "Слушай, похоже, у тебя паническая атака не впервые.",
+      pPhrase,
       answers,
       disabled: true,
       currStageId,
       isHiding: false,
-      dDelay: 2000,
+      dDelay: 1000,
       isLoaded: false,
       audioPlayed: false,
-      isEnding: false
+      isEnding: false,
+      alertText: ""
     };
   }
   getStageData(stageId) {
@@ -46,10 +54,22 @@ export default class UI extends React.Component {
     };
   }
   update(stuffId) {
+    const stuff = this.loc.stuffs.find(s => s.id === stuffId);
+    stuff.changes.forEach(change => {
+      const param = this.loc._getParam(change.paramName);
+      if (param.isAchiev && param.value !== change.term) {
+        setTimeout(() => {
+          this.setState({
+            alertText: param.name
+          });
+        }, 500);
+      }
+    });
+
     const newStageId = this.loc.calcStuff(stuffId);
+
     const pPhrase = this.loc.getCorrectPhrase(stuffId);
     const { cPhrase, answers, isFin } = this.getStageData(newStageId);
-    // const newTopic = this.loc._getTopic(topic_id)
 
     this.setState({
       isHiding: true,
@@ -57,6 +77,8 @@ export default class UI extends React.Component {
     });
 
     setTimeout(() => {
+      const delayParam = this.loc._getParam(PARAM_DETERMINATION);
+      const dDelay = (this.loc.lim - delayParam.value) * 100;
       this.setState({
         isEnding: isFin,
         pPhrase,
@@ -64,13 +86,14 @@ export default class UI extends React.Component {
         currStageId: newStageId,
         answers,
         isHiding: false,
-        dDelay: 500 //ДОБАВИТЬ ЗАВИСИМОСТЬ ОТ ПОТРЯСЕНИЯ
+        dDelay
       });
     }, 500);
   }
   endingNext = () => {
     const { answers } = this.state;
     if (answers.length) this.update(answers[0].id);
+    //console.log(answers.length)
   };
   writingFinish() {
     this.setState({ disabled: false });
@@ -79,22 +102,28 @@ export default class UI extends React.Component {
     const { audioPlayed } = this.state;
     this.setState({ audioPlayed: !audioPlayed });
   };
+
   render() {
     const {
-        pPhrase,
-        cPhrase,
-        currStageId,
-        answers,
-        disabled,
-        isHiding,
-        dDelay,
-        isLoaded,
-        audioPlayed,
-        isEnding
-      } = this.state,
-      answersItems = answers.map(answer => {
+      pPhrase,
+      cPhrase,
+      currStageId,
+      answers,
+      disabled,
+      isHiding,
+      dDelay,
+      isLoaded,
+      audioPlayed,
+      isEnding,
+      alertText
+    } = this.state;
+
+    const answersItems = answers.map(answer => {
+        const isAchiev = this.loc.checkStuffByAchiev(answer.id);
+
         return (
           <AnswerI
+            isAchiev={isAchiev}
             key={answer.id}
             text={answer.generalPhrase}
             disabled={disabled}
@@ -105,29 +134,22 @@ export default class UI extends React.Component {
           />
         );
       }),
-      { width, height, landSizes } = this.props,
-      gameUI =
-        isLoaded && !isEnding ? (
-          <div>
-            <Params
-              params={this.loc.params}
-              lim={this.loc.lim}
-              edit={(paramName, term) => {
-                this.loc._editParams([this.loc.cChange(paramName, term)]);
-                this.forceUpdate();
-              }}
-              grads={this.loc.grads}
-              checkGrad={this.loc.checkGrad}
-            />
-            <div className="answers">{answersItems}</div>
-          </div>
-        ) : null,
-      loadingAnim = !isLoaded ? <Loading /> : null;
+      { width, height, landSizes } = this.props;
+
+    const currentStage = this.loc.stages.find(s => s.id === currStageId);
+    const currentTopic = this.loc._getTopic(currentStage.topic_id);
+
+    const gameUI =
+      isLoaded && !isEnding ? (
+        <div className="answers">{answersItems}</div>
+      ) : null;
+    const loadingAnim = !isLoaded ? <Loading /> : null;
 
     return (
       <div>
         {loadingAnim}
         <Visual
+          progress={(this.loc.topicQ / this.loc.topicLim) * 1000}
           isEnding={isEnding}
           params={this.loc.params}
           width={width}
@@ -137,6 +159,7 @@ export default class UI extends React.Component {
           landSizes={landSizes}
         />
         <Ending
+          topicName={currentTopic.name}
           isEnding={isEnding}
           disabled={disabled}
           endingNext={this.endingNext}
@@ -159,7 +182,7 @@ export default class UI extends React.Component {
             this.writingFinish();
           }}
         />
-
+        <Alert key={alertText} text={alertText} />
         <Settings
           methods={{ audioSwitch: this.audioSwitch }}
           data={{ audioPlayed }}

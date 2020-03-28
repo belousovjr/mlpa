@@ -3,12 +3,13 @@ import "./style.css";
 
 export default class AnswerI extends React.Component {
   render() {
-    const { text, click, disabled, isHiding } = this.props;
+    const { text, click, disabled, isHiding, isAchiev } = this.props;
     const disClass = disabled ? (isHiding ? "disabled" : "") : "undisabled";
+    const achievClass = isAchiev ? 'achievement' : '';
     return (
         <div>
       <div
-        className={`answer ${disClass}`}
+        className={`answer ${disClass} ${achievClass}`}
         onClick={() => {
           if (!disabled) click();
         }}

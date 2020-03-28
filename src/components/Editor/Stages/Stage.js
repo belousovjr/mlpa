@@ -17,6 +17,14 @@ export default class Stage extends React.Component {
     const pAnswers = stuffs.filter(stuff => !stuff.isA);
     return { answer, pAnswers };
   }
+  sortItems = (stuffA, stuffB) => {
+    const isTopA = Boolean(stuffA.isA || stuffA.isIntro);
+    const isTopB = Boolean(stuffB.isA || stuffB.isIntro)
+
+
+    return  isTopB - isTopA
+
+  }
   render() {
     const {
       stage,
@@ -33,7 +41,7 @@ export default class Stage extends React.Component {
 
     const { answer, pAnswers } = this.splitStuffs(stuffs);
 
-    const stuffsItems = [answer, ...pAnswers].map(stuff => {
+    const stuffsItems = [answer, ...pAnswers].sort(this.sortItems).map(stuff => {
       const res = stuff ? (
         <StuffItem
           stat={stat}
@@ -97,7 +105,7 @@ export default class Stage extends React.Component {
             }}
           >
             X
-          </button>{" "}
+          </button>
           <input
             type="checkbox"
             checked={stage.isStart}

@@ -41,7 +41,7 @@ import {
   GRAD_GC,
   GRAD_NOODLE,
   GRAD_PANICS,
-  GRAD_PHOTO
+  GRAD_PHOTO,
 } from "./grads";
 
 const locE = new Loc();
@@ -92,7 +92,8 @@ locE.addGrads(
   locE.cGrad(GRAD_GC, RANGE_GC),
   locE.cGrad(GRAD_NOODLE, RANGE_NOODLE),
   locE.cGrad(GRAD_PANICS, RANGE_PANICS),
-  locE.cGrad(GRAD_PHOTO, RANGE_PHOTO)
+  locE.cGrad(GRAD_PHOTO, RANGE_PHOTO),
+
 );
 
 export default locE;

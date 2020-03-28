@@ -5,5 +5,6 @@ export default class Stuff {
     this.isA = isA;
     this.id = id;
   }
+  isIntro = false;
   stage_id = null;
 }

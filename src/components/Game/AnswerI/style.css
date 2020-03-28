@@ -40,6 +40,11 @@
   animation-fill-mode: forwards;
 }
 
+
+.achievement {
+  color: yellow;
+}
+
 @keyframes undis {
   from {
     opacity: 0;

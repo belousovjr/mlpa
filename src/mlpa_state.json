@@ -219,115 +219,196 @@
     "topics": [
         {
             "name": "Вступление",
-            "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 1
+            "id": 1,
+            "gradNames": [
+                "ПАН АПАТ"
+            ]
         },
         {
             "name": "Что с ней?",
-            "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 2
+            "id": 2,
+            "gradNames": [
+                "ПАН АПАТ"
+            ]
         },
         {
             "name": "Как ей помочь?",
-            "graduation": "ПАН НЕУВ",
             "isFin": false,
             "isStart": false,
-            "id": 3
+            "id": 3,
+            "gradNames": [
+                "ПАН НЕУВ"
+            ]
         },
         {
             "name": "Что планирует делать?",
-            "graduation": "ПАН УВ",
             "isFin": false,
             "isStart": false,
-            "id": 4
+            "id": 4,
+            "gradNames": [
+                "ПАН УВ"
+            ]
         },
         {
             "name": "О чем она думает?",
-            "graduation": "НАПР АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 5
+            "id": 5,
+            "gradNames": [
+                "НАПР АПАТ"
+            ]
         },
         {
             "name": "Успокоить окончательно",
-            "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 6
+            "id": 6,
+            "gradNames": [
+                "НАПР НЕУВ"
+            ]
         },
         {
             "name": "Оскорбительная провокация",
-            "graduation": "СТАБ АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 7
+            "id": 7,
+            "gradNames": [
+                "СТАБ АПАТ"
+            ]
         },
         {
             "name": "Провоцировать действия",
-            "graduation": "НАПР НЕУВ",
             "isFin": false,
             "isStart": false,
-            "id": 8
+            "id": 8,
+            "gradNames": [
+                "НАПР УВ"
+            ]
         },
         {
             "name": "Журить за ранимость",
-            "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 9
+            "id": 9,
+            "gradNames": [
+                "СТАБ НЕУВ"
+            ]
         },
         {
             "name": "Давление",
-            "graduation": "ПАН АПАТ",
             "isFin": false,
             "isStart": false,
-            "id": 10
+            "id": 10,
+            "gradNames": [
+                "СТАБ УВ"
+            ]
         },
         {
             "name": "Собака",
-            "graduation": "УПОМИНАЛА О СОБАКЕ",
             "isFin": false,
             "isStart": false,
-            "id": 11
+            "id": 11,
+            "gradNames": [
+                "УПОМИНАЛА О СОБАКЕ"
+            ]
         },
         {
             "name": "Личность игрока",
-            "graduation": "УПОМИНАЛ О СЕБЕ",
             "isFin": false,
             "isStart": false,
-            "id": 12
+            "id": 12,
+            "gradNames": [
+                "УПОМИНАЛ О СЕБЕ"
+            ]
         },
         {
             "name": "Краш",
-            "graduation": "УПОМИНАЛА О ПАРНЕ",
             "isFin": false,
             "isStart": false,
-            "id": 13
+            "id": 13,
+            "gradNames": [
+                "УПОМИНАЛА О ПАРНЕ"
+            ]
         },
         {
             "name": "Паста",
-            "graduation": "УПОМИНАЛА О ЛАПШЕ",
             "isFin": false,
             "isStart": false,
-            "id": 14
+            "id": 14,
+            "gradNames": [
+                "УПОМИНАЛА О ЛАПШЕ"
+            ]
         },
         {
             "name": "Фотография",
-            "graduation": "УПОМИНАЛА О ФОТО",
             "isFin": false,
-            "isStart": false,
-            "id": 15
+            "isStart": true,
+            "id": 15,
+            "gradNames": [
+                "УПОМИНАЛА О ФОТО"
+            ]
         },
         {
             "name": "Паники",
-            "graduation": "УПОМИНАЛА О ПАНИКАХ",
             "isFin": false,
-            "isStart": true,
-            "id": 16
+            "isStart": false,
+            "id": 16,
+            "gradNames": [
+                "УПОМИНАЛА О ПАНИКАХ"
+            ]
+        },
+        {
+            "name": "taisa",
+            "isFin": true,
+            "isStart": false,
+            "id": 17,
+            "gradNames": [
+                "НАПР НЕУВ",
+                "НАПР УВ",
+                "СТАБ НЕУВ"
+            ]
+        },
+        {
+            "name": "gabriella",
+            "isFin": true,
+            "isStart": false,
+            "id": 18,
+            "gradNames": [
+                "СТАБ УВ"
+            ]
+        },
+        {
+            "name": "hurima",
+            "isFin": true,
+            "isStart": false,
+            "id": 19,
+            "gradNames": [
+                "СТАБ АПАТ"
+            ]
+        },
+        {
+            "name": "leya",
+            "isFin": true,
+            "isStart": false,
+            "id": 20,
+            "gradNames": [
+                "ПАН НЕУВ",
+                "ПАН УВ"
+            ]
+        },
+        {
+            "name": "lola",
+            "isFin": true,
+            "isStart": false,
+            "id": 21,
+            "gradNames": [
+                "ПАН АПАТ",
+                "НАПР АПАТ"
+            ]
         }
     ],
     "stuffs": [
@@ -502,21 +583,40 @@
         {
             "stage_id": 14,
             "next_stage_id": 15,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 28
         },
         {
             "stage_id": 14,
             "next_stage_id": 16,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 29
         },
         {
             "stage_id": 14,
             "next_stage_id": 17,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 30
         },
@@ -547,14 +647,28 @@
         {
             "stage_id": 15,
             "next_stage_id": 18,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 35
         },
         {
             "stage_id": 15,
             "next_stage_id": 19,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 36
         },
@@ -582,21 +696,40 @@
         {
             "stage_id": 16,
             "next_stage_id": 23,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 40
         },
         {
             "stage_id": 17,
             "next_stage_id": 24,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 41
         },
         {
             "stage_id": 17,
             "next_stage_id": 25,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 42
         },
@@ -665,14 +798,24 @@
         {
             "stage_id": 18,
             "next_stage_id": 28,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 53
         },
         {
             "stage_id": 18,
             "next_stage_id": 29,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 54
         },
@@ -686,14 +829,24 @@
         {
             "stage_id": 19,
             "next_stage_id": 31,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 56
         },
         {
             "stage_id": 19,
             "next_stage_id": 32,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 57
         },
@@ -735,14 +888,28 @@
         {
             "stage_id": 21,
             "next_stage_id": 38,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 63
         },
         {
             "stage_id": 22,
             "next_stage_id": 39,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 64
         },
@@ -756,21 +923,44 @@
         {
             "stage_id": 22,
             "next_stage_id": 41,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 66
         },
         {
             "stage_id": 23,
             "next_stage_id": 42,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 67
         },
         {
             "stage_id": 23,
             "next_stage_id": 43,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 68
         },
@@ -784,14 +974,24 @@
         {
             "stage_id": 24,
             "next_stage_id": 45,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 70
         },
         {
             "stage_id": 24,
             "next_stage_id": 46,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Знакомство",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 71
         },
@@ -805,7 +1005,16 @@
         {
             "stage_id": 25,
             "next_stage_id": 48,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 73
         },
@@ -819,7 +1028,12 @@
         {
             "stage_id": 25,
             "next_stage_id": 50,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 75
         },
@@ -833,14 +1047,28 @@
         {
             "stage_id": 26,
             "next_stage_id": 52,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 77
         },
         {
             "stage_id": 26,
             "next_stage_id": 53,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 78
         },
@@ -1015,21 +1243,36 @@
         {
             "stage_id": 54,
             "next_stage_id": 55,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 107
         },
         {
             "stage_id": 54,
             "next_stage_id": 56,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 108
         },
         {
             "stage_id": 54,
             "next_stage_id": 57,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 109
         },
@@ -1054,14 +1297,28 @@
         {
             "stage_id": 55,
             "next_stage_id": 58,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 113
         },
         {
             "stage_id": 55,
             "next_stage_id": 59,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 114
         },
@@ -1089,21 +1346,40 @@
         {
             "stage_id": 56,
             "next_stage_id": 63,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 118
         },
         {
             "stage_id": 57,
             "next_stage_id": 64,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 119
         },
         {
             "stage_id": 57,
             "next_stage_id": 65,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 120
         },
@@ -1171,14 +1447,28 @@
         {
             "stage_id": 58,
             "next_stage_id": 67,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 132
         },
         {
             "stage_id": 58,
             "next_stage_id": 68,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 133
         },
@@ -1199,7 +1489,12 @@
         {
             "stage_id": 59,
             "next_stage_id": 71,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 136
         },
@@ -1213,7 +1508,16 @@
         {
             "stage_id": 60,
             "next_stage_id": 73,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 138
         },
@@ -1248,14 +1552,24 @@
         {
             "stage_id": 61,
             "next_stage_id": 93,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 143
         },
         {
             "stage_id": 62,
             "next_stage_id": 78,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 144
         },
@@ -1276,7 +1590,16 @@
         {
             "stage_id": 63,
             "next_stage_id": 81,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 147
         },
@@ -1290,21 +1613,44 @@
         {
             "stage_id": 63,
             "next_stage_id": 83,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 149
         },
         {
             "stage_id": 64,
             "next_stage_id": 84,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Панические атаки",
+                    "term": true
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 150
         },
         {
             "stage_id": 64,
             "next_stage_id": 85,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 151
         },
@@ -1325,35 +1671,76 @@
         {
             "stage_id": 65,
             "next_stage_id": 88,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 154
         },
         {
             "stage_id": 65,
             "next_stage_id": 89,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 155
         },
         {
             "stage_id": 66,
             "next_stage_id": 90,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 156
         },
         {
             "stage_id": 66,
             "next_stage_id": 91,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 157
         },
         {
             "stage_id": 66,
             "next_stage_id": 92,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Фотограф",
+                    "term": true
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 158
         },
@@ -1553,7 +1940,12 @@
         {
             "stage_id": 94,
             "next_stage_id": 96,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 191
         },
@@ -1705,7 +2097,12 @@
         {
             "stage_id": 99,
             "next_stage_id": 110,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Собака",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 214
         },
@@ -1740,7 +2137,12 @@
         {
             "stage_id": 100,
             "next_stage_id": 115,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 219
         },
@@ -1761,7 +2163,16 @@
         {
             "stage_id": 101,
             "next_stage_id": 118,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 222
         },
@@ -1775,7 +2186,12 @@
         {
             "stage_id": 102,
             "next_stage_id": 120,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 224
         },
@@ -1789,21 +2205,40 @@
         {
             "stage_id": 103,
             "next_stage_id": 122,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 226
         },
         {
             "stage_id": 103,
             "next_stage_id": 123,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 227
         },
         {
             "stage_id": 103,
             "next_stage_id": 124,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 228
         },
@@ -1824,7 +2259,16 @@
         {
             "stage_id": 104,
             "next_stage_id": 127,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 231
         },
@@ -1838,7 +2282,16 @@
         {
             "stage_id": 105,
             "next_stage_id": 129,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 233
         },
@@ -2101,7 +2554,16 @@
         {
             "stage_id": 136,
             "next_stage_id": 141,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 275
         },
@@ -2122,21 +2584,48 @@
         {
             "stage_id": 137,
             "next_stage_id": 144,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 278
         },
         {
             "stage_id": 137,
             "next_stage_id": 145,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 279
         },
         {
             "stage_id": 137,
             "next_stage_id": 146,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Панические атаки",
+                    "term": true
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 280
         },
@@ -2246,7 +2735,12 @@
         {
             "stage_id": 140,
             "next_stage_id": 154,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Любовь к лапше",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 297
         },
@@ -2260,14 +2754,28 @@
         {
             "stage_id": 141,
             "next_stage_id": 156,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 299
         },
         {
             "stage_id": 141,
             "next_stage_id": 157,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 300
         },
@@ -2281,7 +2789,16 @@
         {
             "stage_id": 142,
             "next_stage_id": 159,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 302
         },
@@ -2309,7 +2826,16 @@
         {
             "stage_id": 143,
             "next_stage_id": 163,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 306
         },
@@ -2323,7 +2849,16 @@
         {
             "stage_id": 144,
             "next_stage_id": 165,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Любовь к лапше",
+                    "term": true
+                },
+                {
+                    "paramName": "Фотограф",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 308
         },
@@ -2365,14 +2900,32 @@
         {
             "stage_id": 146,
             "next_stage_id": 171,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 314
         },
         {
             "stage_id": 146,
             "next_stage_id": 172,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 315
         },
@@ -2561,7 +3114,12 @@
         {
             "stage_id": 174,
             "next_stage_id": 176,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 346
         },
@@ -2600,7 +3158,16 @@
         {
             "stage_id": 175,
             "next_stage_id": 179,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 352
         },
@@ -2649,7 +3216,12 @@
         {
             "stage_id": 177,
             "next_stage_id": 186,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 359
         },
@@ -2710,14 +3282,28 @@
         {
             "stage_id": 178,
             "next_stage_id": 187,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 369
         },
         {
             "stage_id": 178,
             "next_stage_id": 188,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 370
         },
@@ -2745,21 +3331,36 @@
         {
             "stage_id": 179,
             "next_stage_id": 192,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 374
         },
         {
             "stage_id": 180,
             "next_stage_id": 193,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 375
         },
         {
             "stage_id": 180,
             "next_stage_id": 194,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 376
         },
@@ -2787,28 +3388,56 @@
         {
             "stage_id": 181,
             "next_stage_id": 198,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 380
         },
         {
             "stage_id": 182,
             "next_stage_id": 199,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 381
         },
         {
             "stage_id": 182,
             "next_stage_id": 200,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 382
         },
         {
             "stage_id": 182,
             "next_stage_id": 201,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 383
         },
@@ -2829,7 +3458,12 @@
         {
             "stage_id": 183,
             "next_stage_id": 204,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 386
         },
@@ -2857,7 +3491,12 @@
         {
             "stage_id": 185,
             "next_stage_id": 208,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Знакомство",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 390
         },
@@ -2885,14 +3524,28 @@
         {
             "stage_id": 186,
             "next_stage_id": 212,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 394
         },
         {
             "stage_id": 186,
             "next_stage_id": 213,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 395
         },
@@ -3188,7 +3841,16 @@
         {
             "stage_id": 216,
             "next_stage_id": 222,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 443
         },
@@ -3202,7 +3864,12 @@
         {
             "stage_id": 217,
             "next_stage_id": 224,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 445
         },
@@ -3406,14 +4073,24 @@
         {
             "stage_id": 219,
             "next_stage_id": 230,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Собака",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 478
         },
         {
             "stage_id": 219,
             "next_stage_id": 231,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 479
         },
@@ -3434,7 +4111,16 @@
         {
             "stage_id": 220,
             "next_stage_id": 234,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 482
         },
@@ -3455,7 +4141,16 @@
         {
             "stage_id": 221,
             "next_stage_id": 237,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 485
         },
@@ -3469,14 +4164,28 @@
         {
             "stage_id": 222,
             "next_stage_id": 239,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 487
         },
         {
             "stage_id": 222,
             "next_stage_id": 240,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 488
         },
@@ -3511,7 +4220,16 @@
         {
             "stage_id": 224,
             "next_stage_id": 245,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 493
         },
@@ -3539,7 +4257,12 @@
         {
             "stage_id": 225,
             "next_stage_id": 249,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 497
         },
@@ -3567,7 +4290,12 @@
         {
             "stage_id": 226,
             "next_stage_id": 253,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Собака",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 501
         },
@@ -3640,7 +4368,12 @@
         {
             "stage_id": 256,
             "next_stage_id": 261,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 512
         },
@@ -3668,14 +4401,24 @@
         {
             "stage_id": 257,
             "next_stage_id": 265,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 516
         },
         {
             "stage_id": 257,
             "next_stage_id": 266,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 517
         },
@@ -3898,7 +4641,12 @@
         {
             "stage_id": 258,
             "next_stage_id": 267,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 554
         },
@@ -3947,14 +4695,28 @@
         {
             "stage_id": 260,
             "next_stage_id": 274,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 561
         },
         {
             "stage_id": 260,
             "next_stage_id": 275,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Собака",
+                    "term": true
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 562
         },
@@ -3975,7 +4737,12 @@
         {
             "stage_id": 261,
             "next_stage_id": 278,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 565
         },
@@ -3989,21 +4756,36 @@
         {
             "stage_id": 262,
             "next_stage_id": 280,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 567
         },
         {
             "stage_id": 262,
             "next_stage_id": 281,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 568
         },
         {
             "stage_id": 263,
             "next_stage_id": 282,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 569
         },
@@ -4017,70 +4799,132 @@
         {
             "stage_id": 263,
             "next_stage_id": 284,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 571
         },
         {
             "stage_id": 264,
             "next_stage_id": 285,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 572
         },
         {
             "stage_id": 264,
             "next_stage_id": 286,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 573
         },
         {
             "stage_id": 264,
             "next_stage_id": 287,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 574
         },
         {
             "stage_id": 265,
             "next_stage_id": 288,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 575
         },
         {
             "stage_id": 265,
             "next_stage_id": 289,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 576
         },
         {
             "stage_id": 265,
             "next_stage_id": 290,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 577
         },
         {
             "stage_id": 266,
             "next_stage_id": 291,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 578
         },
         {
             "stage_id": 266,
             "next_stage_id": 292,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 579
         },
         {
             "stage_id": 266,
             "next_stage_id": 293,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 580
         },
@@ -4118,7 +4962,12 @@
         {
             "stage_id": 294,
             "next_stage_id": 296,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 586
         },
@@ -4132,7 +4981,16 @@
         {
             "stage_id": 295,
             "next_stage_id": 298,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 588
         },
@@ -4153,14 +5011,28 @@
         {
             "stage_id": 296,
             "next_stage_id": 301,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 591
         },
         {
             "stage_id": 296,
             "next_stage_id": 302,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 592
         },
@@ -4249,21 +5121,44 @@
         {
             "stage_id": 298,
             "next_stage_id": 307,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 606
         },
         {
             "stage_id": 298,
             "next_stage_id": 308,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 607
         },
         {
             "stage_id": 298,
             "next_stage_id": 309,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 608
         },
@@ -4326,7 +5221,12 @@
         {
             "stage_id": 301,
             "next_stage_id": 318,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 617
         },
@@ -4361,14 +5261,32 @@
         {
             "stage_id": 303,
             "next_stage_id": 323,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 622
         },
         {
             "stage_id": 303,
             "next_stage_id": 324,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 623
         },
@@ -4403,14 +5321,28 @@
         {
             "stage_id": 305,
             "next_stage_id": 329,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 628
         },
         {
             "stage_id": 305,
             "next_stage_id": 330,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 4
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 629
         },
@@ -4431,7 +5363,12 @@
         {
             "stage_id": 306,
             "next_stage_id": 333,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 632
         },
@@ -4624,21 +5561,40 @@
         {
             "stage_id": 334,
             "next_stage_id": 335,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 664
         },
         {
             "stage_id": 334,
             "next_stage_id": 336,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 665
         },
         {
             "stage_id": 334,
             "next_stage_id": 337,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 666
         },
@@ -4659,7 +5615,12 @@
         {
             "stage_id": 335,
             "next_stage_id": 340,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Фотограф",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 669
         },
@@ -4734,7 +5695,12 @@
         {
             "stage_id": 336,
             "next_stage_id": 343,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                }
+            ],
             "isA": false,
             "id": 681
         },
@@ -4755,7 +5721,12 @@
         {
             "stage_id": 337,
             "next_stage_id": 346,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 684
         },
@@ -4825,7 +5796,16 @@
         {
             "stage_id": 341,
             "next_stage_id": 356,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 694
         },
@@ -4839,7 +5819,12 @@
         {
             "stage_id": 341,
             "next_stage_id": 358,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 696
         },
@@ -4853,14 +5838,28 @@
         {
             "stage_id": 342,
             "next_stage_id": 360,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -1
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 698
         },
         {
             "stage_id": 342,
             "next_stage_id": 361,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 699
         },
@@ -4888,7 +5887,16 @@
         {
             "stage_id": 344,
             "next_stage_id": 365,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 703
         },
@@ -4902,7 +5910,16 @@
         {
             "stage_id": 344,
             "next_stage_id": 367,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 705
         },
@@ -5119,14 +6136,28 @@
         {
             "stage_id": 374,
             "next_stage_id": 375,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 4
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 740
         },
         {
             "stage_id": 374,
             "next_stage_id": 376,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 741
         },
@@ -5145,28 +6176,52 @@
         {
             "stage_id": 375,
             "next_stage_id": 377,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 744
         },
         {
             "stage_id": 375,
             "next_stage_id": 378,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 745
         },
         {
             "stage_id": 376,
             "next_stage_id": 379,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 746
         },
         {
             "stage_id": 376,
             "next_stage_id": 380,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -4
+                }
+            ],
             "isA": false,
             "id": 747
         },
@@ -5239,42 +6294,88 @@
         {
             "stage_id": 381,
             "next_stage_id": 382,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -4
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 759
         },
         {
             "stage_id": 381,
             "next_stage_id": 383,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 760
         },
         {
             "stage_id": 382,
             "next_stage_id": 384,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -5
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 761
         },
         {
             "stage_id": 382,
             "next_stage_id": 385,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 762
         },
         {
             "stage_id": 383,
             "next_stage_id": 386,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 763
         },
         {
             "stage_id": 383,
             "next_stage_id": 387,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 764
         },
@@ -5323,7 +6424,12 @@
         {
             "stage_id": 388,
             "next_stage_id": 389,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 772
         },
@@ -5337,7 +6443,12 @@
         {
             "stage_id": 389,
             "next_stage_id": 391,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 774
         },
@@ -5358,7 +6469,12 @@
         {
             "stage_id": 390,
             "next_stage_id": 394,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 4
+                }
+            ],
             "isA": false,
             "id": 777
         },
@@ -5407,42 +6523,88 @@
         {
             "stage_id": 395,
             "next_stage_id": 396,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 785
         },
         {
             "stage_id": 395,
             "next_stage_id": 397,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 786
         },
         {
             "stage_id": 396,
             "next_stage_id": 398,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                }
+            ],
             "isA": false,
             "id": 787
         },
         {
             "stage_id": 396,
             "next_stage_id": 399,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 3
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 788
         },
         {
             "stage_id": 397,
             "next_stage_id": 400,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 4
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 789
         },
         {
             "stage_id": 397,
             "next_stage_id": 401,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                },
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 790
         },
@@ -5491,14 +6653,28 @@
         {
             "stage_id": 402,
             "next_stage_id": 403,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 798
         },
         {
             "stage_id": 402,
             "next_stage_id": 404,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Мертвец",
+                    "term": true
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -3
+                }
+            ],
             "isA": false,
             "id": 799
         },
@@ -5512,21 +6688,40 @@
         {
             "stage_id": 403,
             "next_stage_id": 406,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -4
+                },
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": -4
+                }
+            ],
             "isA": false,
             "id": 801
         },
         {
             "stage_id": 404,
             "next_stage_id": 407,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 802
         },
         {
             "stage_id": 404,
             "next_stage_id": 408,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 803
         },
@@ -5603,16 +6798,536 @@
         {
             "stage_id": 411,
             "next_stage_id": 414,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "Мертвец",
+                    "term": true
+                }
+            ],
             "isA": false,
             "id": 815
         },
         {
             "stage_id": 411,
             "next_stage_id": 415,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "РЕШИМОСТЬ",
+                    "term": -1
+                }
+            ],
             "isA": false,
             "id": 816
+        },
+        {
+            "isIntro": true,
+            "stage_id": 1,
+            "next_stage_id": 1,
+            "changes": [],
+            "isA": false,
+            "id": 817
+        },
+        {
+            "isIntro": true,
+            "stage_id": 14,
+            "next_stage_id": 14,
+            "changes": [],
+            "isA": false,
+            "id": 818
+        },
+        {
+            "isIntro": true,
+            "stage_id": 54,
+            "next_stage_id": 54,
+            "changes": [],
+            "isA": false,
+            "id": 819
+        },
+        {
+            "isIntro": true,
+            "stage_id": 94,
+            "next_stage_id": 94,
+            "changes": [],
+            "isA": false,
+            "id": 820
+        },
+        {
+            "isIntro": true,
+            "stage_id": 134,
+            "next_stage_id": 134,
+            "changes": [],
+            "isA": false,
+            "id": 821
+        },
+        {
+            "isIntro": true,
+            "stage_id": 174,
+            "next_stage_id": 174,
+            "changes": [],
+            "isA": false,
+            "id": 822
+        },
+        {
+            "isIntro": true,
+            "stage_id": 214,
+            "next_stage_id": 214,
+            "changes": [],
+            "isA": false,
+            "id": 823
+        },
+        {
+            "isIntro": true,
+            "stage_id": 254,
+            "next_stage_id": 254,
+            "changes": [],
+            "isA": false,
+            "id": 824
+        },
+        {
+            "isIntro": true,
+            "stage_id": 294,
+            "next_stage_id": 294,
+            "changes": [],
+            "isA": false,
+            "id": 825
+        },
+        {
+            "isIntro": true,
+            "stage_id": 334,
+            "next_stage_id": 334,
+            "changes": [],
+            "isA": false,
+            "id": 826
+        },
+        {
+            "isIntro": true,
+            "stage_id": 374,
+            "next_stage_id": 374,
+            "changes": [],
+            "isA": false,
+            "id": 827
+        },
+        {
+            "isIntro": true,
+            "stage_id": 381,
+            "next_stage_id": 381,
+            "changes": [],
+            "isA": false,
+            "id": 828
+        },
+        {
+            "isIntro": true,
+            "stage_id": 388,
+            "next_stage_id": 388,
+            "changes": [],
+            "isA": false,
+            "id": 829
+        },
+        {
+            "isIntro": true,
+            "stage_id": 395,
+            "next_stage_id": 395,
+            "changes": [],
+            "isA": false,
+            "id": 830
+        },
+        {
+            "isIntro": true,
+            "stage_id": 402,
+            "next_stage_id": 402,
+            "changes": [],
+            "isA": false,
+            "id": 831
+        },
+        {
+            "isIntro": true,
+            "stage_id": 409,
+            "next_stage_id": 409,
+            "changes": [],
+            "isA": false,
+            "id": 832
+        },
+        {
+            "isIntro": true,
+            "stage_id": 416,
+            "changes": [],
+            "isA": false,
+            "id": 833,
+            "next_stage_id": 416
+        },
+        {
+            "stage_id": 416,
+            "changes": [],
+            "isA": true,
+            "id": 834
+        },
+        {
+            "isIntro": true,
+            "stage_id": 417,
+            "changes": [],
+            "isA": false,
+            "id": 835,
+            "next_stage_id": 417
+        },
+        {
+            "stage_id": 417,
+            "changes": [],
+            "isA": true,
+            "id": 836
+        },
+        {
+            "isIntro": true,
+            "stage_id": 418,
+            "changes": [],
+            "isA": false,
+            "id": 837,
+            "next_stage_id": 418
+        },
+        {
+            "stage_id": 418,
+            "changes": [],
+            "isA": true,
+            "id": 838
+        },
+        {
+            "isIntro": true,
+            "stage_id": 419,
+            "changes": [],
+            "isA": false,
+            "id": 839,
+            "next_stage_id": 419
+        },
+        {
+            "stage_id": 419,
+            "changes": [],
+            "isA": true,
+            "id": 840
+        },
+        {
+            "isIntro": true,
+            "stage_id": 420,
+            "changes": [],
+            "isA": false,
+            "id": 841,
+            "next_stage_id": 420
+        },
+        {
+            "stage_id": 420,
+            "changes": [],
+            "isA": true,
+            "id": 842
+        },
+        {
+            "stage_id": 417,
+            "next_stage_id": 425,
+            "changes": [],
+            "isA": false,
+            "id": 846
+        },
+        {
+            "stage_id": 422,
+            "changes": [],
+            "isA": true,
+            "id": 848
+        },
+        {
+            "stage_id": 423,
+            "changes": [],
+            "isA": true,
+            "id": 850
+        },
+        {
+            "stage_id": 424,
+            "changes": [],
+            "isA": true,
+            "id": 852
+        },
+        {
+            "stage_id": 422,
+            "next_stage_id": 423,
+            "changes": [],
+            "isA": false,
+            "id": 853
+        },
+        {
+            "stage_id": 423,
+            "next_stage_id": 424,
+            "changes": [],
+            "isA": false,
+            "id": 854
+        },
+        {
+            "stage_id": 416,
+            "next_stage_id": 422,
+            "changes": [],
+            "isA": false,
+            "id": 855
+        },
+        {
+            "stage_id": 425,
+            "changes": [],
+            "isA": true,
+            "id": 857
+        },
+        {
+            "stage_id": 426,
+            "changes": [],
+            "isA": true,
+            "id": 859
+        },
+        {
+            "stage_id": 427,
+            "changes": [],
+            "isA": true,
+            "id": 861
+        },
+        {
+            "stage_id": 425,
+            "next_stage_id": 426,
+            "changes": [],
+            "isA": false,
+            "id": 862
+        },
+        {
+            "stage_id": 426,
+            "next_stage_id": 427,
+            "changes": [],
+            "isA": false,
+            "id": 863
+        },
+        {
+            "stage_id": 428,
+            "changes": [],
+            "isA": true,
+            "id": 866
+        },
+        {
+            "stage_id": 429,
+            "changes": [],
+            "isA": true,
+            "id": 868
+        },
+        {
+            "stage_id": 430,
+            "changes": [],
+            "isA": true,
+            "id": 870
+        },
+        {
+            "stage_id": 431,
+            "changes": [],
+            "isA": true,
+            "id": 872
+        },
+        {
+            "stage_id": 432,
+            "changes": [],
+            "isA": true,
+            "id": 874
+        },
+        {
+            "stage_id": 428,
+            "next_stage_id": 429,
+            "changes": [],
+            "isA": false,
+            "id": 877
+        },
+        {
+            "stage_id": 429,
+            "next_stage_id": 430,
+            "changes": [],
+            "isA": false,
+            "id": 878
+        },
+        {
+            "stage_id": 430,
+            "next_stage_id": 431,
+            "changes": [],
+            "isA": false,
+            "id": 879
+        },
+        {
+            "stage_id": 431,
+            "next_stage_id": 432,
+            "changes": [],
+            "isA": false,
+            "id": 880
+        },
+        {
+            "stage_id": 418,
+            "next_stage_id": 428,
+            "changes": [],
+            "isA": false,
+            "id": 881
+        },
+        {
+            "stage_id": 419,
+            "next_stage_id": 434,
+            "changes": [],
+            "isA": false,
+            "id": 882
+        },
+        {
+            "stage_id": 434,
+            "changes": [],
+            "isA": true,
+            "id": 884
+        },
+        {
+            "stage_id": 435,
+            "changes": [],
+            "isA": true,
+            "id": 886
+        },
+        {
+            "stage_id": 436,
+            "changes": [],
+            "isA": true,
+            "id": 888
+        },
+        {
+            "stage_id": 437,
+            "changes": [],
+            "isA": true,
+            "id": 890
+        },
+        {
+            "stage_id": 438,
+            "changes": [],
+            "isA": true,
+            "id": 892
+        },
+        {
+            "stage_id": 439,
+            "changes": [],
+            "isA": true,
+            "id": 894
+        },
+        {
+            "stage_id": 434,
+            "next_stage_id": 435,
+            "changes": [],
+            "isA": false,
+            "id": 895
+        },
+        {
+            "stage_id": 435,
+            "next_stage_id": 436,
+            "changes": [],
+            "isA": false,
+            "id": 896
+        },
+        {
+            "stage_id": 436,
+            "next_stage_id": 437,
+            "changes": [],
+            "isA": false,
+            "id": 897
+        },
+        {
+            "stage_id": 437,
+            "next_stage_id": 438,
+            "changes": [],
+            "isA": false,
+            "id": 898
+        },
+        {
+            "stage_id": 438,
+            "next_stage_id": 439,
+            "changes": [],
+            "isA": false,
+            "id": 899
+        },
+        {
+            "stage_id": 420,
+            "next_stage_id": 440,
+            "changes": [],
+            "isA": false,
+            "id": 900
+        },
+        {
+            "stage_id": 440,
+            "changes": [],
+            "isA": true,
+            "id": 902
+        },
+        {
+            "stage_id": 441,
+            "changes": [],
+            "isA": true,
+            "id": 904
+        },
+        {
+            "stage_id": 440,
+            "next_stage_id": 441,
+            "changes": [],
+            "isA": false,
+            "id": 905
+        },
+        {
+            "stage_id": 442,
+            "changes": [],
+            "isA": true,
+            "id": 908
+        },
+        {
+            "stage_id": 443,
+            "changes": [],
+            "isA": true,
+            "id": 910
+        },
+        {
+            "stage_id": 444,
+            "changes": [],
+            "isA": true,
+            "id": 912
+        },
+        {
+            "stage_id": 445,
+            "changes": [],
+            "isA": true,
+            "id": 914
+        },
+        {
+            "stage_id": 424,
+            "next_stage_id": 442,
+            "changes": [],
+            "isA": false,
+            "id": 915
+        },
+        {
+            "stage_id": 427,
+            "next_stage_id": 443,
+            "changes": [],
+            "isA": false,
+            "id": 916
+        },
+        {
+            "stage_id": 432,
+            "next_stage_id": 444,
+            "changes": [],
+            "isA": false,
+            "id": 917
+        },
+        {
+            "stage_id": 439,
+            "next_stage_id": 445,
+            "changes": [],
+            "isA": false,
+            "id": 918
+        },
+        {
+            "stage_id": 446,
+            "changes": [],
+            "isA": true,
+            "id": 920
+        },
+        {
+            "stage_id": 441,
+            "next_stage_id": 446,
+            "changes": [],
+            "isA": false,
+            "id": 921
         }
     ],
     "stages": [
@@ -8105,6 +9820,180 @@
             "topic_id": 16,
             "id": 415,
             "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 17,
+            "id": 416,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 18,
+            "id": 417,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 418,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 419,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 21,
+            "id": 420,
+            "isStart": true
+        },
+        {
+            "isBeen": false,
+            "topic_id": 17,
+            "id": 422,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 17,
+            "id": 423,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 17,
+            "id": 424,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 18,
+            "id": 425,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 18,
+            "id": 426,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 18,
+            "id": 427,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 428,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 429,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 430,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 431,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 432,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 434,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 435,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 436,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 437,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 438,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 439,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 21,
+            "id": 440,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 21,
+            "id": 441,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 17,
+            "id": 442,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 18,
+            "id": 443,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 19,
+            "id": 444,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 20,
+            "id": 445,
+            "isStart": false
+        },
+        {
+            "isBeen": false,
+            "topic_id": 21,
+            "id": 446,
+            "isStart": false
         }
     ],
     "phrases": [
@@ -8674,7 +10563,7 @@
         },
         {
             "stuff_id": 62,
-            "text": "Не будь тряпой, ты не главный герой гаремника. Соберись.",
+            "text": "Не будь тряпкой, ты не главный герой гаремника. Соберись.",
             "isGeneral": false,
             "id": 97
         },
@@ -8698,7 +10587,7 @@
         },
         {
             "stuff_id": 64,
-            "text": "Ну, ты так выглядишь. Как маленький котеночек с износившимся бантиком..ну,и так далее.",
+            "text": "Ну, ты так выглядишь. Как маленький котеночек с износившимся бантиком.. Ну, и так далее.",
             "isGeneral": false,
             "id": 101
         },
@@ -9688,7 +11577,7 @@
         },
         {
             "stuff_id": 176,
-            "text": "Да... Ты прав...",
+            "text": "Да... Ты прав... У меня постоянно бывают такие срывы. Я слабая...",
             "isGeneral": false,
             "id": 268
         },
@@ -10336,7 +12225,7 @@
         },
         {
             "stuff_id": 245,
-            "text": "Я не смогу если она умрет!",
+            "text": "Я не смогу если она умрёт!",
             "isGeneral": false,
             "id": 376
         },
@@ -10672,7 +12561,7 @@
         },
         {
             "stuff_id": 289,
-            "text": "Я всех утомляю... Ты ничем не лучше их...",
+            "text": "Ты ничем не лучше других... Я всех утомляю этими срывами...",
             "isGeneral": false,
             "id": 432
         },
@@ -11626,7 +13515,7 @@
         },
         {
             "stuff_id": 389,
-            "text": "Безысходность не будет свществовать, когда выход будет найден. А это в твои силах.",
+            "text": "Безысходность не будет существовать, когда выход будет найден. А это в твоих силах.",
             "isGeneral": false,
             "id": 591
         },
@@ -11662,7 +13551,7 @@
         },
         {
             "stuff_id": 392,
-            "text": "Я просто хочу, чтобы ты все правильно поняла. Ты плохо меня слушаешь. А это так...Метод кнута и пряника.",
+            "text": "Я просто хочу, чтобы ты все правильно поняла. Ты плохо меня слушаешь. А это так... Метод кнута и пряника.",
             "isGeneral": false,
             "id": 597
         },
@@ -11956,7 +13845,7 @@
         },
         {
             "stuff_id": 434,
-            "text": "Он не стал бы меня бросать...На твой взгляд мне стоит...двигаться?",
+            "text": "Он не стал бы меня бросать... На твой взгляд мне стоит... двигаться?",
             "isGeneral": false,
             "id": 646
         },
@@ -12580,7 +14469,7 @@
         },
         {
             "stuff_id": 502,
-            "text": "Я не знаю что делать... Правда.",
+            "text": "Я не могу! Я правда не знаю что делать!",
             "isGeneral": false,
             "id": 750
         },
@@ -13312,7 +15201,7 @@
         },
         {
             "stuff_id": 585,
-            "text": "Обличать -низко.А я констатирую факты.",
+            "text": "Обличать — низко. А я констатирую факты.",
             "isGeneral": false,
             "id": 872
         },
@@ -13678,7 +15567,7 @@
         },
         {
             "stuff_id": 620,
-            "text": "Да плевать.Хорошо теюе стоится?",
+            "text": "Да плевать. Хорошо тебе стоится?",
             "isGeneral": false,
             "id": 936
         },
@@ -14722,7 +16611,7 @@
         },
         {
             "stuff_id": 741,
-            "text": "Лучше помочь.Ей, похоже, не очень хорошо. Что именно с ней, кстати?",
+            "text": "Лучше помочь. Ей, похоже, не очень хорошо. Что именно с ней, кстати?",
             "isGeneral": false,
             "id": 1110
         },
@@ -14818,7 +16707,7 @@
         },
         {
             "stuff_id": 752,
-            "text": "Давай конкретно, кто ты?",
+            "text": "Это странно... Давай конкретно, кто ты?",
             "isGeneral": false,
             "id": 1126
         },
@@ -15304,7 +17193,7 @@
         },
         {
             "stuff_id": 809,
-            "text": "По моей вине погиб человек. Я могла помочь, но была слишком увлечена собой, и заметила неполадку слишком поздно. Это вечно будет мучить меня.",
+            "text": "По моей вине погиб человек. Я могла помочь, но была слишком увлечена собой, и заметила проблему слишком поздно. Это вечно будет мучить меня.",
             "isGeneral": false,
             "id": 1207
         },
@@ -15385,13 +17274,1152 @@
             "text": "Не важно",
             "isGeneral": true,
             "id": 1220
+        },
+        {
+            "stuff_id": 817,
+            "rangeName": "",
+            "text": "...",
+            "isGeneral": false,
+            "id": 1221
+        },
+        {
+            "stuff_id": 817,
+            "rangeName": "",
+            "text": "Вступление",
+            "isGeneral": true,
+            "id": 1222
+        },
+        {
+            "stuff_id": 818,
+            "rangeName": "",
+            "text": "Окей, можешь просто объяснить что с тобой?",
+            "isGeneral": false,
+            "id": 1223
+        },
+        {
+            "stuff_id": 818,
+            "rangeName": "",
+            "text": "Что с тобой",
+            "isGeneral": true,
+            "id": 1224
+        },
+        {
+            "stuff_id": 819,
+            "rangeName": "",
+            "text": "Ладно, скажи, я могу как-то помочь?",
+            "isGeneral": false,
+            "id": 1225
+        },
+        {
+            "stuff_id": 819,
+            "rangeName": "",
+            "text": "Помочь",
+            "isGeneral": true,
+            "id": 1226
+        },
+        {
+            "stuff_id": 820,
+            "rangeName": "",
+            "text": "Кхм, окей. Что делать собираешься?",
+            "isGeneral": false,
+            "id": 1227
+        },
+        {
+            "stuff_id": 820,
+            "rangeName": "",
+            "text": "Планы",
+            "isGeneral": true,
+            "id": 1228
+        },
+        {
+            "stuff_id": 821,
+            "rangeName": "",
+            "text": "Слушай, ты о чем сейчас думаешь?",
+            "isGeneral": false,
+            "id": 1229
+        },
+        {
+            "stuff_id": 821,
+            "rangeName": "",
+            "text": "Мысли",
+            "isGeneral": true,
+            "id": 1230
+        },
+        {
+            "stuff_id": 822,
+            "rangeName": "",
+            "text": "Слушай, тебе в любом случае надо сейчас успокоиться.",
+            "isGeneral": false,
+            "id": 1231
+        },
+        {
+            "stuff_id": 822,
+            "rangeName": "",
+            "text": "Успокойся",
+            "isGeneral": true,
+            "id": 1232
+        },
+        {
+            "stuff_id": 823,
+            "rangeName": "",
+            "text": "Да начни ты уже шевелиться, убожество!",
+            "isGeneral": false,
+            "id": 1233
+        },
+        {
+            "stuff_id": 823,
+            "rangeName": "",
+            "text": "Грубая провокация",
+            "isGeneral": true,
+            "id": 1234
+        },
+        {
+            "stuff_id": 824,
+            "rangeName": "",
+            "text": "Так или иначе, начни уже что-то делать...",
+            "isGeneral": false,
+            "id": 1235
+        },
+        {
+            "stuff_id": 824,
+            "rangeName": "",
+            "text": "Действуй",
+            "isGeneral": true,
+            "id": 1236
+        },
+        {
+            "stuff_id": 825,
+            "rangeName": "",
+            "text": "Если честно, не знаю на что ты сгодишься. Такая ранимая...",
+            "isGeneral": false,
+            "id": 1237
+        },
+        {
+            "stuff_id": 825,
+            "rangeName": "",
+            "text": "Слишком ранимая",
+            "isGeneral": true,
+            "id": 1238
+        },
+        {
+            "stuff_id": 826,
+            "rangeName": "",
+            "text": "Ну что ж, ты, как я понял, так и планируешь стоять и трястись?",
+            "isGeneral": false,
+            "id": 1239
+        },
+        {
+            "stuff_id": 826,
+            "rangeName": "",
+            "text": "Давление",
+            "isGeneral": true,
+            "id": 1240
+        },
+        {
+            "stuff_id": 827,
+            "rangeName": "",
+            "text": "Кстати, ты говорила, что все дело в собаке?",
+            "isGeneral": false,
+            "id": 1241
+        },
+        {
+            "stuff_id": 827,
+            "rangeName": "",
+            "text": "Собака",
+            "isGeneral": true,
+            "id": 1242
+        },
+        {
+            "stuff_id": 828,
+            "rangeName": "",
+            "text": "Ты не особо меня слушаешь. Забыла кто я?",
+            "isGeneral": false,
+            "id": 1243
+        },
+        {
+            "stuff_id": 828,
+            "rangeName": "",
+            "text": "Знакомы",
+            "isGeneral": true,
+            "id": 1244
+        },
+        {
+            "stuff_id": 829,
+            "rangeName": "",
+            "text": "Кстати, могу я спросить о твоем покойном приятеле?",
+            "isGeneral": false,
+            "id": 1245
+        },
+        {
+            "stuff_id": 829,
+            "rangeName": "",
+            "text": "Мертвец",
+            "isGeneral": true,
+            "id": 1246
+        },
+        {
+            "stuff_id": 830,
+            "rangeName": "",
+            "text": "Это, поговорим о пасте?",
+            "isGeneral": false,
+            "id": 1247
+        },
+        {
+            "stuff_id": 830,
+            "rangeName": "",
+            "text": "Лапша",
+            "isGeneral": true,
+            "id": 1248
+        },
+        {
+            "stuff_id": 831,
+            "rangeName": "",
+            "text": "Кстати, ты говорил что занимаешься фотографией, верно?",
+            "isGeneral": false,
+            "id": 1249
+        },
+        {
+            "stuff_id": 831,
+            "rangeName": "",
+            "text": "Фотограф",
+            "isGeneral": true,
+            "id": 1250
+        },
+        {
+            "stuff_id": 832,
+            "rangeName": "",
+            "text": "У тебя паническая атака не в первый раз, да?",
+            "isGeneral": false,
+            "id": 1251
+        },
+        {
+            "stuff_id": 832,
+            "rangeName": "",
+            "text": "Панические атаки",
+            "isGeneral": true,
+            "id": 1252
+        },
+        {
+            "stuff_id": 242,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Мне нельзя видеть как умрет эта собака... Я боюсь...",
+            "isGeneral": false,
+            "id": 1253
+        },
+        {
+            "stuff_id": 245,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Я не знаю что со мной будет если эта собака умрет...",
+            "isGeneral": false,
+            "id": 1254
+        },
+        {
+            "stuff_id": 246,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "О чем ты? Она не может говорить, это же животное! Она умирает...",
+            "isGeneral": false,
+            "id": 1255
+        },
+        {
+            "stuff_id": 252,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Да, я в безопасноти, но я сейчас меня больше волнует собака...",
+            "isGeneral": false,
+            "id": 1256
+        },
+        {
+            "stuff_id": 794,
+            "rangeName": "УПОМИНАЛА О ПАРНЕ",
+            "text": "Когда мой... Когда моего парня  не стало мне нужно было как-то отвлечься.",
+            "isGeneral": false,
+            "id": 1257
+        },
+        {
+            "stuff_id": 163,
+            "rangeName": "УПОМИНАЛА О ПАРНЕ",
+            "text": "Зачем ты так... Я же говорила о нём, боже...",
+            "isGeneral": false,
+            "id": 1258
+        },
+        {
+            "stuff_id": 181,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Зачем ты издеваешься?!",
+            "isGeneral": false,
+            "id": 1259
+        },
+        {
+            "stuff_id": 203,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Я же говорила.",
+            "isGeneral": false,
+            "id": 1260
+        },
+        {
+            "stuff_id": 214,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Собака, верно?",
+            "isGeneral": false,
+            "id": 1261
+        },
+        {
+            "stuff_id": 241,
+            "rangeName": "УПОМИНАЛА О СОБАКЕ",
+            "text": "Да, собака...",
+            "isGeneral": false,
+            "id": 1262
+        },
+        {
+            "stuff_id": 327,
+            "rangeName": "УПОМИНАЛА О ПАРНЕ",
+            "text": "Не говори о нём...",
+            "isGeneral": false,
+            "id": 1263
+        },
+        {
+            "stuff_id": 300,
+            "rangeName": "УПОМИНАЛА О ПАРНЕ",
+            "text": "Хоть кто-то? Я уверен, что твой парень был от тебя в восторге. Нас уже двое!",
+            "isGeneral": false,
+            "id": 1264
+        },
+        {
+            "stuff_id": 443,
+            "rangeName": "УПОМИНАЛА О ПАРНЕ",
+            "text": "Будь я твоим парнем, я бы тебя уже бросил! Кто захочет встречаться в бревном? Ты же даже не двигаешься.",
+            "isGeneral": false,
+            "id": 1265
+        },
+        {
+            "stuff_id": 833,
+            "text": "Пора",
+            "isGeneral": false,
+            "id": 1267
+        },
+        {
+            "stuff_id": 833,
+            "text": "Пора",
+            "isGeneral": true,
+            "id": 1268
+        },
+        {
+            "stuff_id": 834,
+            "text": "Имя Таиса считается именем греческим. Появилось оно еще в далекие античные времена. В то время Греция была языческим государством и имела тесные связи с Египтом. В египетской мифологии есть богиня Изида, так вот имя Таиса означает \"принадлежащая богине Изиде\", что писалось как ta Isios. Но есть еще несколько переводов имени.   Однако некоторые у лингвисты считают, что значение имени Таисия может быть \"поздняя\" или \"плодородная\".  Именины Таисы по церковному календарю отмечаются трижды в году: 4 апреля, 23 мая (Таиса Египетская) и 21 октября (преподобная Таиса Фиванская).     Девочка с именем Таиса растет спокойным ребенком. В процессе взросления Таиса начинает понемногу замыкаться в себе, а особенно с малознакомыми людьми. Она всячески отстаивает свое личное пространство, что редко свойственно для детей. Стремится, чтобы жизнь её не была обыденной. Уверенна, что рассчитывать может только на себя. Не очень везучий человек, но никогда не падает духом.",
+            "isGeneral": false,
+            "id": 1269
+        },
+        {
+            "stuff_id": 835,
+            "text": "Пора",
+            "isGeneral": false,
+            "id": 1270
+        },
+        {
+            "stuff_id": 835,
+            "text": "Пора",
+            "isGeneral": true,
+            "id": 1271
+        },
+        {
+            "stuff_id": 836,
+            "text": "Если анализировать значение имени Габриэлла и говорить об основных качествах ее личности, то стоит выделить самоуверенность, чувствительность и развитую интуицию. Обладательница данного имени может похвастаться аналитическим складом ума и силой воли. Все это помогает ей достигать успеха в работе, стоит также сказать, что, если имя Габриэлла ставит перед собой определенную цель, то она ее добивается, несмотря на преграды и препятствия. Напротив, трудности только вдохновляют ее и позволяют открыть в себе новые способности.  Имя Габриэлла один раз в году отмечает именины: отмечается 19 декабря.",
+            "isGeneral": false,
+            "id": 1272
+        },
+        {
+            "stuff_id": 837,
+            "text": "Пора",
+            "isGeneral": false,
+            "id": 1273
+        },
+        {
+            "stuff_id": 837,
+            "text": "Пора",
+            "isGeneral": true,
+            "id": 1274
+        },
+        {
+            "stuff_id": 838,
+            "text": "Имя Хурима означает предрасположеность к жизни подвижника. Человек способен на жертву даже не ради какой-то высокой цели, а просто потому, что «может себе это позволить». Отдать любимую игрушку. Оказаться от личного счастья ради счастья другого человека.  Как следствие – настоятельная необходимость в присутствии «объекта приложения». Должен быть кто-то, к чьим ногам можно «бросить весь мир». А иначе жизнь не будет иметь смысла.",
+            "isGeneral": false,
+            "id": 1275
+        },
+        {
+            "stuff_id": 839,
+            "text": "Пора",
+            "isGeneral": false,
+            "id": 1276
+        },
+        {
+            "stuff_id": 839,
+            "text": "Пора",
+            "isGeneral": true,
+            "id": 1277
+        },
+        {
+            "stuff_id": 840,
+            "text": "Происхождение имени Лея точно не установлено, но, вероятнее всего, оно восходит к аккадскому слову «корова». Существуют также версии происхождения имени на основе древнееврейского и халдейского языков. Согласно первой из них, имя переводится как \"усталая\", \"слабая\". Именины Лея отмечает 22 марта. В католической вере есть святая Лея, которая покровительствует вдовам С самого детства девочка с таким именем очень общительна и дружелюбна, однако довольно эгоистична, так как ее собственные интересы для нее всегда будут на первом месте. Лея достаточно эмоциональна и порой может сказать резкие слова прежде, чем подумает, причем с годами эта черта в ней только усиливается.",
+            "isGeneral": false,
+            "id": 1278
+        },
+        {
+            "stuff_id": 841,
+            "text": "Пора",
+            "isGeneral": false,
+            "id": 1279
+        },
+        {
+            "stuff_id": 841,
+            "text": "Пора",
+            "isGeneral": true,
+            "id": 1280
+        },
+        {
+            "stuff_id": 842,
+            "text": "Имя Лола – это женское имя, употребляемое изначально как уменьшительно-ласкательное обращение к именам Долорес и Лолита, а также в Португалии к имени Каролина. П Имя Лолита означает «скорбящая», «печальная».  В настоящее время имя в обиходе и как уменьшительно-ласкательное обращение, и как самостоятельное имя. Имя Лола в православных святцах не значится, а католики отмечают именины Лолы как день именин у Долорес – День Пресвятой Марии Скорбящей – 15 сентября. Обладательница имени Лолита имеет очень эффектный и деликатный характер, хотя она не всегда позволяет себе выставлять собственные эмоции на показ. Она любит гармонию и симметрию, её можно назвать эстетом, и часто может себя вести под внешним влиянием, поэтому её действия могут быть восприняты как с хорошей, так и отрицательной точки зрения.",
+            "isGeneral": false,
+            "id": 1281
+        },
+        {
+            "stuff_id": 846,
+            "text": "звоню!",
+            "isGeneral": false,
+            "id": 1287
+        },
+        {
+            "stuff_id": 846,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1288
+        },
+        {
+            "stuff_id": 847,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1289
+        },
+        {
+            "stuff_id": 847,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1290
+        },
+        {
+            "stuff_id": 848,
+            "text": "Наверное, сложно представить человека, смотрящего в одного точку дольше, чем я. Было упущено чертовски много времени и хотелось плакать. Я не могла и дальше изоьрвжать каменное изваяние. Я бы себе не простила.",
+            "isGeneral": false,
+            "id": 1291
+        },
+        {
+            "stuff_id": 849,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1292
+        },
+        {
+            "stuff_id": 849,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1293
+        },
+        {
+            "stuff_id": 850,
+            "text": "Собака оказалась удивительно теплой и липкой от крови. И живой...Если я бы задохнулась там от облегчения - это была бы одна из самых дурацких и бессмысленных смертей в истории человечества.",
+            "isGeneral": false,
+            "id": 1294
+        },
+        {
+            "stuff_id": 851,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1295
+        },
+        {
+            "stuff_id": 851,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1296
+        },
+        {
+            "stuff_id": 852,
+            "text": "Я забрала пса домой, к себе. Назвала Лаки. Фантазии мне было не занимать, да. К осени раны Лаки почти совсем зажили. Он, правда, оказался пиратом и больше не мог нормально бегать, но я все равно его очень любила.",
+            "isGeneral": false,
+            "id": 1297
+        },
+        {
+            "stuff_id": 853,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1298
+        },
+        {
+            "stuff_id": 853,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1299
+        },
+        {
+            "stuff_id": 854,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1300
+        },
+        {
+            "stuff_id": 854,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1301
+        },
+        {
+            "stuff_id": 855,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1302
+        },
+        {
+            "stuff_id": 855,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1303
+        },
+        {
+            "stuff_id": 856,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1304
+        },
+        {
+            "stuff_id": 856,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1305
+        },
+        {
+            "stuff_id": 857,
+            "text": "Ну, конечно я не могла просто оставить все как есть. Я и так слишком долго бездействовала.",
+            "isGeneral": false,
+            "id": 1306
+        },
+        {
+            "stuff_id": 858,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1307
+        },
+        {
+            "stuff_id": 858,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1308
+        },
+        {
+            "stuff_id": 859,
+            "text": "Собака была жива. Не знаю, как долго это могло бы еще продлиться. Забавное ощущение - когда чья-то жизнь целиком и полностью находится в твоих руках. Но мне не было забавно. Я достала телефон. Набрала номер. Даже пальцы не дрожали.",
+            "isGeneral": false,
+            "id": 1309
+        },
+        {
+            "stuff_id": 860,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1310
+        },
+        {
+            "stuff_id": 860,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1311
+        },
+        {
+            "stuff_id": 861,
+            "text": "Маленькая мисс Совершенство. Ставит цель и добивается ее. Я даже почувствовала немного уважения к себе в тот момент. Будто кто-то меня простил. Почувствовала себя хорошо. Лучше, чем было.",
+            "isGeneral": false,
+            "id": 1312
+        },
+        {
+            "stuff_id": 862,
+            "text": "два",
+            "isGeneral": false,
+            "id": 1313
+        },
+        {
+            "stuff_id": 862,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1314
+        },
+        {
+            "stuff_id": 863,
+            "text": "три",
+            "isGeneral": false,
+            "id": 1315
+        },
+        {
+            "stuff_id": 863,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1316
+        },
+        {
+            "stuff_id": 865,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1319
+        },
+        {
+            "stuff_id": 865,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1320
+        },
+        {
+            "stuff_id": 866,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1321
+        },
+        {
+            "stuff_id": 867,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1322
+        },
+        {
+            "stuff_id": 867,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1323
+        },
+        {
+            "stuff_id": 868,
+            "text": "Я все вспомнила тогда...",
+            "isGeneral": false,
+            "id": 1324
+        },
+        {
+            "stuff_id": 869,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1325
+        },
+        {
+            "stuff_id": 869,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1326
+        },
+        {
+            "stuff_id": 870,
+            "text": "Твоя улыбка.Твои глаза.Твой дурацкий хвостик. Все самое лучшее. Все самое любимое.",
+            "isGeneral": false,
+            "id": 1327
+        },
+        {
+            "stuff_id": 871,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1328
+        },
+        {
+            "stuff_id": 871,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1329
+        },
+        {
+            "stuff_id": 872,
+            "text": "Вспомнила вместе с твоей пулей в виске.",
+            "isGeneral": false,
+            "id": 1330
+        },
+        {
+            "stuff_id": 873,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1331
+        },
+        {
+            "stuff_id": 873,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1332
+        },
+        {
+            "stuff_id": 874,
+            "text": "Мне...Мне так жаль, что я не смогла спасти тебя снова. Прости меня. Я смотрю на эту дурацкую дохлую собаку и вспоминаю тебя. Я поверить не могу, что ты сейчас такой же мертвый, как она.",
+            "isGeneral": false,
+            "id": 1333
+        },
+        {
+            "stuff_id": 875,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1334
+        },
+        {
+            "stuff_id": 875,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1335
+        },
+        {
+            "stuff_id": 877,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1337
+        },
+        {
+            "stuff_id": 877,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1338
+        },
+        {
+            "stuff_id": 878,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1339
+        },
+        {
+            "stuff_id": 878,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1340
+        },
+        {
+            "stuff_id": 879,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1341
+        },
+        {
+            "stuff_id": 879,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1342
+        },
+        {
+            "stuff_id": 880,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1343
+        },
+        {
+            "stuff_id": 880,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1344
+        },
+        {
+            "stuff_id": 881,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1345
+        },
+        {
+            "stuff_id": 881,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1346
+        },
+        {
+            "stuff_id": 882,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1347
+        },
+        {
+            "stuff_id": 882,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1348
+        },
+        {
+            "stuff_id": 883,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1349
+        },
+        {
+            "stuff_id": 883,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1350
+        },
+        {
+            "stuff_id": 884,
+            "text": "Смотреть на кровь и ошметки внутренностей было, как минимум, неприятно. Ладно, если откровенней - в тот момент я отчетливо почувствовала пресловутый сдвиг по фазе. Хотелось убежать, закрыть глаза или выдрать их, удариться головой об плитку в ванной, так, чтобы память отшибло, наглотаться снотворного...",
+            "isGeneral": false,
+            "id": 1351
+        },
+        {
+            "stuff_id": 885,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1352
+        },
+        {
+            "stuff_id": 885,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1353
+        },
+        {
+            "stuff_id": 886,
+            "text": "Я даже не вспомню отчеиливо момент, когда осознала, что спасаю свою шкуру позорным бегством.",
+            "isGeneral": false,
+            "id": 1354
+        },
+        {
+            "stuff_id": 887,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1355
+        },
+        {
+            "stuff_id": 887,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1356
+        },
+        {
+            "stuff_id": 888,
+            "text": "В висках пульсировало только одно: \"поскорее бы добраться домой\". И я бежала. Не знаю, куда. Я не смотрела. Искала свой чертов дом.",
+            "isGeneral": false,
+            "id": 1357
+        },
+        {
+            "stuff_id": 889,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1358
+        },
+        {
+            "stuff_id": 889,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1359
+        },
+        {
+            "stuff_id": 890,
+            "text": "Удивительно, что я вообще добралась до квартиры в таких условиях. Перед глазами все еще стояла та крамная лужа, а в ушах стучала кровь, и я вообще не понимала, что происходит вокруг меня. Хотелось плакать, но слез не было. Меня трясло. Некоторое время я просто лежала в прихожей, довольствуясь тем, что до сих пор жива. Хотя тут, скорее, сожалеть надо. И я искренне жалела, что в отличие от бедного мертвого создания с улицы, я была жива. А еще есть хотелось. Вот так вот прозаично. А может, из-за стресса.",
+            "isGeneral": false,
+            "id": 1360
+        },
+        {
+            "stuff_id": 891,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1361
+        },
+        {
+            "stuff_id": 891,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1362
+        },
+        {
+            "stuff_id": 892,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1363
+        },
+        {
+            "stuff_id": 893,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1364
+        },
+        {
+            "stuff_id": 893,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1365
+        },
+        {
+            "stuff_id": 894,
+            "text": "Ну, попытка протолкнуть в себя лапшу провалилась с треском, ага.",
+            "isGeneral": false,
+            "id": 1366
+        },
+        {
+            "stuff_id": 895,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1367
+        },
+        {
+            "stuff_id": 895,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1368
+        },
+        {
+            "stuff_id": 896,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1369
+        },
+        {
+            "stuff_id": 896,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1370
+        },
+        {
+            "stuff_id": 897,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1371
+        },
+        {
+            "stuff_id": 897,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1372
+        },
+        {
+            "stuff_id": 898,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1373
+        },
+        {
+            "stuff_id": 898,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1374
+        },
+        {
+            "stuff_id": 899,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1375
+        },
+        {
+            "stuff_id": 899,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1376
+        },
+        {
+            "stuff_id": 900,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1377
+        },
+        {
+            "stuff_id": 900,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1378
+        },
+        {
+            "stuff_id": 901,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1379
+        },
+        {
+            "stuff_id": 901,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1380
+        },
+        {
+            "stuff_id": 902,
+            "text": "Мне действительно оставалось только скорбеть. Глядя правде в лицо - я поняла, что больше не могу верить себе. Чудовищная ошибка была допущена снова.",
+            "isGeneral": false,
+            "id": 1381
+        },
+        {
+            "stuff_id": 903,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1382
+        },
+        {
+            "stuff_id": 903,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1383
+        },
+        {
+            "stuff_id": 904,
+            "text": "Она лежала там, ужасно жалкая и изломанная. Похоже, ее душа отправилась в собачий Рай уже несколько минут назад. Похоже. Я оказалась годной только на грусть. И сейчас мне хотелось только одного - покинуть тело вместе с ней. Но я бы горела в Аду. Я оказалась бесполезна. Я ничем не смогла помочь. Даже себе. Терять было теперь нечего.",
+            "isGeneral": false,
+            "id": 1384
+        },
+        {
+            "stuff_id": 905,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1385
+        },
+        {
+            "stuff_id": 905,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1386
+        },
+        {
+            "stuff_id": 907,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1389
+        },
+        {
+            "stuff_id": 907,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1390
+        },
+        {
+            "stuff_id": 908,
+            "text": "А зимой Лаки умер, и я снова осталась одна.",
+            "isGeneral": false,
+            "id": 1391
+        },
+        {
+            "stuff_id": 909,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1392
+        },
+        {
+            "stuff_id": 909,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1393
+        },
+        {
+            "stuff_id": 910,
+            "text": "Наверное — это был один из самых спокойных моментов в моей жизни. Они приехали и забрали ее. Просто. Без боли и крови. И теперь все было хорошо и правильно. Все стало хорошо и правильно. Ком в горле исчез. Я почувствовала облегчение. Еще были шансы на то, что все наладится. Ну, когда-нибудь. Может быть. С некоторой вероятностью.",
+            "isGeneral": false,
+            "id": 1394
+        },
+        {
+            "stuff_id": 911,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1395
+        },
+        {
+            "stuff_id": 911,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1396
+        },
+        {
+            "stuff_id": 912,
+            "text": "Прости...меня...если сможешь...",
+            "isGeneral": false,
+            "id": 1397
+        },
+        {
+            "stuff_id": 913,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1398
+        },
+        {
+            "stuff_id": 913,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1399
+        },
+        {
+            "stuff_id": 914,
+            "text": "...",
+            "isGeneral": false,
+            "id": 1400
+        },
+        {
+            "stuff_id": 915,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1401
+        },
+        {
+            "stuff_id": 915,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1402
+        },
+        {
+            "stuff_id": 916,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1403
+        },
+        {
+            "stuff_id": 916,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1404
+        },
+        {
+            "stuff_id": 917,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1405
+        },
+        {
+            "stuff_id": 917,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1406
+        },
+        {
+            "stuff_id": 918,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1407
+        },
+        {
+            "stuff_id": 918,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1408
+        },
+        {
+            "stuff_id": 919,
+            "text": "introSpace",
+            "isGeneral": false,
+            "id": 1409
+        },
+        {
+            "stuff_id": 919,
+            "text": "introGenSpace",
+            "isGeneral": true,
+            "id": 1410
+        },
+        {
+            "stuff_id": 920,
+            "text": "Я задумалась о смерти. Своей.",
+            "isGeneral": false,
+            "id": 1411
+        },
+        {
+            "stuff_id": 921,
+            "text": "space",
+            "isGeneral": false,
+            "id": 1412
+        },
+        {
+            "stuff_id": 921,
+            "text": "generalSpace",
+            "isGeneral": true,
+            "id": 1413
         }
     ],
     "lim": 15,
+    "topicLim": 8,
+    "topicQ": 0,
     "idState": {
-        "topics": 16,
-        "phrases": 1220,
-        "stuffs": 816,
-        "stages": 415
+        "topics": 22,
+        "phrases": 1413,
+        "stuffs": 921,
+        "stages": 446
     }
 }

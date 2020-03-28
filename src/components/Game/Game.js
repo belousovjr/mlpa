@@ -17,7 +17,7 @@ export default class Game extends React.Component {
   }
   defaultParams() {
     this.loc.params.forEach(p => {
-      if (!p.isAchiev) p.value = 7;
+      if (!p.isAchiev) p.value = 2;
     });
   }
   getSizes() {

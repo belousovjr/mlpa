@@ -7,6 +7,7 @@ import Change from "./change";
 import Stage from "./stage";
 import Topic from "./topic";
 import Interf from "./interf";
+import {PARAM_CRUSH} from "../game/parameters";
 
 export default class Loc {
   params = [];
@@ -19,6 +20,9 @@ export default class Loc {
   phrases = [];
 
   lim = 15;
+
+  topicLim = 8;
+  topicQ = 0;
 
   cParam(name, value, isAchiev) {
     return new Parameter(name, value, isAchiev);
@@ -67,20 +71,26 @@ export default class Loc {
   };
 
   cStuff(props, ...phrases) {
-    const { id: nextStageId, changes = [], isA } = props ? props : {};
+    let { id: nextStageId, changes = [], isA, isIntro } = props ? props : {};
     const stuffId = this.getId("stuffs");
 
     this.addPhrases(stuffId, phrases);
-    return new Stuff(
+    const newStuff = new Stuff(
       nextStageId,
       !isA ? changes.filter(c => c.term) : [],
       isA,
       stuffId
     );
+    newStuff.isIntro = isIntro;
+    return newStuff;
   }
 
   addStuffs(stageId, ...stuffs) {
-    const newStuffs = stuffs.map(stuff => ({ ...stuff, stage_id: stageId }));
+    const newStuffs = stuffs.map(stuff => {
+      let { isIntro } = stuff;
+      const next_stage_id = isIntro ? stageId : stuff.next_stage_id;
+      return { ...stuff, stage_id: stageId, next_stage_id };
+    });
     this.stuffs = this.stuffs.concat(newStuffs);
   }
 
@@ -160,6 +170,10 @@ export default class Loc {
     return res;
   };
 
+  checkGrads = gradNames => {
+    return gradNames.find(gName => this.checkGrad(gName));
+  };
+
   checkGrad = gradName => {
     const grad = this._getGrad(gradName);
     const ranges = grad.rangesNames.map(rName => this._getRange(rName));
@@ -203,6 +217,30 @@ export default class Loc {
     return generalPhrase?.text;
   };
 
+  checkStuffByAchiev = id => {
+    const stuff = this.stuffs.find(s => s.id === id);
+    if (!stuff.next_stage_id) return false;
+    const nextStage = this.stages.find(s => s.id === stuff.next_stage_id);
+    const stage = this.stages.find(s => s.id === stuff.stage_id);
+    const topic = this._getTopic(stage.topic_id);
+
+    const result = topic.gradNames.find(gName => {
+      const grad = this._getGrad(gName);
+
+      return (
+        nextStage.isStart &&
+        Boolean(
+          grad.rangesNames.find(rName => {
+            const range = this._getRange(rName);
+            const param = this._getParam(range.paramName);
+            return param.isAchiev;
+          })
+        )
+      );
+    });
+    return result;
+  };
+
   getCorrectPhrase = stuffId => {
     const stuff = this.stuffs.find(s => s.id === stuffId);
     const phrases = this._getPhrases(stuff.id);
@@ -216,82 +254,63 @@ export default class Loc {
     return neutralPhrase.text;
   };
 
-  _getCorrectStuffs(id) {
-    //НЕОБХОДИМОЕ ЧИСЛО ОТВЕТОВ
-    const necessity = 3;
-    const stuffs = this._getStuffs(id);
-
-    //ОГРАНИЧЕНИЕ ПО *БЫЛ ЗДЕСЬ*
-    const answersAll = stuffs.filter(stuff => {
-      if (stuff.isA) return false;
-      else {
-        const stage = this.stages.find(s => s.id === stuff.next_stage_id);
-        return !stage.isBeen;
-      }
-    });
-
-    const correctNeutAchiev = [];
-    const correctFinal = [];
-    const incrrectNeutral = [];
-
-    answersAll.forEach(stuff => {
-      const nextStage = this.stages.find(
-        stage => stage.id === stuff.next_stage_id
-      );
-      const topic = this._getTopic(nextStage.topic_id);
-      const grad = this._getGrad(topic.graduation);
-      const ranges = grad.rangesNames(rName => this._getRange(rName));
-      const params = ranges.rangesNames(r => this._getParam(r.paramName));
-
-      const isAchiev = params.find(p => p.isAchiev);
-      const correct = this.checkGrad(grad.name);
-      const { isFin } = topic;
-
-      if (correct) {
-        //подходящее по градации
-        //если не финал
-        if (!isFin) correctNeutAchiev.push(stuff);
-        //если финал
-        else correctFinal.push(stuff);
-      } else if (!isAchiev && !isFin) {
-        //неподходящие если не ачивный и не финальный
-        incrrectNeutral.push(stuff);
-      }
-    });
-
-    let resultStuffs = correctNeutAchiev.concat(incrrectNeutral);
-    //если пришло время для финалочек
-    if (false) resultStuffs = resultStuffs.concat(correctFinal);
-    return resultStuffs.slice(0, necessity);
-  }
-
-  checkAnswToGrad = stuff => {
-    const nextStage = this.stages.find(
-      stage => stage.id === stuff.next_stage_id
-    );
-    const topic = this._getTopic(nextStage.topic_id);
-    return this.checkGrad(topic.graduation);
-  };
-
-  //ДОБАВИТЬ БЕЗУСЛОВНЫЕ ОГРАНИЧЕНИЯ ДЛЯ ТЕМ ЗАВИСИМЫХ ОТ АЧИВОК
-  getInterfaceStage = id => {
-    //ДОБАВИТЬ ПОДКЛЮЧЕНИЕ ФИНАЛОЧЕК КОГДА НАДО
-
+  _getCorrectStuffs = id => {
     const stage = this.stages.find(s => s.id === id);
     stage.isBeen = true;
+    const currentTopic = this._getTopic(stage.topic_id);
 
-    const stuffs = this._getStuffs(id);
+    const answersAll = this._getStuffs(id);
 
-    const replicStuff = stuffs.find(stuff => stuff.isA);
+    const replicStuff = answersAll.find(stuff => stuff.isA);
     const replic = new Interf(null, this.getCorrectPhrase(replicStuff.id));
 
-    //ОГРАНИЧЕНИЯ ПО *БЫЛ ТУТ*
-    const answersAll = stuffs.filter(stuff => {
-      return !stuff.isA;
+    let answersNotA = answersAll.filter(stuff => {
+      return !(stuff.isA || stuff.isIntro);
     });
 
-    //РЕЗУЛЬТАТ
-    const resAnswers = answersAll;
+    if (!answersNotA.length) {
+      this.topicQ++;
+
+      if (this.topicQ < this.topicLim) {
+        this.topics.forEach(topic => {
+          const nextStage = this._getStages(topic.id).find(
+            stage => stage.isStart
+          );
+          const nextTopic = this._getTopic(nextStage.topic_id);
+          if (!nextStage.isBeen && !nextTopic.isStart && !nextTopic.isFin) {
+            const nextStuff = this._getStuffs(nextStage.id).find(
+              stuff => stuff.isIntro
+            );
+            answersNotA.push(nextStuff);
+          }
+        });
+
+        answersNotA = answersNotA.filter(a => {
+          if (this.checkStuffByAchiev(a.id)) {
+            const nextStage = this.stages.find(s => s.id === a.next_stage_id);
+            const nextTopic = this._getTopic(nextStage.topic_id);
+            return this.checkGrads(nextTopic.gradNames);
+          } else return true;
+        });
+
+        answersNotA.sort(() => Math.random() - 0.5);
+
+        answersNotA = answersNotA.slice(0, 3);
+      } else if (!currentTopic.isFin) {
+        const finalTopic = this.topics.find(topic => {
+          return topic.isFin && this.checkGrads(topic.gradNames);
+        });
+        const finalStage = this._getStages(finalTopic.id).find(s => s.isStart);
+        const finalAnswer = this._getStuffs(finalStage.id).find(s => s.isIntro);
+        answersNotA.push(finalAnswer);
+      }
+    }
+
+    return { resAnswers: answersNotA, replic };
+  };
+
+  getInterfaceStage = id => {
+    const { resAnswers, replic } = this._getCorrectStuffs(id);
 
     const interf = {
       answers: resAnswers.map(stuff => {
@@ -309,9 +328,16 @@ export default class Loc {
 
   ssign = data => {
     for (let key in data) {
-      if (!["params", "grads", "ranges"].find(k => k === key)) {
+      if (!["params", "grads", "ranges", "topicLim"].find(k => k === key)) {
         this[key] = data[key];
       }
     }
+    this.stuffs.forEach(s => {
+      if(s.changes.find(c => c.paramName === PARAM_CRUSH)){
+        const stage = this.stages.find(st => st.id === s.stage_id)
+        const topic = this._getTopic(stage.topic_id)
+        console.log(`stage:${stage.id} topic: ${topic.name}`)
+      }
+    })
   };
 }

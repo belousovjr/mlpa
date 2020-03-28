@@ -37,7 +37,9 @@ export default class StuffItem extends React.Component {
     const { changes } = stuff;
     const { currentTopic, viewAchievs } = this.state;
 
-    const changesItems = !stuff.isA
+    const isSpecial = !(stuff.isA || stuff.isIntro);
+
+    const changesItems = isSpecial
       ? stat.params.map(p => {
           const c = changes.find(change => change.paramName === p.name);
 
@@ -86,7 +88,11 @@ export default class StuffItem extends React.Component {
       : null;
 
     const style = {
-      backgroundColor: stuff.isA ? "#ccffff" : "#D3D3D3",
+      backgroundColor: stuff.isA
+        ? "#ccffff"
+        : stuff.isIntro
+        ? " #ffe6b3"
+        : "#D3D3D3",
       cursor: "pointer",
       margin: "0.2rem",
 
@@ -123,7 +129,7 @@ export default class StuffItem extends React.Component {
       );
     });
 
-    const next = !stuff.isA ? (
+    const next = isSpecial ? (
       <div style={{ display: "inline-block", marginRight: "0.5rem" }}>
         <div
           style={{
@@ -168,11 +174,11 @@ export default class StuffItem extends React.Component {
       </div>
     ) : null;
 
-    const removeButton = !stuff.isA ? (
+    const removeButton = isSpecial ? (
       <button onClick={() => methods.removeStuff(stuff.id)}>X</button>
     ) : null;
 
-    const viewBox = stuff.isA ? null : (
+    const viewBox = !isSpecial ? null : (
       <input
         type="checkbox"
         checked={viewAchievs}

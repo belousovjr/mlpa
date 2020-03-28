@@ -1,14 +1,34 @@
 import React from "react";
 import "./style.css";
 import ImageItem from "./ImageItem";
-import Visual from "../Visual/Visual";
 
 export default class Ending extends React.Component {
   constructor() {
     super();
     this.endData = [
       {
-        name: "call",
+        name: "gabriella",
+        quantity: 5,
+        audio: ""
+      },
+      {
+        name: "taisa",
+        quantity: 5,
+        audio: ""
+      },
+
+      {
+        name: "hurima",
+        quantity: 7,
+        audio: ""
+      },
+      {
+        name: "leya",
+        quantity: 8,
+        audio: ""
+      },
+      {
+        name: "lola",
         quantity: 4,
         audio: ""
       }
@@ -32,6 +52,7 @@ export default class Ending extends React.Component {
           this.images.push({ name: `${name}_${i}`, image: target });
 
           if (this.images.length === endDataSum) {
+            console.log("LOADED");
             this.setState({ imagesLoaded: true });
           }
         };
@@ -40,13 +61,14 @@ export default class Ending extends React.Component {
   }
 
   render() {
-    const { name, quantity } = this.endData[0];
     const { currentImg, imagesLoaded } = this.state;
-    const { endingNext, disabled, isEnding } = this.props;
+    const { endingNext, disabled, isEnding, topicName } = this.props;
 
     const imagesItems = [];
 
-    if (imagesLoaded) {
+    if (imagesLoaded && isEnding) {
+      const { name, quantity } = this.endData.find(e => e.name === topicName);
+
       for (let i = 1; i <= quantity; i++) {
         const isCurrent = i === currentImg;
 

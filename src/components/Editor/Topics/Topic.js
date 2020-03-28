@@ -5,7 +5,7 @@ import Stage from "../Stages/Stage";
 export default class Topic extends React.Component {
   constructor() {
     super();
-    this.state = { newStageStart: false };
+    this.state = { newStageStart: false, showGrads: false };
   }
   stuffText = id => {
     if (id) {
@@ -36,8 +36,7 @@ export default class Topic extends React.Component {
       allTopics
     } = this.props;
 
-    const { grads } = stat;
-    const { graduation } = topic;
+    const { showGrads } = this.state;
 
     const stages = methods.getStages(topic.id);
     const stagesItems = stages.map(stage => {
@@ -52,14 +51,6 @@ export default class Topic extends React.Component {
           isSelect={isSelect}
           click={click}
         />
-      );
-    });
-
-    const optItems = grads.map(grad => {
-      return (
-        <option value={grad.name} key={grad.name}>
-          {grad.name}
-        </option>
       );
     });
 
@@ -88,27 +79,34 @@ export default class Topic extends React.Component {
               methods.updateTopic(
                 topic.id,
                 e.target.value,
-                topic.graduation,
+                topic.gradNames,
                 topic.isFin,
                 topic.isStart
               );
             }}
           />
-          , grad:
-          <select
-            value={graduation}
-            onChange={e => {
-              methods.updateTopic(
-                topic.id,
-                topic.name,
-                e.target.value,
-                topic.isFin,
-                topic.isStart
-              );
-            }}
-          >
-            {optItems}
-          </select>
+          , grads:
+          <input type="checkbox" checked={showGrads} onChange={e => {this.setState({showGrads: e.target.checked})}}/>
+          {showGrads
+            ? stat.grads.map(g => (
+                <div key={g.name}>
+                  {g.name}
+                  <input
+                    type="checkbox"
+                    checked={Boolean(
+                      topic.gradNames.find(grad => grad === g.name)
+                    )}
+                    onChange={e => {
+                      methods.updateTopicGrads(
+                        topic.id,
+                        g.name,
+                        !e.target.checked
+                      );
+                    }}
+                  />
+                </div>
+              ))
+            : null}
           Start:
           <input
             type="checkbox"
@@ -117,7 +115,7 @@ export default class Topic extends React.Component {
               methods.updateTopic(
                 topic.id,
                 topic.name,
-                topic.graduation,
+                topic.gradNames,
                 topic.isFin,
                 e.target.checked
               );
@@ -131,7 +129,7 @@ export default class Topic extends React.Component {
               methods.updateTopic(
                 topic.id,
                 topic.name,
-                topic.graduation,
+                topic.gradNames,
                 e.target.checked,
                 topic.isStart
               );
