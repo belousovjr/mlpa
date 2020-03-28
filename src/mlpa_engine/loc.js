@@ -207,7 +207,6 @@ export default class Loc {
     const stuff = this.stuffs.find(s => s.id === stuffId);
 
     this._editParams(stuff.changes);
-    return stuff.next_stage_id;
   };
 
   getGeneralPhrase = stuffId => {

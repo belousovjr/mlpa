@@ -66,10 +66,12 @@ export default class UI extends React.Component {
       }
     });
 
-    const newStageId = this.loc.calcStuff(stuffId);
+    const newStageId = stuff.next_stage_id;
 
     const pPhrase = this.loc.getCorrectPhrase(stuffId);
     const { cPhrase, answers, isFin } = this.getStageData(newStageId);
+
+    this.loc.calcStuff(stuffId);
 
     this.setState({
       isHiding: true,
