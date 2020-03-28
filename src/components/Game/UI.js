@@ -95,7 +95,6 @@ export default class UI extends React.Component {
   endingNext = () => {
     const { answers } = this.state;
     if (answers.length) this.update(answers[0].id);
-    //console.log(answers.length)
   };
   writingFinish() {
     this.setState({ disabled: false });

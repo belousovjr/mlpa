@@ -14,7 +14,8 @@ body {
   font-size: 2rem;
   position: absolute;
   overflow-y: auto;
-  overflow-x: hidden;
+
+  /* perspective: 15rem;*/
 }
 
 ::-webkit-scrollbar {

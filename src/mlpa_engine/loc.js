@@ -7,7 +7,7 @@ import Change from "./change";
 import Stage from "./stage";
 import Topic from "./topic";
 import Interf from "./interf";
-import {PARAM_CRUSH} from "../game/parameters";
+import { PARAM_CRUSH } from "../game/parameters";
 
 export default class Loc {
   params = [];
@@ -21,7 +21,7 @@ export default class Loc {
 
   lim = 15;
 
-  topicLim = 8;
+  topicLim = 1;
   topicQ = 0;
 
   cParam(name, value, isAchiev) {
@@ -331,12 +331,5 @@ export default class Loc {
         this[key] = data[key];
       }
     }
-    this.stuffs.forEach(s => {
-      if(s.changes.find(c => c.paramName === PARAM_CRUSH)){
-        const stage = this.stages.find(st => st.id === s.stage_id)
-        const topic = this._getTopic(stage.topic_id)
-        console.log(`stage:${stage.id} topic: ${topic.name}`)
-      }
-    })
   };
 }

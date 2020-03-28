@@ -52,7 +52,6 @@ export default class Ending extends React.Component {
           this.images.push({ name: `${name}_${i}`, image: target });
 
           if (this.images.length === endDataSum) {
-            console.log("LOADED");
             this.setState({ imagesLoaded: true });
           }
         };

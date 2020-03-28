@@ -6,6 +6,10 @@
   height: 100%;
   width: 100%;
   background-color: black;
+
+  animation-name: ending-showing;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .end-cont {
@@ -19,16 +23,17 @@
 .end-img {
   height: 100%;
   animation: float 7s infinite ease-in-out;
+  border-radius: 1rem;
 }
 
 .not-dis > .end-img {
   transition: box-shadow 0.5s;
-  box-shadow: 0px 0px 23px 6px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 7px 4px rgba(255, 255, 255, 0.7);
 }
 
 .not-dis:active > .end-img {
   transition: box-shadow 0.5s;
-  box-shadow: 0px 0px 23px 6px rgba(0, 238, 255, 1);
+  box-shadow: 0px 0px 4px 4px rgba(0, 255, 215, 1);
 }
 
 .appear {
@@ -84,5 +89,14 @@
     opacity: 1;
     cursor: pointer;
     transform: rotate(0deg);
+  }
+}
+
+@keyframes ending-showing {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
