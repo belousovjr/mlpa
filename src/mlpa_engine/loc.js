@@ -21,7 +21,7 @@ export default class Loc {
 
   lim = 15;
 
-  topicLim = 1;
+  topicLim = 8;
   topicQ = 0;
 
   cParam(name, value, isAchiev) {
