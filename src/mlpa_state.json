@@ -220,7 +220,7 @@
         {
             "name": "Вступление",
             "isFin": false,
-            "isStart": false,
+            "isStart": true,
             "id": 1,
             "gradNames": [
                 "ПАН АПАТ"
@@ -346,7 +346,7 @@
         {
             "name": "Фотография",
             "isFin": false,
-            "isStart": true,
+            "isStart": false,
             "id": 15,
             "gradNames": [
                 "УПОМИНАЛА О ФОТО"
