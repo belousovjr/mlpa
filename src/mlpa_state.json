@@ -2360,7 +2360,12 @@
         {
             "stage_id": 105,
             "next_stage_id": 130,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 234
         },
@@ -2563,7 +2568,12 @@
         {
             "stage_id": 134,
             "next_stage_id": 136,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 2
+                }
+            ],
             "isA": false,
             "id": 267
         },
@@ -2881,7 +2891,12 @@
         {
             "stage_id": 143,
             "next_stage_id": 162,
-            "changes": [],
+            "changes": [
+                {
+                    "paramName": "УРАВНОВЕШЕННОСТЬ",
+                    "term": 1
+                }
+            ],
             "isA": false,
             "id": 305
         },
